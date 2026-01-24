@@ -18,20 +18,28 @@ public class XTypeUnameCanCreateNew
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("create")]
     public Boolean Create { get; set; }
+
     [JsonPropertyName("read")]
     public Boolean Read { get; set; }
+
     [JsonPropertyName("edit")]
     public Boolean Edit { get; set; }
+
     [JsonPropertyName("viewatt")]
     public Boolean ViewAtt { get; set; }
+
     [JsonPropertyName("uploadatt")]
     public Boolean UploadAtt { get; set; }
+
     [JsonPropertyName("downloadatt")]
     public Boolean DownloadAtt { get; set; }
+
     [JsonPropertyName("editatt")]
     public Boolean EditAtt { get; set; }
+
     [JsonPropertyName("viewactionhistory")]
     public Boolean ViewActionHistory { get; set; }
 }

@@ -19,16 +19,17 @@ public partial class XTypeButton
 {
     [JsonPropertyName("custombutton_id")]
     public Int32? CustombuttonId { get; set; }
-    [JsonPropertyName("custombutton_name")]
 
+    [JsonPropertyName("custombutton_name")]
     public String? CustombuttonName { get; set; }
 
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
+
     [JsonPropertyName("xtype_id")]
     public Int32? XtypeId { get; set; }
-    [JsonPropertyName("xtype_name")]
 
+    [JsonPropertyName("xtype_name")]
     public String? XtypeName { get; set; }
 }
 

@@ -18,10 +18,13 @@ public class AllowedAfterStatu
 {
     [JsonPropertyName("xtypestatus_id")]
     public Int32 XTypeStatusId { get; set; }
+
     [JsonPropertyName("status_id")]
     public Int32 StatusId { get; set; }
+
     [JsonPropertyName("status_name")]
     public String StatusName { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

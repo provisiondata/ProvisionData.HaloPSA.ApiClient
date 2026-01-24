@@ -19,10 +19,11 @@ public partial class DeviceUserCount
 {
     [JsonPropertyName("count")]
     public Int32? Count { get; set; }
+
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
-    [JsonPropertyName("name")]
 
+    [JsonPropertyName("name")]
     public String? Name { get; set; }
 }
 

@@ -24,6 +24,7 @@ public class Milestone
 
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("sequence")]
     public Int32 Sequence { get; set; }
 
@@ -35,10 +36,13 @@ public class Milestone
 
     [JsonPropertyName("milestone_dependencies")]
     public List<String> MilestoneDependencies { get; set; } = [];
+
     [JsonPropertyName("dependencies")]
     public List<Dependency> Dependencies { get; set; } = [];
+
     [JsonPropertyName("tickets")]
     public List<Ticket> Tickets { get; set; } = [];
+
     [JsonPropertyName("_complete")]
     public Boolean Complete { get; set; }
 
@@ -47,6 +51,7 @@ public class Milestone
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("start_days")]
     public Int32 StartDays { get; set; }
 
@@ -64,6 +69,7 @@ public class Milestone
 
     [JsonPropertyName("invoicenumber")]
     public String Invoicenumber { get; set; } = String.Empty;
+
     [JsonPropertyName("from_template_id")]
     public Int32 FromTemplateId { get; set; }
 }

@@ -18,26 +18,37 @@ public class GroupVisibilityCondition
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("entity_id")]
     public Int32 EntityId { get; set; }
+
     [JsonPropertyName("entity_name")]
     public String EntityName { get; set; } = String.Empty;
+
     [JsonPropertyName("entity_id2")]
     public Int32 EntityId2 { get; set; }
+
     [JsonPropertyName("entity_guid2")]
     public String EntityGuid2 { get; set; } = String.Empty;
+
     [JsonPropertyName("entity_id3")]
     public Int32 EntityId3 { get; set; }
+
     [JsonPropertyName("type")]
     public Int32 Type { get; set; }
+
     [JsonPropertyName("desc")]
     public String Desc { get; set; } = String.Empty;
+
     [JsonPropertyName("seq")]
     public Int32 Seq { get; set; }
+
     [JsonPropertyName("allow_access")]
     public Boolean AllowAccess { get; set; }
+
     [JsonPropertyName("subscriber_type")]
     public Int32 SubscriberType { get; set; }
+
     [JsonPropertyName("restrictions")]
     public Restriction[] Restrictions { get; set; } = [];
     [JsonPropertyName("visibility_conditions")]

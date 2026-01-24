@@ -24,20 +24,25 @@ public class Automationcriterion
 
     [JsonPropertyName("autoassign_guid")]
     public String AutoassignGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("qualification_criteria_id")]
     public Int32 QualificationCriteriaId { get; set; }
 
     [JsonPropertyName("fieldname")]
     public String Fieldname { get; set; } = String.Empty;
+
     [JsonPropertyName("value_type")]
     public String ValueType { get; set; } = String.Empty;
+
     [JsonPropertyName("value_int")]
     public Int32 ValueInt { get; set; }
 
     [JsonPropertyName("valueint_guid")]
     public String ValueintGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("value_string")]
     public String ValueString { get; set; } = String.Empty;
+
     [JsonPropertyName("value_datetime")]
     public DateTime ValueDatetime { get; set; } = DateTime.UnixEpoch;
 
@@ -52,8 +57,10 @@ public class Automationcriterion
 
     [JsonPropertyName("value_display")]
     public String ValueDisplay { get; set; } = String.Empty;
+
     [JsonPropertyName("tablename")]
     public String Tablename { get; set; } = String.Empty;
+
     [JsonPropertyName("type")]
     public Int32 Type { get; set; }
 
@@ -65,11 +72,13 @@ public class Automationcriterion
 
     [JsonPropertyName("chatprofile_id")]
     public String ChatprofileId { get; set; } = String.Empty;
+
     [JsonPropertyName("chatprofile_flow_seq")]
     public Int32 ChatprofileFlowSeq { get; set; }
 
     [JsonPropertyName("timezonestring")]
     public String Timezonestring { get; set; } = String.Empty;
+
     [JsonPropertyName("match_after_start")]
     public Boolean MatchAfterStart { get; set; }
 
@@ -78,6 +87,7 @@ public class Automationcriterion
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("stdid")]
     public Int32 Stdid { get; set; }
 }

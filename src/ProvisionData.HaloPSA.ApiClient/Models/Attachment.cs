@@ -18,20 +18,25 @@ public class Attachment
 {
     [JsonPropertyName("third_party_id")]
     public String ThirdPartyId { get; set; } = String.Empty;
+
     [JsonPropertyName("link")]
     public String Link { get; set; } = String.Empty;
+
     [JsonPropertyName("content_type")]
     public String ContentType { get; set; } = String.Empty;
+
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
 
     [JsonPropertyName("filename")]
     public String Filename { get; set; } = String.Empty;
+
     [JsonPropertyName("datecreated")]
     public DateTime Datecreated { get; set; } = DateTime.UnixEpoch;
 
     [JsonPropertyName("note")]
     public String Note { get; set; } = String.Empty;
+
     [JsonPropertyName("filesize")]
     public Int32 Filesize { get; set; }
 
@@ -43,11 +48,13 @@ public class Attachment
 
     [JsonPropertyName("desc")]
     public String Desc { get; set; } = String.Empty;
+
     [JsonPropertyName("isimage")]
     public Boolean Isimage { get; set; }
 
     [JsonPropertyName("data")]
     public String Data { get; set; } = String.Empty;
+
     [JsonPropertyName("ticket_id")]
     public Int32 TicketId { get; set; }
 
@@ -68,13 +75,16 @@ public class Attachment
 
     [JsonPropertyName("guid")]
     public String Guid { get; set; } = String.Empty;
+
     [JsonPropertyName("image_upload_id")]
     public Int32 ImageUploadId { get; set; }
 
     [JsonPropertyName("image_upload_key")]
     public String ImageUploadKey { get; set; } = String.Empty;
+
     [JsonPropertyName("file")]
     public String File { get; set; } = String.Empty;
+
     [JsonPropertyName("_enduserportalpdfprint")]
     public Boolean Enduserportalpdfprint { get; set; }
 
@@ -86,6 +96,7 @@ public class Attachment
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("showforusers")]
     public Boolean Showforusers { get; set; }
 
@@ -97,10 +108,13 @@ public class Attachment
 
     [JsonPropertyName("data_base64")]
     public String DataBase64 { get; set; } = String.Empty;
+
     [JsonPropertyName("download_url")]
     public String DownloadUrl { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_token")]
     public String ThirdPartyToken { get; set; } = String.Empty;
+
     [JsonPropertyName("already_posted")]
     public Boolean AlreadyPosted { get; set; }
 
@@ -112,8 +126,10 @@ public class Attachment
 
     [JsonPropertyName("_importtype")]
     public String Importtype { get; set; } = String.Empty;
+
     [JsonPropertyName("s3url")]
     public String S3url { get; set; } = String.Empty;
+
     [JsonPropertyName("att_link")]
     public String AttLink { get; set; } = String.Empty;
 }

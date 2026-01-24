@@ -22,7 +22,6 @@ public abstract record ItemBase
     {
         return $"[{Id}] {Name} ({SupplierPartCode}) <{IncomeAccount}> {SupplierName} {AssetGroup}".Trim();
     }
-
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
 
@@ -40,6 +39,7 @@ public abstract record ItemBase
 
     [JsonPropertyName("assetgroup_id")]
     public AssetGroup AssetGroup { get; set; } = AssetGroup.NonSerialized;
+
     [JsonPropertyName("assetgroup_name")]
     public String AssetgroupName { get; set; } = "Non-Serialized";
 
@@ -85,6 +85,7 @@ public abstract record ItemBase
 
     [JsonPropertyName("taxcode")]
     public Int32 Taxcode { get; set; } = 3;
+
     [JsonPropertyName("taxcode_name")]
     public String TaxcodeName { get; set; } = "GP";
 
@@ -96,6 +97,7 @@ public abstract record ItemBase
 
     [JsonPropertyName("nominalcode")]
     public String NominalCode { get; set; } = "4192";
+
     [JsonPropertyName("nominalcode_name")]
     public String NominalcodeName { get; set; } = "Hardware";
 
@@ -110,6 +112,7 @@ public abstract record ItemBase
 
     [JsonPropertyName("isrecurringitem")]
     public Boolean IsRecurring { get; set; }
+
     [JsonPropertyName("recurringprice")]
     public Decimal RecurringPrice { get; set; }
 

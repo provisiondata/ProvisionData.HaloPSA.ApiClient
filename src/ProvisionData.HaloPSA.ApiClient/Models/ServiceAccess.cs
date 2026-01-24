@@ -14,20 +14,29 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-public class AllowedClient
+public record ServiceAccess
 {
-    [JsonPropertyName("client_id")]
-    public Int32 ClientId { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-    [JsonPropertyName("client_name")]
-    public String ClientName { get; set; } = String.Empty;
+    [JsonPropertyName("service_category_id")]
+    public Int32 ServiceCategoryId { get; set; }
 
-    [JsonPropertyName("template_id")]
-    public Int32 TemplateId { get; set; }
+    [JsonPropertyName("service_id")]
+    public Int32 ServiceId { get; set; }
 
-    [JsonPropertyName("todo_id")]
-    public Int32 TodoId { get; set; }
+    [JsonPropertyName("type")]
+    public String Type { get; set; } = String.Empty;
 
-    [JsonPropertyName("_warning")]
-    public String Warning { get; set; } = String.Empty;
+    [JsonPropertyName("data_id")]
+    public Int32 DataId { get; set; }
+
+    [JsonPropertyName("data_name")]
+    public String DataName { get; set; } = String.Empty;
+
+    [JsonPropertyName("service_name")]
+    public String ServiceName { get; set; } = String.Empty;
+
+    [JsonPropertyName("allow_access")]
+    public Boolean AllowAccess { get; set; }
 }

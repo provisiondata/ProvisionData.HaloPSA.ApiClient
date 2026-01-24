@@ -18,62 +18,64 @@ public partial class DeviceApplications
 
 {
     [JsonPropertyName("bundledesc")]
-
     public String? Bundledesc { get; set; }
 
     [JsonPropertyName("cost")]
     public Double? Cost { get; set; }
+
     [JsonPropertyName("count")]
     public Int32? Count { get; set; }
+
     [JsonPropertyName("did")]
     public Int32? Did { get; set; }
+
     [JsonPropertyName("expiry_date")]
     public DateTimeOffset? ExpiryDate { get; set; }
+
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
+
     [JsonPropertyName("install_date")]
     public DateTimeOffset? InstallDate { get; set; }
+
     [JsonPropertyName("lastused")]
     public DateTimeOffset? Lastused { get; set; }
+
     [JsonPropertyName("licence_id")]
     public Int32? LicenceId { get; set; }
-    [JsonPropertyName("licence_name")]
 
+    [JsonPropertyName("licence_name")]
     public String? LicenceName { get; set; }
 
     [JsonPropertyName("licence_required")]
     public Boolean? LicenceRequired { get; set; }
+
     [JsonPropertyName("moduleid")]
     public Int32? Moduleid { get; set; }
-    [JsonPropertyName("name")]
 
+    [JsonPropertyName("name")]
     public String? Name { get; set; }
 
     [JsonPropertyName("new_devices")]
-
     public List<Device>? NewDevices { get; set; }
-
     [JsonPropertyName("new_users")]
     public List<User>? NewUsers { get; set; }
-
     [JsonPropertyName("role_id")]
     public Int32? RoleId { get; set; }
-    [JsonPropertyName("role_name")]
 
+    [JsonPropertyName("role_name")]
     public String? RoleName { get; set; }
 
     [JsonPropertyName("snowid")]
-
     public String? Snowid { get; set; }
 
     [JsonPropertyName("user_id")]
     public Int32? UserId { get; set; }
-    [JsonPropertyName("version")]
 
+    [JsonPropertyName("version")]
     public String? Version { get; set; }
 
     [JsonPropertyName("_warning")]
-
     public String? Warning { get; set; }
 }
 

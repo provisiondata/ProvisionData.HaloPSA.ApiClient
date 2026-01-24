@@ -24,11 +24,13 @@ public class TodoList
 
     [JsonPropertyName("text")]
     public String Text { get; set; } = String.Empty;
+
     [JsonPropertyName("sequence")]
     public Int32 Sequence { get; set; }
 
     [JsonPropertyName("allowed_clients")]
     public List<AllowedClient> AllowedClients { get; set; } = [];
+
     [JsonPropertyName("group_id")]
     public Int32 GroupId { get; set; }
 
@@ -37,11 +39,13 @@ public class TodoList
 
     [JsonPropertyName("group_name")]
     public String GroupName { get; set; } = String.Empty;
+
     [JsonPropertyName("group_seq")]
     public Int32 GroupSeq { get; set; }
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("ticket_id")]
     public Int32 TicketId { get; set; }
 
@@ -53,6 +57,7 @@ public class TodoList
 
     [JsonPropertyName("done_by_name")]
     public String DoneByName { get; set; } = String.Empty;
+
     [JsonPropertyName("start_date")]
     public DateTime StartDate { get; set; } = DateTime.UnixEpoch;
 

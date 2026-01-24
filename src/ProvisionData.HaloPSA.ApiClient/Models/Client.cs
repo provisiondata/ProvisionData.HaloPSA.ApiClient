@@ -220,38 +220,19 @@ public record Client
     [JsonPropertyName("all_organisations_allowed")]
     public Boolean AllOrganisationsAllowed { get; set; }
 
-    [JsonPropertyName("allowed_organisations")]
-    public List<Object> AllowedOrganisations { get; } = [];
-
-    [JsonPropertyName("faqlists")]
-    public List<Object> Faqlists { get; } = [];
-
     [JsonPropertyName("popup_notes")]
     public List<PopupNote> PopupNotes { get; } = [];
-
     [JsonPropertyName("allowall_tickettypes")]
     public Boolean AllowallTickettypes { get; set; }
-
-    [JsonPropertyName("allowed_tickettypes")]
-    public List<Object> AllowedTickettypes { get; } = [];
 
     [JsonPropertyName("allowall_category1")]
     public Boolean AllowallCategory1 { get; set; }
 
-    [JsonPropertyName("allowed_category1")]
-    public List<Object> AllowedCategory1 { get; } = [];
-
     [JsonPropertyName("allowall_category2")]
     public Boolean AllowallCategory2 { get; set; }
 
-    [JsonPropertyName("allowed_category2")]
-    public List<Object> AllowedCategory2 { get; } = [];
-
     [JsonPropertyName("allowall_category3")]
     public Boolean AllowallCategory3 { get; set; }
-
-    [JsonPropertyName("allowed_category3")]
-    public List<Object> AllowedCategory3 { get; } = [];
 
     [JsonPropertyName("allowall_category4")]
     public Boolean AllowallCategory4 { get; set; }
@@ -259,29 +240,16 @@ public record Client
     [JsonPropertyName("alocked")]
     public Boolean Alocked { get; set; }
 
-    [JsonPropertyName("allowed_category4")]
-    public List<Object> AllowedCategory4 { get; } = [];
-
     [JsonPropertyName("billingplans")]
     public List<Billingplan> Billingplans { get; } = [];
-
-    [JsonPropertyName("overriding_rates")]
-    public List<Object> OverridingRates { get; } = [];
-
     [JsonPropertyName("allowallchargerates")]
     public Boolean Allowallchargerates { get; set; }
-
-    [JsonPropertyName("chargerates")]
-    public List<Object> Chargerates { get; } = [];
 
     [JsonPropertyName("excludefrominvoicesync")]
     public Boolean Excludefrominvoicesync { get; set; }
 
     [JsonPropertyName("allow_api_access")]
     public Boolean AllowApiAccess { get; set; }
-
-    [JsonPropertyName("areaitems")]
-    public List<Object> Areaitems { get; } = [];
 
     [JsonPropertyName("override_portalcolour")]
     public Boolean OverridePortalcolour { get; set; }
@@ -357,10 +325,6 @@ public record Client
 
     [JsonPropertyName("service_access")]
     public List<ServiceAccess> ServiceAccess { get; } = [];
-
-    [JsonPropertyName("service_subscriptions")]
-    public List<Object> ServiceSubscriptions { get; } = [];
-
     [JsonPropertyName("snelstart_id")]
     public String SnelstartId { get; set; } = String.Empty;
 
@@ -402,9 +366,6 @@ public record Client
 
     [JsonPropertyName("defaultcontractoverride_ref")]
     public String DefaultcontractoverrideRef { get; set; } = String.Empty;
-
-    [JsonPropertyName("external_links")]
-    public List<Object> ExternalLinks { get; } = [];
 
     [JsonPropertyName("liongardid")]
     public Int32 Liongardid { get; set; }
@@ -535,9 +496,6 @@ public record Client
     [JsonPropertyName("override_layout_name")]
     public String OverrideLayoutName { get; set; } = String.Empty;
 
-    [JsonPropertyName("extratabs")]
-    public List<Object> Extratabs { get; } = [];
-
     [JsonPropertyName("servicenow_ticket_sync")]
     public String ServicenowTicketSync { get; set; } = String.Empty;
 
@@ -589,12 +547,6 @@ public record Client
     [JsonPropertyName("client_to_invoice_recurring_name")]
     public String ClientToInvoiceRecurringName { get; set; } = String.Empty;
 
-    [JsonPropertyName("azure_tenants")]
-    public List<Object> AzureTenants { get; } = [];
-
-    [JsonPropertyName("qbo_company_id")]
-    public String QboCompanyId { get; set; } = String.Empty;
-
     [JsonPropertyName("automatic_sales_tax")]
     public Boolean AutomaticSalesTax { get; set; }
 
@@ -639,6 +591,7 @@ public record Client
 
     [JsonPropertyName("overridepdftemplatequote_name")]
     public String OverridepdftemplatequoteName { get; set; } = String.Empty;
+
     public List<Site> Sites { get; set; } = [];
 }
 
@@ -763,61 +716,4 @@ public record MainDeliveryAddress
 
     [JsonPropertyName("site_id")]
     public Int32 SiteId { get; set; }
-}
-
-public record PopupNote
-{
-    [JsonPropertyName("id")]
-    public Int32 Id { get; set; }
-
-    [JsonPropertyName("client_id")]
-    public Int32 ClientId { get; set; }
-
-    [JsonPropertyName("date_created")]
-    public DateTime DateCreated { get; set; }
-
-    [JsonPropertyName("note")]
-    public String Note { get; set; } = String.Empty;
-
-    [JsonPropertyName("dismissable")]
-    public Boolean Dismissable { get; set; }
-
-    [JsonPropertyName("read_status")]
-    public Int32 ReadStatus { get; set; }
-
-    [JsonPropertyName("displaymodal")]
-    public Boolean Displaymodal { get; set; }
-
-    [JsonPropertyName("displayhtml")]
-    public Boolean Displayhtml { get; set; }
-
-    [JsonPropertyName("limitdaterange")]
-    public Boolean Limitdaterange { get; set; }
-}
-
-public record ServiceAccess
-{
-    [JsonPropertyName("id")]
-    public Int32 Id { get; set; }
-
-    [JsonPropertyName("service_category_id")]
-    public Int32 ServiceCategoryId { get; set; }
-
-    [JsonPropertyName("service_id")]
-    public Int32 ServiceId { get; set; }
-
-    [JsonPropertyName("type")]
-    public String Type { get; set; } = String.Empty;
-
-    [JsonPropertyName("data_id")]
-    public Int32 DataId { get; set; }
-
-    [JsonPropertyName("data_name")]
-    public String DataName { get; set; } = String.Empty;
-
-    [JsonPropertyName("service_name")]
-    public String ServiceName { get; set; } = String.Empty;
-
-    [JsonPropertyName("allow_access")]
-    public Boolean AllowAccess { get; set; }
 }

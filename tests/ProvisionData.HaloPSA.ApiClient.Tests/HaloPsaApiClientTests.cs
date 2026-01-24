@@ -68,8 +68,8 @@ public class HaloPsaApiClientTests
 
         // Assert
         options.PageSize.ShouldBe(50);
-        options.AuthUrl.ShouldBe("https://halo.pdsint.net/auth/");
-        options.ApiUrl.ShouldBe("https://halo.pdsint.net/api/");
+        options.AuthUrl.ShouldBe(String.Empty);
+        options.ApiUrl.ShouldBe(String.Empty);
         options.JsonSerializerOptions.ShouldNotBeNull();
     }
 }

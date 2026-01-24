@@ -21,37 +21,46 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("guid")]
     public String Guid { get; set; } = String.Empty;
+
     [JsonPropertyName("intent")]
     public String Intent { get; set; } = String.Empty;
+
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("type")]
     public Int32 Type { get; set; }
 
     [JsonPropertyName("domain")]
     public String Domain { get; set; } = String.Empty;
+
     [JsonPropertyName("group_id")]
     public Int32 GroupId { get; set; }
 
     [JsonPropertyName("restriction_type")]
     public String RestrictionType { get; set; } = String.Empty;
+
     [JsonPropertyName("restrictto_department_id")]
     public Int32 RestricttoDepartmentId { get; set; }
 
     [JsonPropertyName("restrictto_department_name")]
     public String RestricttoDepartmentName { get; set; } = String.Empty;
+
     [JsonPropertyName("restrictto_team_id")]
     public Int32 RestricttoTeamId { get; set; }
 
     [JsonPropertyName("restrictto_team_name")]
     public String RestricttoTeamName { get; set; } = String.Empty;
+
     [JsonPropertyName("restrictto_agent_id")]
     public Int32 RestricttoAgentId { get; set; }
 
     [JsonPropertyName("restrictto_agent_name")]
     public String RestricttoAgentName { get; set; } = String.Empty;
+
     [JsonPropertyName("summary")]
     public String Summary { get; set; } = String.Empty;
+
     [JsonPropertyName("tickettype_id")]
     public Int32 TickettypeId { get; set; }
 
@@ -60,14 +69,19 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("creation_rules")]
     public List<CreationRule> CreationRules { get; set; } = [];
+
     [JsonPropertyName("todo_list")]
     public List<TodoList> TodoList { get; set; } = [];
+
     [JsonPropertyName("emailto")]
     public String Emailto { get; set; } = String.Empty;
+
     [JsonPropertyName("emailcc")]
     public String Emailcc { get; set; } = String.Empty;
+
     [JsonPropertyName("emailsubject")]
     public String Emailsubject { get; set; } = String.Empty;
+
     [JsonPropertyName("time")]
     public DateTime Time { get; set; } = DateTime.UnixEpoch;
 
@@ -112,6 +126,7 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("reportarea_name")]
     public String ReportareaName { get; set; } = String.Empty;
+
     [JsonPropertyName("users_can_use")]
     public Boolean UsersCanUse { get; set; }
 
@@ -123,39 +138,52 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("category_1")]
     public String Category1 { get; set; } = String.Empty;
+
     [JsonPropertyName("category_2")]
     public String Category2 { get; set; } = String.Empty;
+
     [JsonPropertyName("category_3")]
     public String Category3 { get; set; } = String.Empty;
+
     [JsonPropertyName("category_4")]
     public String Category4 { get; set; } = String.Empty;
+
     [JsonPropertyName("status_id")]
     public Int32 StatusId { get; set; }
 
     [JsonPropertyName("status_guid")]
     public String StatusGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("details")]
     public String Details { get; set; } = String.Empty;
+
     [JsonPropertyName("details_html")]
     public String DetailsHtml { get; set; } = String.Empty;
+
     [JsonPropertyName("clearance")]
     public String Clearance { get; set; } = String.Empty;
+
     [JsonPropertyName("workflow_id")]
     public Int32 WorkflowId { get; set; }
 
     [JsonPropertyName("workflow_guid")]
     public String WorkflowGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("workflow_name")]
     public String WorkflowName { get; set; } = String.Empty;
+
     [JsonPropertyName("approval_name")]
     public String ApprovalName { get; set; } = String.Empty;
+
     [JsonPropertyName("team")]
     public String Team { get; set; } = String.Empty;
+
     [JsonPropertyName("agent_id")]
     public Int32 AgentId { get; set; }
 
     [JsonPropertyName("agent_name")]
     public String AgentName { get; set; } = String.Empty;
+
     [JsonPropertyName("showforusers")]
     public Boolean Showforusers { get; set; }
 
@@ -167,6 +195,7 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("defaultresourcetype_name")]
     public String DefaultresourcetypeName { get; set; } = String.Empty;
+
     [JsonPropertyName("informlevel")]
     public Int32 Informlevel { get; set; }
 
@@ -235,6 +264,7 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("emailbody")]
     public String Emailbody { get; set; } = String.Empty;
+
     [JsonPropertyName("kbid")]
     public Int32 Kbid { get; set; }
 
@@ -273,10 +303,13 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("customfields")]
     public List<CustomField> Customfields { get; set; } = [];
+
     [JsonPropertyName("assets")]
     public List<Asset> Assets { get; set; } = [];
+
     [JsonPropertyName("users")]
     public List<User> Users { get; set; } = [];
+
     [JsonPropertyName("itil_request_type")]
     public Int32 ItilRequestType { get; set; }
 
@@ -288,6 +321,7 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("webhook_id")]
     public String WebhookId { get; set; } = String.Empty;
+
     [JsonPropertyName("creationtype")]
     public Int32 Creationtype { get; set; }
 
@@ -359,6 +393,7 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("automationcriteria")]
     public List<Automationcriterion> Automationcriteria { get; set; } = [];
 
@@ -403,6 +438,7 @@ public class RecurringInvoiceSchedule
 
     [JsonPropertyName("clients")]
     public String Clients { get; set; } = String.Empty;
+
     [JsonPropertyName("tickettype_guid")]
     public String TickettypeGuid { get; set; } = String.Empty;
 

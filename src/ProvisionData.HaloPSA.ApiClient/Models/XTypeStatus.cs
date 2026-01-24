@@ -20,25 +20,22 @@ public partial class XTypeStatus
     [JsonPropertyName("allowafterallstatuses")]
     public Boolean? Allowafterallstatuses { get; set; }
 
-    //[JsonPropertyName("allowedafterstatus")]
-    //public List<UntypedNode>? Allowedafterstatus { get; set; }
-
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
+
     [JsonPropertyName("status_id")]
     public Int32? StatusId { get; set; }
-    [JsonPropertyName("status_name")]
 
+    [JsonPropertyName("status_name")]
     public String? StatusName { get; set; }
 
     [JsonPropertyName("_warning")]
-
     public String? Warning { get; set; }
 
     [JsonPropertyName("xtype_id")]
     public Int32? XtypeId { get; set; }
-    [JsonPropertyName("xtype_name")]
 
+    [JsonPropertyName("xtype_name")]
     public String? XtypeName { get; set; }
 }
 

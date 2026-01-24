@@ -21,12 +21,16 @@ public class Field
 
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("validate")]
     public String Validate { get; set; } = String.Empty;
+
     [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
+
     [JsonPropertyName("display")]
     public String Display { get; set; } = String.Empty;
+
     [JsonPropertyName("mandatory")]
     public Boolean Mandatory { get; set; }
 
@@ -44,32 +48,45 @@ public class Field
 
     [JsonPropertyName("url")]
     public String Url { get; set; } = String.Empty;
+
     [JsonPropertyName("mapping_id")]
     public Int32 MappingId { get; set; }
+
     [JsonPropertyName("access_level")]
     public Int32 AccessLevel { get; set; }
+
     [JsonPropertyName("show_on_relationship_edit")]
     public Boolean ShowOnRelationshipEdit { get; set; }
+
     [JsonPropertyName("typeinfo_id")]
     public Int32 TypeInfoId { get; set; }
+
     [JsonPropertyName("tab_id")]
     public Int32 TabId { get; set; }
+
     [JsonPropertyName("tab_name")]
     public String TabName { get; set; } = String.Empty;
+
     [JsonPropertyName("tab_sequence")]
     public Int32 TabSequence { get; set; }
+
     [JsonPropertyName("tab_columns")]
     public Int32 TabColumns { get; set; }
+
     [JsonPropertyName("groupname")]
     public String GroupName { get; set; } = String.Empty;
+
     [JsonPropertyName("techdetail")]
     public Int32 TechDetail { get; set; }
+
     [JsonPropertyName("userdetail")]
     public Int32 UserDetail { get; set; }
+
     [JsonPropertyName("group_visibility_conditions")]
     public GroupVisibilityCondition[] GroupVisibilityConditions { get; set; } = [];
     [JsonPropertyName("hint_type")]
     public Int32 HintType { get; set; }
+
     [JsonPropertyName("hint")]
     public String Hint { get; set; } = String.Empty;
 }

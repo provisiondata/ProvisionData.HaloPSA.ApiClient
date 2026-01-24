@@ -18,18 +18,25 @@ public class DatabaseLookupTrigger
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("lookup_profile_id")]
     public Int32 LookupProfileId { get; set; }
+
     [JsonPropertyName("lookup_profile_guid")]
     public String LookupProfileGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("field_id")]
     public Int32 FieldId { get; set; }
+
     [JsonPropertyName("field_guid")]
     public String FieldGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("field_name")]
     public String FieldName { get; set; } = String.Empty;
+
     [JsonPropertyName("required")]
     public Boolean Required { get; set; }
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

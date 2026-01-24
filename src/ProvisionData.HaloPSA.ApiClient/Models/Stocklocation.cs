@@ -21,13 +21,16 @@ public class StockLocation
 
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("client_id")]
     public Int32 ClientId { get; set; }
 
     [JsonPropertyName("client_name")]
     public String ClientName { get; set; } = String.Empty;
+
     [JsonPropertyName("clientsite_name")]
     public String ClientsiteName { get; set; } = String.Empty;
+
     [JsonPropertyName("inactive")]
     public Boolean Inactive { get; set; }
 
@@ -36,15 +39,19 @@ public class StockLocation
 
     [JsonPropertyName("phonenumber")]
     public String Phonenumber { get; set; } = String.Empty;
+
     [JsonPropertyName("colour")]
     public String Colour { get; set; } = String.Empty;
+
     [JsonPropertyName("timezone")]
     public String Timezone { get; set; } = String.Empty;
+
     [JsonPropertyName("invoice_address_isdelivery")]
     public Boolean InvoiceAddressIsdelivery { get; set; }
 
     [JsonPropertyName("notes")]
     public String Notes { get; set; } = String.Empty;
+
     [JsonPropertyName("isstocklocation")]
     public Boolean Isstocklocation { get; set; }
 
@@ -68,6 +75,7 @@ public class StockLocation
 
     [JsonPropertyName("use")]
     public String Use { get; set; } = String.Empty;
+
     [JsonPropertyName("customfields")]
     public List<CustomField> Customfields { get; set; } = [];
 
@@ -79,18 +87,25 @@ public class StockLocation
 
     [JsonPropertyName("delivery_address_line1")]
     public String DeliveryAddressLine1 { get; set; } = String.Empty;
+
     [JsonPropertyName("delivery_address_line2")]
     public String DeliveryAddressLine2 { get; set; } = String.Empty;
+
     [JsonPropertyName("delivery_address_line3")]
     public String DeliveryAddressLine3 { get; set; } = String.Empty;
+
     [JsonPropertyName("delivery_address_line4")]
     public String DeliveryAddressLine4 { get; set; } = String.Empty;
+
     [JsonPropertyName("delivery_address_line5")]
     public String DeliveryAddressLine5 { get; set; } = String.Empty;
+
     [JsonPropertyName("itglue_id")]
     public String ItglueId { get; set; } = String.Empty;
+
     [JsonPropertyName("client_itglue_id")]
     public String ClientItglueId { get; set; } = String.Empty;
+
     [JsonPropertyName("custombuttons")]
     public List<CustomButton> Custombuttons { get; set; } = [];
 
@@ -99,14 +114,19 @@ public class StockLocation
 
     [JsonPropertyName("stockbin_name")]
     public String StockbinName { get; set; } = String.Empty;
+
     [JsonPropertyName("country_code_name")]
     public String CountryCodeName { get; set; } = String.Empty;
+
     [JsonPropertyName("region_code_name")]
     public String RegionCodeName { get; set; } = String.Empty;
+
     [JsonPropertyName("ref")]
     public String Ref { get; set; } = String.Empty;
+
     [JsonPropertyName("lapsafe_default_installation")]
     public String LapsafeDefaultInstallation { get; set; } = String.Empty;
+
     [JsonPropertyName("maincontact_id")]
     public Int32 MaincontactId { get; set; }
 

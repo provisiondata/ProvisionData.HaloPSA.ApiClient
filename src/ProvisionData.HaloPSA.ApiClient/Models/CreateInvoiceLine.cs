@@ -16,9 +16,6 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class CreateInvoiceLine
 {
-    //[JsonPropertyName("id")]
-    //public Int32 Id { get; set; }
-
     [JsonPropertyName("_itemid")]
     public Int32 Itemid { get; set; }
 
@@ -69,67 +66,6 @@ public class CreateInvoiceLine
 
     [JsonPropertyName("tax_rate")]
     public Decimal TaxRate { get; set; }
-
-    //[JsonPropertyName("net_total")]
-    //public Decimal NetTotal { get; set; }
-
-    //[JsonPropertyName("total_tax")]
-    //public Decimal TotalTax { get; set; }
-
-    //[JsonPropertyName("total_discount")]
-    //public Decimal TotalDiscount { get; set; }
-
-    //[JsonPropertyName("total_price")]
-    //public Decimal TotalPrice { get; set; }
-
-    //// Meta
-    //[JsonPropertyName("ihid")]
-    //public Int32 Ihid { get; set; }
-
-    //[JsonPropertyName("item_internal_reference")]
-    //public String ItemInternalReference { get; set; } = String.Empty;
-
-    //[JsonPropertyName("item_external_reference")]
-    //public String ItemExternalReference { get; set; } = String.Empty;
-
-    //[JsonPropertyName("itemonorder")]
-    //public Boolean Itemonorder { get; set; }
-
-    //[JsonPropertyName("dsite")]
-    //public Int32 Dsite { get; set; }
-
-    //[JsonPropertyName("ddevnum")]
-    //public Int32 Ddevnum { get; set; }
-
-    //[JsonPropertyName("did")]
-    //public Int32 Did { get; set; }
-
-    //[JsonPropertyName("chid")]
-    //public Int32 Chid { get; set; }
-
-    //[JsonPropertyName("actioncode")]
-    //public Int32 Actioncode { get; set; }
-
-    //[JsonPropertyName("site")]
-    //public Int32 Site { get; set; }
-
-    //[JsonPropertyName("dmid")]
-    //public Int32 Dmid { get; set; }
-
-    //[JsonPropertyName("faultid")]
-    //public Int32 Faultid { get; set; }
-
-    //[JsonPropertyName("lineactiondate")]
-    //public DateTime Lineactiondate { get; set; } = DateTime.UnixEpoch;
-
-    //[JsonPropertyName("labourdepartmentid")]
-    //public Int32 Labourdepartmentid { get; set; }
-
-    //[JsonPropertyName("olid")]
-    //public Int32 Olid { get; set; }
-
-    //[JsonPropertyName("olseq")]
-    //public Int32 Olseq { get; set; }
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;

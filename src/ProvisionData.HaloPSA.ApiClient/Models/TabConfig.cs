@@ -19,36 +19,41 @@ public partial class TabConfig
 {
     [JsonPropertyName("display")]
     public Int32? Display { get; set; }
+
     [JsonPropertyName("entity_id")]
     public Int32? EntityId { get; set; }
-    [JsonPropertyName("icon")]
 
+    [JsonPropertyName("icon")]
     public String? Icon { get; set; }
 
     [JsonPropertyName("icon_override")]
     public Boolean? IconOverride { get; set; }
+
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
-    [JsonPropertyName("new_icon")]
 
+    [JsonPropertyName("new_icon")]
     public String? NewIcon { get; set; }
 
     [JsonPropertyName("nosidemenu")]
     public Boolean? Nosidemenu { get; set; }
+
     [JsonPropertyName("open_in_new_tab")]
     public Boolean? OpenInNewTab { get; set; }
+
     [JsonPropertyName("screenlayout_id")]
     public Int32? ScreenlayoutId { get; set; }
+
     [JsonPropertyName("sequence")]
     public Int32? Sequence { get; set; }
+
     [JsonPropertyName("tab_id")]
     public Int32? TabId { get; set; }
-    [JsonPropertyName("tab_name")]
 
+    [JsonPropertyName("tab_name")]
     public String? TabName { get; set; }
 
     [JsonPropertyName("url")]
-
     public String? Url { get; set; }
 
     [JsonPropertyName("usage")]

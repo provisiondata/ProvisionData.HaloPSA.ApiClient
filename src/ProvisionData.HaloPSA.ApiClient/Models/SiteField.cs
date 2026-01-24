@@ -21,12 +21,16 @@ public class SiteField
 
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("validate")]
     public String Validate { get; set; } = String.Empty;
+
     [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
+
     [JsonPropertyName("display")]
     public String Display { get; set; } = String.Empty;
+
     [JsonPropertyName("mandatory")]
     public Boolean Mandatory { get; set; }
 
@@ -44,6 +48,7 @@ public class SiteField
 
     [JsonPropertyName("url")]
     public String Url { get; set; } = String.Empty;
+
     [JsonPropertyName("mapping_id")]
     public Int32 MappingId { get; set; }
 
@@ -58,6 +63,7 @@ public class SiteField
 
     [JsonPropertyName("tab_name")]
     public String TabName { get; set; } = String.Empty;
+
     [JsonPropertyName("tab_sequence")]
     public Int32 TabSequence { get; set; }
 
@@ -66,6 +72,7 @@ public class SiteField
 
     [JsonPropertyName("groupname")]
     public String Groupname { get; set; } = String.Empty;
+
     [JsonPropertyName("techdetail")]
     public Int32 Techdetail { get; set; }
 

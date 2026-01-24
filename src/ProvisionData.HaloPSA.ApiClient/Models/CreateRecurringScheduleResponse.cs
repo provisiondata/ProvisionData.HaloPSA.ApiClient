@@ -189,7 +189,6 @@ public class CreateRecurringScheduleResponse
 
     [JsonPropertyName("access_control")]
     public List<AccessControl> AccessControl { get; } = [];
-
     [JsonPropertyName("access_control_level")]
     public Int32 AccessControlLevel { get; set; }
 

@@ -19,26 +19,29 @@ public partial class SnowComputerUserAbstract
 {
     [JsonPropertyName("customerId")]
     public Int32? CustomerId { get; set; }
-    [JsonPropertyName("fullName")]
 
+    [JsonPropertyName("fullName")]
     public String? FullName { get; set; }
 
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
+
     [JsonPropertyName("lastLogon")]
     public DateTimeOffset? LastLogon { get; set; }
+
     [JsonPropertyName("logonCount")]
     public Int32? LogonCount { get; set; }
-    [JsonPropertyName("updatedBy")]
 
+    [JsonPropertyName("updatedBy")]
     public String? UpdatedBy { get; set; }
 
     [JsonPropertyName("updatedDate")]
     public DateTimeOffset? UpdatedDate { get; set; }
+
     [JsonPropertyName("userIsAccessible")]
     public Boolean? UserIsAccessible { get; set; }
-    [JsonPropertyName("username")]
 
+    [JsonPropertyName("username")]
     public String? Username { get; set; }
 }
 

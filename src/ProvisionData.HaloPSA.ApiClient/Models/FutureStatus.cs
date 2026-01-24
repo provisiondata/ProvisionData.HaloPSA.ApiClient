@@ -21,6 +21,7 @@ public class FutureStatus
 
     [JsonPropertyName("item2")]
     public String Item2 { get; set; } = String.Empty;
+
     [JsonPropertyName("item3")]
     public DateTime Item3 { get; set; } = DateTime.UnixEpoch;
 

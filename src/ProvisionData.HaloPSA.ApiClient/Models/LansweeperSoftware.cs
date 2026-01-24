@@ -19,16 +19,14 @@ public partial class LansweeperSoftware
 {
     [JsonPropertyName("installDate")]
     public DateTimeOffset? InstallDate { get; set; }
-    [JsonPropertyName("name")]
 
+    [JsonPropertyName("name")]
     public String? Name { get; set; }
 
     [JsonPropertyName("publisher")]
-
     public String? Publisher { get; set; }
 
     [JsonPropertyName("version")]
-
     public String? Version { get; set; }
 }
 

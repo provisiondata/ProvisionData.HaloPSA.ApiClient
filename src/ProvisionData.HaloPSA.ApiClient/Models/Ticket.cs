@@ -27,6 +27,7 @@ public class Ticket
 
     [JsonPropertyName("ticket_name")]
     public String TicketName { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

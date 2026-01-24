@@ -18,38 +18,55 @@ public class CustomButton
 {
     [JsonPropertyName("guid")]
     public String Guid { get; set; } = String.Empty;
+
     [JsonPropertyName("intent")]
     public String Intent { get; set; } = String.Empty;
+
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("usage")]
     public Int32 Usage { get; set; }
+
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("label")]
     public String Label { get; set; } = String.Empty;
+
     [JsonPropertyName("seq")]
     public Int32 Seq { get; set; }
+
     [JsonPropertyName("icon")]
     public String Icon { get; set; } = String.Empty;
+
     [JsonPropertyName("url")]
     public String Url { get; set; } = String.Empty;
+
     [JsonPropertyName("newtab")]
     public Boolean NewTab { get; set; }
+
     [JsonPropertyName("msid")]
     public Int32 MsId { get; set; }
+
     [JsonPropertyName("type")]
     public Int32 Type { get; set; }
+
     [JsonPropertyName("runbook_id")]
     public String RunbookId { get; set; } = String.Empty;
+
     [JsonPropertyName("runbook_name")]
     public String RunbookName { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("button_visibility_ac")]
     public Int32 ButtonVisibilityAc { get; set; }
+
     [JsonPropertyName("restrict_by_asset_status")]
     public Boolean RestrictByAssetStatus { get; set; }
+
     [JsonPropertyName("button_visibility_statuses")]
     public ButtonVisibilityStatus[] ButtonVisibilityStatuses { get; set; } = [];
 }

@@ -21,6 +21,7 @@ public class User
 
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("site_id")]
     public Int32 SiteId { get; set; }
 
@@ -29,63 +30,88 @@ public class User
 
     [JsonPropertyName("site_name")]
     public String SiteName { get; set; } = String.Empty;
+
     [JsonPropertyName("client_name")]
     public String ClientName { get; set; } = String.Empty;
+
     [JsonPropertyName("firstname")]
     public String Firstname { get; set; } = String.Empty;
+
     [JsonPropertyName("surname")]
     public String Surname { get; set; } = String.Empty;
+
     [JsonPropertyName("initials")]
     public String Initials { get; set; } = String.Empty;
+
     [JsonPropertyName("title")]
     public String Title { get; set; } = String.Empty;
+
     [JsonPropertyName("emailaddress")]
     public String Emailaddress { get; set; } = String.Empty;
+
     [JsonPropertyName("phonenumber_preferred")]
     public String PhonenumberPreferred { get; set; } = String.Empty;
+
     [JsonPropertyName("sitephonenumber")]
     public String Sitephonenumber { get; set; } = String.Empty;
+
     [JsonPropertyName("phonenumber")]
     public String Phonenumber { get; set; } = String.Empty;
+
     [JsonPropertyName("homenumber")]
     public String Homenumber { get; set; } = String.Empty;
+
     [JsonPropertyName("mobilenumber")]
     public String Mobilenumber { get; set; } = String.Empty;
+
     [JsonPropertyName("mobilenumber2")]
     public String Mobilenumber2 { get; set; } = String.Empty;
+
     [JsonPropertyName("fax")]
     public String Fax { get; set; } = String.Empty;
+
     [JsonPropertyName("telpref")]
     public Int32 Telpref { get; set; }
 
     [JsonPropertyName("activedirectory_dn")]
     public String ActivedirectoryDn { get; set; } = String.Empty;
+
     [JsonPropertyName("onpremise_activedirectory_dn")]
     public String OnpremiseActivedirectoryDn { get; set; } = String.Empty;
+
     [JsonPropertyName("container_dn")]
     public String ContainerDn { get; set; } = String.Empty;
+
     [JsonPropertyName("login")]
     public String Login { get; set; } = String.Empty;
+
     [JsonPropertyName("inactive")]
     public Boolean Inactive { get; set; }
 
     [JsonPropertyName("colour")]
     public String Colour { get; set; } = String.Empty;
+
     [JsonPropertyName("isimportantcontact")]
     public Boolean Isimportantcontact { get; set; }
 
     [JsonPropertyName("other1")]
     public String Other1 { get; set; } = String.Empty;
+
     [JsonPropertyName("other2")]
     public String Other2 { get; set; } = String.Empty;
+
     [JsonPropertyName("other3")]
     public String Other3 { get; set; } = String.Empty;
+
     [JsonPropertyName("other4")]
     public String Other4 { get; set; } = String.Empty;
+
     [JsonPropertyName("other5")]
     public String Other5 { get; set; } = String.Empty;
+
     [JsonPropertyName("notes")]
     public String Notes { get; set; } = String.Empty;
+
     [JsonPropertyName("neversendemails")]
     public Boolean Neversendemails { get; set; }
 
@@ -94,10 +120,13 @@ public class User
 
     [JsonPropertyName("site_guid")]
     public String SiteGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("area_guid")]
     public String AreaGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("site_cautomate_guid")]
     public String SiteCautomateGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("priority_id")]
     public Int32 PriorityId { get; set; }
 
@@ -112,6 +141,7 @@ public class User
 
     [JsonPropertyName("software_role_name")]
     public String SoftwareRoleName { get; set; } = String.Empty;
+
     [JsonPropertyName("customfields")]
     public List<CustomField> Customfields { get; set; } = [];
 
@@ -141,6 +171,7 @@ public class User
 
     [JsonPropertyName("site_hubspot_guid")]
     public String SiteHubspotGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("isserviceaccount")]
     public Boolean Isserviceaccount { get; set; }
 
@@ -161,10 +192,13 @@ public class User
 
     [JsonPropertyName("role_list")]
     public String RoleList { get; set; } = String.Empty;
+
     [JsonPropertyName("sitetimezone")]
     public String Sitetimezone { get; set; } = String.Empty;
+
     [JsonPropertyName("use")]
     public String Use { get; set; } = String.Empty;
+
     [JsonPropertyName("client_id")]
     public Int32 ClientId { get; set; }
 
@@ -182,13 +216,16 @@ public class User
 
     [JsonPropertyName("overridepdftemplatequote_name")]
     public String OverridepdftemplatequoteName { get; set; } = String.Empty;
+
     [JsonPropertyName("contract_end_date")]
     public DateTime ContractEndDate { get; set; } = DateTime.UnixEpoch;
 
     [JsonPropertyName("okta_id")]
     public String OktaId { get; set; } = String.Empty;
+
     [JsonPropertyName("azure_id")]
     public String AzureId { get; set; } = String.Empty;
+
     [JsonPropertyName("user_with_clientsite")]
     public String UserWithClientsite { get; set; } = String.Empty;
 }

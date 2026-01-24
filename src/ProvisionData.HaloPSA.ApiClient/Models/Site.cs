@@ -91,9 +91,6 @@ public record Site
     [JsonPropertyName("client")]
     public Client? Client { get; set; }
 
-    [JsonPropertyName("popup_notes")]
-    public List<Object> PopupNotes { get; set; } = [];
-
     [JsonPropertyName("fields")]
     public List<Field> Fields { get; set; } = [];
 
@@ -172,29 +169,16 @@ public record Site
     [JsonPropertyName("use")]
     public String Use { get; set; } = String.Empty;
 
-    [JsonPropertyName("customfields")]
-    public List<Object> Customfields { get; set; } = [];
-
     [JsonPropertyName("itglue_id")]
     public String ItglueId { get; set; } = String.Empty;
-
-    [JsonPropertyName("custombuttons")]
-    public List<Object> Custombuttons { get; set; } = [];
 
     [JsonPropertyName("maincontact_id")]
     public Int32 MaincontactId { get; set; }
 
     [JsonPropertyName("site_item_tax_code")]
     public Int32 SiteItemTaxCode { get; set; }
+
     public List<Address> Addresses { get; set; } = [];
 
-}
-
-public class ListSitesResponse
-{
-    [JsonPropertyName("record_count")]
-    public Int32 RecordCount { get; set; }
-
-    [JsonPropertyName("sites")]
-    public List<Site> Sites { get; set; } = [];
+ 
 }

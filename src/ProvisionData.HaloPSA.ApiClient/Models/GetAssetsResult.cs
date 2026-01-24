@@ -18,16 +18,21 @@ public class GetAssetsResult
 {
     [JsonPropertyName("page_no")]
     public Int32 PageNo { get; set; }
+
     [JsonPropertyName("page_size")]
     public Int32 PageSize { get; set; }
+
     [JsonPropertyName("record_count")]
     public Int32 RecordCount { get; set; }
+
     [JsonPropertyName("assets")]
     public Asset[] Assets { get; set; } = [];
     [JsonPropertyName("columns_id")]
     public Int32 ColumnsId { get; set; }
+
     [JsonPropertyName("columns_tilehtml")]
     public String ColumnsTilehtml { get; set; } = String.Empty;
+
     [JsonPropertyName("columns")]
     public Column[] Columns { get; set; } = [];
     [JsonPropertyName("xtypeunamecancreatenew")]

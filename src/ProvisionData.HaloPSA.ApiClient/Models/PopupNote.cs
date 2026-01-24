@@ -14,20 +14,32 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-public class AllowedClient
+public record PopupNote
 {
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
+
     [JsonPropertyName("client_id")]
     public Int32 ClientId { get; set; }
 
-    [JsonPropertyName("client_name")]
-    public String ClientName { get; set; } = String.Empty;
+    [JsonPropertyName("date_created")]
+    public DateTime DateCreated { get; set; }
 
-    [JsonPropertyName("template_id")]
-    public Int32 TemplateId { get; set; }
+    [JsonPropertyName("note")]
+    public String Note { get; set; } = String.Empty;
 
-    [JsonPropertyName("todo_id")]
-    public Int32 TodoId { get; set; }
+    [JsonPropertyName("dismissable")]
+    public Boolean Dismissable { get; set; }
 
-    [JsonPropertyName("_warning")]
-    public String Warning { get; set; } = String.Empty;
+    [JsonPropertyName("read_status")]
+    public Int32 ReadStatus { get; set; }
+
+    [JsonPropertyName("displaymodal")]
+    public Boolean Displaymodal { get; set; }
+
+    [JsonPropertyName("displayhtml")]
+    public Boolean Displayhtml { get; set; }
+
+    [JsonPropertyName("limitdaterange")]
+    public Boolean Limitdaterange { get; set; }
 }

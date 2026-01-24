@@ -33,18 +33,22 @@ public class QuantityAsset
 
     [JsonPropertyName("type_name")]
     public String TypeName { get; set; } = String.Empty;
+
     [JsonPropertyName("device_group_name")]
     public String DeviceGroupName { get; set; } = String.Empty;
+
     [JsonPropertyName("site_id")]
     public Int32 SiteId { get; set; }
 
     [JsonPropertyName("site_name")]
     public String SiteName { get; set; } = String.Empty;
+
     [JsonPropertyName("licence_id")]
     public Int32 LicenceId { get; set; }
 
     [JsonPropertyName("licence_name")]
     public String LicenceName { get; set; } = String.Empty;
+
     [JsonPropertyName("assigned_licences")]
     public Boolean AssignedLicences { get; set; }
 
@@ -59,6 +63,7 @@ public class QuantityAsset
 
     [JsonPropertyName("criteria")]
     public List<Criterion> Criteria { get; set; } = [];
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

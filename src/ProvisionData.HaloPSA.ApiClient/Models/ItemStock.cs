@@ -19,82 +19,96 @@ public partial class ItemStock
 {
     [JsonPropertyName("cost")]
     public Double? Cost { get; set; }
+
     [JsonPropertyName("date")]
     public DateTimeOffset? Date { get; set; }
+
     [JsonPropertyName("delivering_to_user")]
     public Boolean? DeliveringToUser { get; set; }
+
     [JsonPropertyName("dont_track_stock")]
     public Boolean? DontTrackStock { get; set; }
+
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
+
     [JsonPropertyName("_isimport")]
     public Boolean? Isimport { get; set; }
+
     [JsonPropertyName("is_stock_take")]
     public Boolean? IsStockTake { get; set; }
+
     [JsonPropertyName("item_assettype_id")]
     public Int32? ItemAssettypeId { get; set; }
+
     [JsonPropertyName("item_id")]
     public Int32? ItemId { get; set; }
-    [JsonPropertyName("item_name")]
 
+    [JsonPropertyName("item_name")]
     public String? ItemName { get; set; }
 
     [JsonPropertyName("line_site_id")]
     public Int32? LineSiteId { get; set; }
-    [JsonPropertyName("note")]
 
+    [JsonPropertyName("note")]
     public String? Note { get; set; }
 
     [JsonPropertyName("purchaseorder_id")]
     public Int32? PurchaseorderId { get; set; }
+
     [JsonPropertyName("purchaseorder_line_id")]
     public Int32? PurchaseorderLineId { get; set; }
-    [JsonPropertyName("purchaseorder_ref")]
 
+    [JsonPropertyName("purchaseorder_ref")]
     public String? PurchaseorderRef { get; set; }
 
     [JsonPropertyName("quantity_in")]
     public Double? QuantityIn { get; set; }
+
     [JsonPropertyName("quantity_issued")]
     public Double? QuantityIssued { get; private set; }
     [JsonPropertyName("quantity_remaining")]
     public Double? QuantityRemaining { get; set; }
+
     [JsonPropertyName("real_quantity_in")]
     public Double? RealQuantityIn { get; set; }
+
     [JsonPropertyName("salesorder_id")]
     public Int32? SalesorderId { get; set; }
+
     [JsonPropertyName("serialised_asset_count")]
     public Int32? SerialisedAssetCount { get; set; }
+
     [JsonPropertyName("serialised_assets")]
-
-    public List<Device_List>? SerialisedAssets { get; set; }
-
+    public List<DeviceList>? SerialisedAssets { get; set; }
     [JsonPropertyName("serialised_assets_in_stock")]
     public Int32? SerialisedAssetsInStock { get; set; }
+
     [JsonPropertyName("serialise_only_one")]
     public Boolean? SerialiseOnlyOne { get; set; }
+
     [JsonPropertyName("stockbin_id")]
     public Int32? StockbinId { get; set; }
-    [JsonPropertyName("stockbin_name")]
 
+    [JsonPropertyName("stockbin_name")]
     public String? StockbinName { get; set; }
 
     [JsonPropertyName("stocklocation_id")]
     public Int32? StocklocationId { get; set; }
-    [JsonPropertyName("stocklocation_name")]
 
+    [JsonPropertyName("stocklocation_name")]
     public String? StocklocationName { get; set; }
 
     [JsonPropertyName("supplier_id")]
     public Int32? SupplierId { get; set; }
-    [JsonPropertyName("supplier_name")]
 
+    [JsonPropertyName("supplier_name")]
     public String? SupplierName { get; set; }
 
     [JsonPropertyName("ticket_id")]
     public Int32? TicketId { get; set; }
-    [JsonPropertyName("_warning")]
 
+    [JsonPropertyName("_warning")]
     public String? Warning { get; set; }
 }
 

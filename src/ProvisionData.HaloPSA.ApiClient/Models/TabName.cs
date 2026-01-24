@@ -20,47 +20,46 @@ public partial class Tabname
     [JsonPropertyName("columns")]
     public Int32? Columns { get; set; }
 
-    //[JsonPropertyName("fields")]
-    //public List<UntypedNode>? Fields { get; set; }
-
     [JsonPropertyName("guid")]
     public Guid? Guid { get; set; }
-    [JsonPropertyName("icon")]
 
+    [JsonPropertyName("icon")]
     public String? Icon { get; set; }
 
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
-    [JsonPropertyName("intent")]
 
+    [JsonPropertyName("intent")]
     public String? Intent { get; set; }
 
     [JsonPropertyName("linked_dashboard_id")]
     public Int32? LinkedDashboardId { get; set; }
+
     [JsonPropertyName("module_id")]
     public Int32? ModuleId { get; set; }
-    [JsonPropertyName("name")]
 
+    [JsonPropertyName("name")]
     public String? Name { get; set; }
 
     [JsonPropertyName("new_iframe_secret")]
-
     public String? NewIframeSecret { get; set; }
 
     [JsonPropertyName("open_in_new_tab")]
     public Boolean? OpenInNewTab { get; set; }
+
     [JsonPropertyName("send_secure_url_parameter")]
     public Boolean? SendSecureUrlParameter { get; set; }
+
     [JsonPropertyName("sequence")]
     public Int32? Sequence { get; set; }
+
     [JsonPropertyName("tableid")]
     public Int32? Tableid { get; set; }
-    [JsonPropertyName("url")]
 
+    [JsonPropertyName("url")]
     public String? Url { get; set; }
 
     [JsonPropertyName("_warning")]
-
     public String? Warning { get; set; }
 }
 

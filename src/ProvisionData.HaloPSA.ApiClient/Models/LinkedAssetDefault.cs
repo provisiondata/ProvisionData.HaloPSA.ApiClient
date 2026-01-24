@@ -30,6 +30,7 @@ public class LinkedAssetDefault
 
     [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

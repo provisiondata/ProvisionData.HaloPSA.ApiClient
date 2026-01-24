@@ -18,11 +18,9 @@ public partial class DynatraceRelationship
 
 {
     [JsonPropertyName("id")]
-
     public String? Id { get; set; }
 
     [JsonPropertyName("type")]
-
     public String? Type { get; set; }
 }
 

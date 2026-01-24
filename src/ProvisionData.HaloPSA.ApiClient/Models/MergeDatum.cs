@@ -36,6 +36,7 @@ public class MergeDatum
 
     [JsonPropertyName("contract_ref")]
     public String ContractRef { get; set; } = String.Empty;
+
     [JsonPropertyName("salesorder_id")]
     public Int32 SalesorderId { get; set; }
 

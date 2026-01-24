@@ -18,31 +18,24 @@ public partial class LansweeperRelation
 
 {
     [JsonPropertyName("childAssetKey")]
-
     public String? ChildAssetKey { get; set; }
 
     [JsonPropertyName("comment")]
-
     public String? Comment { get; set; }
 
     [JsonPropertyName("endDate")]
-
     public String? EndDate { get; set; }
 
     [JsonPropertyName("lastChanged")]
-
     public String? LastChanged { get; set; }
 
     [JsonPropertyName("name")]
-
     public String? Name { get; set; }
 
     [JsonPropertyName("parentAssetKey")]
-
     public String? ParentAssetKey { get; set; }
 
     [JsonPropertyName("startDate")]
-
     public String? StartDate { get; set; }
 }
 

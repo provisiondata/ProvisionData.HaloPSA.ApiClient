@@ -24,8 +24,10 @@ public class Group
 
     [JsonPropertyName("text")]
     public String Text { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("todo_list")]
     public List<TodoList> TodoList { get; set; } = [];
 }

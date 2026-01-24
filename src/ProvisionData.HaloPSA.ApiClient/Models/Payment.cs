@@ -39,39 +39,49 @@ public class Payment
 
     [JsonPropertyName("intent_id")]
     public String IntentId { get; set; } = String.Empty;
+
     [JsonPropertyName("intent_date")]
     public DateTime IntentDate { get; set; } = DateTime.UnixEpoch;
 
     [JsonPropertyName("intent_response")]
     public String IntentResponse { get; set; } = String.Empty;
+
     [JsonPropertyName("webhook_payload")]
     public String WebhookPayload { get; set; } = String.Empty;
+
     [JsonPropertyName("webhook_received_date")]
     public DateTime WebhookReceivedDate { get; set; } = DateTime.UnixEpoch;
 
     [JsonPropertyName("sage50_reference")]
     public String Sage50Reference { get; set; } = String.Empty;
+
     [JsonPropertyName("thirdpartyid")]
     public String Thirdpartyid { get; set; } = String.Empty;
+
     [JsonPropertyName("client_id")]
     public Int32 ClientId { get; set; }
 
     [JsonPropertyName("client_name")]
     public String ClientName { get; set; } = String.Empty;
+
     [JsonPropertyName("_statuswarning")]
     public String Statuswarning { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("qbo_id")]
     public Int32 QboId { get; set; }
 
     [JsonPropertyName("xero_id")]
     public String XeroId { get; set; } = String.Empty;
+
     [JsonPropertyName("_isimport")]
     public Boolean Isimport { get; set; }
 
     [JsonPropertyName("_importtype")]
     public String Importtype { get; set; } = String.Empty;
+
     [JsonPropertyName("sqlimport_id")]
     public Int32 SqlimportId { get; set; }
 

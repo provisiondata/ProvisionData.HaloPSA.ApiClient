@@ -18,16 +18,22 @@ public class ValidationData
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("fiid")]
     public Int32 FiId { get; set; }
+
     [JsonPropertyName("filinktoid")]
     public Int32 FilinkToId { get; set; }
+
     [JsonPropertyName("validationtype")]
     public Int32 ValidationType { get; set; }
+
     [JsonPropertyName("askforreason")]
     public Boolean AskForReason { get; set; }
+
     [JsonPropertyName("hours")]
     public Int32 Hours { get; set; }
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

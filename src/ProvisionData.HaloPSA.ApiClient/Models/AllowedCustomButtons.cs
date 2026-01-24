@@ -18,12 +18,16 @@ public class AllowedCustomButtons
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("xtype_id")]
     public Int32 XTypeId { get; set; }
+
     [JsonPropertyName("xtype_name")]
     public String XTypeName { get; set; } = String.Empty;
+
     [JsonPropertyName("custombutton_id")]
     public Int32 CustomButtonId { get; set; }
+
     [JsonPropertyName("custombutton_name")]
     public String CustomButtonName { get; set; } = String.Empty;
 }

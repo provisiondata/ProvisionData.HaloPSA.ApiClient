@@ -21,12 +21,16 @@ public class Service
 
     [JsonPropertyName("guid")]
     public String Guid { get; set; } = String.Empty;
+
     [JsonPropertyName("intent")]
     public String Intent { get; set; } = String.Empty;
+
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("summary")]
     public String Summary { get; set; } = String.Empty;
+
     [JsonPropertyName("sequence")]
     public Int32 Sequence { get; set; }
 
@@ -44,38 +48,46 @@ public class Service
 
     [JsonPropertyName("service_category_guid")]
     public String ServiceCategoryGuid { get; set; } = String.Empty;
+
     [JsonPropertyName("service_category_name")]
     public String ServiceCategoryName { get; set; } = String.Empty;
+
     [JsonPropertyName("business_owner_id")]
     public Int32 BusinessOwnerId { get; set; }
 
     [JsonPropertyName("business_owner_name")]
     public String BusinessOwnerName { get; set; } = String.Empty;
+
     [JsonPropertyName("business_owner_cab_id")]
     public Int32 BusinessOwnerCabId { get; set; }
 
     [JsonPropertyName("business_owner_cab_name")]
     public String BusinessOwnerCabName { get; set; } = String.Empty;
+
     [JsonPropertyName("technical_owner_id")]
     public Int32 TechnicalOwnerId { get; set; }
 
     [JsonPropertyName("technical_owner_name")]
     public String TechnicalOwnerName { get; set; } = String.Empty;
+
     [JsonPropertyName("technical_owner_cab_id")]
     public Int32 TechnicalOwnerCabId { get; set; }
 
     [JsonPropertyName("technical_owner_cab_name")]
     public String TechnicalOwnerCabName { get; set; } = String.Empty;
+
     [JsonPropertyName("compliance_owner_id")]
     public Int32 ComplianceOwnerId { get; set; }
 
     [JsonPropertyName("compliance_owner_name")]
     public String ComplianceOwnerName { get; set; } = String.Empty;
+
     [JsonPropertyName("compliance_owner_cab_id")]
     public Int32 ComplianceOwnerCabId { get; set; }
 
     [JsonPropertyName("compliance_owner_cab_name")]
     public String ComplianceOwnerCabName { get; set; } = String.Empty;
+
     [JsonPropertyName("cost")]
     public Int32 Cost { get; set; }
 
@@ -99,13 +111,16 @@ public class Service
 
     [JsonPropertyName("assettype_ids")]
     public String AssettypeIds { get; set; } = String.Empty;
+
     [JsonPropertyName("current_status")]
     public Int32 CurrentStatus { get; set; }
 
     [JsonPropertyName("status_message_update_internal")]
     public String StatusMessageUpdateInternal { get; set; } = String.Empty;
+
     [JsonPropertyName("status_message_update_public")]
     public String StatusMessageUpdatePublic { get; set; } = String.Empty;
+
     [JsonPropertyName("using_default_public_message")]
     public Boolean UsingDefaultPublicMessage { get; set; }
 
@@ -153,6 +168,7 @@ public class Service
 
     [JsonPropertyName("requestdetail_url")]
     public String RequestdetailUrl { get; set; } = String.Empty;
+
     [JsonPropertyName("requestdetail_shownewreqscreen")]
     public Boolean RequestdetailShownewreqscreen { get; set; }
 
@@ -185,26 +201,37 @@ public class Service
 
     [JsonPropertyName("use")]
     public String Use { get; set; } = String.Empty;
+
     [JsonPropertyName("icon")]
     public String Icon { get; set; } = String.Empty;
+
     [JsonPropertyName("relatedworkdayid_name")]
     public String RelatedworkdayidName { get; set; } = String.Empty;
+
     [JsonPropertyName("relatedworkdayid_content")]
     public String RelatedworkdayidContent { get; set; } = String.Empty;
+
     [JsonPropertyName("status_message_update_internal_html")]
     public String StatusMessageUpdateInternalHtml { get; set; } = String.Empty;
+
     [JsonPropertyName("status_message_update_public_html")]
     public String StatusMessageUpdatePublicHtml { get; set; } = String.Empty;
+
     [JsonPropertyName("future_statuses")]
     public List<FutureStatus> FutureStatuses { get; set; } = [];
+
     [JsonPropertyName("current_statuses")]
     public List<CurrentStatus> CurrentStatuses { get; set; } = [];
+
     [JsonPropertyName("service_url")]
     public String ServiceUrl { get; set; } = String.Empty;
+
     [JsonPropertyName("incident_url")]
     public String IncidentUrl { get; set; } = String.Empty;
+
     [JsonPropertyName("access_control")]
     public List<AccessControl> AccessControl { get; set; } = [];
+
     [JsonPropertyName("access_control_level")]
     public Int32 AccessControlLevel { get; set; }
 

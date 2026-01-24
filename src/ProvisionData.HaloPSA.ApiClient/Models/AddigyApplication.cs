@@ -19,12 +19,16 @@ public partial class AddigyApplication
 {
     [JsonPropertyName("agentid")]
     public String? Agentid { get; set; }
+
     [JsonPropertyName("name")]
     public String? Name { get; set; }
+
     [JsonPropertyName("orgid")]
     public String? Orgid { get; set; }
+
     [JsonPropertyName("path")]
     public String? Path { get; set; }
+
     [JsonPropertyName("version")]
     public String? Version { get; set; }
 }

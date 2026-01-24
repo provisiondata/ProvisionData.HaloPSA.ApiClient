@@ -13,25 +13,15 @@
 // program. If not, see <https://www.gnu.org/licenses/>.
 
 using Flurl;
-using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ProvisionData.HaloPSA.ApiClient.Models;
-using System.Data;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApiClientOptions> options, TimeProvider timeProvider, ILogger<HaloPsaApiClient> logger)
     : HaloPsaApiClientBase(httpClient, options.Value, timeProvider, logger)
 {
-    protected IDbConnection GetDbConnection()
-    {
-        var connectionString = Options.ConnectionString;
-        var connection = new SqlConnection(connectionString);
-        connection.Open();
-        return connection;
-    }
-
     public async Task<InstanceInfo> GetInstanceInfo(CancellationToken cancellationToken = default)
     {
         try

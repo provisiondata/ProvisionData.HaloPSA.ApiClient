@@ -20,7 +20,6 @@
     "ApiUrl": "https://your-instance.halopsa.com/api/",
     "ClientId": "your-client-id",
     "ClientSecret": "your-client-secret",
-    "ConnectionString": "Server=localhost;Database=Halo;Trusted_Connection=True;",
     "PageSize": 50
   }
 }

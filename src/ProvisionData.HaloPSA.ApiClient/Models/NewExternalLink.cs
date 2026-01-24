@@ -30,14 +30,19 @@ public class NewExternalLink
 
     [JsonPropertyName("third_party_id")]
     public String ThirdPartyId { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_desc")]
     public String ThirdPartyDesc { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_type")]
     public String ThirdPartyType { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_url")]
     public String ThirdPartyUrl { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_assigned_to")]
     public String ThirdPartyAssignedTo { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_count")]
     public Int32 ThirdPartyCount { get; set; }
 
@@ -46,24 +51,31 @@ public class NewExternalLink
 
     [JsonPropertyName("halo_desc")]
     public String HaloDesc { get; set; } = String.Empty;
+
     [JsonPropertyName("halo_second_id")]
     public Int32 HaloSecondId { get; set; }
 
     [JsonPropertyName("halo_second_desc")]
     public String HaloSecondDesc { get; set; } = String.Empty;
+
     [JsonPropertyName("extra_match_field")]
     public String ExtraMatchField { get; set; } = String.Empty;
+
     [JsonPropertyName("details_id")]
     public Int32 DetailsId { get; set; }
 
     [JsonPropertyName("third_party_secondary_id")]
     public String ThirdPartySecondaryId { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_status")]
     public String ThirdPartyStatus { get; set; } = String.Empty;
+
     [JsonPropertyName("third_party_priority")]
     public String ThirdPartyPriority { get; set; } = String.Empty;
+
     [JsonPropertyName("_match")]
     public Boolean Match { get; set; }
 
@@ -78,8 +90,10 @@ public class NewExternalLink
 
     [JsonPropertyName("subscription_id")]
     public String SubscriptionId { get; set; } = String.Empty;
+
     [JsonPropertyName("new_subscription_key")]
     public String NewSubscriptionKey { get; set; } = String.Empty;
+
     [JsonPropertyName("subscription_expiry")]
     public DateTime SubscriptionExpiry { get; set; } = DateTime.UnixEpoch;
 

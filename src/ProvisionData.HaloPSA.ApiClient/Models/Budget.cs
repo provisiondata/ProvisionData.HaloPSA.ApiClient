@@ -39,6 +39,7 @@ public class Budget
 
     [JsonPropertyName("budgettype_name")]
     public String BudgettypeName { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

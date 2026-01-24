@@ -18,20 +18,28 @@ public class Subscriber
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("criteriagroup_id")]
     public Int32 CriteriaGroupId { get; set; }
+
     [JsonPropertyName("service_name")]
     public String ServiceName { get; set; } = String.Empty;
+
     [JsonPropertyName("type")]
     public String Type { get; set; } = String.Empty;
+
     [JsonPropertyName("data_id")]
     public Int32 DataId { get; set; }
+
     [JsonPropertyName("data_name")]
     public String DataName { get; set; } = String.Empty;
+
     [JsonPropertyName("emailupdates")]
     public Boolean EmailUpdates { get; set; }
+
     [JsonPropertyName("subscriber_type")]
     public Int32 SubscriberType { get; set; }
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

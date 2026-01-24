@@ -21,16 +21,22 @@ public class QuickbooksDetails
 
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("country")]
     public String Country { get; set; } = String.Empty;
+
     [JsonPropertyName("company_id")]
     public String CompanyId { get; set; } = String.Empty;
+
     [JsonPropertyName("company_name")]
     public String CompanyName { get; set; } = String.Empty;
+
     [JsonPropertyName("new_access_token")]
     public String NewAccessToken { get; set; } = String.Empty;
+
     [JsonPropertyName("new_refresh_token")]
     public String NewRefreshToken { get; set; } = String.Empty;
+
     [JsonPropertyName("token_expiry")]
     public DateTime TokenExpiry { get; set; } = DateTime.UnixEpoch;
 
@@ -39,8 +45,10 @@ public class QuickbooksDetails
 
     [JsonPropertyName("redirect_uri")]
     public String RedirectUri { get; set; } = String.Empty;
+
     [JsonPropertyName("authorization_code")]
     public String AuthorizationCode { get; set; } = String.Empty;
+
     [JsonPropertyName("_exchangecode")]
     public Boolean Exchangecode { get; set; }
 
@@ -49,6 +57,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("_importtype")]
     public String Importtype { get; set; } = String.Empty;
+
     [JsonPropertyName("new_method")]
     public Boolean NewMethod { get; set; }
 
@@ -60,15 +69,19 @@ public class QuickbooksDetails
 
     [JsonPropertyName("api_url")]
     public String ApiUrl { get; set; } = String.Empty;
+
     [JsonPropertyName("client_id")]
     public String ClientId { get; set; } = String.Empty;
+
     [JsonPropertyName("new_client_secret")]
     public String NewClientSecret { get; set; } = String.Empty;
+
     [JsonPropertyName("default_tax_code_id")]
     public Int32 DefaultTaxCodeId { get; set; }
 
     [JsonPropertyName("default_tax_code_name")]
     public String DefaultTaxCodeName { get; set; } = String.Empty;
+
     [JsonPropertyName("default_tax_code")]
     public DefaultTaxCode DefaultTaxCode { get; set; } = default!;
 
@@ -77,6 +90,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("zero_tax_rate_name")]
     public String ZeroTaxRateName { get; set; } = String.Empty;
+
     [JsonPropertyName("zero_tax_rate")]
     public ZeroTaxRate ZeroTaxRate { get; set; } = default!;
 
@@ -85,6 +99,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("client_top_level_name")]
     public String ClientTopLevelName { get; set; } = String.Empty;
+
     [JsonPropertyName("client_name_field")]
     public Int32 ClientNameField { get; set; }
 
@@ -93,23 +108,28 @@ public class QuickbooksDetails
 
     [JsonPropertyName("inventory_item_group_name")]
     public String InventoryItemGroupName { get; set; } = String.Empty;
+
     [JsonPropertyName("non_inventory_item_group")]
     public Int32 NonInventoryItemGroup { get; set; }
 
     [JsonPropertyName("non_inventory_item_group_name")]
     public String NonInventoryItemGroupName { get; set; } = String.Empty;
+
     [JsonPropertyName("service_item_group")]
     public Int32 ServiceItemGroup { get; set; }
 
     [JsonPropertyName("service_item_group_name")]
     public String ServiceItemGroupName { get; set; } = String.Empty;
+
     [JsonPropertyName("enable_sync")]
     public Boolean EnableSync { get; set; }
 
     [JsonPropertyName("sync_entities")]
     public String SyncEntities { get; set; } = String.Empty;
+
     [JsonPropertyName("sync_entities_list")]
     public List<SyncEntitiesList> SyncEntitiesList { get; set; } = [];
+
     [JsonPropertyName("show_message")]
     public Boolean ShowMessage { get; set; }
 
@@ -124,8 +144,10 @@ public class QuickbooksDetails
 
     [JsonPropertyName("default_invoice_item_name")]
     public String DefaultInvoiceItemName { get; set; } = String.Empty;
+
     [JsonPropertyName("default_order_item_name")]
     public String DefaultOrderItemName { get; set; } = String.Empty;
+
     [JsonPropertyName("invoice_email_status")]
     public Int32 InvoiceEmailStatus { get; set; }
 
@@ -134,6 +156,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("supplier_top_level_name")]
     public String SupplierTopLevelName { get; set; } = String.Empty;
+
     [JsonPropertyName("supplier_name_field")]
     public Int32 SupplierNameField { get; set; }
 
@@ -142,6 +165,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("default_order_account_name")]
     public String DefaultOrderAccountName { get; set; } = String.Empty;
+
     [JsonPropertyName("default_order_account")]
     public Account DefaultOrderAccount { get; set; } = default!;
 
@@ -156,6 +180,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("default_sales_account_name")]
     public String DefaultSalesAccountName { get; set; } = String.Empty;
+
     [JsonPropertyName("default_sales_account")]
     public Account DefaultSalesAccount { get; set; } = default!;
 
@@ -164,6 +189,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("default_expense_account_name")]
     public String DefaultExpenseAccountName { get; set; } = String.Empty;
+
     [JsonPropertyName("default_expense_account")]
     public Account DefaultExpenseAccount { get; set; } = default!;
 
@@ -172,6 +198,7 @@ public class QuickbooksDetails
 
     [JsonPropertyName("default_asset_account_name")]
     public String DefaultAssetAccountName { get; set; } = String.Empty;
+
     [JsonPropertyName("default_asset_account")]
     public Account DefaultAssetAccount { get; set; } = default!;
 
@@ -207,11 +234,13 @@ public class QuickbooksDetails
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("default_deferred_code_id")]
     public Int32 DefaultDeferredCodeId { get; set; }
 
     [JsonPropertyName("default_deferred_code_name")]
     public String DefaultDeferredCodeName { get; set; } = String.Empty;
+
     [JsonPropertyName("default_deferred_account")]
     public Account DefaultDeferredAccount { get; set; } = default!;
 }

@@ -36,16 +36,19 @@ public class TaxRuleResult
 
     [JsonPropertyName("taxcode")]
     public String Taxcode { get; set; } = String.Empty;
+
     [JsonPropertyName("module_id")]
     public Int32 ModuleId { get; set; }
 
     [JsonPropertyName("third_party_id")]
     public String ThirdPartyId { get; set; } = String.Empty;
+
     [JsonPropertyName("datecreated")]
     public DateTime Datecreated { get; set; } = DateTime.UnixEpoch;
 
     [JsonPropertyName("thirdpartyname")]
     public String Thirdpartyname { get; set; } = String.Empty;
+
     [JsonPropertyName("taxid")]
     public Int32 Taxid { get; set; }
 

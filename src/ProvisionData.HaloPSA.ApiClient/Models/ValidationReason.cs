@@ -18,6 +18,7 @@ public class ValidationReason
 {
     [JsonPropertyName("id")]
     public String Id { get; set; } = String.Empty;
+
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
 }

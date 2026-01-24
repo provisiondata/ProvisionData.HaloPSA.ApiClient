@@ -24,10 +24,13 @@ public class Criterion
 
     [JsonPropertyName("tablename")]
     public String Tablename { get; set; } = String.Empty;
+
     [JsonPropertyName("fieldname")]
     public String Fieldname { get; set; } = String.Empty;
+
     [JsonPropertyName("value_type")]
     public String ValueType { get; set; } = String.Empty;
+
     [JsonPropertyName("value_int")]
     public Int32 ValueInt { get; set; }
 
@@ -36,11 +39,13 @@ public class Criterion
 
     [JsonPropertyName("value_string")]
     public String ValueString { get; set; } = String.Empty;
+
     [JsonPropertyName("value_datetime")]
     public DateTime ValueDatetime { get; set; } = DateTime.UnixEpoch;
 
     [JsonPropertyName("value_display")]
     public String ValueDisplay { get; set; } = String.Empty;
+
     [JsonPropertyName("type")]
     public Int32 Type { get; set; }
 

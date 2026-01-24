@@ -14,20 +14,11 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-public class AllowedClient
+public class ListSitesResponse
 {
-    [JsonPropertyName("client_id")]
-    public Int32 ClientId { get; set; }
+    [JsonPropertyName("record_count")]
+    public Int32 RecordCount { get; set; }
 
-    [JsonPropertyName("client_name")]
-    public String ClientName { get; set; } = String.Empty;
-
-    [JsonPropertyName("template_id")]
-    public Int32 TemplateId { get; set; }
-
-    [JsonPropertyName("todo_id")]
-    public Int32 TodoId { get; set; }
-
-    [JsonPropertyName("_warning")]
-    public String Warning { get; set; } = String.Empty;
+    [JsonPropertyName("sites")]
+    public List<Site> Sites { get; set; } = [];
 }

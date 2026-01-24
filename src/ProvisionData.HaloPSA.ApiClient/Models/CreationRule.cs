@@ -36,6 +36,7 @@ public class CreationRule
 
     [JsonPropertyName("createonchildclose_name")]
     public String CreateonchildcloseName { get; set; } = String.Empty;
+
     [JsonPropertyName("working_days")]
     public Int32 WorkingDays { get; set; }
 
@@ -44,6 +45,7 @@ public class CreationRule
 
     [JsonPropertyName("outcome_name")]
     public String OutcomeName { get; set; } = String.Empty;
+
     [JsonPropertyName("field_id")]
     public Int32 FieldId { get; set; }
 
@@ -52,10 +54,13 @@ public class CreationRule
 
     [JsonPropertyName("field_value_string")]
     public String FieldValueString { get; set; } = String.Empty;
+
     [JsonPropertyName("field_contains")]
     public String FieldContains { get; set; } = String.Empty;
+
     [JsonPropertyName("field_name")]
     public String FieldName { get; set; } = String.Empty;
+
     [JsonPropertyName("approvalstatus")]
     public Int32 Approvalstatus { get; set; }
 

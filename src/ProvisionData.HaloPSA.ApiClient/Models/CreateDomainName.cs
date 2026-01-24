@@ -21,7 +21,6 @@ public class CreateDomainName
 
     [JsonPropertyName("assettype_id")]
     public required Int32 AssettypeId { get; init; } = 141;
-
     [JsonPropertyName("inventory_number")]
     public required String InventoryNumber { get; set; }
 

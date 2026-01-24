@@ -12,7 +12,6 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using Dapper;
 using Flurl;
 using Microsoft.Extensions.Logging;
 using ProvisionData.HaloPSA.ApiClient.Models;
@@ -88,8 +87,6 @@ public partial class HaloPsaApiClient
     public Task UpdateRecurringInvoiceAsync(RecurringInvoice value, CancellationToken cancellationToken = default)
         => throw new NotImplementedException();
 
-    const String UpdateRecurringScheduleSql = "UPDATE HaloPSA.dbo.STDREQUEST SET STDNextCreationDate=@NextCreationDate WHERE stdid=@Id;";
-
     public async Task CreateRecurringInvoiceSchedule(RecurringInvoice invoice, CancellationToken cancellationToken = default)
     {
         var schedule = new CreateRecurringInvoiceSchedule(invoice.Id)
@@ -111,12 +108,6 @@ public partial class HaloPsaApiClient
 
             var poco = new UpdateRecurringScheduleRequest() { Id = scheduleResponse.Id, NextCreationDate = invoice.Schedule.NextCreationDate };
             Logger.LogDebug("CreateRecurringInvoiceSchedule Response: {json}", json);
-
-            var result = await GetDbConnection().ExecuteAsync(UpdateRecurringScheduleSql, new { scheduleResponse.Id, invoice.Schedule.NextCreationDate });
-            if (result == 1)
-            {
-                Logger.LogInformation("Recurring Schedule Updated: {InvoiceID} {ScheduleId}", invoice.Id, scheduleResponse.Id);
-            }
         }
         catch (Exception ex)
         {

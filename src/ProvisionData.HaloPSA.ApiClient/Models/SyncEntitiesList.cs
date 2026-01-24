@@ -18,8 +18,10 @@ public class SyncEntitiesList
 {
     [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
+
     [JsonPropertyName("label")]
     public String Label { get; set; } = String.Empty;
+
     [JsonPropertyName("isnew")]
     public Boolean Isnew { get; set; }
 }

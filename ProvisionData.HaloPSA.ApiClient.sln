@@ -13,12 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev", "dev", "{4B8794A0-C7E
 		Directory.Build.props = Directory.Build.props
 		LICENSE.md = LICENSE.md
 		README.md = README.md
+		scratch.txt = scratch.txt
+		version.json = version.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{DE079EBB-AC02-4FF5-AE9F-9887ACDEBF89}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\ci.yml = .github\workflows\ci.yml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{DABE038C-58B5-43FD-8CD6-1AFF6F0564A8}"
 	ProjectSection(SolutionItems) = preProject
@@ -27,7 +26,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{97FDE202-0638-4D9D-8BC9-173AC7EC127D}"
 	ProjectSection(SolutionItems) = preProject
+		docs\CONVENTIONS.md = docs\CONVENTIONS.md
 		docs\NUIGET.md = docs\NUIGET.md
+		docs\TODO.md = docs\TODO.md
+		docs\USAGE.md = docs\USAGE.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C6CA5124-02E2-43FE-A1CF-DC83D2CDA645}"

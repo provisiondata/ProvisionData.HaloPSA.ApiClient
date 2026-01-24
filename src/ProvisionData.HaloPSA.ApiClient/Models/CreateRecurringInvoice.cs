@@ -61,7 +61,6 @@ public record CreateRecurringInvoice //: InvoiceBase
 
     [JsonPropertyName("lines")]
     public required List<CreateInvoiceLine> Lines { get; set; }
-
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("schedule_date")]
     public DateTime? ScheduleDate { get; set; }
@@ -118,12 +117,6 @@ public record CreateRecurringInvoice //: InvoiceBase
     [JsonPropertyName("enddate")]
     public DateTime? EndDate { get; set; }
 
-    //[JsonPropertyName("period_start_date")]
-    //public DateTime PeriodStartDate { get; set; }
-
-    //[JsonPropertyName("period_end_date")]
-    //public DateTime PeriodEndDate { get; set; }
-
     [JsonPropertyName("nextcreationperiod")]
     public required String NextCreationPeriod { get; set; }
 
@@ -145,54 +138,11 @@ public record CreateRecurringInvoice //: InvoiceBase
     [JsonPropertyName("last_synced")]
     public required DateTime LastSynced { get; set; }
 
-    //[JsonPropertyName("_print_preview")]
-    //public Boolean PrintPreview { get; set; }
-
-    //[JsonPropertyName("_print_generate")]
-    //public Boolean PrintGenerate { get; set; }
-
-    //[JsonPropertyName("_is_invoice_run")]
-    //public Boolean IsInvoiceRun { get; set; }
-
-    //[JsonPropertyName("_billing_cut_off")]
-    //public DateTime BillingCutOff { get; set; }
-
-    //[JsonPropertyName("_create_from_areaitems")]
-    //public List<CreateFromAreaitem> CreateFromAreaitems { get; set; }
-
-    //[JsonPropertyName("_create_from_contract")]
-    //public Int32 CreateFromContract { get; set; }
-
-    //[JsonPropertyName("_validateonly")]
-    //public Boolean Validateonly { get; set; }
-
-    //[JsonPropertyName("_sendmassinvoice")]
-    //public Boolean Sendmassinvoice { get; set; }
-
-    //[JsonPropertyName("_isimport")]
-    //public Boolean IsImport { get; set; } = true;
-
-    //[JsonPropertyName("_importtype")]
-    //public String Importtype { get; set; }
-
-    //[JsonPropertyName("_create_credit_note")]
-    //public Boolean CreateCreditNote { get; set; }
-
     [JsonPropertyName("_dont_fire_automations")]
     public Boolean DontFireAutomations { get; set; }
-
-    //[JsonPropertyName("_is_process")]
-    //public Boolean IsProcess { get; set; }
 
     [JsonPropertyName("_is_task_schedule")]
     public Boolean IsTaskSchedule { get; set; } = true;
 
-    //[JsonPropertyName("_forcethirdpartysync")]
-    //public Boolean Forcethirdpartysync { get; set; }
-
-    //[JsonPropertyName("_novalidate")]
-    //public Boolean Novalidate { get; set; }
-
-    //[JsonPropertyName("_dotaxsync")]
-    //public Boolean Dotaxsync { get; set; }
+ 
 }

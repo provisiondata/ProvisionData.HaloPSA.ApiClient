@@ -27,6 +27,7 @@ public class Dependency
 
     [JsonPropertyName("parent_name")]
     public String ParentName { get; set; } = String.Empty;
+
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

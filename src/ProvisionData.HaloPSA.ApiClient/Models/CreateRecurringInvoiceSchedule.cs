@@ -35,7 +35,6 @@ public partial class CreateRecurringInvoiceSchedule(Int64 invoiceId)
     public required DateTime LastCreated { get; set; }
 
     // Properties with Default Values
-
     [JsonPropertyName("daysplus")]
     public Int64 Daysplus { get; set; }
 
@@ -55,7 +54,6 @@ public partial class CreateRecurringInvoiceSchedule(Int64 invoiceId)
     public Boolean CreateOnNonWorkDays { get; set; } = true;
 
     // Optional Properties
-
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("id")]
     public Int64? Id { get; set; }

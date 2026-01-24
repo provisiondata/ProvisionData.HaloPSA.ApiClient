@@ -18,6 +18,7 @@ public class AddLine
 {
     [JsonPropertyName("customfields")]
     public List<CustomField> Customfields { get; set; } = [];
+
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
 
@@ -26,14 +27,19 @@ public class AddLine
 
     [JsonPropertyName("item_code")]
     public String ItemCode { get; set; } = String.Empty;
+
     [JsonPropertyName("item_shortdescription")]
     public String ItemShortdescription { get; set; } = String.Empty;
+
     [JsonPropertyName("item_longdescription")]
     public String ItemLongdescription { get; set; } = String.Empty;
+
     [JsonPropertyName("nominal_code")]
     public String NominalCode { get; set; } = String.Empty;
+
     [JsonPropertyName("tax_code")]
     public String TaxCode { get; set; } = String.Empty;
+
     [JsonPropertyName("qty_order")]
     public Int32 QtyOrder { get; set; }
 
@@ -51,8 +57,10 @@ public class AddLine
 
     [JsonPropertyName("comment_1")]
     public String Comment1 { get; set; } = String.Empty;
+
     [JsonPropertyName("comment_2")]
     public String Comment2 { get; set; } = String.Empty;
+
     [JsonPropertyName("itemonorder")]
     public Boolean Itemonorder { get; set; }
 
@@ -67,6 +75,7 @@ public class AddLine
 
     [JsonPropertyName("productnumber")]
     public String Productnumber { get; set; } = String.Empty;
+
     [JsonPropertyName("unit_cost")]
     public Int32 UnitCost { get; set; }
 
@@ -75,6 +84,7 @@ public class AddLine
 
     [JsonPropertyName("asset_inventory_number")]
     public String AssetInventoryNumber { get; set; } = String.Empty;
+
     [JsonPropertyName("contract_id")]
     public Int32 ContractId { get; set; }
 
@@ -131,6 +141,7 @@ public class AddLine
 
     [JsonPropertyName("xero_lineid")]
     public String XeroLineid { get; set; } = String.Empty;
+
     [JsonPropertyName("prepay_id")]
     public Int32 PrepayId { get; set; }
 
@@ -148,17 +159,22 @@ public class AddLine
 
     [JsonPropertyName("entity_type")]
     public String EntityType { get; set; } = String.Empty;
+
     [JsonPropertyName("item_internal_reference")]
     public String ItemInternalReference { get; set; } = String.Empty;
+
     [JsonPropertyName("item_external_reference")]
     public String ItemExternalReference { get; set; } = String.Empty;
+
     [JsonPropertyName("linked_item")]
     public LinkedItem LinkedItem { get; set; } = default!;
 
     [JsonPropertyName("item_tax_name")]
     public String ItemTaxName { get; set; } = String.Empty;
+
     [JsonPropertyName("xero_tax_code")]
     public String XeroTaxCode { get; set; } = String.Empty;
+
     [JsonPropertyName("override_ast_total")]
     public Int32 OverrideAstTotal { get; set; }
 
@@ -173,8 +189,10 @@ public class AddLine
 
     [JsonPropertyName("prorata_shortdescription")]
     public String ProrataShortdescription { get; set; } = String.Empty;
+
     [JsonPropertyName("prorata_longdescription")]
     public String ProrataLongdescription { get; set; } = String.Empty;
+
     [JsonPropertyName("isinactive")]
     public Boolean Isinactive { get; set; }
 
@@ -210,21 +228,28 @@ public class AddLine
 
     [JsonPropertyName("prorata_data")]
     public List<ProrataDatum> ProrataData { get; set; } = [];
+
     [JsonPropertyName("quantity_users")]
     public List<QuantityUser> QuantityUsers { get; set; } = [];
+
     [JsonPropertyName("quantity_assets")]
     public List<QuantityAsset> QuantityAssets { get; set; } = [];
+
     [JsonPropertyName("quantity_licences")]
     public List<QuantityLicence> QuantityLicences { get; set; } = [];
+
     [JsonPropertyName("quantity_subscriptions")]
     public List<QuantitySubscription> QuantitySubscriptions { get; set; } = [];
+
     [JsonPropertyName("recurring_invoice_quantity_type")]
     public Int32 RecurringInvoiceQuantityType { get; set; }
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("tax_name")]
     public String TaxName { get; set; } = String.Empty;
+
     [JsonPropertyName("_isimport")]
     public Boolean Isimport { get; set; }
 
@@ -254,8 +279,10 @@ public class AddLine
 
     [JsonPropertyName("intacct_location_id")]
     public String IntacctLocationId { get; set; } = String.Empty;
+
     [JsonPropertyName("intacct_department_id")]
     public String IntacctDepartmentId { get; set; } = String.Empty;
+
     [JsonPropertyName("synced_to_intacct")]
     public Boolean SyncedToIntacct { get; set; }
 
@@ -291,10 +318,13 @@ public class AddLine
 
     [JsonPropertyName("client_name")]
     public String ClientName { get; set; } = String.Empty;
+
     [JsonPropertyName("_importtype")]
     public String Importtype { get; set; } = String.Empty;
+
     [JsonPropertyName("dbc_id")]
     public String DbcId { get; set; } = String.Empty;
+
     [JsonPropertyName("purchaseorder_id")]
     public Int32 PurchaseorderId { get; set; }
 
@@ -321,13 +351,16 @@ public class AddLine
 
     [JsonPropertyName("supplier_name")]
     public String SupplierName { get; set; } = String.Empty;
+
     [JsonPropertyName("hide_on_pdf")]
     public Boolean HideOnPdf { get; set; }
 
     [JsonPropertyName("intacct_warehouse_id")]
     public String IntacctWarehouseId { get; set; } = String.Empty;
+
     [JsonPropertyName("invoice_class")]
     public String InvoiceClass { get; set; } = String.Empty;
+
     [JsonPropertyName("percent_invoiced")]
     public Int32 PercentInvoiced { get; set; }
 
@@ -336,6 +369,7 @@ public class AddLine
 
     [JsonPropertyName("meter_tiers")]
     public List<MeterTier> MeterTiers { get; set; } = [];
+
     [JsonPropertyName("meter_min_quantity")]
     public Int32 MeterMinQuantity { get; set; }
 
@@ -344,8 +378,10 @@ public class AddLine
 
     [JsonPropertyName("myob_row_version")]
     public String MyobRowVersion { get; set; } = String.Empty;
+
     [JsonPropertyName("myob_location")]
     public String MyobLocation { get; set; } = String.Empty;
+
     [JsonPropertyName("myob_row_id")]
     public Int32 MyobRowId { get; set; }
 

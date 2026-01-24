@@ -19,20 +19,28 @@ public partial class RTPermission
 {
     [JsonPropertyName("create")]
     public Boolean? Create { get; set; }
+
     [JsonPropertyName("downloadatt")]
     public Boolean? Downloadatt { get; set; }
+
     [JsonPropertyName("edit")]
     public Boolean? Edit { get; set; }
+
     [JsonPropertyName("editatt")]
     public Boolean? Editatt { get; set; }
+
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
+
     [JsonPropertyName("read")]
     public Boolean? Read { get; set; }
+
     [JsonPropertyName("uploadatt")]
     public Boolean? Uploadatt { get; set; }
+
     [JsonPropertyName("viewactionhistory")]
     public Boolean? Viewactionhistory { get; set; }
+
     [JsonPropertyName("viewatt")]
     public Boolean? Viewatt { get; set; }
 }

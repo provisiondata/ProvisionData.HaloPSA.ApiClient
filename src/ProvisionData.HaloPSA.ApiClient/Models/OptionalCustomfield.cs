@@ -21,20 +21,25 @@ public class OptionalCustomfield
 
     [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
+
     [JsonPropertyName("label")]
     public String Label { get; set; } = String.Empty;
+
     [JsonPropertyName("summary")]
     public String Summary { get; set; } = String.Empty;
+
     [JsonPropertyName("type")]
     public Int32 Type { get; set; }
 
     [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
+
     [JsonPropertyName("value_is_password_id")]
     public Boolean ValueIsPasswordId { get; set; }
 
     [JsonPropertyName("display")]
     public String Display { get; set; } = String.Empty;
+
     [JsonPropertyName("characterlimit")]
     public Int32 Characterlimit { get; set; }
 
@@ -64,8 +69,10 @@ public class OptionalCustomfield
 
     [JsonPropertyName("database_lookup_triggers")]
     public List<DatabaseLookupTrigger> DatabaseLookupTriggers { get; set; } = [];
+
     [JsonPropertyName("third_party_name")]
     public String ThirdPartyName { get; set; } = String.Empty;
+
     [JsonPropertyName("extratype")]
     public Int32 Extratype { get; set; }
 
@@ -74,6 +81,7 @@ public class OptionalCustomfield
 
     [JsonPropertyName("hyperlink")]
     public String Hyperlink { get; set; } = String.Empty;
+
     [JsonPropertyName("usage")]
     public Int32 Usage { get; set; }
 
@@ -85,6 +93,7 @@ public class OptionalCustomfield
 
     [JsonPropertyName("third_party_value")]
     public String ThirdPartyValue { get; set; } = String.Empty;
+
     [JsonPropertyName("custom_extra_table_id")]
     public Int32 CustomExtraTableId { get; set; }
 
@@ -93,13 +102,16 @@ public class OptionalCustomfield
 
     [JsonPropertyName("calculation")]
     public String Calculation { get; set; } = String.Empty;
+
     [JsonPropertyName("validation_reasons")]
     public List<ValidationReason> ValidationReasons { get; set; } = [];
+
     [JsonPropertyName("int_value_is_display")]
     public Boolean IntValueIsDisplay { get; set; }
 
     [JsonPropertyName("regex")]
     public String Regex { get; set; } = String.Empty;
+
     [JsonPropertyName("onlyshowforagents")]
     public Boolean Onlyshowforagents { get; set; }
 
@@ -120,10 +132,13 @@ public class OptionalCustomfield
 
     [JsonPropertyName("variable_format_1")]
     public String VariableFormat1 { get; set; } = String.Empty;
+
     [JsonPropertyName("variable_format_2")]
     public String VariableFormat2 { get; set; } = String.Empty;
+
     [JsonPropertyName("validation_data")]
     public List<ValidationData> ValidationData { get; set; } = [];
+
     [JsonPropertyName("database_lookup_input")]
     public Int32 DatabaseLookupInput { get; set; }
 

@@ -36,8 +36,10 @@ public class ProrataDatum
 
     [JsonPropertyName("shortdescription")]
     public String Shortdescription { get; set; } = String.Empty;
+
     [JsonPropertyName("longdescription")]
     public String Longdescription { get; set; } = String.Empty;
+
     [JsonPropertyName("quantity_id")]
     public Int32 QuantityId { get; set; }
 
@@ -58,6 +60,7 @@ public class ProrataDatum
 
     [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
+
     [JsonPropertyName("isinvoiced")]
     public Boolean Isinvoiced { get; set; }
 

@@ -18,166 +18,148 @@ public partial class Lookup
 
 {
     [JsonPropertyName("access_control")]
-
     public List<AccessControl>? AccessControl { get; set; }
-
     [JsonPropertyName("access_control_level")]
     public Int32? AccessControlLevel { get; set; }
-    [JsonPropertyName("column_profile_name")]
 
+    [JsonPropertyName("column_profile_name")]
     public String? ColumnProfileName { get; set; }
 
     [JsonPropertyName("contract_ref")]
-
     public String? ContractRef { get; set; }
 
     [JsonPropertyName("custom1")]
-
     public String? Custom1 { get; set; }
 
     [JsonPropertyName("custom1_bool")]
     public Boolean? Custom1Bool { get; set; }
-    [JsonPropertyName("custom2")]
 
+    [JsonPropertyName("custom2")]
     public String? Custom2 { get; set; }
 
     [JsonPropertyName("dynamics_company_name")]
-
     public String? DynamicsCompanyName { get; set; }
 
     [JsonPropertyName("email_template_name")]
-
     public String? EmailTemplateName { get; set; }
 
     [JsonPropertyName("id")]
     public Int32? Id { get; set; }
-    [JsonPropertyName("_importtype")]
 
+    [JsonPropertyName("_importtype")]
     public String? Importtype { get; set; }
 
     [JsonPropertyName("inactive")]
     public Boolean? Inactive { get; set; }
-    [JsonPropertyName("intent")]
 
+    [JsonPropertyName("intent")]
     public String? Intent { get; set; }
 
     [JsonPropertyName("_isimport")]
     public Boolean? Isimport { get; set; }
+
     [JsonPropertyName("_isnewcode")]
     public Boolean? Isnewcode { get; set; }
-    [JsonPropertyName("jira_instance_name")]
 
+    [JsonPropertyName("jira_instance_name")]
     public String? JiraInstanceName { get; set; }
 
     [JsonPropertyName("kashflow_tenant")]
-
     public String? KashflowTenant { get; set; }
 
     [JsonPropertyName("linked_item")]
-
     public String? LinkedItem { get; set; }
 
     [JsonPropertyName("lookupid")]
     public Int32? Lookupid { get; set; }
-    [JsonPropertyName("name")]
 
+    [JsonPropertyName("name")]
     public String? Name { get; set; }
 
     [JsonPropertyName("originalvalue")]
-
     public String? Originalvalue { get; set; }
 
     [JsonPropertyName("overriding_rate_id")]
     public Int32? OverridingRateId { get; set; }
 
-    //[JsonPropertyName("rates")]
-    //public List<UntypedNode>? Rates { get; set; }
-
     [JsonPropertyName("sequence")]
     public Int32? Sequence { get; set; }
-    [JsonPropertyName("sla_name")]
 
+    [JsonPropertyName("sla_name")]
     public String? SlaName { get; set; }
 
     [JsonPropertyName("sub_lookup")]
-
     public List<Lookup>? SubLookup { get; set; }
-
     [JsonPropertyName("surcharge_item_name")]
-
     public String? SurchargeItemName { get; set; }
 
     [JsonPropertyName("tax_rate_name")]
-
     public String? TaxRateName { get; set; }
 
-    //[JsonPropertyName("translations")]
-    //public List<UntypedNode>? Translations { get; set; }
-
     [JsonPropertyName("value10")]
-
     public String? Value10 { get; set; }
 
     [JsonPropertyName("value10_bool")]
     public Boolean? Value10Bool { get; set; }
-    [JsonPropertyName("value2")]
 
+    [JsonPropertyName("value2")]
     public String? Value2 { get; set; }
 
     [JsonPropertyName("value2_bool")]
     public Boolean? Value2Bool { get; set; }
+
     [JsonPropertyName("value2_guid")]
     public Guid? Value2Guid { get; set; }
-    [JsonPropertyName("value3")]
 
+    [JsonPropertyName("value3")]
     public String? Value3 { get; set; }
 
     [JsonPropertyName("value3_bool")]
     public Boolean? Value3Bool { get; set; }
-    [JsonPropertyName("value4")]
 
+    [JsonPropertyName("value4")]
     public String? Value4 { get; set; }
 
     [JsonPropertyName("value4_bool")]
     public Boolean? Value4Bool { get; set; }
-    [JsonPropertyName("value5")]
 
+    [JsonPropertyName("value5")]
     public String? Value5 { get; set; }
 
     [JsonPropertyName("value5_bool")]
     public Boolean? Value5Bool { get; set; }
-    [JsonPropertyName("value6")]
 
+    [JsonPropertyName("value6")]
     public String? Value6 { get; set; }
 
     [JsonPropertyName("value6_bool")]
     public Boolean? Value6Bool { get; set; }
-    [JsonPropertyName("value7")]
 
+    [JsonPropertyName("value7")]
     public String? Value7 { get; set; }
 
     [JsonPropertyName("value7_bool")]
     public Boolean? Value7Bool { get; set; }
-    [JsonPropertyName("value8")]
 
+    [JsonPropertyName("value8")]
     public String? Value8 { get; set; }
 
     [JsonPropertyName("value8_bool")]
     public Boolean? Value8Bool { get; set; }
-    [JsonPropertyName("value9")]
 
+    [JsonPropertyName("value9")]
     public String? Value9 { get; set; }
 
     [JsonPropertyName("value9_bool")]
     public Boolean? Value9Bool { get; set; }
+
     [JsonPropertyName("valueint1")]
     public Int32? Valueint1 { get; set; }
-    [JsonPropertyName("_warning")]
 
+    [JsonPropertyName("_warning")]
     public String? Warning { get; set; }
 
     [JsonPropertyName("xero_tenant_name")]
-
     public String? XeroTenantName { get; set; }
 }
 

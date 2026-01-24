@@ -30,6 +30,7 @@ public class CreateFromAreaitem
 
     [JsonPropertyName("areaitemdesc")]
     public String Areaitemdesc { get; set; } = String.Empty;
+
     [JsonPropertyName("billingperiod_id")]
     public Int32 BillingperiodId { get; set; }
 
@@ -38,6 +39,7 @@ public class CreateFromAreaitem
 
     [JsonPropertyName("invoicenumber")]
     public String Invoicenumber { get; set; } = String.Empty;
+
     [JsonPropertyName("lastinvoicedate")]
     public DateTime Lastinvoicedate { get; set; } = DateTime.UnixEpoch;
 
@@ -49,6 +51,7 @@ public class CreateFromAreaitem
 
     [JsonPropertyName("note")]
     public String Note { get; set; } = String.Empty;
+
     [JsonPropertyName("costprice")]
     public Int32 Costprice { get; set; }
 
@@ -57,6 +60,7 @@ public class CreateFromAreaitem
 
     [JsonPropertyName("accounts_id")]
     public String AccountsId { get; set; } = String.Empty;
+
     [JsonPropertyName("numberdayswarning")]
     public Int32 Numberdayswarning { get; set; }
 

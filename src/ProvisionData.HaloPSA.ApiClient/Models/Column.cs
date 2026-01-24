@@ -18,22 +18,31 @@ public class Column
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
+
     [JsonPropertyName("columns_id")]
     public Int32 ColumnsId { get; set; }
+
     [JsonPropertyName("column_seq")]
     public Int32 ColumnSeq { get; set; }
+
     [JsonPropertyName("column_name")]
     public String ColumnName { get; set; } = String.Empty;
+
     [JsonPropertyName("width")]
     public Int32 Width { get; set; }
+
     [JsonPropertyName("order_seq")]
     public Int32 OrderSeq { get; set; }
+
     [JsonPropertyName("order_desc")]
     public Boolean OrderDesc { get; set; }
+
     [JsonPropertyName("column_title_override")]
     public String ColumnTitleOverride { get; set; } = String.Empty;
+
     [JsonPropertyName("groupbystatus")]
     public Int32 GroupByStatus { get; set; }
+
     [JsonPropertyName("columns_guid")]
     public String ColumnsGuid { get; set; } = String.Empty;
 }
