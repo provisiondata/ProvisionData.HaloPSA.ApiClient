@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -14,17 +14,15 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-
-
 public partial class QualysHostAssetSoftwareHostAssetSoftware
 
 {
-	[JsonPropertyName("name")]
+    [JsonPropertyName("name")]
 
-	public String? Name { get; set; }
+    public String? Name { get; set; }
 
-	[JsonPropertyName("version")]
+    [JsonPropertyName("version")]
 
-	public String? Version { get; set; }
+    public String? Version { get; set; }
 }
 

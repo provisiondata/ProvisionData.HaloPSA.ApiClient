@@ -1,0 +1,69 @@
+﻿name: CI
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: windows-latest
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --configuration Release --no-build --verbosity normal
+      - name: Pack
+        run: dotnet pack src/ProvisionData.HaloPSA.ApiClient/ProvisionData.HaloPSA.ApiClient.csproj --configuration Release --no-build /p:ContinuousIntegrationBuild=true
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget
+          path: src/ProvisionData.HaloPSA.ApiClient/bin/Release/*.nupkg
+
+  publish:
+    needs: build-test
+    if: github.ref_type == 'tag'
+    runs-on: windows-latest
+    environment: production
+    permissions:
+      id-token: write  # enable GitHub OIDC token issuance for this job
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Pack
+        run: dotnet pack src/ProvisionData.HaloPSA.ApiClient/ProvisionData.HaloPSA.ApiClient.csproj --configuration Release --no-build /p:ContinuousIntegrationBuild=true
+
+      # Get a short-lived NuGet API key
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ secrets.NUGET_USER }} # Environment Secret
+
+      - name: Publish to NuGet
+        run: dotnet nuget push src/ProvisionData.HaloPSA.ApiClient/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{steps.login.outputs.NUGET_API_KEY}} --skip-duplicate

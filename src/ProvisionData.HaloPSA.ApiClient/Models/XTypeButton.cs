@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -14,23 +14,21 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-
-
 public partial class XTypeButton
 
 {
-	[JsonPropertyName("custombutton_id")]
-	public Int32? CustombuttonId { get; set; }
-	[JsonPropertyName("custombutton_name")]
+    [JsonPropertyName("custombutton_id")]
+    public Int32? CustombuttonId { get; set; }
+    [JsonPropertyName("custombutton_name")]
 
-	public String? CustombuttonName { get; set; }
+    public String? CustombuttonName { get; set; }
 
-	[JsonPropertyName("id")]
-	public Int32? Id { get; set; }
-	[JsonPropertyName("xtype_id")]
-	public Int32? XtypeId { get; set; }
-	[JsonPropertyName("xtype_name")]
+    [JsonPropertyName("id")]
+    public Int32? Id { get; set; }
+    [JsonPropertyName("xtype_id")]
+    public Int32? XtypeId { get; set; }
+    [JsonPropertyName("xtype_name")]
 
-	public String? XtypeName { get; set; }
+    public String? XtypeName { get; set; }
 }
 

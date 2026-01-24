@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -14,33 +14,31 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-
-
 public partial class SnowComputerUserAbstract
 
 {
-	[JsonPropertyName("customerId")]
-	public Int32? CustomerId { get; set; }
-	[JsonPropertyName("fullName")]
+    [JsonPropertyName("customerId")]
+    public Int32? CustomerId { get; set; }
+    [JsonPropertyName("fullName")]
 
-	public String? FullName { get; set; }
+    public String? FullName { get; set; }
 
-	[JsonPropertyName("id")]
-	public Int32? Id { get; set; }
-	[JsonPropertyName("lastLogon")]
-	public DateTimeOffset? LastLogon { get; set; }
-	[JsonPropertyName("logonCount")]
-	public Int32? LogonCount { get; set; }
-	[JsonPropertyName("updatedBy")]
+    [JsonPropertyName("id")]
+    public Int32? Id { get; set; }
+    [JsonPropertyName("lastLogon")]
+    public DateTimeOffset? LastLogon { get; set; }
+    [JsonPropertyName("logonCount")]
+    public Int32? LogonCount { get; set; }
+    [JsonPropertyName("updatedBy")]
 
-	public String? UpdatedBy { get; set; }
+    public String? UpdatedBy { get; set; }
 
-	[JsonPropertyName("updatedDate")]
-	public DateTimeOffset? UpdatedDate { get; set; }
-	[JsonPropertyName("userIsAccessible")]
-	public Boolean? UserIsAccessible { get; set; }
-	[JsonPropertyName("username")]
+    [JsonPropertyName("updatedDate")]
+    public DateTimeOffset? UpdatedDate { get; set; }
+    [JsonPropertyName("userIsAccessible")]
+    public Boolean? UserIsAccessible { get; set; }
+    [JsonPropertyName("username")]
 
-	public String? Username { get; set; }
+    public String? Username { get; set; }
 }
 

@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,10 +16,10 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class SyncEntitiesList
 {
-	[JsonPropertyName("value")]
+    [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
-	[JsonPropertyName("label")]
+    [JsonPropertyName("label")]
     public String Label { get; set; } = String.Empty;
-	[JsonPropertyName("isnew")]
-	public Boolean Isnew { get; set; }
+    [JsonPropertyName("isnew")]
+    public Boolean Isnew { get; set; }
 }

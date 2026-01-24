@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -14,17 +14,15 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-
-
 public partial class DeviceUserCount
 
 {
-	[JsonPropertyName("count")]
-	public Int32? Count { get; set; }
-	[JsonPropertyName("id")]
-	public Int32? Id { get; set; }
-	[JsonPropertyName("name")]
+    [JsonPropertyName("count")]
+    public Int32? Count { get; set; }
+    [JsonPropertyName("id")]
+    public Int32? Id { get; set; }
+    [JsonPropertyName("name")]
 
-	public String? Name { get; set; }
+    public String? Name { get; set; }
 }
 

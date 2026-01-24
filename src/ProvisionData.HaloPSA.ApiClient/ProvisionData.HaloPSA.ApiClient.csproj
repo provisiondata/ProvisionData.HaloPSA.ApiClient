@@ -1,34 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net10.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <!-- NuGet package metadata -->
+        <PackageId>ProvisionData.HaloPSA.ApiClient</PackageId>
+        <Title>ProvisionData HaloPSA API Client</Title>
+        <Description>HaloPSA API Client for .NET providing typed models and client helpers.</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.Identity" Version="1.17.1" />
-        <PackageReference Include="CsvHelper" Version="33.1.0" />
-        <PackageReference Include="Dapper" Version="2.1.66" />
-        <PackageReference Include="Flurl" Version="4.0.0" />
-        <PackageReference Include="JsonSubTypes" Version="2.0.1" />
-        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.2" />
-        <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.2" />
-        <PackageReference Include="Microsoft.Kiota.Abstractions" Version="1.21.2" />
-        <PackageReference Include="Microsoft.Kiota.Authentication.Azure" Version="1.21.2" />
-        <PackageReference Include="Microsoft.Kiota.Http.HttpClientLibrary" Version="1.21.2" />
-        <PackageReference Include="Microsoft.Kiota.Serialization.Form" Version="1.21.2" />
-        <PackageReference Include="Microsoft.Kiota.Serialization.Json" Version="1.21.2" />
-        <PackageReference Include="Microsoft.Kiota.Serialization.Multipart" Version="1.21.2" />
-        <PackageReference Include="Microsoft.Kiota.Serialization.Text" Version="1.21.2" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-        <PackageReference Include="Polly" Version="8.6.5" />
-        <PackageReference Include="RestSharp" Version="113.1.0" />
+        <Using Include="System.Text.Json.Serialization" />
     </ItemGroup>
 
-	<ItemGroup>
-		<Using Include="System.Text.Json.Serialization" />
-	</ItemGroup>
-	
+    <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.1.66" />
+        <PackageReference Include="Flurl" Version="4.0.0" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.2" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All" />
+        <PackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" PrivateAssets="All" />
+        <PackageReference Include="Polly" Version="8.6.5" />
+    </ItemGroup>
+
 </Project>

@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -17,112 +17,112 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 public partial class ExternalLinkList
 
 {
-	[JsonPropertyName("chat_message_count")]
-	public Int32? ChatMessageCount { get; set; }
-	[JsonPropertyName("date_created")]
-	public DateTimeOffset? DateCreated { get; set; }
-	[JsonPropertyName("date_updated")]
-	public DateTimeOffset? DateUpdated { get; set; }
-	[JsonPropertyName("description")]
+    [JsonPropertyName("chat_message_count")]
+    public Int32? ChatMessageCount { get; set; }
+    [JsonPropertyName("date_created")]
+    public DateTimeOffset? DateCreated { get; set; }
+    [JsonPropertyName("date_updated")]
+    public DateTimeOffset? DateUpdated { get; set; }
+    [JsonPropertyName("description")]
 
-	public String? Description { get; set; }
+    public String? Description { get; set; }
 
-	[JsonPropertyName("details_id")]
-	public Int32? DetailsId { get; set; }
-	[JsonPropertyName("dont_move_existing_assets")]
-	public Boolean? DontMoveExistingAssets { get; set; }
-	[JsonPropertyName("extra_match_field")]
+    [JsonPropertyName("details_id")]
+    public Int32? DetailsId { get; set; }
+    [JsonPropertyName("dont_move_existing_assets")]
+    public Boolean? DontMoveExistingAssets { get; set; }
+    [JsonPropertyName("extra_match_field")]
 
-	public String? ExtraMatchField { get; set; }
+    public String? ExtraMatchField { get; set; }
 
-	//[JsonPropertyName("filters")]
-	//public List<UntypedNode>? Filters { get; set; }
+    //[JsonPropertyName("filters")]
+    //public List<UntypedNode>? Filters { get; set; }
 
-	[JsonPropertyName("halo_desc")]
+    [JsonPropertyName("halo_desc")]
 
-	public String? HaloDesc { get; set; }
+    public String? HaloDesc { get; set; }
 
-	[JsonPropertyName("halo_id")]
-	public Int32? HaloId { get; set; }
-	[JsonPropertyName("halo_second_desc")]
+    [JsonPropertyName("halo_id")]
+    public Int32? HaloId { get; set; }
+    [JsonPropertyName("halo_second_desc")]
 
-	public String? HaloSecondDesc { get; set; }
+    public String? HaloSecondDesc { get; set; }
 
-	[JsonPropertyName("halo_second_id")]
-	public Int32? HaloSecondId { get; set; }
-	[JsonPropertyName("id")]
-	public Int32? Id { get; set; }
-	[JsonPropertyName("integration_name")]
+    [JsonPropertyName("halo_second_id")]
+    public Int32? HaloSecondId { get; set; }
+    [JsonPropertyName("id")]
+    public Int32? Id { get; set; }
+    [JsonPropertyName("integration_name")]
 
-	public String? IntegrationName { get; set; }
+    public String? IntegrationName { get; set; }
 
-	[JsonPropertyName("_match")]
-	public Boolean? Match { get; set; }
-	[JsonPropertyName("module_id")]
-	public Int32? ModuleId { get; set; }
-	[JsonPropertyName("new_subscription_key")]
+    [JsonPropertyName("_match")]
+    public Boolean? Match { get; set; }
+    [JsonPropertyName("module_id")]
+    public Int32? ModuleId { get; set; }
+    [JsonPropertyName("new_subscription_key")]
 
-	public String? NewSubscriptionKey { get; set; }
+    public String? NewSubscriptionKey { get; set; }
 
-	[JsonPropertyName("populate_url")]
-	public Boolean? PopulateUrl { get; set; }
-	[JsonPropertyName("primary")]
-	public Boolean? Primary { get; set; }
-	[JsonPropertyName("revisions")]
-	public Int32? Revisions { get; set; }
-	[JsonPropertyName("subscription_expiry")]
-	public DateTimeOffset? SubscriptionExpiry { get; set; }
-	[JsonPropertyName("subscription_id")]
+    [JsonPropertyName("populate_url")]
+    public Boolean? PopulateUrl { get; set; }
+    [JsonPropertyName("primary")]
+    public Boolean? Primary { get; set; }
+    [JsonPropertyName("revisions")]
+    public Int32? Revisions { get; set; }
+    [JsonPropertyName("subscription_expiry")]
+    public DateTimeOffset? SubscriptionExpiry { get; set; }
+    [JsonPropertyName("subscription_id")]
 
-	public String? SubscriptionId { get; set; }
+    public String? SubscriptionId { get; set; }
 
-	[JsonPropertyName("table_id")]
-	public Int32? TableId { get; set; }
-	[JsonPropertyName("third_party_additional_id")]
+    [JsonPropertyName("table_id")]
+    public Int32? TableId { get; set; }
+    [JsonPropertyName("third_party_additional_id")]
 
-	public String? ThirdPartyAdditionalId { get; set; }
+    public String? ThirdPartyAdditionalId { get; set; }
 
-	[JsonPropertyName("third_party_assigned_to")]
+    [JsonPropertyName("third_party_assigned_to")]
 
-	public String? ThirdPartyAssignedTo { get; set; }
+    public String? ThirdPartyAssignedTo { get; set; }
 
-	[JsonPropertyName("third_party_count")]
-	public Int64? ThirdPartyCount { get; set; }
-	[JsonPropertyName("third_party_desc")]
+    [JsonPropertyName("third_party_count")]
+    public Int64? ThirdPartyCount { get; set; }
+    [JsonPropertyName("third_party_desc")]
 
-	public String? ThirdPartyDesc { get; set; }
+    public String? ThirdPartyDesc { get; set; }
 
-	[JsonPropertyName("third_party_id")]
+    [JsonPropertyName("third_party_id")]
 
-	public String? ThirdPartyId { get; set; }
+    public String? ThirdPartyId { get; set; }
 
-	[JsonPropertyName("third_party_priority")]
+    [JsonPropertyName("third_party_priority")]
 
-	public String? ThirdPartyPriority { get; set; }
+    public String? ThirdPartyPriority { get; set; }
 
-	[JsonPropertyName("third_party_secondary_id")]
+    [JsonPropertyName("third_party_secondary_id")]
 
-	public String? ThirdPartySecondaryId { get; set; }
+    public String? ThirdPartySecondaryId { get; set; }
 
-	[JsonPropertyName("third_party_status")]
+    [JsonPropertyName("third_party_status")]
 
-	public String? ThirdPartyStatus { get; set; }
+    public String? ThirdPartyStatus { get; set; }
 
-	[JsonPropertyName("third_party_type")]
+    [JsonPropertyName("third_party_type")]
 
-	public String? ThirdPartyType { get; set; }
+    public String? ThirdPartyType { get; set; }
 
-	[JsonPropertyName("third_party_url")]
+    [JsonPropertyName("third_party_url")]
 
-	public String? ThirdPartyUrl { get; set; }
+    public String? ThirdPartyUrl { get; set; }
 
-	[JsonPropertyName("update_existing_link")]
-	public Boolean? UpdateExistingLink { get; set; }
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("update_existing_link")]
+    public Boolean? UpdateExistingLink { get; set; }
+    [JsonPropertyName("_warning")]
 
-	public String? Warning { get; set; }
+    public String? Warning { get; set; }
 
-	//[JsonPropertyName("_webhookaction")]
-	//public UntypedNode? Webhookaction { get; set; }
+    //[JsonPropertyName("_webhookaction")]
+    //public UntypedNode? Webhookaction { get; set; }
 }
 

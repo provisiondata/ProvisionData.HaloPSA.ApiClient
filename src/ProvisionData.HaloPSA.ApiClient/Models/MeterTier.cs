@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,21 +16,21 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class MeterTier
 {
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-	[JsonPropertyName("idid")]
-	public Int32 Idid { get; set; }
+    [JsonPropertyName("idid")]
+    public Int32 Idid { get; set; }
 
-	[JsonPropertyName("minquantity")]
-	public Int32 Minquantity { get; set; }
+    [JsonPropertyName("minquantity")]
+    public Int32 Minquantity { get; set; }
 
-	[JsonPropertyName("maxquantity")]
-	public Int32 Maxquantity { get; set; }
+    [JsonPropertyName("maxquantity")]
+    public Int32 Maxquantity { get; set; }
 
-	[JsonPropertyName("price")]
-	public Int32 Price { get; set; }
+    [JsonPropertyName("price")]
+    public Int32 Price { get; set; }
 
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

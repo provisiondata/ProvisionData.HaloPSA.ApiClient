@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,62 +16,62 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class SiteField
 {
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-	[JsonPropertyName("name")]
+    [JsonPropertyName("name")]
     public String Name { get; set; } = String.Empty;
-	[JsonPropertyName("validate")]
+    [JsonPropertyName("validate")]
     public String Validate { get; set; } = String.Empty;
-	[JsonPropertyName("value")]
+    [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
-	[JsonPropertyName("display")]
+    [JsonPropertyName("display")]
     public String Display { get; set; } = String.Empty;
-	[JsonPropertyName("mandatory")]
-	public Boolean Mandatory { get; set; }
+    [JsonPropertyName("mandatory")]
+    public Boolean Mandatory { get; set; }
 
-	[JsonPropertyName("showonactivity")]
-	public Boolean Showonactivity { get; set; }
+    [JsonPropertyName("showonactivity")]
+    public Boolean Showonactivity { get; set; }
 
-	[JsonPropertyName("lookup")]
-	public Int32 Lookup { get; set; }
+    [JsonPropertyName("lookup")]
+    public Int32 Lookup { get; set; }
 
-	[JsonPropertyName("systemuse")]
-	public Int32 Systemuse { get; set; }
+    [JsonPropertyName("systemuse")]
+    public Int32 Systemuse { get; set; }
 
-	[JsonPropertyName("parenttype_id")]
-	public Int32 ParenttypeId { get; set; }
+    [JsonPropertyName("parenttype_id")]
+    public Int32 ParenttypeId { get; set; }
 
-	[JsonPropertyName("url")]
+    [JsonPropertyName("url")]
     public String Url { get; set; } = String.Empty;
-	[JsonPropertyName("mapping_id")]
-	public Int32 MappingId { get; set; }
+    [JsonPropertyName("mapping_id")]
+    public Int32 MappingId { get; set; }
 
-	[JsonPropertyName("access_level")]
-	public Int32 AccessLevel { get; set; }
+    [JsonPropertyName("access_level")]
+    public Int32 AccessLevel { get; set; }
 
-	[JsonPropertyName("typeinfo_id")]
-	public Int32 TypeinfoId { get; set; }
+    [JsonPropertyName("typeinfo_id")]
+    public Int32 TypeinfoId { get; set; }
 
-	[JsonPropertyName("tab_id")]
-	public Int32 TabId { get; set; }
+    [JsonPropertyName("tab_id")]
+    public Int32 TabId { get; set; }
 
-	[JsonPropertyName("tab_name")]
+    [JsonPropertyName("tab_name")]
     public String TabName { get; set; } = String.Empty;
-	[JsonPropertyName("tab_sequence")]
-	public Int32 TabSequence { get; set; }
+    [JsonPropertyName("tab_sequence")]
+    public Int32 TabSequence { get; set; }
 
-	[JsonPropertyName("tab_columns")]
-	public Int32 TabColumns { get; set; }
+    [JsonPropertyName("tab_columns")]
+    public Int32 TabColumns { get; set; }
 
-	[JsonPropertyName("groupname")]
+    [JsonPropertyName("groupname")]
     public String Groupname { get; set; } = String.Empty;
-	[JsonPropertyName("techdetail")]
-	public Int32 Techdetail { get; set; }
+    [JsonPropertyName("techdetail")]
+    public Int32 Techdetail { get; set; }
 
-	[JsonPropertyName("userdetail")]
-	public Int32 Userdetail { get; set; }
+    [JsonPropertyName("userdetail")]
+    public Int32 Userdetail { get; set; }
 
-	[JsonPropertyName("visibility_conditions")]
+    [JsonPropertyName("visibility_conditions")]
     public List<VisibilityCondition> VisibilityConditions { get; set; } = [];
 }

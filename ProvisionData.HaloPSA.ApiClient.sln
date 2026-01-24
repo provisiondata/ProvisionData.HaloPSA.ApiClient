@@ -1,17 +1,40 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.2.11415.280 d18.0
+VisualStudioVersion = 18.2.11415.280
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiClient", "src\ProvisionData.HaloPSA.ApiClient\ProvisionData.HaloPSA.ApiClient.csproj", "{76065FFC-B8F3-8AB0-7041-436455EE6E17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev", "dev", "{4B8794A0-C7EE-4CFE-A4C0-CB99F258CDDF}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		README.md = README.md
+		Directory.Build.props = Directory.Build.props
 		LICENSE.md = LICENSE.md
+		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{DE079EBB-AC02-4FF5-AE9F-9887ACDEBF89}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{DABE038C-58B5-43FD-8CD6-1AFF6F0564A8}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{97FDE202-0638-4D9D-8BC9-173AC7EC127D}"
+	ProjectSection(SolutionItems) = preProject
+		docs\NUIGET.md = docs\NUIGET.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C6CA5124-02E2-43FE-A1CF-DC83D2CDA645}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{23C1DDDD-B343-4B9C-92A9-01B149A2988B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiClient.Tests", "tests\ProvisionData.HaloPSA.ApiClient.Tests\ProvisionData.HaloPSA.ApiClient.Tests.csproj", "{49E06BEC-5887-0D2F-F77F-18AD537B02CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +46,18 @@ Global
 		{76065FFC-B8F3-8AB0-7041-436455EE6E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76065FFC-B8F3-8AB0-7041-436455EE6E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76065FFC-B8F3-8AB0-7041-436455EE6E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E06BEC-5887-0D2F-F77F-18AD537B02CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E06BEC-5887-0D2F-F77F-18AD537B02CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E06BEC-5887-0D2F-F77F-18AD537B02CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E06BEC-5887-0D2F-F77F-18AD537B02CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76065FFC-B8F3-8AB0-7041-436455EE6E17} = {23C1DDDD-B343-4B9C-92A9-01B149A2988B}
+		{DABE038C-58B5-43FD-8CD6-1AFF6F0564A8} = {DE079EBB-AC02-4FF5-AE9F-9887ACDEBF89}
+		{49E06BEC-5887-0D2F-F77F-18AD537B02CC} = {C6CA5124-02E2-43FE-A1CF-DC83D2CDA645}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39718234-34AB-4D17-8279-5CA43A7BD1A2}

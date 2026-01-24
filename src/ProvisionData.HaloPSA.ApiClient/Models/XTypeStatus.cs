@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -14,33 +14,31 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-
-
 public partial class XTypeStatus
 
 {
-	[JsonPropertyName("allowafterallstatuses")]
-	public Boolean? Allowafterallstatuses { get; set; }
+    [JsonPropertyName("allowafterallstatuses")]
+    public Boolean? Allowafterallstatuses { get; set; }
 
-	//[JsonPropertyName("allowedafterstatus")]
-	//public List<UntypedNode>? Allowedafterstatus { get; set; }
+    //[JsonPropertyName("allowedafterstatus")]
+    //public List<UntypedNode>? Allowedafterstatus { get; set; }
 
-	[JsonPropertyName("id")]
-	public Int32? Id { get; set; }
-	[JsonPropertyName("status_id")]
-	public Int32? StatusId { get; set; }
-	[JsonPropertyName("status_name")]
+    [JsonPropertyName("id")]
+    public Int32? Id { get; set; }
+    [JsonPropertyName("status_id")]
+    public Int32? StatusId { get; set; }
+    [JsonPropertyName("status_name")]
 
-	public String? StatusName { get; set; }
+    public String? StatusName { get; set; }
 
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
 
-	public String? Warning { get; set; }
+    public String? Warning { get; set; }
 
-	[JsonPropertyName("xtype_id")]
-	public Int32? XtypeId { get; set; }
-	[JsonPropertyName("xtype_name")]
+    [JsonPropertyName("xtype_id")]
+    public Int32? XtypeId { get; set; }
+    [JsonPropertyName("xtype_name")]
 
-	public String? XtypeName { get; set; }
+    public String? XtypeName { get; set; }
 }
 

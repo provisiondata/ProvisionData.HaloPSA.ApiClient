@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -14,90 +14,88 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-
-
 public partial class Holidays
 
 {
-	[JsonPropertyName("agent_id")]
-	public Int32? AgentId { get; set; }
-	[JsonPropertyName("agent_name")]
+    [JsonPropertyName("agent_id")]
+    public Int32? AgentId { get; set; }
+    [JsonPropertyName("agent_name")]
 
-	public String? AgentName { get; set; }
+    public String? AgentName { get; set; }
 
-	[JsonPropertyName("allday")]
-	public Boolean? Allday { get; set; }
+    [JsonPropertyName("allday")]
+    public Boolean? Allday { get; set; }
 
-	//[JsonPropertyName("appointmentobj")]
-	//public UntypedNode? Appointmentobj { get; set; }
+    //[JsonPropertyName("appointmentobj")]
+    //public UntypedNode? Appointmentobj { get; set; }
 
-	[JsonPropertyName("approvalnote")]
+    [JsonPropertyName("approvalnote")]
 
-	public String? Approvalnote { get; set; }
+    public String? Approvalnote { get; set; }
 
-	[JsonPropertyName("approval_start")]
-	public Boolean? ApprovalStart { get; set; }
-	[JsonPropertyName("approval_status")]
-	public Int32? ApprovalStatus { get; set; }
+    [JsonPropertyName("approval_start")]
+    public Boolean? ApprovalStart { get; set; }
+    [JsonPropertyName("approval_status")]
+    public Int32? ApprovalStatus { get; set; }
 
-	//[JsonPropertyName("change_freeze_clients")]
-	//public List<UntypedNode>? ChangeFreezeClients { get; set; }
+    //[JsonPropertyName("change_freeze_clients")]
+    //public List<UntypedNode>? ChangeFreezeClients { get; set; }
 
-	[JsonPropertyName("createnextappt")]
-	public Boolean? Createnextappt { get; set; }
-	[JsonPropertyName("date")]
-	public DateTimeOffset? Date { get; set; }
-	[JsonPropertyName("date_datetime")]
-	public DateTimeOffset? DateDatetime { get; set; }
-	[JsonPropertyName("date_only")]
-	public DateTimeOffset? DateOnly { get; set; }
-	[JsonPropertyName("duration")]
-	public Double? Duration { get; set; }
-	[JsonPropertyName("enable_change_freeze_per_client")]
-	public Boolean? EnableChangeFreezePerClient { get; set; }
-	[JsonPropertyName("end_date")]
-	public DateTimeOffset? EndDate { get; set; }
-	[JsonPropertyName("end_date_only")]
-	public DateTimeOffset? EndDateOnly { get; set; }
-	[JsonPropertyName("entity")]
-	public Int32? Entity { get; set; }
-	[JsonPropertyName("entity_id")]
-	public Int32? EntityId { get; set; }
-	[JsonPropertyName("environment")]
-	public Int32? Environment { get; set; }
-	[JsonPropertyName("_force")]
-	public Boolean? Force { get; set; }
-	[JsonPropertyName("holid")]
-	public Int32? Holid { get; set; }
-	[JsonPropertyName("holiday_type")]
-	public Int32? HolidayType { get; set; }
-	[JsonPropertyName("id")]
-	public Guid? Id { get; set; }
-	[JsonPropertyName("isrecurring")]
-	public Boolean? Isrecurring { get; set; }
-	[JsonPropertyName("name")]
+    [JsonPropertyName("createnextappt")]
+    public Boolean? Createnextappt { get; set; }
+    [JsonPropertyName("date")]
+    public DateTimeOffset? Date { get; set; }
+    [JsonPropertyName("date_datetime")]
+    public DateTimeOffset? DateDatetime { get; set; }
+    [JsonPropertyName("date_only")]
+    public DateTimeOffset? DateOnly { get; set; }
+    [JsonPropertyName("duration")]
+    public Double? Duration { get; set; }
+    [JsonPropertyName("enable_change_freeze_per_client")]
+    public Boolean? EnableChangeFreezePerClient { get; set; }
+    [JsonPropertyName("end_date")]
+    public DateTimeOffset? EndDate { get; set; }
+    [JsonPropertyName("end_date_only")]
+    public DateTimeOffset? EndDateOnly { get; set; }
+    [JsonPropertyName("entity")]
+    public Int32? Entity { get; set; }
+    [JsonPropertyName("entity_id")]
+    public Int32? EntityId { get; set; }
+    [JsonPropertyName("environment")]
+    public Int32? Environment { get; set; }
+    [JsonPropertyName("_force")]
+    public Boolean? Force { get; set; }
+    [JsonPropertyName("holid")]
+    public Int32? Holid { get; set; }
+    [JsonPropertyName("holiday_type")]
+    public Int32? HolidayType { get; set; }
+    [JsonPropertyName("id")]
+    public Guid? Id { get; set; }
+    [JsonPropertyName("isrecurring")]
+    public Boolean? Isrecurring { get; set; }
+    [JsonPropertyName("name")]
 
-	public String? Name { get; set; }
+    public String? Name { get; set; }
 
-	[JsonPropertyName("_return_appointment")]
-	public Boolean? ReturnAppointment { get; set; }
+    [JsonPropertyName("_return_appointment")]
+    public Boolean? ReturnAppointment { get; set; }
 
-	[JsonPropertyName("schedule")]
-	public Schedule? Schedule { get; set; }
+    [JsonPropertyName("schedule")]
+    public Schedule? Schedule { get; set; }
 
-	[JsonPropertyName("schedulehandledtype")]
-	public Int32? Schedulehandledtype { get; set; }
-	[JsonPropertyName("thirdpartyid")]
+    [JsonPropertyName("schedulehandledtype")]
+    public Int32? Schedulehandledtype { get; set; }
+    [JsonPropertyName("thirdpartyid")]
 
-	public String? Thirdpartyid { get; set; }
+    public String? Thirdpartyid { get; set; }
 
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
 
-	public String? Warning { get; set; }
+    public String? Warning { get; set; }
 
-	[JsonPropertyName("workday_guid")]
-	public Guid? WorkdayGuid { get; set; }
-	[JsonPropertyName("workday_id")]
-	public Int32? WorkdayId { get; set; }
+    [JsonPropertyName("workday_guid")]
+    public Guid? WorkdayGuid { get; set; }
+    [JsonPropertyName("workday_id")]
+    public Int32? WorkdayId { get; set; }
 }
 

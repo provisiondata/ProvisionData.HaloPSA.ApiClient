@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -12,21 +12,19 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
+using System.Text.Json;
+
 namespace ProvisionData.HaloPSA.ApiClient;
 
-public class HaloApiClientException : Exception
+public class HaloPsaApiClientOptions
 {
-	public HaloApiClientException() : base()
-	{
-	}
+    public String AuthUrl { get; set; } = "https://halo.pdsint.net/auth/";
+    public String ApiUrl { get; set; } = "https://halo.pdsint.net/api/";
+    public String ConnectionString { get; set; } = default!;
+    public String ClientId { get; set; } = String.Empty;
+    public String ClientSecret { get; set; } = String.Empty;
 
-	public HaloApiClientException(String? message) : base(message)
-	{
-	}
+    public Int32 PageSize { get; set; } = 50;
 
-	public HaloApiClientException(String? message, Exception? innerException) : base(message, innerException)
-	{
-	}
-
-	public String? JSON { get; init; }
+    public JsonSerializerOptions JsonSerializerOptions { get; set; } = new();
 }

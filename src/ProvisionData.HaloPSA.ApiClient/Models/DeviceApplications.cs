@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -12,71 +12,68 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-
 namespace ProvisionData.HaloPSA.ApiClient.Models;
-
-
 
 public partial class DeviceApplications
 
 {
-	[JsonPropertyName("bundledesc")]
+    [JsonPropertyName("bundledesc")]
 
-	public String? Bundledesc { get; set; }
+    public String? Bundledesc { get; set; }
 
-	[JsonPropertyName("cost")]
-	public Double? Cost { get; set; }
-	[JsonPropertyName("count")]
-	public Int32? Count { get; set; }
-	[JsonPropertyName("did")]
-	public Int32? Did { get; set; }
-	[JsonPropertyName("expiry_date")]
-	public DateTimeOffset? ExpiryDate { get; set; }
-	[JsonPropertyName("id")]
-	public Int32? Id { get; set; }
-	[JsonPropertyName("install_date")]
-	public DateTimeOffset? InstallDate { get; set; }
-	[JsonPropertyName("lastused")]
-	public DateTimeOffset? Lastused { get; set; }
-	[JsonPropertyName("licence_id")]
-	public Int32? LicenceId { get; set; }
-	[JsonPropertyName("licence_name")]
+    [JsonPropertyName("cost")]
+    public Double? Cost { get; set; }
+    [JsonPropertyName("count")]
+    public Int32? Count { get; set; }
+    [JsonPropertyName("did")]
+    public Int32? Did { get; set; }
+    [JsonPropertyName("expiry_date")]
+    public DateTimeOffset? ExpiryDate { get; set; }
+    [JsonPropertyName("id")]
+    public Int32? Id { get; set; }
+    [JsonPropertyName("install_date")]
+    public DateTimeOffset? InstallDate { get; set; }
+    [JsonPropertyName("lastused")]
+    public DateTimeOffset? Lastused { get; set; }
+    [JsonPropertyName("licence_id")]
+    public Int32? LicenceId { get; set; }
+    [JsonPropertyName("licence_name")]
 
-	public String? LicenceName { get; set; }
+    public String? LicenceName { get; set; }
 
-	[JsonPropertyName("licence_required")]
-	public Boolean? LicenceRequired { get; set; }
-	[JsonPropertyName("moduleid")]
-	public Int32? Moduleid { get; set; }
-	[JsonPropertyName("name")]
+    [JsonPropertyName("licence_required")]
+    public Boolean? LicenceRequired { get; set; }
+    [JsonPropertyName("moduleid")]
+    public Int32? Moduleid { get; set; }
+    [JsonPropertyName("name")]
 
-	public String? Name { get; set; }
+    public String? Name { get; set; }
 
-	[JsonPropertyName("new_devices")]
+    [JsonPropertyName("new_devices")]
 
-	public List<Device>? NewDevices { get; set; }
+    public List<Device>? NewDevices { get; set; }
 
-	[JsonPropertyName("new_users")]
-	public List<User>? NewUsers { get; set; }
+    [JsonPropertyName("new_users")]
+    public List<User>? NewUsers { get; set; }
 
-	[JsonPropertyName("role_id")]
-	public Int32? RoleId { get; set; }
-	[JsonPropertyName("role_name")]
+    [JsonPropertyName("role_id")]
+    public Int32? RoleId { get; set; }
+    [JsonPropertyName("role_name")]
 
-	public String? RoleName { get; set; }
+    public String? RoleName { get; set; }
 
-	[JsonPropertyName("snowid")]
+    [JsonPropertyName("snowid")]
 
-	public String? Snowid { get; set; }
+    public String? Snowid { get; set; }
 
-	[JsonPropertyName("user_id")]
-	public Int32? UserId { get; set; }
-	[JsonPropertyName("version")]
+    [JsonPropertyName("user_id")]
+    public Int32? UserId { get; set; }
+    [JsonPropertyName("version")]
 
-	public String? Version { get; set; }
+    public String? Version { get; set; }
 
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
 
-	public String? Warning { get; set; }
+    public String? Warning { get; set; }
 }
 

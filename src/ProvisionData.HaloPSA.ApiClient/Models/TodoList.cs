@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,55 +16,55 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class TodoList
 {
-	[JsonPropertyName("template_id")]
-	public Int32 TemplateId { get; set; }
+    [JsonPropertyName("template_id")]
+    public Int32 TemplateId { get; set; }
 
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-	[JsonPropertyName("text")]
+    [JsonPropertyName("text")]
     public String Text { get; set; } = String.Empty;
-	[JsonPropertyName("sequence")]
-	public Int32 Sequence { get; set; }
+    [JsonPropertyName("sequence")]
+    public Int32 Sequence { get; set; }
 
-	[JsonPropertyName("allowed_clients")]
+    [JsonPropertyName("allowed_clients")]
     public List<AllowedClient> AllowedClients { get; set; } = [];
-	[JsonPropertyName("group_id")]
-	public Int32 GroupId { get; set; }
+    [JsonPropertyName("group_id")]
+    public Int32 GroupId { get; set; }
 
-	[JsonPropertyName("group")]
-	public Group Group { get; set; } = default!;
+    [JsonPropertyName("group")]
+    public Group Group { get; set; } = default!;
 
-	[JsonPropertyName("group_name")]
+    [JsonPropertyName("group_name")]
     public String GroupName { get; set; } = String.Empty;
-	[JsonPropertyName("group_seq")]
-	public Int32 GroupSeq { get; set; }
+    [JsonPropertyName("group_seq")]
+    public Int32 GroupSeq { get; set; }
 
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
-	[JsonPropertyName("ticket_id")]
-	public Int32 TicketId { get; set; }
+    [JsonPropertyName("ticket_id")]
+    public Int32 TicketId { get; set; }
 
-	[JsonPropertyName("done")]
-	public Boolean Done { get; set; }
+    [JsonPropertyName("done")]
+    public Boolean Done { get; set; }
 
-	[JsonPropertyName("done_by_id")]
-	public Int32 DoneById { get; set; }
+    [JsonPropertyName("done_by_id")]
+    public Int32 DoneById { get; set; }
 
-	[JsonPropertyName("done_by_name")]
+    [JsonPropertyName("done_by_name")]
     public String DoneByName { get; set; } = String.Empty;
-	[JsonPropertyName("start_date")]
-	public DateTime StartDate { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("start_date")]
+    public DateTime StartDate { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("end_date")]
-	public DateTime EndDate { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("end_date")]
+    public DateTime EndDate { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("actual_start")]
-	public DateTime ActualStart { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("actual_start")]
+    public DateTime ActualStart { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("actual_end")]
-	public DateTime ActualEnd { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("actual_end")]
+    public DateTime ActualEnd { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("addedby")]
-	public Int32 Addedby { get; set; }
+    [JsonPropertyName("addedby")]
+    public Int32 Addedby { get; set; }
 }

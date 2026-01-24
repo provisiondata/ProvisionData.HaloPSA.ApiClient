@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,20 +16,20 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class LinkedAssetDefault
 {
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-	[JsonPropertyName("iid")]
-	public Int32 Iid { get; set; }
+    [JsonPropertyName("iid")]
+    public Int32 Iid { get; set; }
 
-	[JsonPropertyName("dtype")]
-	public Int32 Dtype { get; set; }
+    [JsonPropertyName("dtype")]
+    public Int32 Dtype { get; set; }
 
-	[JsonPropertyName("yseq")]
-	public Int32 Yseq { get; set; }
+    [JsonPropertyName("yseq")]
+    public Int32 Yseq { get; set; }
 
-	[JsonPropertyName("value")]
+    [JsonPropertyName("value")]
     public String Value { get; set; } = String.Empty;
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
 }

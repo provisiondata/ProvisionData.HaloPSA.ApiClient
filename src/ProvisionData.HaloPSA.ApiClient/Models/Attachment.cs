@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,104 +16,104 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class Attachment
 {
-	[JsonPropertyName("third_party_id")]
+    [JsonPropertyName("third_party_id")]
     public String ThirdPartyId { get; set; } = String.Empty;
-	[JsonPropertyName("link")]
+    [JsonPropertyName("link")]
     public String Link { get; set; } = String.Empty;
-	[JsonPropertyName("content_type")]
+    [JsonPropertyName("content_type")]
     public String ContentType { get; set; } = String.Empty;
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-	[JsonPropertyName("filename")]
+    [JsonPropertyName("filename")]
     public String Filename { get; set; } = String.Empty;
-	[JsonPropertyName("datecreated")]
-	public DateTime Datecreated { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("datecreated")]
+    public DateTime Datecreated { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("note")]
+    [JsonPropertyName("note")]
     public String Note { get; set; } = String.Empty;
-	[JsonPropertyName("filesize")]
-	public Int32 Filesize { get; set; }
+    [JsonPropertyName("filesize")]
+    public Int32 Filesize { get; set; }
 
-	[JsonPropertyName("type")]
-	public Int32 Type { get; set; }
+    [JsonPropertyName("type")]
+    public Int32 Type { get; set; }
 
-	[JsonPropertyName("unique_id")]
-	public Int32 UniqueId { get; set; }
+    [JsonPropertyName("unique_id")]
+    public Int32 UniqueId { get; set; }
 
-	[JsonPropertyName("desc")]
+    [JsonPropertyName("desc")]
     public String Desc { get; set; } = String.Empty;
-	[JsonPropertyName("isimage")]
-	public Boolean Isimage { get; set; }
+    [JsonPropertyName("isimage")]
+    public Boolean Isimage { get; set; }
 
-	[JsonPropertyName("data")]
+    [JsonPropertyName("data")]
     public String Data { get; set; } = String.Empty;
-	[JsonPropertyName("ticket_id")]
-	public Int32 TicketId { get; set; }
+    [JsonPropertyName("ticket_id")]
+    public Int32 TicketId { get; set; }
 
-	[JsonPropertyName("action_id")]
-	public Int32 ActionId { get; set; }
+    [JsonPropertyName("action_id")]
+    public Int32 ActionId { get; set; }
 
-	[JsonPropertyName("user_id")]
-	public Int32 UserId { get; set; }
+    [JsonPropertyName("user_id")]
+    public Int32 UserId { get; set; }
 
-	[JsonPropertyName("agent_id")]
-	public Int32 AgentId { get; set; }
+    [JsonPropertyName("agent_id")]
+    public Int32 AgentId { get; set; }
 
-	[JsonPropertyName("attachmentaction_id")]
-	public Int32 AttachmentactionId { get; set; }
+    [JsonPropertyName("attachmentaction_id")]
+    public Int32 AttachmentactionId { get; set; }
 
-	[JsonPropertyName("_canupdate")]
-	public Boolean Canupdate { get; set; }
+    [JsonPropertyName("_canupdate")]
+    public Boolean Canupdate { get; set; }
 
-	[JsonPropertyName("guid")]
+    [JsonPropertyName("guid")]
     public String Guid { get; set; } = String.Empty;
-	[JsonPropertyName("image_upload_id")]
-	public Int32 ImageUploadId { get; set; }
+    [JsonPropertyName("image_upload_id")]
+    public Int32 ImageUploadId { get; set; }
 
-	[JsonPropertyName("image_upload_key")]
+    [JsonPropertyName("image_upload_key")]
     public String ImageUploadKey { get; set; } = String.Empty;
-	[JsonPropertyName("file")]
+    [JsonPropertyName("file")]
     public String File { get; set; } = String.Empty;
-	[JsonPropertyName("_enduserportalpdfprint")]
-	public Boolean Enduserportalpdfprint { get; set; }
+    [JsonPropertyName("_enduserportalpdfprint")]
+    public Boolean Enduserportalpdfprint { get; set; }
 
-	[JsonPropertyName("anon_outcomeid")]
-	public Int32 AnonOutcomeid { get; set; }
+    [JsonPropertyName("anon_outcomeid")]
+    public Int32 AnonOutcomeid { get; set; }
 
-	[JsonPropertyName("has_scanned")]
-	public Boolean HasScanned { get; set; }
+    [JsonPropertyName("has_scanned")]
+    public Boolean HasScanned { get; set; }
 
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
-	[JsonPropertyName("showforusers")]
-	public Boolean Showforusers { get; set; }
+    [JsonPropertyName("showforusers")]
+    public Boolean Showforusers { get; set; }
 
-	[JsonPropertyName("showonchild")]
-	public Boolean Showonchild { get; set; }
+    [JsonPropertyName("showonchild")]
+    public Boolean Showonchild { get; set; }
 
-	[JsonPropertyName("showonrelated")]
-	public Boolean Showonrelated { get; set; }
+    [JsonPropertyName("showonrelated")]
+    public Boolean Showonrelated { get; set; }
 
-	[JsonPropertyName("data_base64")]
+    [JsonPropertyName("data_base64")]
     public String DataBase64 { get; set; } = String.Empty;
-	[JsonPropertyName("download_url")]
+    [JsonPropertyName("download_url")]
     public String DownloadUrl { get; set; } = String.Empty;
-	[JsonPropertyName("third_party_token")]
+    [JsonPropertyName("third_party_token")]
     public String ThirdPartyToken { get; set; } = String.Empty;
-	[JsonPropertyName("already_posted")]
-	public Boolean AlreadyPosted { get; set; }
+    [JsonPropertyName("already_posted")]
+    public Boolean AlreadyPosted { get; set; }
 
-	[JsonPropertyName("faultid")]
-	public Int32 Faultid { get; set; }
+    [JsonPropertyName("faultid")]
+    public Int32 Faultid { get; set; }
 
-	[JsonPropertyName("_isimport")]
-	public Boolean Isimport { get; set; }
+    [JsonPropertyName("_isimport")]
+    public Boolean Isimport { get; set; }
 
-	[JsonPropertyName("_importtype")]
+    [JsonPropertyName("_importtype")]
     public String Importtype { get; set; } = String.Empty;
-	[JsonPropertyName("s3url")]
+    [JsonPropertyName("s3url")]
     public String S3url { get; set; } = String.Empty;
-	[JsonPropertyName("att_link")]
+    [JsonPropertyName("att_link")]
     public String AttLink { get; set; } = String.Empty;
 }

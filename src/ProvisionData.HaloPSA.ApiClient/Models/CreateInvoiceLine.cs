@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,121 +16,121 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class CreateInvoiceLine
 {
-	//[JsonPropertyName("id")]
-	//public Int32 Id { get; set; }
+    //[JsonPropertyName("id")]
+    //public Int32 Id { get; set; }
 
-	[JsonPropertyName("_itemid")]
-	public Int32 Itemid { get; set; }
+    [JsonPropertyName("_itemid")]
+    public Int32 Itemid { get; set; }
 
-	[JsonPropertyName("productnumber")]
-	public String Productnumber { get; set; } = String.Empty;
+    [JsonPropertyName("productnumber")]
+    public String Productnumber { get; set; } = String.Empty;
 
-	[JsonPropertyName("item_code")]
-	public required String ItemCode { get; set; } = String.Empty;
+    [JsonPropertyName("item_code")]
+    public required String ItemCode { get; set; } = String.Empty;
 
-	[JsonPropertyName("comment_1")]
-	public String Notes { get; set; } = String.Empty;
+    [JsonPropertyName("comment_1")]
+    public String Notes { get; set; } = String.Empty;
 
-	[JsonPropertyName("comment_2")]
-	public String Comment2 { get; set; } = String.Empty;
+    [JsonPropertyName("comment_2")]
+    public String Comment2 { get; set; } = String.Empty;
 
-	// Description
-	[JsonPropertyName("item_shortdescription")]
-	public String ItemShortdescription { get; set; } = String.Empty;
+    // Description
+    [JsonPropertyName("item_shortdescription")]
+    public String ItemShortdescription { get; set; } = String.Empty;
 
-	[JsonPropertyName("item_longdescription")]
-	public String ItemLongdescription { get; set; } = String.Empty;
+    [JsonPropertyName("item_longdescription")]
+    public String ItemLongdescription { get; set; } = String.Empty;
 
-	// Bookkeeping
-	[JsonPropertyName("nominal_code")]
-	public required String NominalCode { get; set; } = String.Empty;
+    // Bookkeeping
+    [JsonPropertyName("nominal_code")]
+    public required String NominalCode { get; set; } = String.Empty;
 
-	// Pricing
-	[JsonPropertyName("qty_order")]
-	public Decimal QtyOrder { get; set; }
+    // Pricing
+    [JsonPropertyName("qty_order")]
+    public Decimal QtyOrder { get; set; }
 
-	[JsonPropertyName("unit_cost")]
-	public Decimal UnitCost { get; set; }
+    [JsonPropertyName("unit_cost")]
+    public Decimal UnitCost { get; set; }
 
-	[JsonPropertyName("unit_price")]
-	public Decimal UnitPrice { get; set; }
+    [JsonPropertyName("unit_price")]
+    public Decimal UnitPrice { get; set; }
 
-	[JsonPropertyName("net_amount")]
-	public Decimal NetAmount { get; set; }
+    [JsonPropertyName("net_amount")]
+    public Decimal NetAmount { get; set; }
 
-	[JsonPropertyName("item_tax_code")]
-	public Int32 ItemTaxCode { get; set; }
+    [JsonPropertyName("item_tax_code")]
+    public Int32 ItemTaxCode { get; set; }
 
-	[JsonPropertyName("tax_code")]
-	public String TaxCode { get; set; } = String.Empty;
+    [JsonPropertyName("tax_code")]
+    public String TaxCode { get; set; } = String.Empty;
 
-	[JsonPropertyName("tax_amount")]
-	public Decimal TaxAmount { get; set; }
+    [JsonPropertyName("tax_amount")]
+    public Decimal TaxAmount { get; set; }
 
-	[JsonPropertyName("tax_rate")]
-	public Decimal TaxRate { get; set; }
+    [JsonPropertyName("tax_rate")]
+    public Decimal TaxRate { get; set; }
 
-	//[JsonPropertyName("net_total")]
-	//public Decimal NetTotal { get; set; }
+    //[JsonPropertyName("net_total")]
+    //public Decimal NetTotal { get; set; }
 
-	//[JsonPropertyName("total_tax")]
-	//public Decimal TotalTax { get; set; }
+    //[JsonPropertyName("total_tax")]
+    //public Decimal TotalTax { get; set; }
 
-	//[JsonPropertyName("total_discount")]
-	//public Decimal TotalDiscount { get; set; }
+    //[JsonPropertyName("total_discount")]
+    //public Decimal TotalDiscount { get; set; }
 
-	//[JsonPropertyName("total_price")]
-	//public Decimal TotalPrice { get; set; }
+    //[JsonPropertyName("total_price")]
+    //public Decimal TotalPrice { get; set; }
 
-	//// Meta
-	//[JsonPropertyName("ihid")]
-	//public Int32 Ihid { get; set; }
+    //// Meta
+    //[JsonPropertyName("ihid")]
+    //public Int32 Ihid { get; set; }
 
-	//[JsonPropertyName("item_internal_reference")]
-	//public String ItemInternalReference { get; set; } = String.Empty;
+    //[JsonPropertyName("item_internal_reference")]
+    //public String ItemInternalReference { get; set; } = String.Empty;
 
-	//[JsonPropertyName("item_external_reference")]
-	//public String ItemExternalReference { get; set; } = String.Empty;
+    //[JsonPropertyName("item_external_reference")]
+    //public String ItemExternalReference { get; set; } = String.Empty;
 
-	//[JsonPropertyName("itemonorder")]
-	//public Boolean Itemonorder { get; set; }
+    //[JsonPropertyName("itemonorder")]
+    //public Boolean Itemonorder { get; set; }
 
-	//[JsonPropertyName("dsite")]
-	//public Int32 Dsite { get; set; }
+    //[JsonPropertyName("dsite")]
+    //public Int32 Dsite { get; set; }
 
-	//[JsonPropertyName("ddevnum")]
-	//public Int32 Ddevnum { get; set; }
+    //[JsonPropertyName("ddevnum")]
+    //public Int32 Ddevnum { get; set; }
 
-	//[JsonPropertyName("did")]
-	//public Int32 Did { get; set; }
+    //[JsonPropertyName("did")]
+    //public Int32 Did { get; set; }
 
-	//[JsonPropertyName("chid")]
-	//public Int32 Chid { get; set; }
+    //[JsonPropertyName("chid")]
+    //public Int32 Chid { get; set; }
 
-	//[JsonPropertyName("actioncode")]
-	//public Int32 Actioncode { get; set; }
+    //[JsonPropertyName("actioncode")]
+    //public Int32 Actioncode { get; set; }
 
-	//[JsonPropertyName("site")]
-	//public Int32 Site { get; set; }
+    //[JsonPropertyName("site")]
+    //public Int32 Site { get; set; }
 
-	//[JsonPropertyName("dmid")]
-	//public Int32 Dmid { get; set; }
+    //[JsonPropertyName("dmid")]
+    //public Int32 Dmid { get; set; }
 
-	//[JsonPropertyName("faultid")]
-	//public Int32 Faultid { get; set; }
+    //[JsonPropertyName("faultid")]
+    //public Int32 Faultid { get; set; }
 
-	//[JsonPropertyName("lineactiondate")]
-	//public DateTime Lineactiondate { get; set; } = DateTime.UnixEpoch;
+    //[JsonPropertyName("lineactiondate")]
+    //public DateTime Lineactiondate { get; set; } = DateTime.UnixEpoch;
 
-	//[JsonPropertyName("labourdepartmentid")]
-	//public Int32 Labourdepartmentid { get; set; }
+    //[JsonPropertyName("labourdepartmentid")]
+    //public Int32 Labourdepartmentid { get; set; }
 
-	//[JsonPropertyName("olid")]
-	//public Int32 Olid { get; set; }
+    //[JsonPropertyName("olid")]
+    //public Int32 Olid { get; set; }
 
-	//[JsonPropertyName("olseq")]
-	//public Int32 Olseq { get; set; }
+    //[JsonPropertyName("olseq")]
+    //public Int32 Olseq { get; set; }
 
-	[JsonPropertyName("_warning")]
-	public String Warning { get; set; } = String.Empty;
+    [JsonPropertyName("_warning")]
+    public String Warning { get; set; } = String.Empty;
 }

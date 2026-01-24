@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,60 +16,60 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class ProrataDatum
 {
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-	[JsonPropertyName("invoicedetailid")]
-	public Int32 Invoicedetailid { get; set; }
+    [JsonPropertyName("invoicedetailid")]
+    public Int32 Invoicedetailid { get; set; }
 
-	[JsonPropertyName("date")]
-	public DateTime Date { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("date")]
+    public DateTime Date { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("quantity")]
-	public Int32 Quantity { get; set; }
+    [JsonPropertyName("quantity")]
+    public Int32 Quantity { get; set; }
 
-	[JsonPropertyName("unitprice")]
-	public Int32 Unitprice { get; set; }
+    [JsonPropertyName("unitprice")]
+    public Int32 Unitprice { get; set; }
 
-	[JsonPropertyName("unitcost")]
-	public Int32 Unitcost { get; set; }
+    [JsonPropertyName("unitcost")]
+    public Int32 Unitcost { get; set; }
 
-	[JsonPropertyName("shortdescription")]
+    [JsonPropertyName("shortdescription")]
     public String Shortdescription { get; set; } = String.Empty;
-	[JsonPropertyName("longdescription")]
+    [JsonPropertyName("longdescription")]
     public String Longdescription { get; set; } = String.Empty;
-	[JsonPropertyName("quantity_id")]
-	public Int32 QuantityId { get; set; }
+    [JsonPropertyName("quantity_id")]
+    public Int32 QuantityId { get; set; }
 
-	[JsonPropertyName("user_id")]
-	public Int32 UserId { get; set; }
+    [JsonPropertyName("user_id")]
+    public Int32 UserId { get; set; }
 
-	[JsonPropertyName("device_id")]
-	public Int32 DeviceId { get; set; }
+    [JsonPropertyName("device_id")]
+    public Int32 DeviceId { get; set; }
 
-	[JsonPropertyName("prorata_next_invoice")]
-	public Boolean ProrataNextInvoice { get; set; }
+    [JsonPropertyName("prorata_next_invoice")]
+    public Boolean ProrataNextInvoice { get; set; }
 
-	[JsonPropertyName("invoiceheaderid")]
-	public Int32 Invoiceheaderid { get; set; }
+    [JsonPropertyName("invoiceheaderid")]
+    public Int32 Invoiceheaderid { get; set; }
 
-	[JsonPropertyName("dont_auto_calculate")]
-	public Boolean DontAutoCalculate { get; set; }
+    [JsonPropertyName("dont_auto_calculate")]
+    public Boolean DontAutoCalculate { get; set; }
 
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
-	[JsonPropertyName("isinvoiced")]
-	public Boolean Isinvoiced { get; set; }
+    [JsonPropertyName("isinvoiced")]
+    public Boolean Isinvoiced { get; set; }
 
-	[JsonPropertyName("isfuturepr")]
-	public Boolean Isfuturepr { get; set; }
+    [JsonPropertyName("isfuturepr")]
+    public Boolean Isfuturepr { get; set; }
 
-	[JsonPropertyName("inv_manual_pr_immediately")]
-	public Boolean InvManualPrImmediately { get; set; }
+    [JsonPropertyName("inv_manual_pr_immediately")]
+    public Boolean InvManualPrImmediately { get; set; }
 
-	[JsonPropertyName("change_id")]
-	public Int32 ChangeId { get; set; }
+    [JsonPropertyName("change_id")]
+    public Int32 ChangeId { get; set; }
 
-	[JsonPropertyName("istempprorata")]
-	public Boolean Istempprorata { get; set; }
+    [JsonPropertyName("istempprorata")]
+    public Boolean Istempprorata { get; set; }
 }

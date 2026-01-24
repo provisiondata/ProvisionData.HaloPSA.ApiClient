@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,20 +16,20 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class GetAssetsResult
 {
-	[JsonPropertyName("page_no")]
-	public Int32 PageNo { get; set; }
-	[JsonPropertyName("page_size")]
-	public Int32 PageSize { get; set; }
-	[JsonPropertyName("record_count")]
-	public Int32 RecordCount { get; set; }
-	[JsonPropertyName("assets")]
-	public Asset[] Assets { get; set; } = [];
-	[JsonPropertyName("columns_id")]
-	public Int32 ColumnsId { get; set; }
-	[JsonPropertyName("columns_tilehtml")]
-	public String ColumnsTilehtml { get; set; } = String.Empty;
-	[JsonPropertyName("columns")]
-	public Column[] Columns { get; set; } = [];
-	[JsonPropertyName("xtypeunamecancreatenew")]
-	public XTypeUnameCanCreateNew[] Xtypeunamecancreatenew { get; set; } = [];
+    [JsonPropertyName("page_no")]
+    public Int32 PageNo { get; set; }
+    [JsonPropertyName("page_size")]
+    public Int32 PageSize { get; set; }
+    [JsonPropertyName("record_count")]
+    public Int32 RecordCount { get; set; }
+    [JsonPropertyName("assets")]
+    public Asset[] Assets { get; set; } = [];
+    [JsonPropertyName("columns_id")]
+    public Int32 ColumnsId { get; set; }
+    [JsonPropertyName("columns_tilehtml")]
+    public String ColumnsTilehtml { get; set; } = String.Empty;
+    [JsonPropertyName("columns")]
+    public Column[] Columns { get; set; } = [];
+    [JsonPropertyName("xtypeunamecancreatenew")]
+    public XTypeUnameCanCreateNew[] Xtypeunamecancreatenew { get; set; } = [];
 }

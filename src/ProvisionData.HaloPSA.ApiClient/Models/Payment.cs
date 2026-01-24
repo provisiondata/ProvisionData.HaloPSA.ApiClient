@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,65 +16,65 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class Payment
 {
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
 
-	[JsonPropertyName("invoice_id")]
-	public Int32 InvoiceId { get; set; }
+    [JsonPropertyName("invoice_id")]
+    public Int32 InvoiceId { get; set; }
 
-	[JsonPropertyName("date")]
-	public DateTime Date { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("date")]
+    public DateTime Date { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("amount")]
-	public Int32 Amount { get; set; }
+    [JsonPropertyName("amount")]
+    public Int32 Amount { get; set; }
 
-	[JsonPropertyName("method")]
-	public Int32 Method { get; set; }
+    [JsonPropertyName("method")]
+    public Int32 Method { get; set; }
 
-	[JsonPropertyName("status")]
-	public Int32 Status { get; set; }
+    [JsonPropertyName("status")]
+    public Int32 Status { get; set; }
 
-	[JsonPropertyName("module_id")]
-	public Int32 ModuleId { get; set; }
+    [JsonPropertyName("module_id")]
+    public Int32 ModuleId { get; set; }
 
-	[JsonPropertyName("intent_id")]
+    [JsonPropertyName("intent_id")]
     public String IntentId { get; set; } = String.Empty;
-	[JsonPropertyName("intent_date")]
-	public DateTime IntentDate { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("intent_date")]
+    public DateTime IntentDate { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("intent_response")]
+    [JsonPropertyName("intent_response")]
     public String IntentResponse { get; set; } = String.Empty;
-	[JsonPropertyName("webhook_payload")]
+    [JsonPropertyName("webhook_payload")]
     public String WebhookPayload { get; set; } = String.Empty;
-	[JsonPropertyName("webhook_received_date")]
-	public DateTime WebhookReceivedDate { get; set; } = DateTime.UnixEpoch;
+    [JsonPropertyName("webhook_received_date")]
+    public DateTime WebhookReceivedDate { get; set; } = DateTime.UnixEpoch;
 
-	[JsonPropertyName("sage50_reference")]
+    [JsonPropertyName("sage50_reference")]
     public String Sage50Reference { get; set; } = String.Empty;
-	[JsonPropertyName("thirdpartyid")]
+    [JsonPropertyName("thirdpartyid")]
     public String Thirdpartyid { get; set; } = String.Empty;
-	[JsonPropertyName("client_id")]
-	public Int32 ClientId { get; set; }
+    [JsonPropertyName("client_id")]
+    public Int32 ClientId { get; set; }
 
-	[JsonPropertyName("client_name")]
+    [JsonPropertyName("client_name")]
     public String ClientName { get; set; } = String.Empty;
-	[JsonPropertyName("_statuswarning")]
+    [JsonPropertyName("_statuswarning")]
     public String Statuswarning { get; set; } = String.Empty;
-	[JsonPropertyName("_warning")]
+    [JsonPropertyName("_warning")]
     public String Warning { get; set; } = String.Empty;
-	[JsonPropertyName("qbo_id")]
-	public Int32 QboId { get; set; }
+    [JsonPropertyName("qbo_id")]
+    public Int32 QboId { get; set; }
 
-	[JsonPropertyName("xero_id")]
+    [JsonPropertyName("xero_id")]
     public String XeroId { get; set; } = String.Empty;
-	[JsonPropertyName("_isimport")]
-	public Boolean Isimport { get; set; }
+    [JsonPropertyName("_isimport")]
+    public Boolean Isimport { get; set; }
 
-	[JsonPropertyName("_importtype")]
+    [JsonPropertyName("_importtype")]
     public String Importtype { get; set; } = String.Empty;
-	[JsonPropertyName("sqlimport_id")]
-	public Int32 SqlimportId { get; set; }
+    [JsonPropertyName("sqlimport_id")]
+    public Int32 SqlimportId { get; set; }
 
-	[JsonPropertyName("invoice_match_id")]
+    [JsonPropertyName("invoice_match_id")]
     public String InvoiceMatchId { get; set; } = String.Empty;
 }

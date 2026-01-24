@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,20 +16,20 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class AllowedStatus
 {
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
-	[JsonPropertyName("xtype_id")]
-	public Int32 XTypeId { get; set; }
-	[JsonPropertyName("xtype_name")]
-	public String XTypeName { get; set; } = String.Empty;
-	[JsonPropertyName("status_id")]
-	public Int32 StatusId { get; set; }
-	[JsonPropertyName("status_name")]
-	public String StatusName { get; set; } = String.Empty;
-	[JsonPropertyName("allowafterallstatuses")]
-	public Boolean AllowAfterAllStatuses { get; set; }
-	[JsonPropertyName("allowedafterstatus")]
-	public AllowedAfterStatu[] AllowedAfterStatus { get; set; } = [];
-	[JsonPropertyName("_warning")]
-	public String Warning { get; set; } = String.Empty;
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
+    [JsonPropertyName("xtype_id")]
+    public Int32 XTypeId { get; set; }
+    [JsonPropertyName("xtype_name")]
+    public String XTypeName { get; set; } = String.Empty;
+    [JsonPropertyName("status_id")]
+    public Int32 StatusId { get; set; }
+    [JsonPropertyName("status_name")]
+    public String StatusName { get; set; } = String.Empty;
+    [JsonPropertyName("allowafterallstatuses")]
+    public Boolean AllowAfterAllStatuses { get; set; }
+    [JsonPropertyName("allowedafterstatus")]
+    public AllowedAfterStatu[] AllowedAfterStatus { get; set; } = [];
+    [JsonPropertyName("_warning")]
+    public String Warning { get; set; } = String.Empty;
 }

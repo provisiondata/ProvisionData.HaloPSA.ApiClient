@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -16,26 +16,26 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public class UserAccess
 {
-	[JsonPropertyName("id")]
-	public Int32 Id { get; set; }
-	[JsonPropertyName("criteriagroup_id")]
-	public Int32 CriteriaGroupId { get; set; }
-	[JsonPropertyName("service_category_id")]
-	public Int32 ServiceCategoryId { get; set; }
-	[JsonPropertyName("service_id")]
-	public Int32 ServiceId { get; set; }
-	[JsonPropertyName("type")]
-	public String Type { get; set; } = String.Empty;
-	[JsonPropertyName("data_id")]
-	public Int32 DataId { get; set; }
-	[JsonPropertyName("svrdata_guid")]
-	public String SvrDataGuid { get; set; } = String.Empty;
-	[JsonPropertyName("data_name")]
-	public String DataName { get; set; } = String.Empty;
-	[JsonPropertyName("allow_access")]
-	public Boolean AllowAccess { get; set; }
-	[JsonPropertyName("data_string")]
-	public String DataString { get; set; } = String.Empty;
-	[JsonPropertyName("_warning")]
-	public String Warning { get; set; } = String.Empty;
+    [JsonPropertyName("id")]
+    public Int32 Id { get; set; }
+    [JsonPropertyName("criteriagroup_id")]
+    public Int32 CriteriaGroupId { get; set; }
+    [JsonPropertyName("service_category_id")]
+    public Int32 ServiceCategoryId { get; set; }
+    [JsonPropertyName("service_id")]
+    public Int32 ServiceId { get; set; }
+    [JsonPropertyName("type")]
+    public String Type { get; set; } = String.Empty;
+    [JsonPropertyName("data_id")]
+    public Int32 DataId { get; set; }
+    [JsonPropertyName("svrdata_guid")]
+    public String SvrDataGuid { get; set; } = String.Empty;
+    [JsonPropertyName("data_name")]
+    public String DataName { get; set; } = String.Empty;
+    [JsonPropertyName("allow_access")]
+    public Boolean AllowAccess { get; set; }
+    [JsonPropertyName("data_string")]
+    public String DataString { get; set; } = String.Empty;
+    [JsonPropertyName("_warning")]
+    public String Warning { get; set; } = String.Empty;
 }

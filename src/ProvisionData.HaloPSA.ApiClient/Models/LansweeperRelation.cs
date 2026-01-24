@@ -1,5 +1,5 @@
-// Provision Data Systems Inc.
-// Copyright (C) 2024 Doug Wilson
+// Provision Data HaloPSA API Client
+// Copyright (C) 2026 Provision Data Systems Inc.
 //
 // This program is free software: you can redistribute it and/or modify it under the terms of
 // the GNU Affero General Public License as published by the Free Software Foundation, either
@@ -14,37 +14,35 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-
-
 public partial class LansweeperRelation
 
 {
-	[JsonPropertyName("childAssetKey")]
+    [JsonPropertyName("childAssetKey")]
 
-	public String? ChildAssetKey { get; set; }
+    public String? ChildAssetKey { get; set; }
 
-	[JsonPropertyName("comment")]
+    [JsonPropertyName("comment")]
 
-	public String? Comment { get; set; }
+    public String? Comment { get; set; }
 
-	[JsonPropertyName("endDate")]
+    [JsonPropertyName("endDate")]
 
-	public String? EndDate { get; set; }
+    public String? EndDate { get; set; }
 
-	[JsonPropertyName("lastChanged")]
+    [JsonPropertyName("lastChanged")]
 
-	public String? LastChanged { get; set; }
+    public String? LastChanged { get; set; }
 
-	[JsonPropertyName("name")]
+    [JsonPropertyName("name")]
 
-	public String? Name { get; set; }
+    public String? Name { get; set; }
 
-	[JsonPropertyName("parentAssetKey")]
+    [JsonPropertyName("parentAssetKey")]
 
-	public String? ParentAssetKey { get; set; }
+    public String? ParentAssetKey { get; set; }
 
-	[JsonPropertyName("startDate")]
+    [JsonPropertyName("startDate")]
 
-	public String? StartDate { get; set; }
+    public String? StartDate { get; set; }
 }
 
