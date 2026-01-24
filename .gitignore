@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # Avoid checking in sensitive configuration data
 appsettings.*.json
+scratch.txt
