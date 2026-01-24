@@ -62,10 +62,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Pack
-        #run: dotnet pack src/ProvisionData.HaloPSA.ApiClient/ProvisionData.HaloPSA.ApiClient.csproj --configuration Release --no-build --output ./artifacts /p:ContinuousIntegrationBuild=true
-        run: |
-          dotnet pack --configuration Release --no-build --output ./artifacts /p:ContinuousIntegrationBuild=true
-          dotnet pack -r win-x64 --configuration Release --no-build --output ./artifacts /p:ContinuousIntegrationBuild=true
+        run: dotnet pack --configuration Release --no-build --output ./artifacts /p:ContinuousIntegrationBuild=true
 
       # Get a short-lived NuGet API key
       - name: NuGet login (OIDC → temp API key)
