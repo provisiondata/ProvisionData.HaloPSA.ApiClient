@@ -1,34 +1,38 @@
 <Project>
-
-    <PropertyGroup>
-        <TargetFramework>net10.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-
-        <!-- NuGet package metadata -->
-        <Authors>ProvisionData</Authors>
-        <Company>Provision Data Systems Inc.</Company>
-        <RepositoryUrl>https://github.com/provisiondata/ProvisionData.HaloPSA.ApiClient</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
-        <PackageProjectUrl>https://github.com/provisiondata/ProvisionData.HaloPSA.ApiClient</PackageProjectUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <Copyright>Copyright (c) ProvisionData</Copyright>
-        <PackageTags>HaloPSA;API;Client</PackageTags>
-        <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <GenerateDocumentationFile>false</GenerateDocumentationFile>
-        <PublishRepositoryUrl>true</PublishRepositoryUrl>
-        <EmbedUntrackedSources>true</EmbedUntrackedSources>
-        <RepositoryBranch>main</RepositoryBranch>
-        <RepositoryCommit>$(SourceRevisionId)</RepositoryCommit>
-    </PropertyGroup>
-
-    <!-- Ensure README and LICENSE are packed -->
-    <ItemGroup>
-        <None Include="../../README.md" Pack="true" PackagePath="/" />
-        <None Include="../../LICENSE.md" Pack="true" PackagePath="/" />
-    </ItemGroup>
-
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- NuGet package metadata -->
+    <Authors>ProvisionData</Authors>
+    <Company>Provision Data Systems Inc.</Company>
+    <RepositoryUrl>https://github.com/provisiondata/ProvisionData.HaloPSA.ApiClient</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/provisiondata/ProvisionData.HaloPSA.ApiClient</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Provision Data Systems Inc.</Copyright>
+    <PackageTags>HaloPSA;API;Client</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <RepositoryBranch>main</RepositoryBranch>
+    <RepositoryCommit>$(SourceRevisionId)</RepositoryCommit>
+    <!-- GitVersioning -->
+    <GitVersionBaseDirectory>$(MSBuildThisFileDirectory)</GitVersionBaseDirectory>
+  </PropertyGroup>
+  <!-- Ensure README and LICENSE are packed -->
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <None Include="../../LICENSE.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" Condition="!Exists('packages.config')">
+      <PrivateAssets>all</PrivateAssets>
+      <Version>3.9.50</Version>
+    </PackageReference>
+  </ItemGroup>
 </Project>

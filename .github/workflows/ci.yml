@@ -66,14 +66,5 @@ jobs:
             dotnet nuget push $_.FullName `
               --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" `
               --source https://api.nuget.org/v3/index.json
-          }
-
-      - name: Publish symbols
-        if: startsWith(github.ref, 'refs/tags/v')
-        shell: pwsh
-        run: |
-          Get-ChildItem artifacts -Filter *.snupkg | ForEach-Object {
-            dotnet nuget push $_.FullName `
-              --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" `
-              --source https://api.nuget.org/v3/index.json
+               --skip-duplicate
           }

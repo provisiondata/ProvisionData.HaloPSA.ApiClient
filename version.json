@@ -1,16 +1,33 @@
 {
   "$schema": "https://raw.githubusercontent.com/dotnet/Nerdbank.GitVersioning/main/src/NerdBank.GitVersioning/version.schema.json",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-beta",
+  "semVer1NumericIdentifierPadding": 2,
+  "gitCommitIdShortFixedLength": 8,
+  "assemblyVersion": {
+    "precision": "build"
+  },
   "publicReleaseRefSpec": [
-    "^refs/heads/main$",
-    "^refs/tags/v\\\\d+\\\\.\\\\d+(?:\\\\.\\\\d+)?$"
+    "^refs/heads/master$",
+    "^refs/heads/v\\d+(?:\\.\\d+)?$"
   ],
   "cloudBuild": {
+    "setVersionVariables": true,
     "buildNumber": {
-      "enabled": true
+      "enabled": true,
+      "includeCommitId": {
+        "when": "nonPublicReleaseOnly",
+        "where": "buildMetadata"
+      }
     }
   },
-  "pathFilters": [
-    "./src/ProvisionData.HaloPSA.ApiClient"
-  ]
+  "nugetPackageVersion": {
+    "semVer": 2,
+    "precision": "build"
+  },
+  "release": {
+    "tagName": "v{version}",
+    "branchName": "release/v{version}",
+    "versionIncrement": "build",
+    "firstUnstableTag": "beta"
+  }
 }

@@ -4,6 +4,10 @@ A .NET API client library for **HaloPSA** (a Professional Services Automation pl
 
 ## Installation
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/provisiondata/ProvisionData.HaloPSA.ApiClient/ci.yml) ![NuGet Version](https://img.shields.io/nuget/v/!%5BNuGet%20Downloads%5D(https%3A%2F%2Fimg.shields.io%2Fnuget%2Fdt%2FProvisionData.HaloPSA.ApiClient))
+
+
+
 ```bash
 dotnet add package ProvisionData.HaloPSA.ApiClient
 ```
