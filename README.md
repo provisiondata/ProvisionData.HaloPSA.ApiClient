@@ -4,7 +4,7 @@ A .NET API client library for **HaloPSA** (a Professional Services Automation pl
 
 ## Installation
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/provisiondata/ProvisionData.HaloPSA.ApiClient/ci.yml) ![NuGet Version](https://img.shields.io/nuget/v/!%5BNuGet%20Downloads%5D(https%3A%2F%2Fimg.shields.io%2Fnuget%2Fdt%2FProvisionData.HaloPSA.ApiClient))
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/provisiondata/ProvisionData.HaloPSA.ApiClient/ci.yml) ![NuGet Version](https://img.shields.io/nuget/v/ProvisionData.HaloPSA.ApiClient)
 
 
 
@@ -87,6 +87,7 @@ public class AssetController : ControllerBase
 ## API Coverage
 
 The client provides methods for:
+
 - **Clients** - Customer/client management
 - **Assets** - Asset tracking and management
 - **Items** - Product/item management
@@ -94,6 +95,13 @@ The client provides methods for:
 - **Recurring Invoices** - Invoice automation
 - **Domain Names** - Domain name tracking
 - **Account Codes** - Financial account codes
+
+### Adding Additional API Endpoints
+
+To extend the client with additional API endpoints, add new models and decorate
+the properties with `[JsonPropertyName("id")]` attributes. Add new methods in
+the `HaloPsaApiClient` class following the existing patterns. Ensure to handle
+authentication, error handling, and logging consistently.
 
 ## Advanced Configuration
 
