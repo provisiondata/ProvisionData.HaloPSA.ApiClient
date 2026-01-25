@@ -1,11 +1,12 @@
 # ProvisionData.HaloPSA.ApiClient
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/provisiondata/ProvisionData.HaloPSA.ApiClient/ci.yml?link=https%3A%2F%2Fgithub.com%2Fprovisiondata%2FProvisionData.HaloPSA.ApiClient)
+![NuGet Version](https://img.shields.io/nuget/v/ProvisionData.HaloPSA.ApiClient?link=https%3A%2F%2Fgithub.com%2Fprovisiondata%2FProvisionData.HaloPSA.ApiClient)
+
+
 A .NET API client library for **HaloPSA** (a Professional Services Automation platform). It provides typed .NET models and HTTP client wrappers to interact with the HaloPSA REST API.
 
 ## Installation
-
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/provisiondata/ProvisionData.HaloPSA.ApiClient/ci.yml) ![NuGet Version](https://img.shields.io/nuget/v/ProvisionData.HaloPSA.ApiClient)
-
 
 
 ```bash
