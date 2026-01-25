@@ -27,6 +27,7 @@
 
         <!-- GitVersioning -->
         <GitVersionBaseDirectory>$(MSBuildThisFileDirectory)</GitVersionBaseDirectory>
+        <NBGV_ThisAssemblyNamespace>ProvisionData</NBGV_ThisAssemblyNamespace>
     </PropertyGroup>
 
     <!-- Ensure README and LICENSE are packed -->
