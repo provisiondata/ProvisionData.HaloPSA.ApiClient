@@ -17,19 +17,19 @@ public partial class CustomTable
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_customfields")]
-    public List<CustomField>? AddCustomfields { get; set; } = [];
+    public List<CustomField>? AddCustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_customfields")]
-    public List<CustomField>? EditCustomfields { get; set; } = [];
+    public List<CustomField>? EditCustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_customfields")]
-    public List<Int32>? DeleteCustomfields { get; set; } = [];
+    public List<Int32>? DeleteCustomfields { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
@@ -108,7 +108,7 @@ public partial class CustomTable
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<FieldInfo>? Fields { get; set; } = [];
+    public List<FieldInfo>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customextratableid")]
@@ -152,7 +152,7 @@ public partial class CustomTable
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -211,7 +211,7 @@ public partial class CustomTable
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("schema")]
-    public List<CustomTableSchema>? Schema { get; set; } = [];
+    public List<CustomTableSchema>? Schema { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_run_stats_now")]
@@ -223,11 +223,11 @@ public partial class CustomTable
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rows")]
-    public List<UnknownType>? Rows { get; set; } = [];
+    public List<UnknownType>? Rows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_add_rows")]
-    public List<UnknownType>? AddRows { get; set; } = [];
+    public List<UnknownType>? AddRows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_delete_data")]

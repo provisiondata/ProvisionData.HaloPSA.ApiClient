@@ -10,7 +10,7 @@ public partial class MailboxAddress
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("route")]
-    public List<String>? Route { get; set; } = [];
+    public List<String>? Route { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("address")]

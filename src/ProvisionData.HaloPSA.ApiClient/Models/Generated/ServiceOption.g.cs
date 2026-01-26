@@ -64,7 +64,7 @@ public partial class ServiceOption
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("creation_rules")]
-    public List<StdRequestRule>? CreationRules { get; set; } = [];
+    public List<StdRequestRule>? CreationRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_service_name_short")]

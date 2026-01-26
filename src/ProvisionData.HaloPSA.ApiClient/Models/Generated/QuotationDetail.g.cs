@@ -273,15 +273,15 @@ public partial class QuotationDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")]
-    public List<Lookup>? Chargerates { get; set; } = [];
+    public List<Lookup>? Chargerates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("budgets")]
-    public List<FaultBudget>? Budgets { get; set; } = [];
+    public List<FaultBudget>? Budgets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_template")]
@@ -301,7 +301,7 @@ public partial class QuotationDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("one_optional_mandatory")]
-    public List<KeyPair>? OneOptionalMandatory { get; set; } = [];
+    public List<KeyPair>? OneOptionalMandatory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("one_optional_mandatory_list")]
@@ -517,7 +517,7 @@ public partial class QuotationDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("taxRuleResult")]
-    public List<TaxRuleResult>? TaxRuleResult { get; set; } = [];
+    public List<TaxRuleResult>? TaxRuleResult { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("decimalplacesforinvoices")]

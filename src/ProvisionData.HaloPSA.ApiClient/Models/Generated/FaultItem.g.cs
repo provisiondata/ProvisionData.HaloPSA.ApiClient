@@ -169,7 +169,7 @@ public partial class FaultItem
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("consignment_ids")]
-    public List<Int32>? ConsignmentIds { get; set; } = [];
+    public List<Int32>? ConsignmentIds { get; set; } = new();
 
     [JsonPropertyName("asset_id")]
     public Int32 AssetId { get; set; }
@@ -184,7 +184,7 @@ public partial class FaultItem
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reserved_assets")]
-    public List<DeviceList>? ReservedAssets { get; set; } = [];
+    public List<DeviceList>? ReservedAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("inventory_number")]

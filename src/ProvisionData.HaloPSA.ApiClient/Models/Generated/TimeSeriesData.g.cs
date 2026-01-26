@@ -22,7 +22,7 @@ public partial class TimeSeriesData
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("exogenous_variables")]
-    public Object? ExogenousVariables { get; set; } = new Object();
+    public UnknownType? ExogenousVariables { get; set; } = new();
 
 }
 

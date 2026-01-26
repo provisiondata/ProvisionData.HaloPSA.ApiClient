@@ -58,7 +58,7 @@ public partial class MailchimpSettings
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auto_fb_post")]
-    public List<String>? AutoFbPost { get; set; } = [];
+    public List<String>? AutoFbPost { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fb_comments")]

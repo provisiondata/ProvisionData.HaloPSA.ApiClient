@@ -73,11 +73,11 @@ public partial class VirtualAgentFunction
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("parameters")]
-    public List<VirtualAgentFunctionParameter>? Parameters { get; set; } = [];
+    public List<VirtualAgentFunctionParameter>? Parameters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("function_access_conditions")]
-    public List<AutoassignCriteria>? FunctionAccessConditions { get; set; } = [];
+    public List<AutoassignCriteria>? FunctionAccessConditions { get; set; } = new();
 
 }
 

@@ -93,11 +93,11 @@ public partial class TicketArea
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<ViewFilterDetails>? Filters { get; set; } = [];
+    public List<ViewFilterDetails>? Filters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("team_restrictions")]
-    public List<AreaSectionDetail>? TeamRestrictions { get; set; } = [];
+    public List<AreaSectionDetail>? TeamRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("area_use")]
@@ -117,7 +117,7 @@ public partial class TicketArea
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kanbanstatuschoice")]
-    public List<KeyPair>? Kanbanstatuschoice { get; set; } = [];
+    public List<KeyPair>? Kanbanstatuschoice { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kanbanstatuschoice_list")]
@@ -169,11 +169,11 @@ public partial class TicketArea
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("role_restrictions")]
-    public List<AreaSectionDetail>? RoleRestrictions { get; set; } = [];
+    public List<AreaSectionDetail>? RoleRestrictions { get; set; } = new();
 
 }
 

@@ -67,7 +67,7 @@ public partial class MicrosoftSubscriptionMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_folder")]
-    public List<IntegrationFieldMapping>? MappingsFolder { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsFolder { get; set; } = new();
 
     [JsonPropertyName("sharepoint_list")]
     public SharePointList SharepointList { get; set; } = new();

@@ -38,11 +38,11 @@ public partial class VirtualAgent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("functions")]
-    public List<VirtualAgentFunction>? Functions { get; set; } = [];
+    public List<VirtualAgentFunction>? Functions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

@@ -17,7 +17,7 @@ public partial class MessagePart
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("headers")]
-    public List<MessagePartHeader>? Headers { get; set; } = [];
+    public List<MessagePartHeader>? Headers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mimeType")]
@@ -29,7 +29,7 @@ public partial class MessagePart
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("parts")]
-    public List<MessagePart>? Parts { get; set; } = [];
+    public List<MessagePart>? Parts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("eTag")]

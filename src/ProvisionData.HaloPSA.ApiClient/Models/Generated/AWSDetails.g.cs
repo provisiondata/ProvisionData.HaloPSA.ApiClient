@@ -49,11 +49,11 @@ public partial class AWSDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings")]
-    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sitemappings")]
-    public List<IntegrationSiteMapping>? Sitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? Sitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableintegrator")]
@@ -89,7 +89,7 @@ public partial class AWSDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_assetgroup")]
@@ -113,7 +113,7 @@ public partial class AWSDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("regions_list")]
-    public List<KeyPair2>? RegionsList { get; set; } = [];
+    public List<KeyPair2>? RegionsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_list")]
@@ -121,7 +121,7 @@ public partial class AWSDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("regions_rds")]
@@ -129,7 +129,7 @@ public partial class AWSDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("regions_list_rds")]
-    public List<KeyPair2>? RegionsListRds { get; set; } = [];
+    public List<KeyPair2>? RegionsListRds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assetimportidentifier_rds")]
@@ -141,7 +141,7 @@ public partial class AWSDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings_rds")]
-    public List<IntegrationFieldMapping>? FieldmappingsRds { get; set; } = [];
+    public List<IntegrationFieldMapping>? FieldmappingsRds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_assetgroup_rds")]
@@ -169,7 +169,7 @@ public partial class AWSDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype_rds")]
-    public List<XTypeMapping>? MappingsXtypeRds { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtypeRds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_devices_rds")]

@@ -69,7 +69,7 @@ public partial class Pax8Details
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_entities_list")]
-    public List<KeyPair2>? ImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? ImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("top_level")]
@@ -97,7 +97,7 @@ public partial class Pax8Details
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_mappings")]
-    public List<ExternalLinkList>? ClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? ClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

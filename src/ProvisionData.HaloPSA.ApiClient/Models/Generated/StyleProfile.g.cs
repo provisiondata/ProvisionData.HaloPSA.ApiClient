@@ -37,11 +37,11 @@ public partial class StyleProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rules")]
-    public List<StyleProfileRule>? Rules { get; set; } = [];
+    public List<StyleProfileRule>? Rules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("links")]
-    public List<StyleProfileLink>? Links { get; set; } = [];
+    public List<StyleProfileLink>? Links { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

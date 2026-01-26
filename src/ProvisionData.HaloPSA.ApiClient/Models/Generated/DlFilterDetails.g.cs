@@ -29,7 +29,7 @@ public partial class DlFilterDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filter_values")]
-    public List<KeyPair>? FilterValues { get; set; } = [];
+    public List<KeyPair>? FilterValues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filter_guid")]

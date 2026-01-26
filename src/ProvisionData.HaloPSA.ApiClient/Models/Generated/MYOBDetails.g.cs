@@ -137,7 +137,7 @@ public partial class MYOBDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_list")]
@@ -169,7 +169,7 @@ public partial class MYOBDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sync_entities_list")]
-    public List<KeyPair2>? SyncEntitiesList { get; set; } = [];
+    public List<KeyPair2>? SyncEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_access_token")]
@@ -189,11 +189,11 @@ public partial class MYOBDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_mappings")]
-    public List<ExternalLinkList>? ClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? ClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("supplier_mappings")]
-    public List<ExternalLinkList>? SupplierMappings { get; set; } = [];
+    public List<ExternalLinkList>? SupplierMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

@@ -41,11 +41,11 @@ public partial class AnalyzerFilter
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stringrulevalues")]
-    public List<KeyPair2>? Stringrulevalues { get; set; } = [];
+    public List<KeyPair2>? Stringrulevalues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("numericrulevalues")]
-    public List<KeyPair2>? Numericrulevalues { get; set; } = [];
+    public List<KeyPair2>? Numericrulevalues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stringruletext")]

@@ -93,7 +93,7 @@ public partial class Expense
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
 }
 

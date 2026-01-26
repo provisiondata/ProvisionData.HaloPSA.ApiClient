@@ -452,7 +452,7 @@ public partial class TOutcome
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonPropertyName("newticket_user")]
     public Users NewticketUser { get; set; } = new();
@@ -483,7 +483,7 @@ public partial class TOutcome
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<AttachmentList>? Attachments { get; set; } = [];
+    public List<AttachmentList>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_ticketinfoloaded")]
@@ -591,7 +591,7 @@ public partial class TOutcome
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -686,11 +686,11 @@ public partial class TOutcome
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_input_mappings")]
-    public List<IntegrationFieldMapping>? AzureInputMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AzureInputMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_output_mappings")]
-    public List<IntegrationFieldMapping>? AzureOutputMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AzureOutputMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_sync_to_salesforce")]
@@ -738,7 +738,7 @@ public partial class TOutcome
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("workflows")]
-    public List<KeyPair2>? Workflows { get; set; } = [];
+    public List<KeyPair2>? Workflows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quoter_template")]
@@ -754,11 +754,11 @@ public partial class TOutcome
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettypes")]
-    public List<KeyPair2>? Tickettypes { get; set; } = [];
+    public List<KeyPair2>? Tickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("travelrate")]
@@ -1061,7 +1061,7 @@ public partial class TOutcome
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enduser_role_ids")]
-    public List<Int32>? EnduserRoleIds { get; set; } = [];
+    public List<Int32>? EnduserRoleIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_note_to_parent")]

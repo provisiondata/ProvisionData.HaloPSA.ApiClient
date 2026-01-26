@@ -57,7 +57,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("limit_start_date")]
@@ -97,7 +97,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("geo_restrictions")]
-    public List<GeoLocationRestriction>? GeoRestrictions { get; set; } = [];
+    public List<GeoLocationRestriction>? GeoRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resolution")]
@@ -165,15 +165,15 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tags")]
-    public List<Tag>? Tags { get; set; } = [];
+    public List<Tag>? Tags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams")]
-    public List<SectionDetail>? Teams { get; set; } = [];
+    public List<SectionDetail>? Teams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("your_vote")]
@@ -185,7 +185,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<AttachmentList>? Attachments { get; set; } = [];
+    public List<AttachmentList>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isimport")]
@@ -217,7 +217,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("other_versions")]
-    public List<KBEntryList>? OtherVersions { get; set; } = [];
+    public List<KBEntryList>? OtherVersions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_id")]
@@ -225,11 +225,11 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_attachments")]
-    public List<Attachment>? ImportAttachments { get; set; } = [];
+    public List<Attachment>? ImportAttachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("related_articles")]
-    public List<KBEntryList>? RelatedArticles { get; set; } = [];
+    public List<KBEntryList>? RelatedArticles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("your_comment")]
@@ -249,7 +249,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_print_generate")]
@@ -273,11 +273,11 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbentryclientaccess")]
-    public List<KbEntryAreaAccess>? Kbentryclientaccess { get; set; } = [];
+    public List<KbEntryAreaAccess>? Kbentryclientaccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbentrytoplevelaccess")]
-    public List<KbEntryTopLevelAccess>? Kbentrytoplevelaccess { get; set; } = [];
+    public List<KbEntryTopLevelAccess>? Kbentrytoplevelaccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -285,7 +285,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("devices")]
-    public List<DeviceList>? Devices { get; set; } = [];
+    public List<DeviceList>? Devices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faq_write")]
@@ -308,15 +308,15 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("wordpress_tags")]
-    public Object? WordpressTags { get; set; } = new Object();
+    public UnknownType? WordpressTags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("wordpress_categories")]
-    public Object? WordpressCategories { get; set; } = new Object();
+    public UnknownType? WordpressCategories { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("importtags")]
@@ -324,7 +324,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("owners")]
-    public List<KBOwner>? Owners { get; set; } = [];
+    public List<KBOwner>? Owners { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("search_index_sync_timestamp")]
@@ -336,7 +336,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbpermalinks")]
-    public List<Permalinks>? Kbpermalinks { get; set; } = [];
+    public List<Permalinks>? Kbpermalinks { get; set; } = new();
 
     [JsonPropertyName("negativeFeedbackTicket")]
     public Tickets NegativeFeedbackTicket { get; set; } = new();
@@ -371,11 +371,11 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("style_profile_links")]
-    public List<StyleProfileLink>? StyleProfileLinks { get; set; } = [];
+    public List<StyleProfileLink>? StyleProfileLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("style_profile_rules")]
-    public List<StyleProfileRule>? StyleProfileRules { get; set; } = [];
+    public List<StyleProfileRule>? StyleProfileRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("active_draft_id")]
@@ -421,7 +421,7 @@ public partial class KBEntry
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faqlists")]
-    public List<FAQListHead>? Faqlists { get; set; } = [];
+    public List<FAQListHead>? Faqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("description_list")]

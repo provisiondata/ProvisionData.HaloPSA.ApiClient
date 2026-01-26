@@ -10,7 +10,7 @@ public partial class StripePaymentIntentCreateRequest
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("items")]
-    public List<StripeItem>? Items { get; set; } = [];
+    public List<StripeItem>? Items { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cardid")]

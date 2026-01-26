@@ -81,19 +81,19 @@ public partial class OutboundIntegrationMethod
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("uri_params")]
-    public List<OutboundIntegrationMethodValue>? UriParams { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? UriParams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("headers")]
-    public List<OutboundIntegrationMethodValue>? Headers { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? Headers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("body_mappings")]
-    public List<OutboundIntegrationMethodValue>? BodyMappings { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? BodyMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("output_variables")]
-    public List<OutboundIntegrationMethodValue>? OutputVariables { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? OutputVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test")]
@@ -101,15 +101,15 @@ public partial class OutboundIntegrationMethod
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test_variables")]
-    public List<IntegrationRunbookVariable>? TestVariables { get; set; } = [];
+    public List<IntegrationRunbookVariable>? TestVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test_runbook_variables")]
-    public List<IntegrationRunbookVariable>? TestRunbookVariables { get; set; } = [];
+    public List<IntegrationRunbookVariable>? TestRunbookVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test_output_variables")]
-    public List<IntegrationRunbookVariable>? TestOutputVariables { get; set; } = [];
+    public List<IntegrationRunbookVariable>? TestOutputVariables { get; set; } = new();
 
     [JsonPropertyName("_test_result")]
     public WebhookEvent TestResult { get; set; } = new();
@@ -132,7 +132,7 @@ public partial class OutboundIntegrationMethod
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

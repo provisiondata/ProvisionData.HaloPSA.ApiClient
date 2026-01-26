@@ -70,7 +70,7 @@ public partial class Webhook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("events")]
-    public List<UnameNotification>? Events { get; set; } = [];
+    public List<UnameNotification>? Events { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("last_status")]
@@ -106,7 +106,7 @@ public partial class Webhook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("headers_to_sign")]
-    public List<KeyPair2>? HeadersToSign { get; set; } = [];
+    public List<KeyPair2>? HeadersToSign { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timestamp_verification_header")]
@@ -162,7 +162,7 @@ public partial class Webhook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings")]
-    public List<WebhookMapping>? Mappings { get; set; } = [];
+    public List<WebhookMapping>? Mappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custom_payload")]
@@ -214,23 +214,23 @@ public partial class Webhook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("steps")]
-    public List<FlowDetail>? Steps { get; set; } = [];
+    public List<FlowDetail>? Steps { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("input_variables")]
-    public List<OutboundIntegrationMethodValue>? InputVariables { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? InputVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mapping_profiles")]
-    public List<ObjectMappingProfile>? MappingProfiles { get; set; } = [];
+    public List<ObjectMappingProfile>? MappingProfiles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("standalone_methods")]
-    public List<OutboundIntegrationMethod>? StandaloneMethods { get; set; } = [];
+    public List<OutboundIntegrationMethod>? StandaloneMethods { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("integrations")]
-    public List<OutboundIntegration>? Integrations { get; set; } = [];
+    public List<OutboundIntegration>? Integrations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("schedule_id")]
@@ -302,7 +302,7 @@ public partial class Webhook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("safe_instance_list")]
-    public List<Instance>? SafeInstanceList { get; set; } = [];
+    public List<Instance>? SafeInstanceList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test")]
@@ -310,15 +310,15 @@ public partial class Webhook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test_variables")]
-    public List<IntegrationRunbookVariable>? TestVariables { get; set; } = [];
+    public List<IntegrationRunbookVariable>? TestVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test_runbook_variables")]
-    public List<IntegrationRunbookVariable>? TestRunbookVariables { get; set; } = [];
+    public List<IntegrationRunbookVariable>? TestRunbookVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test_output_variables")]
-    public List<IntegrationRunbookVariable>? TestOutputVariables { get; set; } = [];
+    public List<IntegrationRunbookVariable>? TestOutputVariables { get; set; } = new();
 
     [JsonPropertyName("_test_result")]
     public WebhookEvent TestResult { get; set; } = new();
@@ -356,7 +356,7 @@ public partial class Webhook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

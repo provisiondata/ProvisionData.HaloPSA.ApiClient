@@ -18,7 +18,7 @@ public partial class SqlLookupRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("db_params")]
-    public List<StringObjectDbTypeTuple>? DbParams { get; set; } = [];
+    public List<StringObjectDbTypeTuple>? DbParams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filookup")]

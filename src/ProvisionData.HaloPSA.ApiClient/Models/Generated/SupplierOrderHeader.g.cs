@@ -10,7 +10,7 @@ public partial class SupplierOrderHeader
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
@@ -217,11 +217,11 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lines")]
-    public List<SupplierOrderDetail>? Lines { get; set; } = [];
+    public List<SupplierOrderDetail>? Lines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_lines")]
-    public List<SupplierOrderDetail>? AddLines { get; set; } = [];
+    public List<SupplierOrderDetail>? AddLines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_validateonly")]
@@ -285,7 +285,7 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("so_assets")]
-    public List<DeviceList>? SoAssets { get; set; } = [];
+    public List<DeviceList>? SoAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("warrantyurl")]
@@ -317,7 +317,7 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_create_invoice_lines")]
-    public List<SupplierOrderDetail>? CreateInvoiceLines { get; set; } = [];
+    public List<SupplierOrderDetail>? CreateInvoiceLines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_return_invoice")]
@@ -333,7 +333,7 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("invoices")]
-    public List<InvoiceHeader>? Invoices { get; set; } = [];
+    public List<InvoiceHeader>? Invoices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("invoice_count")]
@@ -471,11 +471,11 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_dont_fire_automations")]
@@ -499,7 +499,7 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_users")]
-    public List<UsersList>? NewApprovalprocessUsers { get; set; } = [];
+    public List<UsersList>? NewApprovalprocessUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_email")]
@@ -511,7 +511,7 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_cab")]
-    public List<CabMember>? NewApprovalprocessCab { get; set; } = [];
+    public List<CabMember>? NewApprovalprocessCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_role_id")]
@@ -578,7 +578,7 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_importtypeid")]

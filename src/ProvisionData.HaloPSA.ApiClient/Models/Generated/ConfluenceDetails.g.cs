@@ -33,7 +33,7 @@ public partial class ConfluenceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faq_links")]
-    public List<ExternalLinkList>? FaqLinks { get; set; } = [];
+    public List<ExternalLinkList>? FaqLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enabled")]

@@ -8,6 +8,7 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public partial class RunbookAutomationMonitoring
 {
+        // NOTE: The schema for RunbookAutomationMonitoring had no properties defined.
 }
 
 #nullable disable

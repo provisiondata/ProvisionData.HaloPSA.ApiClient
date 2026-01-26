@@ -74,15 +74,15 @@ public partial class LDAPConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_user")]
-    public List<LDAPName>? MappingsUser { get; set; } = [];
+    public List<LDAPName>? MappingsUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_agent")]
-    public List<LDAPName>? MappingsAgent { get; set; } = [];
+    public List<LDAPName>? MappingsAgent { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ldap_strings")]
-    public List<LDAPString>? LdapStrings { get; set; } = [];
+    public List<LDAPString>? LdapStrings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("useadauthentication")]
@@ -106,7 +106,7 @@ public partial class LDAPConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_containers")]
-    public List<LDAPString>? Containers { get; set; } = [];
+    public List<LDAPString>? Containers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_containerfilter")]
@@ -126,7 +126,7 @@ public partial class LDAPConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cab_ldap_strings")]
-    public List<LDAPString>? CabLdapStrings { get; set; } = [];
+    public List<LDAPString>? CabLdapStrings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegratorenabled")]
@@ -154,7 +154,7 @@ public partial class LDAPConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowedclientidslist")]
-    public List<KeyPair3>? HalointegratorAllowedclientidslist { get; set; } = [];
+    public List<KeyPair3>? HalointegratorAllowedclientidslist { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowedclientids")]
@@ -170,11 +170,11 @@ public partial class LDAPConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_matching_list")]
-    public List<KeyPair2>? UserMatchingList { get; set; } = [];
+    public List<KeyPair2>? UserMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_matching_list")]
-    public List<KeyPair2>? AgentMatchingList { get; set; } = [];
+    public List<KeyPair2>? AgentMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_password")]
@@ -190,7 +190,7 @@ public partial class LDAPConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("syncedstrings")]
-    public List<Int32>? Syncedstrings { get; set; } = [];
+    public List<Int32>? Syncedstrings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -210,7 +210,7 @@ public partial class LDAPConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_new_user")]
-    public List<LDAPName>? MappingsNewUser { get; set; } = [];
+    public List<LDAPName>? MappingsNewUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_user_template_name")]

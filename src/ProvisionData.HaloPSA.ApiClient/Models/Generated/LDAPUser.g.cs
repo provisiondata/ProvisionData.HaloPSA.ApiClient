@@ -34,7 +34,7 @@ public partial class LDAPUser
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attributes")]
-    public List<KeyPair>? Attributes { get; set; } = [];
+    public List<KeyPair>? Attributes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("uactguidMapping")]

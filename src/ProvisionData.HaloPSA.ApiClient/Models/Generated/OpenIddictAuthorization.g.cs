@@ -37,7 +37,7 @@ public partial class OpenIddictAuthorization
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tokens")]
-    public List<OpenIddictToken>? Tokens { get; set; } = [];
+    public List<OpenIddictToken>? Tokens { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("type")]

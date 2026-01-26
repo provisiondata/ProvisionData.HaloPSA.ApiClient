@@ -37,7 +37,7 @@ public partial class GoogleBusinessQuestion
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("topAnswers")]
-    public List<GoogleBusinessAnswer>? TopAnswers { get; set; } = [];
+    public List<GoogleBusinessAnswer>? TopAnswers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("gbdid")]

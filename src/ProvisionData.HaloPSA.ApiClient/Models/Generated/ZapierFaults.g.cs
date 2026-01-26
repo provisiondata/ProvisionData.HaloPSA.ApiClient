@@ -101,7 +101,7 @@ public partial class ZapierFaults
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public Object? Customfields { get; set; } = new Object();
+    public UnknownType? Customfields { get; set; } = new();
 
     [JsonPropertyName("lastaction")]
     public ZapierActions Lastaction { get; set; } = new();

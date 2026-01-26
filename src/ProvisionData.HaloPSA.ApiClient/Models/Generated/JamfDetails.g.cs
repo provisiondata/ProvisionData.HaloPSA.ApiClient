@@ -37,7 +37,7 @@ public partial class JamfDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device_types")]
-    public List<KeyPair2>? DeviceTypes { get; set; } = [];
+    public List<KeyPair2>? DeviceTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("defaultsite")]
@@ -49,15 +49,15 @@ public partial class JamfDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_links")]
-    public List<ExternalLinkList>? SiteLinks { get; set; } = [];
+    public List<ExternalLinkList>? SiteLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings")]
-    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mobilefieldmappings")]
-    public List<IntegrationFieldMapping>? Mobilefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Mobilefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sitematchtype")]
@@ -133,7 +133,7 @@ public partial class JamfDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xtype_mappings")]
-    public List<XTypeMapping>? XtypeMappings { get; set; } = [];
+    public List<XTypeMapping>? XtypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auth_method")]

@@ -397,7 +397,7 @@ public partial class OrderTotals
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itemGroups")]
-    public List<Int32>? ItemGroups { get; set; } = [];
+    public List<Int32>? ItemGroups { get; set; } = new();
 
 }
 

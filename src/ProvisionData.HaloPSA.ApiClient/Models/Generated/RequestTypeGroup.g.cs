@@ -17,7 +17,7 @@ public partial class RequestTypeGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

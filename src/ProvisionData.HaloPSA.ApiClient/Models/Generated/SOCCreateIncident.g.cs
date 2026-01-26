@@ -25,7 +25,7 @@ public partial class SOCCreateIncident
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("targets")]
-    public List<SOCCreateIncidentTarget>? Targets { get; set; } = [];
+    public List<SOCCreateIncidentTarget>? Targets { get; set; } = new();
 
 }
 

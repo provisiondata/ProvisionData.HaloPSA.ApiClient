@@ -26,7 +26,7 @@ public partial class SentinelOneBundle
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("surfaces")]
-    public List<SentinelOneSurface>? Surfaces { get; set; } = [];
+    public List<SentinelOneSurface>? Surfaces { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("displayName")]

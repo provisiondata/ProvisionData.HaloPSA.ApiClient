@@ -97,11 +97,11 @@ public partial class UserRoles
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("departments")]
-    public List<UserDepartment>? Departments { get; set; } = [];
+    public List<UserDepartment>? Departments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notifications")]
-    public List<UnameNotification>? Notifications { get; set; } = [];
+    public List<UnameNotification>? Notifications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("canuploaddocuments")]

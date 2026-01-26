@@ -42,7 +42,7 @@ public partial class ReleasePipeline
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("pipeline_mappings")]
-    public List<IntegrationFieldMapping>? PipelineMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? PipelineMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_product_name")]

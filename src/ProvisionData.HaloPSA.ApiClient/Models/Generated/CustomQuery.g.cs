@@ -28,7 +28,7 @@ public partial class CustomQuery
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lookup_values")]
-    public List<KeyPair>? LookupValues { get; set; } = [];
+    public List<KeyPair>? LookupValues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("column_name")]

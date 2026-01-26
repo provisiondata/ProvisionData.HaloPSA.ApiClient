@@ -94,11 +94,11 @@ public partial class TwitterDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("include_word_list")]
-    public List<KeyPair2>? IncludeWordList { get; set; } = [];
+    public List<KeyPair2>? IncludeWordList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("exclude_word_list")]
-    public List<KeyPair2>? ExcludeWordList { get; set; } = [];
+    public List<KeyPair2>? ExcludeWordList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("direct_message_create_users")]

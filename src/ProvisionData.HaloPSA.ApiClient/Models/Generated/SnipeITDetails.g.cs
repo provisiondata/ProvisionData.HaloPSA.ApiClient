@@ -61,7 +61,7 @@ public partial class SnipeITDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snipeit_fieldmappings")]
-    public List<IntegrationFieldMapping>? SnipeitFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SnipeitFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableintegrator")]
@@ -81,7 +81,7 @@ public partial class SnipeITDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_devices")]
@@ -105,7 +105,7 @@ public partial class SnipeITDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_links")]
-    public List<ExternalLinkList>? ClientLinks { get; set; } = [];
+    public List<ExternalLinkList>? ClientLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("guid")]
@@ -113,7 +113,7 @@ public partial class SnipeITDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_assetgroup")]

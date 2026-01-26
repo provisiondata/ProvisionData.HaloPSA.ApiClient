@@ -61,7 +61,7 @@ public partial class IntegrationExport
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("exportdata")]
-    public List<IntegrationExportData>? Exportdata { get; set; } = [];
+    public List<IntegrationExportData>? Exportdata { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

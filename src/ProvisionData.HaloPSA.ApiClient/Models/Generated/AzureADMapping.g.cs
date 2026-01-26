@@ -41,7 +41,7 @@ public partial class AzureADMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<AzureADFilter>? Filters { get; set; } = [];
+    public List<AzureADFilter>? Filters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filter_count")]
@@ -101,7 +101,7 @@ public partial class AzureADMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_mappings_user")]
-    public List<IntegrationFieldMapping>? SiteMappingsUser { get; set; } = [];
+    public List<IntegrationFieldMapping>? SiteMappingsUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("license_type")]

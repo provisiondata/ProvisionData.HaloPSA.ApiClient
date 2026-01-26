@@ -53,7 +53,7 @@ public partial class ItemSupplier
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<ViewFilterDetails>? Filters { get; set; } = [];
+    public List<ViewFilterDetails>? Filters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_is_new")]

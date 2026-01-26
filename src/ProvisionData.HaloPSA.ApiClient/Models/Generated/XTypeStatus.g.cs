@@ -31,7 +31,7 @@ public partial class XTypeStatus
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowedafterstatus")]
-    public List<XTypeStatusRestrictions>? Allowedafterstatus { get; set; } = [];
+    public List<XTypeStatusRestrictions>? Allowedafterstatus { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

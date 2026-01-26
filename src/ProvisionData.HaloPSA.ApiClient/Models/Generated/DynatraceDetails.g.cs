@@ -53,15 +53,15 @@ public partial class DynatraceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("host_fieldmappings")]
-    public List<IntegrationFieldMapping>? HostFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HostFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_fieldmappings")]
-    public List<IntegrationFieldMapping>? ServiceFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServiceFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sitemappings")]
-    public List<IntegrationSiteMapping>? Sitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? Sitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableintegrator")]
@@ -81,7 +81,7 @@ public partial class DynatraceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_devices")]
@@ -109,7 +109,7 @@ public partial class DynatraceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_assetgroup")]

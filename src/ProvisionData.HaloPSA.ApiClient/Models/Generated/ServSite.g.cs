@@ -505,7 +505,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category1")]
-    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category2")]
@@ -513,7 +513,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category2")]
-    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category3")]
@@ -521,7 +521,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category3")]
-    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category4")]
@@ -529,7 +529,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category4")]
-    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("seq")]
@@ -589,27 +589,27 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_access")]
-    public List<ServiceRestriction>? UserAccess { get; set; } = [];
+    public List<ServiceRestriction>? UserAccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_user_access")]
-    public List<CriteriaGroup>? GroupUserAccess { get; set; } = [];
+    public List<CriteriaGroup>? GroupUserAccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("subscribers")]
-    public List<ServiceUser>? Subscribers { get; set; } = [];
+    public List<ServiceUser>? Subscribers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_subscribers")]
-    public List<CriteriaGroup>? GroupSubscribers { get; set; } = [];
+    public List<CriteriaGroup>? GroupSubscribers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_services")]
-    public List<ServiceLinks>? LinkedServices { get; set; } = [];
+    public List<ServiceLinks>? LinkedServices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")]
-    public List<DeviceList>? Assets { get; set; } = [];
+    public List<DeviceList>? Assets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_status")]
@@ -672,15 +672,15 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_services")]
-    public List<ServiceOption>? OptionalServices { get; set; } = [];
+    public List<ServiceOption>? OptionalServices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("isservicedetails")]
@@ -692,11 +692,11 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("status_history")]
-    public List<ServStatus>? StatusHistory { get; set; } = [];
+    public List<ServStatus>? StatusHistory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_request_details")]
-    public List<ServiceRequestDetails>? ServiceRequestDetails { get; set; } = [];
+    public List<ServiceRequestDetails>? ServiceRequestDetails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device_child_id")]
@@ -716,7 +716,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbs")]
-    public List<KBEntryList>? Kbs { get; set; } = [];
+    public List<KBEntryList>? Kbs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("search_index_sync_timestamp")]
@@ -732,7 +732,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tags")]
-    public List<Tag>? Tags { get; set; } = [];
+    public List<Tag>? Tags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("track_availability")]
@@ -752,7 +752,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_category_mappings")]
-    public List<ServiceCategoryMapping>? ServiceCategoryMappings { get; set; } = [];
+    public List<ServiceCategoryMapping>? ServiceCategoryMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_linked_service")]
@@ -792,11 +792,11 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("future_statuses")]
-    public List<Int32NullableStringDateTimeNullableInt32NullableTuple>? FutureStatuses { get; set; } = [];
+    public List<Int32NullableStringDateTimeNullableInt32NullableTuple>? FutureStatuses { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("current_statuses")]
-    public List<Int32NullableStringDateTimeNullableInt32NullableDateTimeNullableTuple>? CurrentStatuses { get; set; } = [];
+    public List<Int32NullableStringDateTimeNullableInt32NullableDateTimeNullableTuple>? CurrentStatuses { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_url")]
@@ -808,7 +808,7 @@ public partial class ServSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

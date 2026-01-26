@@ -137,11 +137,11 @@ public partial class Schedule
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contract_schedule_plan")]
-    public List<ContractSchedulePlan>? ContractSchedulePlan { get; set; } = [];
+    public List<ContractSchedulePlan>? ContractSchedulePlan { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("weeklyrecurrenceamount")]
-    public List<KeyPair>? Weeklyrecurrenceamount { get; set; } = [];
+    public List<KeyPair>? Weeklyrecurrenceamount { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_validateonly")]
@@ -149,7 +149,7 @@ public partial class Schedule
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("events")]
-    public List<Appointment>? Events { get; set; } = [];
+    public List<Appointment>? Events { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

@@ -33,15 +33,15 @@ public partial class MileStone
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("milestone_dependencies")]
-    public List<MileStone>? MilestoneDependencies { get; set; } = [];
+    public List<MileStone>? MilestoneDependencies { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dependencies")]
-    public List<MileStoneDependency>? Dependencies { get; set; } = [];
+    public List<MileStoneDependency>? Dependencies { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickets")]
-    public List<FaultsMileStone>? Tickets { get; set; } = [];
+    public List<FaultsMileStone>? Tickets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_complete")]

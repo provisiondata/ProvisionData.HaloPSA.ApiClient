@@ -115,15 +115,15 @@ public partial class BusinessCentralDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_mappings")]
-    public List<ExternalLinkList>? ClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? ClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("vendor_mappings")]
-    public List<ExternalLinkList>? VendorMappings { get; set; } = [];
+    public List<ExternalLinkList>? VendorMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_group_mappings")]
-    public List<ExternalLinkList>? ItemGroupMappings { get; set; } = [];
+    public List<ExternalLinkList>? ItemGroupMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_default_group")]
@@ -159,7 +159,7 @@ public partial class BusinessCentralDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sync_entities_list")]
-    public List<KeyPair2>? SyncEntitiesList { get; set; } = [];
+    public List<KeyPair2>? SyncEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("show_message")]

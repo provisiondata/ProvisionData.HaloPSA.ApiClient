@@ -217,7 +217,7 @@ public partial class OrderLine
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("consignment_ids")]
-    public List<Int32>? ConsignmentIds { get; set; } = [];
+    public List<Int32>? ConsignmentIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quotation_line_id")]
@@ -305,15 +305,15 @@ public partial class OrderLine
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets_to_reserve")]
-    public List<DeviceList>? AssetsToReserve { get; set; } = [];
+    public List<DeviceList>? AssetsToReserve { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reserved_assets")]
-    public List<DeviceList>? ReservedAssets { get; set; } = [];
+    public List<DeviceList>? ReservedAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("consigned_assets")]
-    public List<DeviceList>? ConsignedAssets { get; set; } = [];
+    public List<DeviceList>? ConsignedAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("invoice_id")]
@@ -417,11 +417,11 @@ public partial class OrderLine
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("invoice_ids")]
-    public List<Int32>? InvoiceIds { get; set; } = [];
+    public List<Int32>? InvoiceIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("downpayment_invoice_ids")]
-    public List<Int32>? DownpaymentInvoiceIds { get; set; } = [];
+    public List<Int32>? DownpaymentInvoiceIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("percentage_invoiced")]
@@ -461,7 +461,7 @@ public partial class OrderLine
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_deferred_revenue")]
@@ -473,11 +473,11 @@ public partial class OrderLine
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")]
-    public List<Lookup>? Chargerates { get; set; } = [];
+    public List<Lookup>? Chargerates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("budgets")]
-    public List<FaultBudget>? Budgets { get; set; } = [];
+    public List<FaultBudget>? Budgets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hide_grouped_items_price")]
@@ -659,7 +659,7 @@ public partial class OrderLine
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("taxRuleResult")]
-    public List<TaxRuleResult>? TaxRuleResult { get; set; } = [];
+    public List<TaxRuleResult>? TaxRuleResult { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("decimalplacesforinvoices")]

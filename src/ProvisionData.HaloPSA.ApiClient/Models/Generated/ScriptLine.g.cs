@@ -49,11 +49,11 @@ public partial class ScriptLine
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("choices")]
-    public List<ScriptChoice>? Choices { get; set; } = [];
+    public List<ScriptChoice>? Choices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("verification_fields")]
-    public List<FieldInfo>? VerificationFields { get; set; } = [];
+    public List<FieldInfo>? VerificationFields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

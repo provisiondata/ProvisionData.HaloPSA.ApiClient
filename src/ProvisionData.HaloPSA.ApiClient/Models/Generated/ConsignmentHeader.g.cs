@@ -45,11 +45,11 @@ public partial class ConsignmentHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lines")]
-    public List<ConsignmentDetail>? Lines { get; set; } = [];
+    public List<ConsignmentDetail>? Lines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")]
-    public List<DeviceList>? Assets { get; set; } = [];
+    public List<DeviceList>? Assets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_print_generate")]

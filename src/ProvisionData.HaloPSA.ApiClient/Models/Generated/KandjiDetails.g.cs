@@ -57,11 +57,11 @@ public partial class KandjiDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings")]
-    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sitemappings")]
-    public List<IntegrationSiteMapping>? Sitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? Sitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableintegrator")]
@@ -97,7 +97,7 @@ public partial class KandjiDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_assetgroup")]

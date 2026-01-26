@@ -41,11 +41,11 @@ public partial class Dynamics365CRMSubTable
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("child_field_mappings")]
-    public List<IntegrationFieldMapping>? ChildFieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ChildFieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("child_mappings")]
-    public List<Dynamics365CRMSubTable>? ChildMappings { get; set; } = [];
+    public List<Dynamics365CRMSubTable>? ChildMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

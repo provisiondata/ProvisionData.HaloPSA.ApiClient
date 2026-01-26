@@ -73,15 +73,15 @@ public partial class ServiceCategory
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_access")]
-    public List<ServiceRestriction>? UserAccess { get; set; } = [];
+    public List<ServiceRestriction>? UserAccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_user_access")]
-    public List<CriteriaGroup>? GroupUserAccess { get; set; } = [];
+    public List<CriteriaGroup>? GroupUserAccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -89,7 +89,7 @@ public partial class ServiceCategory
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

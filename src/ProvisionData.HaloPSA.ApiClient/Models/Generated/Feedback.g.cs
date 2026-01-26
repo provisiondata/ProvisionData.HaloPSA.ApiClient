@@ -40,7 +40,7 @@ public partial class Feedback
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customsurveyfields")]
-    public List<CustomField>? Customsurveyfields { get; set; } = [];
+    public List<CustomField>? Customsurveyfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("recaptcha_token")]
@@ -52,7 +52,7 @@ public partial class Feedback
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automation_id")]

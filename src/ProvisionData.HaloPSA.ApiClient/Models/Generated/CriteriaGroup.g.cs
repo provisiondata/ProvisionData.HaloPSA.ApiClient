@@ -53,19 +53,19 @@ public partial class CriteriaGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("restrictions")]
-    public List<FlowSubDetailRestriction>? Restrictions { get; set; } = [];
+    public List<FlowSubDetailRestriction>? Restrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("visibility_conditions")]
-    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = [];
+    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_access")]
-    public List<ServiceRestriction>? UserAccess { get; set; } = [];
+    public List<ServiceRestriction>? UserAccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("subscribers")]
-    public List<ServiceUser>? Subscribers { get; set; } = [];
+    public List<ServiceUser>? Subscribers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

@@ -49,7 +49,7 @@ public partial class SavedForecast
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("forecast_values")]
-    public List<ForecastOutputValue>? ForecastValues { get; set; } = [];
+    public List<ForecastOutputValue>? ForecastValues { get; set; } = new();
 
 }
 

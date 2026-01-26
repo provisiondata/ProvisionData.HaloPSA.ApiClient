@@ -241,7 +241,7 @@ public partial class Mailbox
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("signature_overrides")]
-    public List<MailboxTechnician>? SignatureOverrides { get; set; } = [];
+    public List<MailboxTechnician>? SignatureOverrides { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isglobalsmtp")]
@@ -480,11 +480,11 @@ public partial class Mailbox
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_user")]
-    public List<IntegrationFieldMapping>? MappingsUser { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_senders")]
-    public List<MailboxSenderRestrictions>? AllowedSenders { get; set; } = [];
+    public List<MailboxSenderRestrictions>? AllowedSenders { get; set; } = new();
 
 }
 

@@ -61,15 +61,15 @@ public partial class ArmisDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings")]
-    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_rules")]
-    public List<IntegrationSiteMapping>? SiteRules { get; set; } = [];
+    public List<IntegrationSiteMapping>? SiteRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_mappings")]
-    public List<ExternalLinkList>? SiteMappings { get; set; } = [];
+    public List<ExternalLinkList>? SiteMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableintegrator")]
@@ -105,7 +105,7 @@ public partial class ArmisDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_assetgroup")]
@@ -153,7 +153,7 @@ public partial class ArmisDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
 }
 

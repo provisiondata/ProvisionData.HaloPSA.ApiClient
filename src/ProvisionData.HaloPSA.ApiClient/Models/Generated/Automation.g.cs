@@ -108,7 +108,7 @@ public partial class Automation
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("trace")]
-    public List<Trace>? Trace { get; set; } = [];
+    public List<Trace>? Trace { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("request_body")]

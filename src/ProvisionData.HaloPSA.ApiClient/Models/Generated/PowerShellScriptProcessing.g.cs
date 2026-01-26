@@ -29,7 +29,7 @@ public partial class PowerShellScriptProcessing
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("execution_parameters")]
-    public Object? ExecutionParameters { get; set; } = new Object();
+    public UnknownType? ExecutionParameters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("success")]

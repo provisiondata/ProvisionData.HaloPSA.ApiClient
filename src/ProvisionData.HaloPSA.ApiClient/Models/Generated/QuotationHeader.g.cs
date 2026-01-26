@@ -10,7 +10,7 @@ public partial class QuotationHeader
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
@@ -179,7 +179,7 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lines")]
-    public List<QuotationDetail>? Lines { get; set; } = [];
+    public List<QuotationDetail>? Lines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_validateonly")]
@@ -258,7 +258,7 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("images")]
-    public List<AttachmentList>? Images { get; set; } = [];
+    public List<AttachmentList>? Images { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("internal_approval_status")]
@@ -358,11 +358,11 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_pdf_list_append")]
-    public List<QuotationHeaderPdf>? LinkedPdfListAppend { get; set; } = [];
+    public List<QuotationHeaderPdf>? LinkedPdfListAppend { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_pdf_list_prepend")]
-    public List<QuotationHeaderPdf>? LinkedPdfListPrepend { get; set; } = [];
+    public List<QuotationHeaderPdf>? LinkedPdfListPrepend { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automatic_sales_tax")]
@@ -454,7 +454,7 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_users")]
-    public List<UsersList>? NewApprovalprocessUsers { get; set; } = [];
+    public List<UsersList>? NewApprovalprocessUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_email")]
@@ -466,7 +466,7 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_cab")]
-    public List<CabMember>? NewApprovalprocessCab { get; set; } = [];
+    public List<CabMember>? NewApprovalprocessCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_delivery_override")]
@@ -524,7 +524,7 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("workflow_history")]
-    public List<WorkflowHistory>? WorkflowHistory { get; set; } = [];
+    public List<WorkflowHistory>? WorkflowHistory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("workflow_step")]
@@ -640,15 +640,15 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quoteapprovalfields")]
-    public List<RequestTypeField>? Quoteapprovalfields { get; set; } = [];
+    public List<RequestTypeField>? Quoteapprovalfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("status_name")]
@@ -719,7 +719,7 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sales_orders")]
-    public List<OrderHead>? SalesOrders { get; set; } = [];
+    public List<OrderHead>? SalesOrders { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("last_change_seq")]
@@ -747,7 +747,7 @@ public partial class QuotationHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_importtypeid")]

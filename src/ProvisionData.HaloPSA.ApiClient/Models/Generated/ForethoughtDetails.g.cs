@@ -25,7 +25,7 @@ public partial class ForethoughtDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attributes")]
-    public List<ForethoughtConfigItem>? Attributes { get; set; } = [];
+    public List<ForethoughtConfigItem>? Attributes { get; set; } = new();
 
 }
 

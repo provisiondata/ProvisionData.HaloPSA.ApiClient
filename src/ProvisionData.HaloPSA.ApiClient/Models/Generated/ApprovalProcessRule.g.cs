@@ -61,7 +61,7 @@ public partial class ApprovalProcessRule
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("criteria")]
-    public List<ApprovalProcessRuleCriteria>? Criteria { get; set; } = [];
+    public List<ApprovalProcessRuleCriteria>? Criteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approval_process_id")]

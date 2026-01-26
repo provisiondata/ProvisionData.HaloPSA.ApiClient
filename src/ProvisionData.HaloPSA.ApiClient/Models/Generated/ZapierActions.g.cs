@@ -33,7 +33,7 @@ public partial class ZapierActions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public Object? Customfields { get; set; } = new Object();
+    public UnknownType? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emailto")]

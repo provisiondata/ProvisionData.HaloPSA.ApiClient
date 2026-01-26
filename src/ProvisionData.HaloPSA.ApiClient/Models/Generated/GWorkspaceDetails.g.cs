@@ -189,23 +189,23 @@ public partial class GWorkspaceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licensed_roles_list")]
-    public List<KeyPair>? LicensedRolesList { get; set; } = [];
+    public List<KeyPair>? LicensedRolesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("named_roles_list")]
-    public List<KeyPair>? NamedRolesList { get; set; } = [];
+    public List<KeyPair>? NamedRolesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_matching_list")]
-    public List<KeyPair2>? UserMatchingList { get; set; } = [];
+    public List<KeyPair2>? UserMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("integrator_import_types_list")]
-    public List<KeyPair2>? IntegratorImportTypesList { get; set; } = [];
+    public List<KeyPair2>? IntegratorImportTypesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_matching_list")]
-    public List<KeyPair2>? AgentMatchingList { get; set; } = [];
+    public List<KeyPair2>? AgentMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mobile_scopes")]
@@ -213,7 +213,7 @@ public partial class GWorkspaceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("scopes")]
-    public List<String>? Scopes { get; set; } = [];
+    public List<String>? Scopes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("asset_scopes")]
@@ -237,51 +237,51 @@ public partial class GWorkspaceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_role_mappings")]
-    public List<IntegrationFieldMapping>? UserRoleMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? UserRoleMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device_mappings")]
-    public List<IntegrationFieldMapping>? DeviceMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? DeviceMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("asset_site_mappings")]
-    public List<ExternalLinkList>? AssetSiteMappings { get; set; } = [];
+    public List<ExternalLinkList>? AssetSiteMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reseller_site_mappings")]
-    public List<GoogleWorkplaceMapping>? ResellerSiteMappings { get; set; } = [];
+    public List<GoogleWorkplaceMapping>? ResellerSiteMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mobile_mappings")]
-    public List<IntegrationFieldMapping>? MobileMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? MobileMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_new_user")]
-    public List<IntegrationFieldMapping>? MappingsNewUser { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsNewUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_mappings")]
-    public List<IntegrationFieldMapping>? UserMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? UserMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_mappings")]
-    public List<IntegrationFieldMapping>? AgentMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AgentMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("role_mappings")]
-    public List<IntegrationFieldMapping>? RoleMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? RoleMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cab_mappings")]
-    public List<IntegrationFieldMapping>? CabMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? CabMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_mappings")]
-    public List<ExternalLinkList>? ClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? ClientMappings { get; set; } = new();
 
 }
 

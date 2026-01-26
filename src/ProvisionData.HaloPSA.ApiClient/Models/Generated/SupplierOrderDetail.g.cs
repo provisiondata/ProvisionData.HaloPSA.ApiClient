@@ -10,7 +10,7 @@ public partial class SupplierOrderDetail
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
@@ -211,7 +211,7 @@ public partial class SupplierOrderDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("date_received")]
@@ -306,7 +306,7 @@ public partial class SupplierOrderDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("taxRuleResult")]
-    public List<TaxRuleResult>? TaxRuleResult { get; set; } = [];
+    public List<TaxRuleResult>? TaxRuleResult { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("decimalplacesforinvoices")]

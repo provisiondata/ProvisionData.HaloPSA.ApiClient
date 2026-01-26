@@ -38,7 +38,7 @@ public partial class Tabname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<FieldInfo>? Fields { get; set; } = [];
+    public List<FieldInfo>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("url")]

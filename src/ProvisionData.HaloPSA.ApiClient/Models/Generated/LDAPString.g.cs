@@ -65,7 +65,7 @@ public partial class LDAPString
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")]
-    public List<LDAPUser>? Users { get; set; } = [];
+    public List<LDAPUser>? Users { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cabmapping")]

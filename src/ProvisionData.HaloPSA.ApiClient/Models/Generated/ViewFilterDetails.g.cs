@@ -41,11 +41,11 @@ public partial class ViewFilterDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filter_values")]
-    public List<KeyPair>? FilterValues { get; set; } = [];
+    public List<KeyPair>? FilterValues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("multiselect_value")]
-    public List<MultiselectFilter>? MultiselectValue { get; set; } = [];
+    public List<MultiselectFilter>? MultiselectValue { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filter_guid")]

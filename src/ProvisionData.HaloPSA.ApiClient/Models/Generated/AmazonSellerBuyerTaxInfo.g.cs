@@ -18,7 +18,7 @@ public partial class AmazonSellerBuyerTaxInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("taxClassifications")]
-    public List<AmazonSellerTaxClassifications>? TaxClassifications { get; set; } = [];
+    public List<AmazonSellerTaxClassifications>? TaxClassifications { get; set; } = new();
 
 }
 

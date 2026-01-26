@@ -88,11 +88,11 @@ public partial class LiveChatMsg
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_search_results")]
-    public List<KBEntryList>? KbSearchResults { get; set; } = [];
+    public List<KBEntryList>? KbSearchResults { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services_search_results")]
-    public List<ServSiteList>? ServicesSearchResults { get; set; } = [];
+    public List<ServSiteList>? ServicesSearchResults { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_image_type")]
@@ -100,7 +100,7 @@ public partial class LiveChatMsg
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachment_ids")]
-    public List<KeyPair4>? AttachmentIds { get; set; } = [];
+    public List<KeyPair4>? AttachmentIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachment_id")]

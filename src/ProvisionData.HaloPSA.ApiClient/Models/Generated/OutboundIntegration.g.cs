@@ -81,7 +81,7 @@ public partial class OutboundIntegration
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("headers_to_sign")]
-    public List<KeyPair2>? HeadersToSign { get; set; } = [];
+    public List<KeyPair2>? HeadersToSign { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bearername")]
@@ -157,7 +157,7 @@ public partial class OutboundIntegration
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("safe_instance_list")]
-    public List<Instance>? SafeInstanceList { get; set; } = [];
+    public List<Instance>? SafeInstanceList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jwt_token_method")]
@@ -169,11 +169,11 @@ public partial class OutboundIntegration
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jwt_extra_claims")]
-    public List<OutboundIntegrationMethodValue>? JwtExtraClaims { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? JwtExtraClaims { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("methods")]
-    public List<OutboundIntegrationMethod>? Methods { get; set; } = [];
+    public List<OutboundIntegrationMethod>? Methods { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_code")]
@@ -213,7 +213,7 @@ public partial class OutboundIntegration
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

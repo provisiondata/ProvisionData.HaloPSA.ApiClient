@@ -37,11 +37,11 @@ public partial class FlowHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("steps")]
-    public List<FlowDetail>? Steps { get; set; } = [];
+    public List<FlowDetail>? Steps { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("always_allow_actions")]
-    public List<TOutcome>? AlwaysAllowActions { get; set; } = [];
+    public List<TOutcome>? AlwaysAllowActions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("active")]
@@ -49,7 +49,7 @@ public partial class FlowHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stages")]
-    public List<FlowStages>? Stages { get; set; } = [];
+    public List<FlowStages>? Stages { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("in_use")]
@@ -57,7 +57,7 @@ public partial class FlowHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -65,11 +65,11 @@ public partial class FlowHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("targets")]
-    public List<WorkflowTarget>? Targets { get; set; } = [];
+    public List<WorkflowTarget>? Targets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("workflow_history")]
-    public List<WorkflowHistory>? WorkflowHistory { get; set; } = [];
+    public List<WorkflowHistory>? WorkflowHistory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_clone")]

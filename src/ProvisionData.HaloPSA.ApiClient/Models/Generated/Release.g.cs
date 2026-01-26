@@ -125,7 +125,7 @@ public partial class Release
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("release_email_tickets")]
-    public List<Int32>? ReleaseEmailTickets { get; set; } = [];
+    public List<Int32>? ReleaseEmailTickets { get; set; } = new();
 
     [JsonPropertyName("releasetype")]
     public ReleaseType Releasetype { get; set; } = new();
@@ -152,7 +152,7 @@ public partial class Release
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licences")]
-    public List<LicenceInfo>? Licences { get; set; } = [];
+    public List<LicenceInfo>? Licences { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_name")]

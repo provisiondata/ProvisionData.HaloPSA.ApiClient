@@ -41,15 +41,15 @@ public partial class DattoCommerceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_field_mappings")]
-    public List<IntegrationFieldMapping>? CustomerFieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? CustomerFieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_group_mappings")]
-    public List<ExternalLinkList>? ItemGroupMappings { get; set; } = [];
+    public List<ExternalLinkList>? ItemGroupMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quote_status_mappings")]
-    public List<IntegrationFieldMapping>? QuoteStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? QuoteStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("create_items_on_import")]
@@ -65,7 +65,7 @@ public partial class DattoCommerceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sostatustoimport_list")]
-    public List<KeyPair2>? SostatustoimportList { get; set; } = [];
+    public List<KeyPair2>? SostatustoimportList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -77,7 +77,7 @@ public partial class DattoCommerceDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
 }
 

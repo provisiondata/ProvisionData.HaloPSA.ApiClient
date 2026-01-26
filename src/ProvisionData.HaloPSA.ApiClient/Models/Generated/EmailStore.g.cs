@@ -108,7 +108,7 @@ public partial class EmailStore
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<Attachment>? Attachments { get; set; } = [];
+    public List<Attachment>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quotation_id")]
@@ -144,7 +144,7 @@ public partial class EmailStore
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bulk_user_id_array")]
-    public List<Int32>? BulkUserIdArray { get; set; } = [];
+    public List<Int32>? BulkUserIdArray { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isbatch")]

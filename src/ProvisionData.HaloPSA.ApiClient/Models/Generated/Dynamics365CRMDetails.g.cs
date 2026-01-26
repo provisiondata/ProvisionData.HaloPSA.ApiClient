@@ -57,11 +57,11 @@ public partial class Dynamics365CRMDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings")]
-    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Fieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customtable_mappings")]
-    public List<Dynamics365CRMFieldMapping>? CustomtableMappings { get; set; } = [];
+    public List<Dynamics365CRMFieldMapping>? CustomtableMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("redirect_uri")]

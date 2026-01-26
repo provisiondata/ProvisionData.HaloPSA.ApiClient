@@ -27,15 +27,15 @@ public partial class PartsLookupResult
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("data")]
-    public Object? Data { get; set; } = new Object();
+    public UnknownType? Data { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_values")]
-    public List<KeyPair>? FieldValues { get; set; } = [];
+    public List<KeyPair>? FieldValues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lookup_values")]
@@ -54,7 +54,7 @@ public partial class PartsLookupResult
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("data_multiple")]
-    public List<UnknownType>? DataMultiple { get; set; } = [];
+    public List<UnknownType>? DataMultiple { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("message_multiple")]
@@ -62,7 +62,7 @@ public partial class PartsLookupResult
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields_multiple")]
-    public List<UnknownType>? CustomfieldsMultiple { get; set; } = [];
+    public List<UnknownType>? CustomfieldsMultiple { get; set; } = new();
 
     [JsonPropertyName("mapped_outcome_field_id")]
     public Int32 MappedOutcomeFieldId { get; set; }

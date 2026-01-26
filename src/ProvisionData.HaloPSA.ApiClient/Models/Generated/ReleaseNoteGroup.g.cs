@@ -21,7 +21,7 @@ public partial class ReleaseNoteGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("releasenotes")]
-    public List<ReleaseNote>? Releasenotes { get; set; } = [];
+    public List<ReleaseNote>? Releasenotes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

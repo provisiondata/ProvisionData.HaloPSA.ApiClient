@@ -73,7 +73,7 @@ public partial class ContractTemplateHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("billingplans")]
-    public List<ContractTemplateDetail>? Billingplans { get; set; } = [];
+    public List<ContractTemplateDetail>? Billingplans { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("billingdescription")]
@@ -89,7 +89,7 @@ public partial class ContractTemplateHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clients")]
-    public List<Int32>? Clients { get; set; } = [];
+    public List<Int32>? Clients { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("create_contract")]

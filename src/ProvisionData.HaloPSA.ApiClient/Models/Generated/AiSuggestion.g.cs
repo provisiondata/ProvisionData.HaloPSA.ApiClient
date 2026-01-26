@@ -25,7 +25,7 @@ public partial class AiSuggestion
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_types")]
-    public List<KeyPair4>? TicketTypes { get; set; } = [];
+    public List<KeyPair4>? TicketTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auto_apply")]
@@ -77,7 +77,7 @@ public partial class AiSuggestion
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("condition_entities")]
-    public List<KeyPair4>? ConditionEntities { get; set; } = [];
+    public List<KeyPair4>? ConditionEntities { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

@@ -105,11 +105,11 @@ public partial class Autoassign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("criteria")]
-    public List<AutoassignCriteria>? Criteria { get; set; } = [];
+    public List<AutoassignCriteria>? Criteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("outcomes")]
-    public List<AutoassignOutcome>? Outcomes { get; set; } = [];
+    public List<AutoassignOutcome>? Outcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_domatch")]
@@ -180,7 +180,7 @@ public partial class Autoassign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rule_ids")]
-    public List<Int32>? RuleIds { get; set; } = [];
+    public List<Int32>? RuleIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_template_id")]
@@ -208,7 +208,7 @@ public partial class Autoassign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_notes")]
-    public List<AreaPopup>? PopupNotes { get; set; } = [];
+    public List<AreaPopup>? PopupNotes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("flowdetail_id")]
@@ -224,7 +224,7 @@ public partial class Autoassign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -232,7 +232,7 @@ public partial class Autoassign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("events")]
-    public List<UnameNotification>? Events { get; set; } = [];
+    public List<UnameNotification>? Events { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_colour")]
@@ -248,11 +248,11 @@ public partial class Autoassign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("olas")]
-    public List<WorkflowTarget>? Olas { get; set; } = [];
+    public List<WorkflowTarget>? Olas { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("database_lookups")]
-    public List<PartsLookup>? DatabaseLookups { get; set; } = [];
+    public List<PartsLookup>? DatabaseLookups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("set_ticket_ai_indexing")]

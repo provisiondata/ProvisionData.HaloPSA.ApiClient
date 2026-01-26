@@ -339,7 +339,7 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_notes")]
-    public List<AreaPopup>? PopupNotes { get; set; } = [];
+    public List<AreaPopup>? PopupNotes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_reassign_all_to_user")]
@@ -347,7 +347,7 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<FieldHelper>? Fields { get; set; } = [];
+    public List<FieldHelper>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("open_ticket_count")]
@@ -371,7 +371,7 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sitecontacts")]
-    public List<SiteContact>? Sitecontacts { get; set; } = [];
+    public List<SiteContact>? Sitecontacts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isimport")]
@@ -497,7 +497,7 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faqlists")]
-    public List<FAQListHead>? Faqlists { get; set; } = [];
+    public List<FAQListHead>? Faqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("all_faqlists_allowed")]
@@ -595,11 +595,11 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("businesscentral_area_company_id")]
@@ -630,15 +630,15 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clients")]
-    public List<Area>? Clients { get; set; } = [];
+    public List<Area>? Clients { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("audit_log")]
-    public List<Audit>? AuditLog { get; set; } = [];
+    public List<Audit>? AuditLog { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maintenance_windows")]
-    public List<Holidays>? MaintenanceWindows { get; set; } = [];
+    public List<Holidays>? MaintenanceWindows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("runbook_button_id")]
@@ -650,11 +650,11 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_fields")]
-    public List<FieldHelper>? SiteFields { get; set; } = [];
+    public List<FieldHelper>? SiteFields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("gfisiteid")]
@@ -710,7 +710,7 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stockbin_id")]
@@ -750,7 +750,7 @@ public partial class Site
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stockbins")]
-    public List<StockBin>? Stockbins { get; set; } = [];
+    public List<StockBin>? Stockbins { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_currency_code")]

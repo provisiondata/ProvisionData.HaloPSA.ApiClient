@@ -98,15 +98,15 @@ public partial class JiraDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("status_mappings")]
-    public List<IntegrationFieldMapping>? StatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? StatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettype_mappings")]
-    public List<JiraMappings>? TickettypeMappings { get; set; } = [];
+    public List<JiraMappings>? TickettypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jirafield_mappings")]
-    public List<IntegrationFieldMapping>? JirafieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JirafieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("comment_contains")]
@@ -118,7 +118,7 @@ public partial class JiraDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("priority_mappings")]
-    public List<IntegrationFieldMapping>? PriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? PriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_webhooks")]

@@ -33,15 +33,15 @@ public partial class FieldGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -49,19 +49,19 @@ public partial class FieldGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettypes")]
-    public List<KeyPair2>? Tickettypes { get; set; } = [];
+    public List<KeyPair2>? Tickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("outcomes")]
-    public List<KeyPair2>? Outcomes { get; set; } = [];
+    public List<KeyPair2>? Outcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("visibility_conditions")]
-    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = [];
+    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_visibility_conditions")]
-    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = [];
+    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("endusernew")]

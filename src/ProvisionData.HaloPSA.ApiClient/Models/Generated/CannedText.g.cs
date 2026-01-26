@@ -61,7 +61,7 @@ public partial class CannedText
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -81,7 +81,7 @@ public partial class CannedText
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tags")]
-    public List<Tag>? Tags { get; set; } = [];
+    public List<Tag>? Tags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -89,23 +89,23 @@ public partial class CannedText
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("departments")]
-    public List<Int32>? Departments { get; set; } = [];
+    public List<Int32>? Departments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams")]
-    public List<Int32>? Teams { get; set; } = [];
+    public List<Int32>? Teams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agents")]
-    public List<Int32>? Agents { get; set; } = [];
+    public List<Int32>? Agents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")]
-    public List<Int32>? Roles { get; set; } = [];
+    public List<Int32>? Roles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_attachments")]
-    public List<FreshdeskAttachment>? FreshdeskAttachments { get; set; } = [];
+    public List<FreshdeskAttachment>? FreshdeskAttachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("shortcut_key")]

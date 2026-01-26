@@ -69,7 +69,7 @@ public partial class InvoiceDetailQuantity
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("criteria")]
-    public List<InvoiceDetailQuantityCriteria>? Criteria { get; set; } = [];
+    public List<InvoiceDetailQuantityCriteria>? Criteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("use_linked_subscription_price")]

@@ -161,15 +161,15 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("defaultvalue_table")]
-    public List<CustomTableRow>? DefaultvalueTable { get; set; } = [];
+    public List<CustomTableRow>? DefaultvalueTable { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("values")]
-    public List<CFLookup>? Values { get; set; } = [];
+    public List<CFLookup>? Values { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("table_values")]
-    public List<CustomTableRow>? TableValues { get; set; } = [];
+    public List<CustomTableRow>? TableValues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_values")]
@@ -192,11 +192,11 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_restrictions")]
-    public List<AreaField>? ClientRestrictions { get; set; } = [];
+    public List<AreaField>? ClientRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("org_restrictions")]
-    public List<OrganisationField>? OrgRestrictions { get; set; } = [];
+    public List<OrganisationField>? OrgRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("database_lookup_id")]
@@ -212,7 +212,7 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("database_lookup_triggers")]
-    public List<PartsLookupField>? DatabaseLookupTriggers { get; set; } = [];
+    public List<PartsLookupField>? DatabaseLookupTriggers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("third_party_name")]
@@ -316,7 +316,7 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("validation_data")]
-    public List<CustomFieldValidation>? ValidationData { get; set; } = [];
+    public List<CustomFieldValidation>? ValidationData { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("calculation")]
@@ -344,15 +344,15 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("visibility_conditions")]
-    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = [];
+    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_visibility_conditions")]
-    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = [];
+    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -368,7 +368,7 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqlcfvariables")]
-    public List<Int32>? Sqlcfvariables { get; set; } = [];
+    public List<Int32>? Sqlcfvariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("showoncrmnote")]
@@ -495,15 +495,15 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettypes")]
-    public List<KeyPair2>? Tickettypes { get; set; } = [];
+    public List<KeyPair2>? Tickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("outcomes")]
-    public List<KeyPair2>? Outcomes { get; set; } = [];
+    public List<KeyPair2>? Outcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldgroups")]
-    public List<KeyPair2>? Fieldgroups { get; set; } = [];
+    public List<KeyPair2>? Fieldgroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("calculatevariablesinvalue")]
@@ -543,11 +543,11 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_restrictions")]
-    public List<RequestTypeFieldRestriction>? UpdateRestrictions { get; set; } = [];
+    public List<RequestTypeFieldRestriction>? UpdateRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_restriction_roles")]
-    public List<Int32>? UpdateRestrictionRoles { get; set; } = [];
+    public List<Int32>? UpdateRestrictionRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("restrictread")]
@@ -555,11 +555,11 @@ public partial class FieldInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("read_restrictions")]
-    public List<RequestTypeFieldRestriction>? ReadRestrictions { get; set; } = [];
+    public List<RequestTypeFieldRestriction>? ReadRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("read_restriction_roles")]
-    public List<Int32>? ReadRestrictionRoles { get; set; } = [];
+    public List<Int32>? ReadRestrictionRoles { get; set; } = new();
 
 }
 

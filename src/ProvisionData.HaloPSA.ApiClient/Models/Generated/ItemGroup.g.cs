@@ -17,11 +17,11 @@ public partial class ItemGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lines")]
-    public List<QuotationDetail>? Lines { get; set; } = [];
+    public List<QuotationDetail>? Lines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("oldLines")]
-    public List<QuotationDetail>? OldLines { get; set; } = [];
+    public List<QuotationDetail>? OldLines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hideitems")]
@@ -45,7 +45,7 @@ public partial class ItemGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -65,7 +65,7 @@ public partial class ItemGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("one_optional_mandatory")]
-    public List<KeyPair>? OneOptionalMandatory { get; set; } = [];
+    public List<KeyPair>? OneOptionalMandatory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("one_optional_mandatory_list")]

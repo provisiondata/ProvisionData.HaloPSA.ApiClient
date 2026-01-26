@@ -45,7 +45,7 @@ public partial class OutboundIntegrationMethodValue
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("value_mappings")]
-    public List<OutboundIntegrationMethodValueMapping>? ValueMappings { get; set; } = [];
+    public List<OutboundIntegrationMethodValueMapping>? ValueMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extra_process")]

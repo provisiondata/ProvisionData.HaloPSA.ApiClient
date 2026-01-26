@@ -69,7 +69,7 @@ public partial class FAQListHead
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("grandparent_name")]
@@ -93,11 +93,11 @@ public partial class FAQListHead
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")]
-    public List<UserRoles>? Roles { get; set; } = [];
+    public List<UserRoles>? Roles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("draft_roles")]
-    public List<UserRoles>? DraftRoles { get; set; } = [];
+    public List<UserRoles>? DraftRoles { get; set; } = new();
 
     [JsonPropertyName("new_external_link")]
     public ExternalLinkList NewExternalLink { get; set; } = new();
@@ -132,11 +132,11 @@ public partial class FAQListHead
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -144,7 +144,7 @@ public partial class FAQListHead
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clients")]
-    public List<AreaList>? Clients { get; set; } = [];
+    public List<AreaList>? Clients { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dontshowonportal")]
@@ -156,15 +156,15 @@ public partial class FAQListHead
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("geo_restrictions")]
-    public List<GeoLocationRestriction>? GeoRestrictions { get; set; } = [];
+    public List<GeoLocationRestriction>? GeoRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_articles")]
-    public List<FAQListDet>? LinkedArticles { get; set; } = [];
+    public List<FAQListDet>? LinkedArticles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("style_profile_links")]
-    public List<StyleProfileLink>? StyleProfileLinks { get; set; } = [];
+    public List<StyleProfileLink>? StyleProfileLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("showtoallwithperms")]

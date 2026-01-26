@@ -10,7 +10,7 @@ public partial class MimeEntity
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("headers")]
-    public List<Header>? Headers { get; set; } = [];
+    public List<Header>? Headers { get; set; } = new();
 
     [JsonPropertyName("contentDisposition")]
     public ContentDisposition ContentDisposition { get; set; } = new();

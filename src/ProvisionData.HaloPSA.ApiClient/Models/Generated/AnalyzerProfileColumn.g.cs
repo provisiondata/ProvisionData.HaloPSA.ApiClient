@@ -101,7 +101,7 @@ public partial class AnalyzerProfileColumn
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("table_alias")]
@@ -109,7 +109,7 @@ public partial class AnalyzerProfileColumn
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("table_joins")]
-    public List<ColumnTableJoins>? TableJoins { get; set; } = [];
+    public List<ColumnTableJoins>? TableJoins { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

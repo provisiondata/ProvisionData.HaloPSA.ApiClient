@@ -106,11 +106,11 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cors_whitelist_list")]
-    public List<KeyPair2>? CorsWhitelistList { get; set; } = [];
+    public List<KeyPair2>? CorsWhitelistList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("steps")]
-    public List<FlowDetail>? Steps { get; set; } = [];
+    public List<FlowDetail>? Steps { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("flow_chart_json")]
@@ -150,7 +150,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_message_mappings")]
-    public List<ChatPopupMessage>? PopupMessageMappings { get; set; } = [];
+    public List<ChatPopupMessage>? PopupMessageMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_ticket_clientsite")]
@@ -162,7 +162,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -202,7 +202,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_roles")]
-    public List<NHDRoles>? AgentRoles { get; set; } = [];
+    public List<NHDRoles>? AgentRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enable_start_message_mapping")]
@@ -218,7 +218,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("start_message_mappings")]
-    public List<ChatStartMessage>? StartMessageMappings { get; set; } = [];
+    public List<ChatStartMessage>? StartMessageMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_wait_time")]
@@ -262,7 +262,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("usermappings")]
-    public List<IntegrationFieldMapping>? Usermappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Usermappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enable_feedback_comments")]
@@ -290,7 +290,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("banners")]
-    public List<ChatBanner>? Banners { get; set; } = [];
+    public List<ChatBanner>? Banners { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("banner_message")]
@@ -298,7 +298,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("wait_messages")]
-    public List<ChatWaitMessage>? WaitMessages { get; set; } = [];
+    public List<ChatWaitMessage>? WaitMessages { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("wait_message_interval")]
@@ -318,7 +318,7 @@ public partial class ChatProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_ticket_user_on_upgrade")]

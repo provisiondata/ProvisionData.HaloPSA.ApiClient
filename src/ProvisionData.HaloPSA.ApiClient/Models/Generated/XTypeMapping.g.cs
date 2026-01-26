@@ -49,7 +49,7 @@ public partial class XTypeMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_mappings")]
-    public List<IntegrationFieldMapping>? FieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_mapping_count")]
@@ -65,7 +65,7 @@ public partial class XTypeMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tag_list_pairs")]
-    public List<KeyPair2>? TagListPairs { get; set; } = [];
+    public List<KeyPair2>? TagListPairs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("seq")]
@@ -85,7 +85,7 @@ public partial class XTypeMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("criteria")]
-    public List<XTypeMappingCriteria>? Criteria { get; set; } = [];
+    public List<XTypeMappingCriteria>? Criteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rule_count")]

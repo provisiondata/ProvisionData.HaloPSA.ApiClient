@@ -77,11 +77,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("creation_rules")]
-    public List<StdRequestRule>? CreationRules { get; set; } = [];
+    public List<StdRequestRule>? CreationRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("todo_list")]
-    public List<STDToDo>? TodoList { get; set; } = [];
+    public List<STDToDo>? TodoList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emailto")]
@@ -393,11 +393,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")]
-    public List<DeviceList>? Assets { get; set; } = [];
+    public List<DeviceList>? Assets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqltoselectassets")]
@@ -409,7 +409,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")]
-    public List<UsersList>? Users { get; set; } = [];
+    public List<UsersList>? Users { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itil_request_type")]
@@ -465,7 +465,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("budgets")]
-    public List<STDrequestbudget>? Budgets { get; set; } = [];
+    public List<STDrequestbudget>? Budgets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("budgettype_id")]
@@ -481,7 +481,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services")]
-    public List<ServSiteList>? Services { get; set; } = [];
+    public List<ServSiteList>? Services { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_canupdate")]
@@ -505,7 +505,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -537,7 +537,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automationcriteria")]
-    public List<AutoassignCriteria>? Automationcriteria { get; set; } = [];
+    public List<AutoassignCriteria>? Automationcriteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("isclone")]
@@ -565,7 +565,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("milestones")]
-    public List<MileStone>? Milestones { get; set; } = [];
+    public List<MileStone>? Milestones { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqltoselectusers")]
@@ -581,15 +581,15 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("additional_agents")]
-    public List<FaultAdditionalAgents>? AdditionalAgents { get; set; } = [];
+    public List<FaultAdditionalAgents>? AdditionalAgents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_audits")]
-    public List<Audit>? NewAudits { get; set; } = [];
+    public List<Audit>? NewAudits { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_changes")]
-    public List<InvoiceChange>? NewChanges { get; set; } = [];
+    public List<InvoiceChange>? NewChanges { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("child_count_of_ticket_to_save")]
@@ -625,7 +625,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("date_dependencies")]
-    public List<StdrequestDateDependencies>? DateDependencies { get; set; } = [];
+    public List<StdrequestDateDependencies>? DateDependencies { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("upload_type")]
@@ -696,11 +696,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("article_tags")]
-    public List<Tag>? ArticleTags { get; set; } = [];
+    public List<Tag>? ArticleTags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faqlists")]
-    public List<FAQListHead>? Faqlists { get; set; } = [];
+    public List<FAQListHead>? Faqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("integration_drive")]
@@ -783,11 +783,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_customfields")]
-    public List<CustomField>? OptionalCustomfields { get; set; } = [];
+    public List<CustomField>? OptionalCustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_assets")]
-    public List<DeviceList>? OptionalAssets { get; set; } = [];
+    public List<DeviceList>? OptionalAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_forwardinboundupdates")]

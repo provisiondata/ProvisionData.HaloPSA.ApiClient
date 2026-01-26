@@ -21,7 +21,7 @@ public partial class TaxRuleConditions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("value_lookup")]
-    public List<KeyPair>? ValueLookup { get; set; } = [];
+    public List<KeyPair>? ValueLookup { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("value_bool")]

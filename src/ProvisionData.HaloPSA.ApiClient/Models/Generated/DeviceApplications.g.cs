@@ -81,11 +81,11 @@ public partial class DeviceApplications
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_users")]
-    public List<Users>? NewUsers { get; set; } = [];
+    public List<Users>? NewUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_devices")]
-    public List<Device>? NewDevices { get; set; } = [];
+    public List<Device>? NewDevices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

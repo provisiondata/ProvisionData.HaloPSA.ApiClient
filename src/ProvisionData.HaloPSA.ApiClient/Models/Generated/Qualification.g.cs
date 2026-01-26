@@ -45,11 +45,11 @@ public partial class Qualification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("criteria")]
-    public List<QualificationCategory>? Criteria { get; set; } = [];
+    public List<QualificationCategory>? Criteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agents")]
-    public List<UnameQualification>? Agents { get; set; } = [];
+    public List<UnameQualification>? Agents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_matched")]
@@ -61,7 +61,7 @@ public partial class Qualification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

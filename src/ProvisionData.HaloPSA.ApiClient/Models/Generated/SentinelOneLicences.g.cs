@@ -10,15 +10,15 @@ public partial class SentinelOneLicences
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bundles")]
-    public List<SentinelOneBundle>? Bundles { get; set; } = [];
+    public List<SentinelOneBundle>? Bundles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("modules")]
-    public List<SentinelOneModule>? Modules { get; set; } = [];
+    public List<SentinelOneModule>? Modules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("settings")]
-    public List<SentinelOneSetting>? Settings { get; set; } = [];
+    public List<SentinelOneSetting>? Settings { get; set; } = new();
 
 }
 

@@ -7289,7 +7289,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_import_types")]
-    public List<KeyPair2>? ItglueImportTypes { get; set; } = [];
+    public List<KeyPair2>? ItglueImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("childticketsdisplay")]
@@ -7369,7 +7369,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ninja_import_types")]
-    public List<KeyPair2>? NinjaImportTypes { get; set; } = [];
+    public List<KeyPair2>? NinjaImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_use_halo_creds")]
@@ -9365,7 +9365,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custom_email_variables")]
-    public List<MessageContentVariable>? CustomEmailVariables { get; set; } = [];
+    public List<MessageContentVariable>? CustomEmailVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_customer_relationship")]
@@ -10685,7 +10685,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("index_filters")]
-    public List<IndexFieldFilters>? IndexFilters { get; set; } = [];
+    public List<IndexFieldFilters>? IndexFilters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("continue_calls_after_logging")]
@@ -11301,7 +11301,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_cannedtexts")]
-    public List<CannedText>? ChatCannedtexts { get; set; } = [];
+    public List<CannedText>? ChatCannedtexts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("signalr_enabled")]
@@ -11325,7 +11325,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("security_questions")]
-    public List<SecurityQuestion>? SecurityQuestions { get; set; } = [];
+    public List<SecurityQuestion>? SecurityQuestions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clearalldata")]
@@ -11389,15 +11389,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("opportunity_fieldmappings_salesforce")]
-    public List<IntegrationFieldMapping>? OpportunityFieldmappingsSalesforce { get; set; } = [];
+    public List<IntegrationFieldMapping>? OpportunityFieldmappingsSalesforce { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("account_fieldmappings_salesforce")]
-    public List<IntegrationFieldMapping>? AccountFieldmappingsSalesforce { get; set; } = [];
+    public List<IntegrationFieldMapping>? AccountFieldmappingsSalesforce { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contact_fieldmappings_salesforce")]
-    public List<IntegrationFieldMapping>? ContactFieldmappingsSalesforce { get; set; } = [];
+    public List<IntegrationFieldMapping>? ContactFieldmappingsSalesforce { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("anydesk_assetfield_id")]
@@ -11409,7 +11409,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_rolemappings_azuread")]
-    public List<IntegrationFieldMapping>? AgentRolemappingsAzuread { get; set; } = [];
+    public List<IntegrationFieldMapping>? AgentRolemappingsAzuread { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_getsagedata")]
@@ -11441,15 +11441,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("beyondtrust_teams")]
-    public List<RemoteSessionTeams>? BeyondtrustTeams { get; set; } = [];
+    public List<RemoteSessionTeams>? BeyondtrustTeams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("change_freeze_periods")]
-    public List<Holidays>? ChangeFreezePeriods { get; set; } = [];
+    public List<Holidays>? ChangeFreezePeriods { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maintenance_windows")]
-    public List<Holidays>? MaintenanceWindows { get; set; } = [];
+    public List<Holidays>? MaintenanceWindows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cautomatedefaultsite_name")]
@@ -11461,7 +11461,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automate_typemappings")]
-    public List<XTypeMapping>? AutomateTypemappings { get; set; } = [];
+    public List<XTypeMapping>? AutomateTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_id_halointegrator")]
@@ -11525,7 +11525,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sccm_fieldmappings")]
-    public List<SQLImportField>? SccmFieldmappings { get; set; } = [];
+    public List<SQLImportField>? SccmFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sccm_sqlserver")]
@@ -11577,7 +11577,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sccm_allowed_clientids_list")]
-    public List<KeyPair2>? SccmAllowedClientidsList { get; set; } = [];
+    public List<KeyPair2>? SccmAllowedClientidsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("exapptsubject")]
@@ -11593,7 +11593,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portalbuttons")]
-    public List<UserDashboardButtons>? Portalbuttons { get; set; } = [];
+    public List<UserDashboardButtons>? Portalbuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ninjadefaultsite_name")]
@@ -11601,11 +11601,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ninja_fieldmappings")]
-    public List<IntegrationFieldMapping>? NinjaFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? NinjaFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ninja_activitytypemappings")]
-    public List<IntegrationFieldMapping>? NinjaActivitytypemappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? NinjaActivitytypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_ninjarmm")]
@@ -11633,7 +11633,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("solarwindsrmm_fieldmappings")]
-    public List<IntegrationFieldMapping>? SolarwindsrmmFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SolarwindsrmmFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_getintegrationdata")]
@@ -11705,7 +11705,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_allowed_clientids_list")]
-    public List<KeyPair2>? LansweeperAllowedClientidsList { get; set; } = [];
+    public List<KeyPair2>? LansweeperAllowedClientidsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_query")]
@@ -11769,7 +11769,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_fieldmappings")]
-    public List<SQLImportField>? LansweeperFieldmappings { get; set; } = [];
+    public List<SQLImportField>? LansweeperFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_assetimportidentifier")]
@@ -11813,7 +11813,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_integrations")]
-    public List<KeyPair2>? HalointegratorIntegrations { get; set; } = [];
+    public List<KeyPair2>? HalointegratorIntegrations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("splunkuser_name")]
@@ -11821,7 +11821,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ncentral_fieldmappings")]
-    public List<IntegrationFieldMapping>? NcentralFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? NcentralFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_ncentral")]
@@ -11853,7 +11853,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("businesscentral_fieldmappings")]
-    public List<IntegrationFieldMapping>? BusinesscentralFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? BusinesscentralFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("businesscentralsite_name")]
@@ -11896,7 +11896,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_automationwebhookmappings")]
-    public List<WebhookMapping>? Automationwebhookmappings { get; set; } = [];
+    public List<WebhookMapping>? Automationwebhookmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_automationticketid")]
@@ -11912,7 +11912,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_webhookmappings")]
-    public List<WebhookMapping>? Webhookmappings { get; set; } = [];
+    public List<WebhookMapping>? Webhookmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_webhookticketid")]
@@ -11924,11 +11924,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_areaitems_to_convert")]
-    public List<AreaItem>? AreaitemsToConvert { get; set; } = [];
+    public List<AreaItem>? AreaitemsToConvert { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_contracts_to_convert")]
-    public List<ContractHeaderList>? ContractsToConvert { get; set; } = [];
+    public List<ContractHeaderList>? ContractsToConvert { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("remotesession_trackingid")]
@@ -11964,7 +11964,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynamicscrm_fieldmappings")]
-    public List<IntegrationFieldMapping>? DynamicscrmFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? DynamicscrmFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("scom_fromaddress")]
@@ -12012,7 +12012,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prtg_fieldmappings")]
-    public List<IntegrationFieldMapping>? PrtgFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? PrtgFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_prtg")]
@@ -12052,15 +12052,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device42_customermappings")]
-    public List<IntegrationFieldMapping>? Device42Customermappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Device42Customermappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device42_typemappings")]
-    public List<XTypeMapping>? Device42Typemappings { get; set; } = [];
+    public List<XTypeMapping>? Device42Typemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device42_devicemappings")]
-    public List<IntegrationFieldMapping>? Device42Devicemappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Device42Devicemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device42defaultsite_name")]
@@ -12089,7 +12089,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datto_fieldmappings")]
-    public List<IntegrationFieldMapping>? DattoFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? DattoFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dattodefaultcustomer_name")]
@@ -12117,7 +12117,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("csp_sitemappings")]
-    public List<AzureADMapping>? CspSitemappings { get; set; } = [];
+    public List<AzureADMapping>? CspSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_generatecspmappings")]
@@ -12129,11 +12129,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("atera_device_types")]
-    public List<KeyPair2>? AteraDeviceTypes { get; set; } = [];
+    public List<KeyPair2>? AteraDeviceTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("atera_fieldmappings")]
-    public List<IntegrationFieldMapping>? AteraFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AteraFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_atera")]
@@ -12157,15 +12157,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device_guids")]
-    public List<String>? DeviceGuids { get; set; } = [];
+    public List<String>? DeviceGuids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_guids")]
-    public List<String>? ClientGuids { get; set; } = [];
+    public List<String>? ClientGuids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_guids")]
-    public List<String>? SiteGuids { get; set; } = [];
+    public List<String>? SiteGuids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_deletelicences")]
@@ -12173,7 +12173,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licence_guids")]
-    public List<String>? LicenceGuids { get; set; } = [];
+    public List<String>? LicenceGuids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("atera_alert_user_name")]
@@ -12201,35 +12201,35 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_sitemappings")]
-    public List<OktaMapping>? OktaSitemappings { get; set; } = [];
+    public List<OktaMapping>? OktaSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_usermappings")]
-    public List<IntegrationFieldMapping>? OktaUsermappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? OktaUsermappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_agentmappings")]
-    public List<IntegrationFieldMapping>? OktaAgentmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? OktaAgentmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_rolemappings")]
-    public List<IntegrationFieldMapping>? OktaRolemappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? OktaRolemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_cabmappings")]
-    public List<IntegrationFieldMapping>? OktaCabmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? OktaCabmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_user_matching_list")]
-    public List<KeyPair2>? OktaUserMatchingList { get; set; } = [];
+    public List<KeyPair2>? OktaUserMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_agent_matching_list")]
-    public List<KeyPair2>? OktaAgentMatchingList { get; set; } = [];
+    public List<KeyPair2>? OktaAgentMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_active_statuses_list")]
-    public List<KeyPair2>? OktaActiveStatusesList { get; set; } = [];
+    public List<KeyPair2>? OktaActiveStatusesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_okta")]
@@ -12249,7 +12249,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quote_cannedtext")]
-    public List<CannedText>? QuoteCannedtext { get; set; } = [];
+    public List<CannedText>? QuoteCannedtext { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("merakiapplicationsecret")]
@@ -12301,15 +12301,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_sitemappings")]
-    public List<IntegrationSiteMapping>? LansweeperSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? LansweeperSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_site_rules")]
-    public List<IntegrationSiteMapping>? LansweeperSiteRules { get; set; } = [];
+    public List<IntegrationSiteMapping>? LansweeperSiteRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_fieldmappings_api")]
-    public List<IntegrationFieldMapping>? LansweeperFieldmappingsApi { get; set; } = [];
+    public List<IntegrationFieldMapping>? LansweeperFieldmappingsApi { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("alarmminutes_bool")]
@@ -12321,7 +12321,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ninja_sitemappings")]
-    public List<IntegrationSiteMapping>? NinjaSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? NinjaSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ninja_alert_user_name")]
@@ -12341,7 +12341,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("alert_guids")]
-    public List<String>? AlertGuids { get; set; } = [];
+    public List<String>? AlertGuids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hashostedintegrator")]
@@ -12369,27 +12369,27 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_clientmappings")]
-    public List<ExternalLinkList>? ItglueClientmappings { get; set; } = [];
+    public List<ExternalLinkList>? ItglueClientmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_sitemappings")]
-    public List<ExternalLinkList>? ItglueSitemappings { get; set; } = [];
+    public List<ExternalLinkList>? ItglueSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_active_statuses_list")]
-    public List<KeyPair2>? ItglueActiveStatusesList { get; set; } = [];
+    public List<KeyPair2>? ItglueActiveStatusesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_typemappings")]
-    public List<XTypeMapping>? ItglueTypemappings { get; set; } = [];
+    public List<XTypeMapping>? ItglueTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_configtypemappings")]
-    public List<XTypeMapping>? ItglueConfigtypemappings { get; set; } = [];
+    public List<XTypeMapping>? ItglueConfigtypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_statusmappings")]
-    public List<IntegrationFieldMapping>? ItglueStatusmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ItglueStatusmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_default_site_name")]
@@ -12409,7 +12409,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bookingtypes")]
-    public List<BookingType>? Bookingtypes { get; set; } = [];
+    public List<BookingType>? Bookingtypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("appsettings_encthumbprint")]
@@ -12429,11 +12429,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("scom_allowed_clientids_list")]
-    public List<KeyPair2>? ScomAllowedClientidsList { get; set; } = [];
+    public List<KeyPair2>? ScomAllowedClientidsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("orion_allowed_clientids_list")]
-    public List<KeyPair2>? OrionAllowedClientidsList { get; set; } = [];
+    public List<KeyPair2>? OrionAllowedClientidsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teamsbot_disabled")]
@@ -12441,7 +12441,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datto_sitemappings")]
-    public List<IntegrationSiteMapping>? DattoSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? DattoSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_dynamics365crm")]
@@ -12473,15 +12473,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jamf_device_types")]
-    public List<KeyPair2>? JamfDeviceTypes { get; set; } = [];
+    public List<KeyPair2>? JamfDeviceTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jamf_fieldmappings")]
-    public List<IntegrationFieldMapping>? JamfFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JamfFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jamf_mobilefieldmappings")]
-    public List<IntegrationFieldMapping>? JamfMobilefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JamfMobilefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_jamf")]
@@ -12497,7 +12497,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sentinel_ticketmappings")]
-    public List<IntegrationFieldMapping>? SentinelTicketmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SentinelTicketmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_sentinel")]
@@ -12525,7 +12525,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azuremonitor_fieldmappings")]
-    public List<IntegrationFieldMapping>? AzuremonitorFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AzuremonitorFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azuremonitoruser_name")]
@@ -12537,11 +12537,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("syncro_device_types")]
-    public List<KeyPair2>? SyncroDeviceTypes { get; set; } = [];
+    public List<KeyPair2>? SyncroDeviceTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("syncro_fieldmappings")]
-    public List<IntegrationFieldMapping>? SyncroFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SyncroFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_syncro")]
@@ -12561,11 +12561,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("domotz_agentfieldmappings")]
-    public List<IntegrationFieldMapping>? DomotzAgentfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? DomotzAgentfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("domotz_devicefieldmappings")]
-    public List<IntegrationFieldMapping>? DomotzDevicefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? DomotzDevicefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("domotz_default_agentsite_name")]
@@ -12577,7 +12577,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("domotz_devicetypemappings")]
-    public List<XTypeMapping>? DomotzDevicetypemappings { get; set; } = [];
+    public List<XTypeMapping>? DomotzDevicetypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_domotz")]
@@ -12601,11 +12601,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_guids")]
-    public List<String>? UserGuids { get; set; } = [];
+    public List<String>? UserGuids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_tenantids")]
-    public List<String>? UserTenantids { get; set; } = [];
+    public List<String>? UserTenantids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_deactivateagents")]
@@ -12617,7 +12617,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_guids")]
-    public List<String>? AgentGuids { get; set; } = [];
+    public List<String>? AgentGuids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_haloassetdiscovery")]
@@ -12633,7 +12633,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automate_sitemappings")]
-    public List<IntegrationSiteMapping>? AutomateSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? AutomateSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_automate")]
@@ -12649,19 +12649,19 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automate_import_entities_list")]
-    public List<KeyPair2>? AutomateImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? AutomateImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("atera_import_entities_list")]
-    public List<KeyPair2>? AteraImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? AteraImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_import_entities_list")]
-    public List<KeyPair2>? AddigyImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? AddigyImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meraki_import_entities_list")]
-    public List<KeyPair2>? MerakiImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? MerakiImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automate_alert_user_name")]
@@ -12669,7 +12669,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_exports")]
-    public List<IntegrationExport>? LansweeperExports { get; set; } = [];
+    public List<IntegrationExport>? LansweeperExports { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_checkexportprogress")]
@@ -12681,19 +12681,19 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("atera_sitemappings")]
-    public List<IntegrationSiteMapping>? AteraSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? AteraSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device42_sitemappings")]
-    public List<IntegrationSiteMapping>? Device42Sitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? Device42Sitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ncentral_sitemappings")]
-    public List<IntegrationSiteMapping>? NcentralSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? NcentralSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("syncro_sitemappings")]
-    public List<IntegrationSiteMapping>? SyncroSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? SyncroSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_g2aremote")]
@@ -12713,7 +12713,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snow_fieldmappings")]
-    public List<IntegrationFieldMapping>? SnowFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SnowFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_snow")]
@@ -12729,23 +12729,23 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_sitemappings")]
-    public List<IntegrationSiteMapping>? AuvikSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? AuvikSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_network_typemappings")]
-    public List<XTypeMapping>? AuvikNetworkTypemappings { get; set; } = [];
+    public List<XTypeMapping>? AuvikNetworkTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_device_typemappings")]
-    public List<XTypeMapping>? AuvikDeviceTypemappings { get; set; } = [];
+    public List<XTypeMapping>? AuvikDeviceTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_network_fieldmappings")]
-    public List<IntegrationFieldMapping>? AuvikNetworkFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AuvikNetworkFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_device_fieldmappings")]
-    public List<IntegrationFieldMapping>? AuvikDeviceFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AuvikDeviceFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_default_site_name")]
@@ -12769,39 +12769,39 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teamsbot_allowed_tenants_list")]
-    public List<KeyPair2>? TeamsbotAllowedTenantsList { get; set; } = [];
+    public List<KeyPair2>? TeamsbotAllowedTenantsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_sitemappings")]
-    public List<IntegrationSiteMapping>? HubspotSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? HubspotSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_company_fieldmappings")]
-    public List<IntegrationFieldMapping>? HubspotCompanyFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HubspotCompanyFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_contact_fieldmappings")]
-    public List<IntegrationFieldMapping>? HubspotContactFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HubspotContactFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_deals_fieldmappings")]
-    public List<IntegrationFieldMapping>? HubspotDealsFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HubspotDealsFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_items_fieldmappings")]
-    public List<IntegrationFieldMapping>? HubspotItemsFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HubspotItemsFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_quotes_fieldmappings")]
-    public List<IntegrationFieldMapping>? HubspotQuotesFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HubspotQuotesFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_quote_line_fieldmappings")]
-    public List<IntegrationFieldMapping>? HubspotQuoteLineFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HubspotQuoteLineFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_deal_line_fieldmappings")]
-    public List<IntegrationFieldMapping>? HubspotDealLineFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HubspotDealLineFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_top_level_name")]
@@ -12813,7 +12813,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hubspot_included_lifecycles_list")]
-    public List<KeyPair>? HubspotIncludedLifecyclesList { get; set; } = [];
+    public List<KeyPair>? HubspotIncludedLifecyclesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_hubspot")]
@@ -12829,11 +12829,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualys_typemappings")]
-    public List<XTypeMapping>? QualysTypemappings { get; set; } = [];
+    public List<XTypeMapping>? QualysTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualys_fieldmappings")]
-    public List<IntegrationFieldMapping>? QualysFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? QualysFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualys_default_site_name")]
@@ -12861,7 +12861,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("passportal_clientmappings")]
-    public List<IntegrationSiteMapping>? PassportalClientmappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? PassportalClientmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_passportal")]
@@ -12877,7 +12877,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("passportal_assetfieldmappings")]
-    public List<IntegrationFieldMapping>? PassportalAssetfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? PassportalAssetfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("passportal_defaultassetsite_name")]
@@ -12885,7 +12885,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("passportal_import_entities_list")]
-    public List<KeyPair2>? PassportalImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? PassportalImportEntitiesList { get; set; } = new();
 
     [JsonPropertyName("auvik_top_level_domain")]
     public AuvikTenantMod AuvikTopLevelDomain { get; set; } = new();
@@ -12896,7 +12896,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_sync_entities_list")]
-    public List<KeyPair2>? IntacctSyncEntitiesList { get; set; } = [];
+    public List<KeyPair2>? IntacctSyncEntitiesList { get; set; } = new();
 
     [JsonPropertyName("license_model")]
     public LicenseModel LicenseModel { get; set; } = new();
@@ -12923,7 +12923,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("domotz_sitemappings")]
-    public List<IntegrationSiteMapping>? DomotzSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? DomotzSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_liongard")]
@@ -12939,11 +12939,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("liongard_sitemappings")]
-    public List<IntegrationSiteMapping>? LiongardSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? LiongardSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("liongard_fieldmappings")]
-    public List<IntegrationFieldMapping>? LiongardFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? LiongardFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("liongard_defaultsite_name")]
@@ -12951,7 +12951,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("liongard_mappings_xtype")]
-    public List<XTypeMapping>? LiongardMappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? LiongardMappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_stripe")]
@@ -12967,7 +12967,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ingram_micro_client_mappings")]
-    public List<ExternalLinkList>? IngramMicroClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? IngramMicroClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ingram_micro_top_level_name")]
@@ -12987,15 +12987,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ingram_micro_import_entities_list")]
-    public List<KeyPair2>? IngramMicroImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? IngramMicroImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quoter_item_mappings")]
-    public List<ExternalLinkList>? QuoterItemMappings { get; set; } = [];
+    public List<ExternalLinkList>? QuoterItemMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("etilize_item_mappings")]
-    public List<ExternalLinkList>? EtilizeItemMappings { get; set; } = [];
+    public List<ExternalLinkList>? EtilizeItemMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_giacom")]
@@ -13011,23 +13011,23 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("giacom_import_entities_list")]
-    public List<KeyPair2>? GiacomImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? GiacomImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_contactfieldmappings")]
-    public List<IntegrationFieldMapping>? SalesforceContactfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SalesforceContactfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_accountfieldmappings")]
-    public List<IntegrationFieldMapping>? SalesforceAccountfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SalesforceAccountfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_opportunityfieldmappings")]
-    public List<IntegrationFieldMapping>? SalesforceOpportunityfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SalesforceOpportunityfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_casefieldmappings")]
-    public List<IntegrationFieldMapping>? SalesforceCasefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SalesforceCasefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_salesforce")]
@@ -13043,15 +13043,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_import_entities_list")]
-    public List<KeyPair2>? SalesforceImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? SalesforceImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_import_attachments_list")]
-    public List<KeyPair2>? SalesforceImportAttachmentsList { get; set; } = [];
+    public List<KeyPair2>? SalesforceImportAttachmentsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_clientmappings")]
-    public List<ExternalLinkList>? SalesforceClientmappings { get; set; } = [];
+    public List<ExternalLinkList>? SalesforceClientmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_allowed_tenants")]
@@ -13059,7 +13059,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_allowed_tenants_list")]
-    public List<KeyPair2>? AzureAllowedTenantsList { get; set; } = [];
+    public List<KeyPair2>? AzureAllowedTenantsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_auto_creation_site_name")]
@@ -13115,35 +13115,35 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kaseya_agentfieldmappings")]
-    public List<IntegrationFieldMapping>? KaseyaAgentfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? KaseyaAgentfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kaseya_sitemappings")]
-    public List<IntegrationSiteMapping>? KaseyaSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? KaseyaSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kaseya_typemappings")]
-    public List<XTypeMapping>? KaseyaTypemappings { get; set; } = [];
+    public List<XTypeMapping>? KaseyaTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stripe_client_mappings")]
-    public List<ExternalLinkList>? StripeClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? StripeClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stripe_paymentmethod_options_keypair")]
-    public List<KeyPair2>? StripePaymentmethodOptionsKeypair { get; set; } = [];
+    public List<KeyPair2>? StripePaymentmethodOptionsKeypair { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stripe_manual_paymentmethod_options_keypair")]
-    public List<KeyPair2>? StripeManualPaymentmethodOptionsKeypair { get; set; } = [];
+    public List<KeyPair2>? StripeManualPaymentmethodOptionsKeypair { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("zabbix_fieldmappings")]
-    public List<IntegrationFieldMapping>? ZabbixFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ZabbixFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("zabbix_typemappings")]
-    public List<XTypeMapping>? ZabbixTypemappings { get; set; } = [];
+    public List<XTypeMapping>? ZabbixTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("zabbix_default_type_name")]
@@ -13167,7 +13167,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("giacom_client_mappings")]
-    public List<ExternalLinkList>? GiacomClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? GiacomClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("giacom_top_level_name")]
@@ -13175,7 +13175,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rhipe_client_mappings")]
-    public List<ExternalLinkList>? RhipeClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? RhipeClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rhipe_top_level_name")]
@@ -13195,11 +13195,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rhipe_import_entities_list")]
-    public List<KeyPair2>? RhipeImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? RhipeImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("techdata_client_mappings")]
-    public List<ExternalLinkList>? TechdataClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? TechdataClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("techdata_top_level_name")]
@@ -13219,11 +13219,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("techdata_import_entities_list")]
-    public List<KeyPair2>? TechdataImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? TechdataImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("inty_client_mappings")]
-    public List<ExternalLinkList>? IntyClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? IntyClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("inty_top_level_name")]
@@ -13243,11 +13243,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("inty_import_entities_list")]
-    public List<KeyPair2>? IntyImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? IntyImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("westcoastcloud_client_mappings")]
-    public List<ExternalLinkList>? WestcoastcloudClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? WestcoastcloudClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("westcoastcloud_top_level_name")]
@@ -13267,11 +13267,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("westcoastcloud_import_entities_list")]
-    public List<KeyPair2>? WestcoastcloudImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? WestcoastcloudImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sherweb_client_mappings")]
-    public List<ExternalLinkList>? SherwebClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? SherwebClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sherweb_top_level_name")]
@@ -13291,11 +13291,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sherweb_import_entities_list")]
-    public List<KeyPair2>? SherwebImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? SherwebImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("also_client_mappings")]
-    public List<ExternalLinkList>? AlsoClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? AlsoClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("also_top_level_name")]
@@ -13315,11 +13315,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("also_import_entities_list")]
-    public List<KeyPair2>? AlsoImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? AlsoImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("arrowsphere_client_mappings")]
-    public List<ExternalLinkList>? ArrowsphereClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? ArrowsphereClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("arrowsphere_top_level_name")]
@@ -13339,11 +13339,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("arrowsphere_import_entities_list")]
-    public List<KeyPair2>? ArrowsphereImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? ArrowsphereImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dickerdata_client_mappings")]
-    public List<ExternalLinkList>? DickerdataClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? DickerdataClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dickerdata_top_level_name")]
@@ -13363,7 +13363,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dickerdata_import_entities_list")]
-    public List<KeyPair2>? DickerdataImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? DickerdataImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_oracle")]
@@ -13451,19 +13451,19 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device_tenantids")]
-    public List<Int32>? DeviceTenantids { get; set; } = [];
+    public List<Int32>? DeviceTenantids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_tenantids")]
-    public List<Int32>? ClientTenantids { get; set; } = [];
+    public List<Int32>? ClientTenantids { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwisecontrol_sitemappings")]
-    public List<ExternalLinkList>? ConnectwisecontrolSitemappings { get; set; } = [];
+    public List<ExternalLinkList>? ConnectwisecontrolSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwisecontrol_typemappings")]
-    public List<XTypeMapping>? ConnectwisecontrolTypemappings { get; set; } = [];
+    public List<XTypeMapping>? ConnectwisecontrolTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_connectwisecontrol")]
@@ -13471,7 +13471,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwisecontrol_import_entities_list")]
-    public List<KeyPair2>? ConnectwisecontrolImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? ConnectwisecontrolImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_connectwisecontrol_lastsync")]
@@ -13487,15 +13487,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("salesforce_priority_mappings")]
-    public List<IntegrationFieldMapping>? SalesforcePriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SalesforcePriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cors_whitelist_list")]
-    public List<KeyPair2>? CorsWhitelistList { get; set; } = [];
+    public List<KeyPair2>? CorsWhitelistList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_userrolemappings")]
-    public List<IntegrationFieldMapping>? OktaUserrolemappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? OktaUserrolemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twilio_ticket_type_name")]
@@ -13531,27 +13531,27 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_sync_halo_id_list")]
-    public List<KeyPair2>? IntacctSyncHaloIdList { get; set; } = [];
+    public List<KeyPair2>? IntacctSyncHaloIdList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacctdefaultlocid_list")]
-    public List<KeyPair2>? IntacctdefaultlocidList { get; set; } = [];
+    public List<KeyPair2>? IntacctdefaultlocidList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_warehouse_mappings")]
-    public List<IntegrationFieldMapping>? IntacctWarehouseMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctWarehouseMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams_chat_tenant_list")]
-    public List<KeyPair2>? TeamsChatTenantList { get; set; } = [];
+    public List<KeyPair2>? TeamsChatTenantList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_status_mappings")]
-    public List<IntegrationFieldMapping>? HaloStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HaloStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_priority_mappings")]
-    public List<IntegrationFieldMapping>? HaloPriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? HaloPriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("etilizeurl")]
@@ -13559,19 +13559,19 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("barracuda_sitemappings")]
-    public List<ExternalLinkList>? BarracudaSitemappings { get; set; } = [];
+    public List<ExternalLinkList>? BarracudaSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("barracuda_clientmappings")]
-    public List<ExternalLinkList>? BarracudaClientmappings { get; set; } = [];
+    public List<ExternalLinkList>? BarracudaClientmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("barracuda_fieldmappings")]
-    public List<IntegrationFieldMapping>? BarracudaFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? BarracudaFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("logicmonitor_fieldmappings")]
-    public List<IntegrationFieldMapping>? LogicmonitorFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? LogicmonitorFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_logicmonitor")]
@@ -13635,11 +13635,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_named_roles_list")]
-    public List<KeyPair>? OktaNamedRolesList { get; set; } = [];
+    public List<KeyPair>? OktaNamedRolesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_mappings_xtype")]
-    public List<XTypeMapping>? LansweeperMappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? LansweeperMappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("whatsapptickettype_name")]
@@ -13659,7 +13659,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site24x7_fieldmappings")]
-    public List<IntegrationFieldMapping>? Site24x7Fieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Site24x7Fieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site24x7_alert_user_name")]
@@ -13667,7 +13667,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_mappings_new_user")]
-    public List<IntegrationFieldMapping>? OktaMappingsNewUser { get; set; } = [];
+    public List<IntegrationFieldMapping>? OktaMappingsNewUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("recaptcha_site_key")]
@@ -13675,7 +13675,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jamf_site_links")]
-    public List<ExternalLinkList>? JamfSiteLinks { get; set; } = [];
+    public List<ExternalLinkList>? JamfSiteLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("total_setup_steps")]
@@ -13703,7 +13703,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("icinga_fieldmappings")]
-    public List<IntegrationFieldMapping>? IcingaFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IcingaFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("icinga_defaultsite_name")]
@@ -13715,7 +13715,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("icinga_sitemappings")]
-    public List<IntegrationSiteMapping>? IcingaSitemappings { get; set; } = [];
+    public List<IntegrationSiteMapping>? IcingaSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("icinga_alert_user_name")]
@@ -13731,19 +13731,19 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_meter_tiers")]
-    public List<InvoiceDetailMeterTiers>? DefaultMeterTiers { get; set; } = [];
+    public List<InvoiceDetailMeterTiers>? DefaultMeterTiers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwisermm_sitemappings")]
-    public List<ExternalLinkList>? ConnectwisermmSitemappings { get; set; } = [];
+    public List<ExternalLinkList>? ConnectwisermmSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwisermm_typemappings")]
-    public List<XTypeMapping>? ConnectwisermmTypemappings { get; set; } = [];
+    public List<XTypeMapping>? ConnectwisermmTypemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwise_rmm_defaultclient_name")]
@@ -13755,7 +13755,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwisermm_import_entities_list")]
-    public List<KeyPair2>? ConnectwisermmImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? ConnectwisermmImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_connectwisermm_lastsync")]
@@ -13771,11 +13771,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("icinga_xtype_mappings")]
-    public List<XTypeMapping>? IcingaXtypeMappings { get; set; } = [];
+    public List<XTypeMapping>? IcingaXtypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("logicmonitor_xtype_mappings")]
-    public List<XTypeMapping>? LogicmonitorXtypeMappings { get; set; } = [];
+    public List<XTypeMapping>? LogicmonitorXtypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("shopifydefaultsite_name")]
@@ -13783,11 +13783,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("shopify_userfieldmappings")]
-    public List<IntegrationFieldMapping>? ShopifyUserfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ShopifyUserfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("shopify_customerfieldmappings")]
-    public List<IntegrationFieldMapping>? ShopifyCustomerfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ShopifyCustomerfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_shopify")]
@@ -13803,39 +13803,39 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("shopify_import_entities_list")]
-    public List<KeyPair2>? ShopifyImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? ShopifyImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_invoicefieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctInvoicefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctInvoicefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_invoicelinefieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctInvoicelinefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctInvoicelinefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_orderfieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctOrderfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctOrderfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_orderlinefieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctOrderlinefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctOrderlinefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_creditfieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctCreditfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctCreditfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_creditlinefieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctCreditlinefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctCreditlinefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_billfieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctBillfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctBillfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_billlinefieldmappings")]
-    public List<IntegrationFieldMapping>? IntacctBilllinefieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IntacctBilllinefieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_xensam")]
@@ -13855,23 +13855,23 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xensam_import_entities_list")]
-    public List<KeyPair2>? XensamImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? XensamImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xensam_fieldmappings")]
-    public List<IntegrationFieldMapping>? XensamFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? XensamFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xensam_datacentre_fieldmappings")]
-    public List<IntegrationFieldMapping>? XensamDatacentreFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? XensamDatacentreFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xensam_clientmappings")]
-    public List<ExternalLinkList>? XensamClientmappings { get; set; } = [];
+    public List<ExternalLinkList>? XensamClientmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xensam_mappings_xtype")]
-    public List<XTypeMapping>? XensamMappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? XensamMappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("trustpilot_defaultusersite_name")]
@@ -13879,7 +13879,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("okta_sitegroup_mappings")]
-    public List<ExternalLinkList>? OktaSitegroupMappings { get; set; } = [];
+    public List<ExternalLinkList>? OktaSitegroupMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_sql_port")]
@@ -13927,7 +13927,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prometheus_fieldmappings")]
-    public List<IntegrationFieldMapping>? PrometheusFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? PrometheusFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prometheus_defaultassettype_name")]
@@ -13939,7 +13939,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prometheus_xtype_mappings")]
-    public List<XTypeMapping>? PrometheusXtypeMappings { get; set; } = [];
+    public List<XTypeMapping>? PrometheusXtypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prometheus_alerting_user_name")]
@@ -14019,7 +14019,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device_tenantids_strings")]
-    public List<String>? DeviceTenantidsStrings { get; set; } = [];
+    public List<String>? DeviceTenantidsStrings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twilio_account_sid")]
@@ -14071,7 +14071,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("gocardless_userfieldmappings")]
-    public List<IntegrationFieldMapping>? GocardlessUserfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? GocardlessUserfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("gocardless_defaultsite_name")]
@@ -14095,7 +14095,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prometheus_api_url_list")]
-    public List<KeyPair2>? PrometheusApiUrlList { get; set; } = [];
+    public List<KeyPair2>? PrometheusApiUrlList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("aidetection_enabled")]
@@ -14103,11 +14103,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_sync_entities_list")]
-    public List<KeyPair2>? ItglueSyncEntitiesList { get; set; } = [];
+    public List<KeyPair2>? ItglueSyncEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("slack_command_workspaces")]
-    public List<KeyPair2>? SlackCommandWorkspaces { get; set; } = [];
+    public List<KeyPair2>? SlackCommandWorkspaces { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meraki_top_level_name")]
@@ -14115,11 +14115,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meraki_client_mappings")]
-    public List<ExternalLinkList>? MerakiClientMappings { get; set; } = [];
+    public List<ExternalLinkList>? MerakiClientMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meraki_device_fieldmappings")]
-    public List<IntegrationFieldMapping>? MerakiDeviceFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? MerakiDeviceFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("merakidefaultassettype_name")]
@@ -14127,7 +14127,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meraki_xtype_mappings")]
-    public List<XTypeMapping>? MerakiXtypeMappings { get; set; } = [];
+    public List<XTypeMapping>? MerakiXtypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_meraki")]
@@ -14175,7 +14175,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("adobecommerce_import_entities_list")]
-    public List<KeyPair2>? AdobecommerceImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? AdobecommerceImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("openai_enabled")]
@@ -14195,7 +14195,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_statusfilter_list")]
-    public List<KeyPair2>? FreshdeskStatusfilterList { get; set; } = [];
+    public List<KeyPair2>? FreshdeskStatusfilterList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("distributionlists_defaultsite_name")]
@@ -14219,7 +14219,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_presence_rules")]
-    public List<UnamePresenceRule>? AgentPresenceRules { get; set; } = [];
+    public List<UnamePresenceRule>? AgentPresenceRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_mailchimp")]
@@ -14235,7 +14235,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mailchimp_import_entities_list")]
-    public List<KeyPair2>? MailchimpImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? MailchimpImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reset_halointegrator_mailchimp_lastsync")]
@@ -14243,7 +14243,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quoteapprovalfields")]
-    public List<RequestTypeField>? Quoteapprovalfields { get; set; } = [];
+    public List<RequestTypeField>? Quoteapprovalfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("recordonlinepresence")]
@@ -14251,7 +14251,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("exchange_agent_subscriptions")]
-    public List<UnameEventSubscription>? ExchangeAgentSubscriptions { get; set; } = [];
+    public List<UnameEventSubscription>? ExchangeAgentSubscriptions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_do_convert_to_prospects")]
@@ -14263,7 +14263,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contractapprovalfields")]
-    public List<RequestTypeField>? Contractapprovalfields { get; set; } = [];
+    public List<RequestTypeField>? Contractapprovalfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sccm_dontupdatetype")]
@@ -14287,15 +14287,15 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("trophy_agents_list")]
-    public List<KeyPair4>? TrophyAgentsList { get; set; } = [];
+    public List<KeyPair4>? TrophyAgentsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_status_reassign_mappings")]
-    public List<AgentStatusReassignMapping>? AgentStatusReassignMappings { get; set; } = [];
+    public List<AgentStatusReassignMapping>? AgentStatusReassignMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_stopped_entities")]
-    public List<KeyPair2>? ClientStoppedEntities { get; set; } = [];
+    public List<KeyPair2>? ClientStoppedEntities { get; set; } = new();
 
     [JsonPropertyName("forethought_configuration")]
     public ForethoughtDetails ForethoughtConfiguration { get; set; } = new();
@@ -14318,7 +14318,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("htv_tracking_config")]
-    public List<HistoricalTicketVolumeConfig>? HtvTrackingConfig { get; set; } = [];
+    public List<HistoricalTicketVolumeConfig>? HtvTrackingConfig { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("zoom_ticket_user_name")]
@@ -14334,7 +14334,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linkaimatched_enabled_tickettypes")]
-    public List<KeyPair4>? LinkaimatchedEnabledTickettypes { get; set; } = [];
+    public List<KeyPair4>? LinkaimatchedEnabledTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_integrator_type")]
@@ -14386,7 +14386,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mcp_functions")]
-    public List<VirtualAgentFunction>? McpFunctions { get; set; } = [];
+    public List<VirtualAgentFunction>? McpFunctions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams_chat_closure_message_name")]
@@ -14434,7 +14434,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twilio_numbers")]
-    public List<TwilioDetails>? TwilioNumbers { get; set; } = [];
+    public List<TwilioDetails>? TwilioNumbers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twiliosms_default_number")]
@@ -14446,7 +14446,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_favourites")]
-    public List<KBEntryFavourites>? KbFavourites { get; set; } = [];
+    public List<KBEntryFavourites>? KbFavourites { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_integration_key")]
@@ -14950,7 +14950,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kaseya_servicedesks")]
-    public List<KeyPair2>? KaseyaServicedesks { get; set; } = [];
+    public List<KeyPair2>? KaseyaServicedesks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_service_url")]
@@ -15086,7 +15086,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("pagerduty_services")]
-    public List<PagerDutyMapping>? PagerdutyServices { get; set; } = [];
+    public List<PagerDutyMapping>? PagerdutyServices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("integration_client_id")]
@@ -15130,19 +15130,19 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("openai_embeddings_tickettypes")]
-    public List<RequestTypeList>? OpenaiEmbeddingsTickettypes { get; set; } = [];
+    public List<RequestTypeList>? OpenaiEmbeddingsTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azureopenai_embeddings_tickettypes")]
-    public List<RequestTypeList>? AzureopenaiEmbeddingsTickettypes { get; set; } = [];
+    public List<RequestTypeList>? AzureopenaiEmbeddingsTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("aiembedding_enabled_tickettypes")]
-    public List<KeyPair4>? AiembeddingEnabledTickettypes { get; set; } = [];
+    public List<KeyPair4>? AiembeddingEnabledTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("vectorise_tickettypes")]
-    public List<RequestTypeList>? VectoriseTickettypes { get; set; } = [];
+    public List<RequestTypeList>? VectoriseTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("vectorise_date")]
@@ -15170,19 +15170,19 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_status_mappings")]
-    public List<IntegrationFieldMapping>? FreshdeskStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FreshdeskStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_priority_mappings")]
-    public List<IntegrationFieldMapping>? FreshdeskPriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FreshdeskPriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_team_mappings")]
-    public List<IntegrationFieldMapping>? FreshdeskTeamMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FreshdeskTeamMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_field_mappings")]
-    public List<IntegrationFieldMapping>? FreshdeskFieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FreshdeskFieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("coralogix_url")]
@@ -15218,7 +15218,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teamsshifts_mappings")]
-    public List<MicrosoftTeamsMapping>? TeamsshiftsMappings { get; set; } = [];
+    public List<MicrosoftTeamsMapping>? TeamsshiftsMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_microsoftteams")]
@@ -15246,7 +15246,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teamsshifts_shifttype_mappings")]
-    public List<ExternalLinkList>? TeamsshiftsShifttypeMappings { get; set; } = [];
+    public List<ExternalLinkList>? TeamsshiftsShifttypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("includeemailvariables")]
@@ -15258,7 +15258,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_company_field_mappings")]
-    public List<IntegrationFieldMapping>? FreshdeskCompanyFieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FreshdeskCompanyFieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("vectorise_end_date")]
@@ -15274,11 +15274,11 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_cannedresponse_field_mappings")]
-    public List<IntegrationFieldMapping>? FreshdeskCannedresponseFieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FreshdeskCannedresponseFieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("freshdesk_tickettype_mappings")]
-    public List<IntegrationFieldMapping>? FreshdeskTickettypeMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? FreshdeskTickettypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_freshdesk")]
@@ -15330,7 +15330,7 @@ public partial class Control
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("zoom_scopes")]
-    public List<String>? ZoomScopes { get; set; } = [];
+    public List<String>? ZoomScopes { get; set; } = new();
 
 }
 

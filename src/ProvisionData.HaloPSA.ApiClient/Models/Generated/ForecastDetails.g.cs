@@ -105,19 +105,19 @@ public partial class ForecastDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettype_multi")]
-    public List<KeyPair>? TickettypeMulti { get; set; } = [];
+    public List<KeyPair>? TickettypeMulti { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticketsource_multi")]
-    public List<KeyPair>? TicketsourceMulti { get; set; } = [];
+    public List<KeyPair>? TicketsourceMulti { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("input_data")]
-    public List<TimeSeriesData>? InputData { get; set; } = [];
+    public List<TimeSeriesData>? InputData { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("forecast_output")]
-    public List<ForecastOutputValue>? ForecastOutput { get; set; } = [];
+    public List<ForecastOutputValue>? ForecastOutput { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("forecast_output_date")]
@@ -125,7 +125,7 @@ public partial class ForecastDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("exogenous_variables")]
-    public List<ForecastEventData>? ExogenousVariables { get; set; } = [];
+    public List<ForecastEventData>? ExogenousVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_do_forecast")]

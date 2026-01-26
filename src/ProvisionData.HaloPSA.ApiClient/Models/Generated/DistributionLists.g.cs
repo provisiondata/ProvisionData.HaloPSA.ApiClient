@@ -33,19 +33,19 @@ public partial class DistributionLists
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")]
-    public List<Users>? Users { get; set; } = [];
+    public List<Users>? Users { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("members")]
-    public List<DistributionListsUser>? Members { get; set; } = [];
+    public List<DistributionListsUser>? Members { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addtheseusers")]
-    public List<Users>? Addtheseusers { get; set; } = [];
+    public List<Users>? Addtheseusers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("removetheseusers")]
-    public List<Users>? Removetheseusers { get; set; } = [];
+    public List<Users>? Removetheseusers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users_count")]
@@ -84,11 +84,11 @@ public partial class DistributionLists
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<DlFilterDetails>? Filters { get; set; } = [];
+    public List<DlFilterDetails>? Filters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_campaigns")]
-    public List<MailCampaign>? LinkedCampaigns { get; set; } = [];
+    public List<MailCampaign>? LinkedCampaigns { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

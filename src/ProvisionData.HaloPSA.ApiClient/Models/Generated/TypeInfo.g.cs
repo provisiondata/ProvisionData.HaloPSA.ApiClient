@@ -65,11 +65,11 @@ public partial class TypeInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("visibility_conditions")]
-    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = [];
+    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_visibility_conditions")]
-    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = [];
+    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

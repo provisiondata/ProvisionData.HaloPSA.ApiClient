@@ -22,7 +22,7 @@ public partial class CreateSlackChannel
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("members")]
-    public List<SlackUser>? Members { get; set; } = [];
+    public List<SlackUser>? Members { get; set; } = new();
 
 }
 

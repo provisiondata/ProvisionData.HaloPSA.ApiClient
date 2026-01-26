@@ -45,11 +45,11 @@ public partial class WorkflowTarget
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("start_steps")]
-    public List<WorkflowTargetStep>? StartSteps { get; set; } = [];
+    public List<WorkflowTargetStep>? StartSteps { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("end_steps")]
-    public List<WorkflowTargetStep>? EndSteps { get; set; } = [];
+    public List<WorkflowTargetStep>? EndSteps { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("target")]
@@ -69,7 +69,7 @@ public partial class WorkflowTarget
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rules")]
-    public List<Autoassign>? Rules { get; set; } = [];
+    public List<Autoassign>? Rules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rule_id")]
@@ -81,11 +81,11 @@ public partial class WorkflowTarget
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams")]
-    public List<WorkflowTargetTeam>? Teams { get; set; } = [];
+    public List<WorkflowTargetTeam>? Teams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("priorities")]
-    public List<WorkflowTargetPriority>? Priorities { get; set; } = [];
+    public List<WorkflowTargetPriority>? Priorities { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("template_id")]

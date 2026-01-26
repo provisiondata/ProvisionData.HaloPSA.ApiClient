@@ -25,7 +25,7 @@ public partial class ScreenLayout
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tab_config")]
-    public List<TabConfig>? TabConfig { get; set; } = [];
+    public List<TabConfig>? TabConfig { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

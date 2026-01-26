@@ -26,7 +26,7 @@ public partial class Tax
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdparty_tax_rates")]
-    public List<KeyPair2>? ThirdpartyTaxRates { get; set; } = [];
+    public List<KeyPair2>? ThirdpartyTaxRates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xero_tenant_id")]
@@ -46,7 +46,7 @@ public partial class Tax
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_rates")]
-    public List<Tax>? LinkedRates { get; set; } = [];
+    public List<Tax>? LinkedRates { get; set; } = new();
 
     [JsonPropertyName("xerotaxrate")]
     public KeyPair2 Xerotaxrate { get; set; } = new();

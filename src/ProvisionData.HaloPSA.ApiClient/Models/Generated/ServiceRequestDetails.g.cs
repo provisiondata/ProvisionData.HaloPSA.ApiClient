@@ -67,7 +67,7 @@ public partial class ServiceRequestDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_services")]
-    public List<ServiceOption>? OptionalServices { get; set; } = [];
+    public List<ServiceOption>? OptionalServices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sequenceid")]
@@ -83,15 +83,15 @@ public partial class ServiceRequestDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_items")]
-    public List<ItemRestriction>? AllowedItems { get; set; } = [];
+    public List<ItemRestriction>? AllowedItems { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_item_groups")]
-    public List<ItemGroupRestriction>? AllowedItemGroups { get; set; } = [];
+    public List<ItemGroupRestriction>? AllowedItemGroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("show_submission_summary")]

@@ -74,7 +74,7 @@ public partial class CustomField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("database_lookup_triggers")]
-    public List<PartsLookupField>? DatabaseLookupTriggers { get; set; } = [];
+    public List<PartsLookupField>? DatabaseLookupTriggers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("third_party_name")]
@@ -127,7 +127,7 @@ public partial class CustomField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("validation_reasons")]
-    public List<KeyPair>? ValidationReasons { get; set; } = [];
+    public List<KeyPair>? ValidationReasons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("int_value_is_display")]
@@ -175,7 +175,7 @@ public partial class CustomField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("validation_data")]
-    public List<CustomFieldValidation>? ValidationData { get; set; } = [];
+    public List<CustomFieldValidation>? ValidationData { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("database_lookup_input")]
@@ -219,7 +219,7 @@ public partial class CustomField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_these_rows")]
-    public List<Int32>? DeleteTheseRows { get; set; } = [];
+    public List<Int32>? DeleteTheseRows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("showinpool")]

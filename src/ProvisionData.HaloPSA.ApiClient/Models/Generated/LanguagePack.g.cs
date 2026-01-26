@@ -57,11 +57,11 @@ public partial class LanguagePack
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<KeyPair2>? Translations { get; set; } = [];
+    public List<KeyPair2>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translation_details")]
-    public List<LanguagePackTranslations>? TranslationDetails { get; set; } = [];
+    public List<LanguagePackTranslations>? TranslationDetails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations_are_custom")]
@@ -73,7 +73,7 @@ public partial class LanguagePack
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

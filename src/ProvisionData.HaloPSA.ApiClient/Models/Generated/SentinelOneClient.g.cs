@@ -128,7 +128,7 @@ public partial class SentinelOneClient
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("skus")]
-    public List<SentinelOneSku>? Skus { get; set; } = [];
+    public List<SentinelOneSku>? Skus { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("controlSites")]

@@ -12,7 +12,10 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient.Generator;
+using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Services;
+
+namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator;
 
 public class Program
 {
@@ -23,11 +26,13 @@ public class Program
         builder.Services.Configure<GeneratorOptions>(builder.Configuration.GetSection(GeneratorOptions.SectionName));
         builder.Services.Configure<ModelChanges>(builder.Configuration.GetSection(ModelChanges.SectionName));
 
-        builder.Services.AddSingleton<Generator>();
+        builder.Services.AddSingleton<IGenerator, Services.Generator>();
+        builder.Services.AddSingleton<IModelChangeValidator, ModelChangeValidator>();
+        builder.Services.AddSingleton<IModelChangeProvider, ModelChangeProvider>();
 
         var host = builder.Build();
 
-        var generator = host.Services.GetRequiredService<Generator>();
+        var generator = host.Services.GetRequiredService<IGenerator>();
 
         await generator.GenerateAsync(CancellationToken.None);
     }

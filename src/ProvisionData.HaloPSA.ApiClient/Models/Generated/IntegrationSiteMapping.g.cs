@@ -61,7 +61,7 @@ public partial class IntegrationSiteMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("criteria")]
-    public List<XTypeMappingCriteria>? Criteria { get; set; } = [];
+    public List<XTypeMappingCriteria>? Criteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rule_count")]

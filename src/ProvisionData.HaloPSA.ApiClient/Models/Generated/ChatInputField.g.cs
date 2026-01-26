@@ -21,11 +21,11 @@ public partial class ChatInputField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lookup_values")]
-    public List<KeyPair2>? LookupValues { get; set; } = [];
+    public List<KeyPair2>? LookupValues { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("input_suggestions")]
-    public List<ChatInputSuggestionUI>? InputSuggestions { get; set; } = [];
+    public List<ChatInputSuggestionUI>? InputSuggestions { get; set; } = new();
 
 }
 

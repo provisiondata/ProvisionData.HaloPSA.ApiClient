@@ -81,11 +81,11 @@ public partial class DashboardLinks
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("widgets")]
-    public List<Widget>? Widgets { get; set; } = [];
+    public List<Widget>? Widgets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -113,11 +113,11 @@ public partial class DashboardLinks
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<DashboardFilter>? Filters { get; set; } = [];
+    public List<DashboardFilter>? Filters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_access")]
-    public List<DashboardRestriction>? UserAccess { get; set; } = [];
+    public List<DashboardRestriction>? UserAccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_published")]

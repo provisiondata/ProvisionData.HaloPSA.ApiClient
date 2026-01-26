@@ -80,7 +80,7 @@ public partial class Organisation
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("departments")]
-    public List<TreeList>? Departments { get; set; } = [];
+    public List<TreeList>? Departments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_client_id")]
@@ -92,15 +92,15 @@ public partial class Organisation
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_tickettypes")]
-    public List<RequestTypeList>? AllowedTickettypes { get; set; } = [];
+    public List<RequestTypeList>? AllowedTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faqlists")]
-    public List<FAQListHead>? Faqlists { get; set; } = [];
+    public List<FAQListHead>? Faqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -144,7 +144,7 @@ public partial class Organisation
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_faqlists")]
-    public List<FAQListHead>? UserFaqlists { get; set; } = [];
+    public List<FAQListHead>? UserFaqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("all_user_faqlists_allowed")]
@@ -168,7 +168,7 @@ public partial class Organisation
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_favourites")]
-    public List<KBEntryFavourites>? KbFavourites { get; set; } = [];
+    public List<KBEntryFavourites>? KbFavourites { get; set; } = new();
 
 }
 

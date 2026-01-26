@@ -10,7 +10,7 @@ public partial class Uname
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sites")]
-    public List<UnameSite>? Sites { get; set; } = [];
+    public List<UnameSite>? Sites { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
@@ -101,23 +101,23 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams")]
-    public List<UnameSection>? Teams { get; set; } = [];
+    public List<UnameSection>? Teams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("departments")]
-    public List<UnameDepartment>? Departments { get; set; } = [];
+    public List<UnameDepartment>? Departments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clients")]
-    public List<UnameAreaRestriction>? Clients { get; set; } = [];
+    public List<UnameAreaRestriction>? Clients { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettypes")]
-    public List<UnameRequestType>? Tickettypes { get; set; } = [];
+    public List<UnameRequestType>? Tickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualifications")]
-    public List<UnameQualification>? Qualifications { get; set; } = [];
+    public List<UnameQualification>? Qualifications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualification_weighting")]
@@ -141,7 +141,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assettypes")]
-    public List<UnameXtype>? Assettypes { get; set; } = [];
+    public List<UnameXtype>? Assettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("googleemail")]
@@ -457,15 +457,15 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")]
-    public List<NHDRoles>? Roles { get; set; } = [];
+    public List<NHDRoles>? Roles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_roles")]
-    public List<NHDRoles>? AddRoles { get; set; } = [];
+    public List<NHDRoles>? AddRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("claims")]
-    public List<NHDClaim>? Claims { get; set; } = [];
+    public List<NHDClaim>? Claims { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("department")]
@@ -481,7 +481,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twofactor_enabled")]
@@ -505,11 +505,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notifications")]
-    public List<UnameNotification>? Notifications { get; set; } = [];
+    public List<UnameNotification>? Notifications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notifications_personal")]
-    public List<UnameNotification>? NotificationsPersonal { get; set; } = [];
+    public List<UnameNotification>? NotificationsPersonal { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emailconfirmed")]
@@ -553,11 +553,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")]
-    public List<Restriction>? Chargerates { get; set; } = [];
+    public List<Restriction>? Chargerates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("warnifnoscan_integrator")]
@@ -765,7 +765,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_holiday_allowances")]
-    public List<UnameHolidayAllowance>? AgentHolidayAllowances { get; set; } = [];
+    public List<UnameHolidayAllowance>? AgentHolidayAllowances { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("remaining_holiday_allowance")]
@@ -801,91 +801,91 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_tickettypes")]
-    public List<AccessControl>? AcTickettypes { get; set; } = [];
+    public List<AccessControl>? AcTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_approvals")]
-    public List<AccessControl>? AcApprovals { get; set; } = [];
+    public List<AccessControl>? AcApprovals { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_rules")]
-    public List<AccessControl>? AcRules { get; set; } = [];
+    public List<AccessControl>? AcRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_cannedtext")]
-    public List<AccessControl>? AcCannedtext { get; set; } = [];
+    public List<AccessControl>? AcCannedtext { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_customfields")]
-    public List<AccessControl>? AcCustomfields { get; set; } = [];
+    public List<AccessControl>? AcCustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_customtables")]
-    public List<AccessControl>? AcCustomtables { get; set; } = [];
+    public List<AccessControl>? AcCustomtables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_dashboards")]
-    public List<AccessControl>? AcDashboards { get; set; } = [];
+    public List<AccessControl>? AcDashboards { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_workflows")]
-    public List<AccessControl>? AcWorkflows { get; set; } = [];
+    public List<AccessControl>? AcWorkflows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_roles")]
-    public List<AccessControl>? AcRoles { get; set; } = [];
+    public List<AccessControl>? AcRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_slas")]
-    public List<AccessControl>? AcSlas { get; set; } = [];
+    public List<AccessControl>? AcSlas { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_templates")]
-    public List<AccessControl>? AcTemplates { get; set; } = [];
+    public List<AccessControl>? AcTemplates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_outcomes")]
-    public List<AccessControl>? AcOutcomes { get; set; } = [];
+    public List<AccessControl>? AcOutcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_workdays")]
-    public List<AccessControl>? AcWorkdays { get; set; } = [];
+    public List<AccessControl>? AcWorkdays { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_emailtemplates")]
-    public List<AccessControl>? AcEmailtemplates { get; set; } = [];
+    public List<AccessControl>? AcEmailtemplates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_messagegroups")]
-    public List<AccessControl>? AcMessagegroups { get; set; } = [];
+    public List<AccessControl>? AcMessagegroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_reportgroups")]
-    public List<AccessControl>? AcReportgroups { get; set; } = [];
+    public List<AccessControl>? AcReportgroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_fieldgroups")]
-    public List<AccessControl>? AcFieldgroups { get; set; } = [];
+    public List<AccessControl>? AcFieldgroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_languagepacks")]
-    public List<AccessControl>? AcLanguagepacks { get; set; } = [];
+    public List<AccessControl>? AcLanguagepacks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_itemgroups")]
-    public List<AccessControl>? AcItemgroups { get; set; } = [];
+    public List<AccessControl>? AcItemgroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_reports")]
-    public List<AccessControl>? AcReports { get; set; } = [];
+    public List<AccessControl>? AcReports { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_datasources")]
-    public List<AccessControl>? AcDatasources { get; set; } = [];
+    public List<AccessControl>? AcDatasources { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_compositereports")]
-    public List<AccessControl>? AcCompositereports { get; set; } = [];
+    public List<AccessControl>? AcCompositereports { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_columns_id_clients")]
@@ -957,27 +957,27 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_assettypes")]
-    public List<AccessControl>? AcAssettypes { get; set; } = [];
+    public List<AccessControl>? AcAssettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_assetgroups")]
-    public List<AccessControl>? AcAssetgroups { get; set; } = [];
+    public List<AccessControl>? AcAssetgroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_servicecategories")]
-    public List<AccessControl>? AcServicecategories { get; set; } = [];
+    public List<AccessControl>? AcServicecategories { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_services")]
-    public List<AccessControl>? AcServices { get; set; } = [];
+    public List<AccessControl>? AcServices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_suppliers")]
-    public List<AccessControl>? AcSuppliers { get; set; } = [];
+    public List<AccessControl>? AcSuppliers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_suppliercontracts")]
-    public List<AccessControl>? AcSuppliercontracts { get; set; } = [];
+    public List<AccessControl>? AcSuppliercontracts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("last_modified")]
@@ -1044,11 +1044,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_chatprofiles")]
-    public List<AccessControl>? AcChatprofiles { get; set; } = [];
+    public List<AccessControl>? AcChatprofiles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_faqlists")]
-    public List<AccessControl>? AcFaqlists { get; set; } = [];
+    public List<AccessControl>? AcFaqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_automatic_call_scripts")]
@@ -1060,7 +1060,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_devices")]
-    public List<AccessControl>? AcDevices { get; set; } = [];
+    public List<AccessControl>? AcDevices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_connectionid")]
@@ -1135,11 +1135,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("calendar_options_multi")]
-    public List<KeyPair2>? CalendarOptionsMulti { get; set; } = [];
+    public List<KeyPair2>? CalendarOptionsMulti { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_databaselookups")]
-    public List<AccessControl>? AcDatabaselookups { get; set; } = [];
+    public List<AccessControl>? AcDatabaselookups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_columns_id_pos")]
@@ -1183,11 +1183,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_notifications")]
-    public List<AccessControl>? AcNotifications { get; set; } = [];
+    public List<AccessControl>? AcNotifications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("load_balance_agent_limits")]
-    public List<UnameLoadBalanceLimit>? LoadBalanceAgentLimits { get; set; } = [];
+    public List<UnameLoadBalanceLimit>? LoadBalanceAgentLimits { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("federated_identity_id")]
@@ -1195,15 +1195,15 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_columnprofiles")]
-    public List<AccessControl>? AcColumnprofiles { get; set; } = [];
+    public List<AccessControl>? AcColumnprofiles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_lists")]
-    public List<AccessControl>? AcLists { get; set; } = [];
+    public List<AccessControl>? AcLists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_filterprofiles")]
-    public List<AccessControl>? AcFilterprofiles { get; set; } = [];
+    public List<AccessControl>? AcFilterprofiles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_ac_agent")]
@@ -1254,23 +1254,23 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_webhooks")]
-    public List<AccessControl>? AcWebhooks { get; set; } = [];
+    public List<AccessControl>? AcWebhooks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_customintegrations")]
-    public List<AccessControl>? AcCustomintegrations { get; set; } = [];
+    public List<AccessControl>? AcCustomintegrations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_azuread")]
-    public List<AccessControl>? AcAzuread { get; set; } = [];
+    public List<AccessControl>? AcAzuread { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_pdftemplates")]
-    public List<AccessControl>? AcPdftemplates { get; set; } = [];
+    public List<AccessControl>? AcPdftemplates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_assetfields")]
-    public List<AccessControl>? AcAssetfields { get; set; } = [];
+    public List<AccessControl>? AcAssetfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isclone")]
@@ -1290,23 +1290,23 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_cost_tracking")]
-    public List<UnameCostTracking>? AgentCostTracking { get; set; } = [];
+    public List<UnameCostTracking>? AgentCostTracking { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_softwareproducts")]
-    public List<AccessControl>? AcSoftwareproducts { get; set; } = [];
+    public List<AccessControl>? AcSoftwareproducts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_integration_credentials")]
-    public List<UnameIntegration>? AgentIntegrationCredentials { get; set; } = [];
+    public List<UnameIntegration>? AgentIntegrationCredentials { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_folders")]
-    public List<AccessControl>? AcFolders { get; set; } = [];
+    public List<AccessControl>? AcFolders { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_qualifications")]
-    public List<AccessControl>? AcQualifications { get; set; } = [];
+    public List<AccessControl>? AcQualifications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contact_pref1")]
@@ -1330,15 +1330,15 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assetfields")]
-    public List<UnameField>? Assetfields { get; set; } = [];
+    public List<UnameField>? Assetfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("unamecustomfields")]
-    public List<UnameCustom>? Unamecustomfields { get; set; } = [];
+    public List<UnameCustom>? Unamecustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("unameappointmenttypes")]
-    public List<UnameAppointment>? Unameappointmenttypes { get; set; } = [];
+    public List<UnameAppointment>? Unameappointmenttypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_canupdate")]
@@ -1362,7 +1362,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<UnameButton>? Custombuttons { get; set; } = [];
+    public List<UnameButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("namewithinactive")]
@@ -1386,7 +1386,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("uname_usercustomfields")]
-    public List<UnameCustom>? UnameUsercustomfields { get; set; } = [];
+    public List<UnameCustom>? UnameUsercustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("can_approve_purchaseorder")]

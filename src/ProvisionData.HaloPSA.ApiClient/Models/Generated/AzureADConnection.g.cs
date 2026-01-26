@@ -64,23 +64,23 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_user")]
-    public List<IntegrationFieldMapping>? MappingsUser { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_agent")]
-    public List<IntegrationFieldMapping>? MappingsAgent { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsAgent { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_agent_roles")]
-    public List<IntegrationFieldMapping>? MappingsAgentRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsAgentRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_agent_teams")]
-    public List<IntegrationFieldMapping>? MappingsAgentTeams { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsAgentTeams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_site")]
-    public List<AzureADMapping>? MappingsSite { get; set; } = [];
+    public List<AzureADMapping>? MappingsSite { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_matching_fields")]
@@ -92,11 +92,11 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_matching_list")]
-    public List<KeyPair2>? UserMatchingList { get; set; } = [];
+    public List<KeyPair2>? UserMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_matching_list")]
-    public List<KeyPair2>? AgentMatchingList { get; set; } = [];
+    public List<KeyPair2>? AgentMatchingList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegratorenabled")]
@@ -116,7 +116,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_cab")]
-    public List<IntegrationFieldMapping>? MappingsCab { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("manage_licenses")]
@@ -128,7 +128,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licensed_roles_list")]
-    public List<KeyPair>? LicensedRolesList { get; set; } = [];
+    public List<KeyPair>? LicensedRolesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tenant_type")]
@@ -136,7 +136,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_device")]
-    public List<IntegrationFieldMapping>? MappingsDevice { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsDevice { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("defaultsite")]
@@ -236,7 +236,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_client")]
-    public List<AreaAzureTenant>? MappingsClient { get; set; } = [];
+    public List<AreaAzureTenant>? MappingsClient { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_ticket_type")]
@@ -260,7 +260,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_ticket")]
-    public List<IntegrationFieldMapping>? MappingsTicket { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsTicket { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intune_dont_update_type")]
@@ -272,7 +272,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intune_enabled")]
@@ -296,7 +296,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("current_scopes")]
-    public List<String>? CurrentScopes { get; set; } = [];
+    public List<String>? CurrentScopes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_dosave")]
@@ -324,7 +324,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_priority")]
-    public List<IntegrationFieldMapping>? MappingsPriority { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsPriority { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_subscription_management")]
@@ -340,7 +340,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_user_roles")]
-    public List<IntegrationFieldMapping>? MappingsUserRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsUserRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("alternate_client_id")]
@@ -360,7 +360,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intune_delete_status")]
@@ -388,7 +388,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("named_roles_list")]
-    public List<KeyPair>? NamedRolesList { get; set; } = [];
+    public List<KeyPair>? NamedRolesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_user_template")]
@@ -400,7 +400,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_new_user")]
-    public List<IntegrationFieldMapping>? MappingsNewUser { get; set; } = [];
+    public List<IntegrationFieldMapping>? MappingsNewUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_user_template_name")]
@@ -432,7 +432,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowedclientidslist")]
-    public List<KeyPair3>? HalointegratorAllowedclientidslist { get; set; } = [];
+    public List<KeyPair3>? HalointegratorAllowedclientidslist { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowedclientids")]
@@ -440,7 +440,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_licence")]
-    public List<KeyPair2>? UserLicence { get; set; } = [];
+    public List<KeyPair2>? UserLicence { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_licence_list")]
@@ -579,39 +579,39 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_mappings_agent_roles")]
-    public List<IntegrationFieldMapping>? AddMappingsAgentRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? AddMappingsAgentRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_mappings_user_roles")]
-    public List<IntegrationFieldMapping>? AddMappingsUserRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? AddMappingsUserRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_mappings_cab")]
-    public List<IntegrationFieldMapping>? AddMappingsCab { get; set; } = [];
+    public List<IntegrationFieldMapping>? AddMappingsCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_mappings_agent_roles")]
-    public List<IntegrationFieldMapping>? EditMappingsAgentRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? EditMappingsAgentRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_mappings_user_roles")]
-    public List<IntegrationFieldMapping>? EditMappingsUserRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? EditMappingsUserRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_mappings_cab")]
-    public List<IntegrationFieldMapping>? EditMappingsCab { get; set; } = [];
+    public List<IntegrationFieldMapping>? EditMappingsCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_mappings_agent_roles")]
-    public List<IntegrationFieldMapping>? DeleteMappingsAgentRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? DeleteMappingsAgentRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_mappings_user_roles")]
-    public List<IntegrationFieldMapping>? DeleteMappingsUserRoles { get; set; } = [];
+    public List<IntegrationFieldMapping>? DeleteMappingsUserRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_mappings_cab")]
-    public List<IntegrationFieldMapping>? DeleteMappingsCab { get; set; } = [];
+    public List<IntegrationFieldMapping>? DeleteMappingsCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("device_site_allocation")]
@@ -619,7 +619,7 @@ public partial class AzureADConnection
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

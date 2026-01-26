@@ -21,7 +21,7 @@ public partial class CSPInvoiceDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attributes")]
-    public Object? Attributes { get; set; } = new Object();
+    public UnknownType? Attributes { get; set; } = new();
 
 }
 

@@ -141,15 +141,15 @@ public partial class ApprovalProcessStep
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rules")]
-    public List<ApprovalProcessRule>? Rules { get; set; } = [];
+    public List<ApprovalProcessRule>? Rules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notification_rules")]
-    public List<ApprovalProcessRule>? NotificationRules { get; set; } = [];
+    public List<ApprovalProcessRule>? NotificationRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automation_runbookid")]

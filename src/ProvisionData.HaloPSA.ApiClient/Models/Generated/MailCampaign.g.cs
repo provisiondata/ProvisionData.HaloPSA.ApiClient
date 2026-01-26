@@ -65,7 +65,7 @@ public partial class MailCampaign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonPropertyName("new_external_link")]
     public ExternalLinkList NewExternalLink { get; set; } = new();
@@ -99,15 +99,15 @@ public partial class MailCampaign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mailchimp_sent_to")]
-    public List<MailchimpSentTo>? MailchimpSentTo { get; set; } = [];
+    public List<MailchimpSentTo>? MailchimpSentTo { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emails")]
-    public List<MailCampaignEmail>? Emails { get; set; } = [];
+    public List<MailCampaignEmail>? Emails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("marketing_unsubscribes")]
-    public List<MarketingUnsubscribe>? MarketingUnsubscribes { get; set; } = [];
+    public List<MarketingUnsubscribe>? MarketingUnsubscribes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("unsubscribe_rate")]
@@ -135,15 +135,15 @@ public partial class MailCampaign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("top_clicks")]
-    public List<TopLinkClick>? TopClicks { get; set; } = [];
+    public List<TopLinkClick>? TopClicks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("all_clicks")]
-    public List<MarketingOpen>? AllClicks { get; set; } = [];
+    public List<MarketingOpen>? AllClicks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("all_opens")]
-    public List<MarketingOpen>? AllOpens { get; set; } = [];
+    public List<MarketingOpen>? AllOpens { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isimport")]

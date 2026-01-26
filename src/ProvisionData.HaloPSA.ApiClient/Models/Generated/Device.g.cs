@@ -193,11 +193,11 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<FieldHelper>? Fields { get; set; } = [];
+    public List<FieldHelper>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relationship_id")]
@@ -205,7 +205,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_contract_value")]
@@ -277,7 +277,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ascendant_assets")]
-    public List<Device>? AscendantAssets { get; set; } = [];
+    public List<Device>? AscendantAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("descendant_count")]
@@ -285,7 +285,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("descendant_assets")]
-    public List<Device>? DescendantAssets { get; set; } = [];
+    public List<Device>? DescendantAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_count")]
@@ -373,23 +373,23 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("children")]
-    public List<Device>? Children { get; set; } = [];
+    public List<Device>? Children { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("parent_assets")]
-    public List<DeviceList>? ParentAssets { get; set; } = [];
+    public List<DeviceList>? ParentAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("child_assets")]
-    public List<DeviceList>? ChildAssets { get; set; } = [];
+    public List<DeviceList>? ChildAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hierarchy")]
-    public List<Device>? Hierarchy { get; set; } = [];
+    public List<Device>? Hierarchy { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")]
-    public List<UsersList>? Users { get; set; } = [];
+    public List<UsersList>? Users { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clone_count")]
@@ -429,11 +429,11 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contracts")]
-    public List<ContractHeaderList>? Contracts { get; set; } = [];
+    public List<ContractHeaderList>? Contracts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("scheduled_tickets")]
-    public List<StdRequestList>? ScheduledTickets { get; set; } = [];
+    public List<StdRequestList>? ScheduledTickets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_guid")]
@@ -449,7 +449,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("software")]
-    public List<DeviceApplications>? Software { get; set; } = [];
+    public List<DeviceApplications>? Software { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("businesscentral_id")]
@@ -492,7 +492,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services")]
-    public List<ServSiteList>? Services { get; set; } = [];
+    public List<ServSiteList>? Services { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datto_site_uid")]
@@ -504,7 +504,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("items_issued")]
-    public List<FaultItem>? ItemsIssued { get; set; } = [];
+    public List<FaultItem>? ItemsIssued { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_id")]
@@ -516,7 +516,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_software")]
-    public List<LansweeperSoftware>? LansweeperSoftware { get; set; } = [];
+    public List<LansweeperSoftware>? LansweeperSoftware { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dlastupdate")]
@@ -543,7 +543,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_role_breakdown")]
-    public List<DeviceUserCount>? UserRoleBreakdown { get; set; } = [];
+    public List<DeviceUserCount>? UserRoleBreakdown { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_id")]
@@ -611,15 +611,15 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("parent_third_party_ids")]
-    public List<String>? ParentThirdPartyIds { get; set; } = [];
+    public List<String>? ParentThirdPartyIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snowUsers")]
-    public List<SnowComputerUserAbstract>? SnowUsers { get; set; } = [];
+    public List<SnowComputerUserAbstract>? SnowUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tab_config")]
-    public List<TabConfig>? TabConfig { get; set; } = [];
+    public List<TabConfig>? TabConfig { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualys_id")]
@@ -638,11 +638,11 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_applications")]
-    public List<AddigyApplication>? AddigyApplications { get; set; } = [];
+    public List<AddigyApplication>? AddigyApplications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_users")]
-    public List<String>? AddigyUsers { get; set; } = [];
+    public List<String>? AddigyUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -674,15 +674,15 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualys_software")]
-    public List<QualysHostAssetSoftwareHostAssetSoftware>? QualysSoftware { get; set; } = [];
+    public List<QualysHostAssetSoftwareHostAssetSoftware>? QualysSoftware { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xtypeunamecanedit")]
-    public List<RTPermission>? Xtypeunamecanedit { get; set; } = [];
+    public List<RTPermission>? Xtypeunamecanedit { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonPropertyName("new_external_link")]
     public ExternalLinkList NewExternalLink { get; set; } = new();
@@ -717,7 +717,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services_hierarchy")]
-    public List<ServSite>? ServicesHierarchy { get; set; } = [];
+    public List<ServSite>? ServicesHierarchy { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_validateonly")]
@@ -733,11 +733,11 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_relations")]
-    public List<LansweeperRelation>? LansweeperRelations { get; set; } = [];
+    public List<LansweeperRelation>? LansweeperRelations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbs")]
-    public List<KBEntryList>? Kbs { get; set; } = [];
+    public List<KBEntryList>? Kbs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_external_link_id")]
@@ -749,7 +749,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sibling_assets")]
-    public List<DeviceList>? SiblingAssets { get; set; } = [];
+    public List<DeviceList>? SiblingAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_details_id")]
@@ -761,11 +761,11 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_access_control")]
-    public List<AccessControl>? NewAccessControl { get; set; } = [];
+    public List<AccessControl>? NewAccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jamf_details_id")]
@@ -829,11 +829,11 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynatrace_to_relations")]
-    public List<DynatraceRelationship>? DynatraceToRelations { get; set; } = [];
+    public List<DynatraceRelationship>? DynatraceToRelations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynatrace_from_relations")]
-    public List<DynatraceRelationship>? DynatraceFromRelations { get; set; } = [];
+    public List<DynatraceRelationship>? DynatraceFromRelations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("open_incident_count")]
@@ -877,15 +877,15 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licences")]
-    public List<LicenceList>? Licences { get; set; } = [];
+    public List<LicenceList>? Licences { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_licences")]
-    public List<LicenceList>? AddLicences { get; set; } = [];
+    public List<LicenceList>? AddLicences { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licences_hierarchy")]
-    public List<LicenceList>? LicencesHierarchy { get; set; } = [];
+    public List<LicenceList>? LicencesHierarchy { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqlimport_accountsid")]
@@ -901,7 +901,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonPropertyName("linked_service")]
     public ServSite LinkedService { get; set; } = new();
@@ -928,39 +928,39 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_parent_assets")]
-    public List<DeviceList>? AddParentAssets { get; set; } = [];
+    public List<DeviceList>? AddParentAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_child_assets")]
-    public List<DeviceList>? AddChildAssets { get; set; } = [];
+    public List<DeviceList>? AddChildAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_sibling_assets")]
-    public List<DeviceList>? AddSiblingAssets { get; set; } = [];
+    public List<DeviceList>? AddSiblingAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_parent_assets")]
-    public List<DeviceList>? EditParentAssets { get; set; } = [];
+    public List<DeviceList>? EditParentAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_child_assets")]
-    public List<DeviceList>? EditChildAssets { get; set; } = [];
+    public List<DeviceList>? EditChildAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_sibling_assets")]
-    public List<DeviceList>? EditSiblingAssets { get; set; } = [];
+    public List<DeviceList>? EditSiblingAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_parent_assets")]
-    public List<DeviceList>? DeleteParentAssets { get; set; } = [];
+    public List<DeviceList>? DeleteParentAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_child_assets")]
-    public List<DeviceList>? DeleteChildAssets { get; set; } = [];
+    public List<DeviceList>? DeleteChildAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_sibling_assets")]
-    public List<DeviceList>? DeleteSiblingAssets { get; set; } = [];
+    public List<DeviceList>? DeleteSiblingAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auto_tag")]
@@ -992,7 +992,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("environments")]
-    public List<Lookup>? Environments { get; set; } = [];
+    public List<Lookup>? Environments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("environment")]
@@ -1000,7 +1000,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maintenance_windows")]
-    public List<Holidays>? MaintenanceWindows { get; set; } = [];
+    public List<Holidays>? MaintenanceWindows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_asset_maintenance")]
@@ -1184,7 +1184,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_status")]
-    public List<XTypeStatus>? AllowedStatus { get; set; } = [];
+    public List<XTypeStatus>? AllowedStatus { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowallcustombuttons")]
@@ -1192,7 +1192,7 @@ public partial class Device
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_custombuttons")]
-    public List<XTypeButton>? AllowedCustombuttons { get; set; } = [];
+    public List<XTypeButton>? AllowedCustombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datto_id")]

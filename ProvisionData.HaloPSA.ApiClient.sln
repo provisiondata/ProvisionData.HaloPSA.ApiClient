@@ -40,7 +40,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{23C1DDDD-B34
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiClient.Tests", "tests\ProvisionData.HaloPSA.ApiClient.Tests\ProvisionData.HaloPSA.ApiClient.Tests.csproj", "{49E06BEC-5887-0D2F-F77F-18AD537B02CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiClient.Generator", "src\ProvisionData.HaloPSA.ApiClient.Generator\ProvisionData.HaloPSA.ApiClient.Generator.csproj", "{2882F981-AE3E-4AC0-83D7-216A03F9724A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiClient.ModelGenerator", "src\ProvisionData.HaloPSA.ApiClient.Generator\ProvisionData.HaloPSA.ApiClient.ModelGenerator.csproj", "{2882F981-AE3E-4AC0-83D7-216A03F9724A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

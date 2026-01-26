@@ -91,7 +91,7 @@ public partial class FieldHelper
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_visibility_conditions")]
-    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = [];
+    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hint_type")]

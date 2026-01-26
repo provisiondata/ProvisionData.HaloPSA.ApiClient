@@ -21,7 +21,7 @@ public partial class StripeWebhookEndpoint
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enabled_events")]
-    public List<String>? EnabledEvents { get; set; } = [];
+    public List<String>? EnabledEvents { get; set; } = new();
 
     [JsonPropertyName("livemode")]
     public Boolean Livemode { get; set; }

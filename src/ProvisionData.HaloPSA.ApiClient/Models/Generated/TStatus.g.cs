@@ -145,15 +145,15 @@ public partial class TStatus
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettypes")]
-    public List<KeyPair2>? Tickettypes { get; set; } = [];
+    public List<KeyPair2>? Tickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("outcomes")]
-    public List<KeyPair2>? Outcomes { get; set; } = [];
+    public List<KeyPair2>? Outcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("useworkinghours_statusnochangehours")]

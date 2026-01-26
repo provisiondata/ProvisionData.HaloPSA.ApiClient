@@ -10,7 +10,7 @@ public partial class MimeMessage
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("headers")]
-    public List<Header>? Headers { get; set; } = [];
+    public List<Header>? Headers { get; set; } = new();
 
     [JsonPropertyName("importance")]
     public MessageImportance Importance { get; set; } = new();
@@ -29,43 +29,43 @@ public partial class MimeMessage
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("from")]
-    public List<InternetAddress>? From { get; set; } = [];
+    public List<InternetAddress>? From { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resentFrom")]
-    public List<InternetAddress>? ResentFrom { get; set; } = [];
+    public List<InternetAddress>? ResentFrom { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("replyTo")]
-    public List<InternetAddress>? ReplyTo { get; set; } = [];
+    public List<InternetAddress>? ReplyTo { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resentReplyTo")]
-    public List<InternetAddress>? ResentReplyTo { get; set; } = [];
+    public List<InternetAddress>? ResentReplyTo { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("to")]
-    public List<InternetAddress>? To { get; set; } = [];
+    public List<InternetAddress>? To { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resentTo")]
-    public List<InternetAddress>? ResentTo { get; set; } = [];
+    public List<InternetAddress>? ResentTo { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cc")]
-    public List<InternetAddress>? Cc { get; set; } = [];
+    public List<InternetAddress>? Cc { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resentCc")]
-    public List<InternetAddress>? ResentCc { get; set; } = [];
+    public List<InternetAddress>? ResentCc { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bcc")]
-    public List<InternetAddress>? Bcc { get; set; } = [];
+    public List<InternetAddress>? Bcc { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resentBcc")]
-    public List<InternetAddress>? ResentBcc { get; set; } = [];
+    public List<InternetAddress>? ResentBcc { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("subject")]
@@ -79,7 +79,7 @@ public partial class MimeMessage
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("references")]
-    public List<String>? References { get; set; } = [];
+    public List<String>? References { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("inReplyTo")]
@@ -110,11 +110,11 @@ public partial class MimeMessage
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bodyParts")]
-    public List<MimeEntity>? BodyParts { get; set; } = [];
+    public List<MimeEntity>? BodyParts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<MimeEntity>? Attachments { get; set; } = [];
+    public List<MimeEntity>? Attachments { get; set; } = new();
 
 }
 

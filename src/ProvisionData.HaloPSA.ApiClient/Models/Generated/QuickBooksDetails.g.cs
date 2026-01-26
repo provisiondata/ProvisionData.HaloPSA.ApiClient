@@ -163,7 +163,7 @@ public partial class QuickBooksDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sync_entities_list")]
-    public List<KeyPair2>? SyncEntitiesList { get; set; } = [];
+    public List<KeyPair2>? SyncEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("show_message")]
@@ -352,7 +352,7 @@ public partial class QuickBooksDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qbo_sitemappings")]
-    public List<ExternalLinkList>? QboSitemappings { get; set; } = [];
+    public List<ExternalLinkList>? QboSitemappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mark_as_void")]

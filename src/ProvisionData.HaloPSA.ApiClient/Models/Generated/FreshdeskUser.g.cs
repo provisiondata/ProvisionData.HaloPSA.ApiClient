@@ -66,7 +66,7 @@ public partial class FreshdeskUser
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("other_emails")]
-    public List<String>? OtherEmails { get; set; } = [];
+    public List<String>? OtherEmails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tags")]
@@ -94,7 +94,7 @@ public partial class FreshdeskUser
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custom_fields")]
-    public Object? CustomFields { get; set; } = new Object();
+    public UnknownType? CustomFields { get; set; } = new();
 
 }
 

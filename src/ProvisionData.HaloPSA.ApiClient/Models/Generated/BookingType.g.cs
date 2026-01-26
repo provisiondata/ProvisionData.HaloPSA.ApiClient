@@ -37,7 +37,7 @@ public partial class BookingType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customslots")]
-    public List<Timeslot>? Customslots { get; set; } = [];
+    public List<Timeslot>? Customslots { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("messagehtml")]

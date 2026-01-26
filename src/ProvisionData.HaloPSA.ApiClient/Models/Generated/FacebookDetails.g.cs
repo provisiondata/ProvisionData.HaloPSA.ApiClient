@@ -112,11 +112,11 @@ public partial class FacebookDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("include_word_list")]
-    public List<KeyPair2>? IncludeWordList { get; set; } = [];
+    public List<KeyPair2>? IncludeWordList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("exclude_word_list")]
-    public List<KeyPair2>? ExcludeWordList { get; set; } = [];
+    public List<KeyPair2>? ExcludeWordList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reopen_post_tickets")]
@@ -284,11 +284,11 @@ public partial class FacebookDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("insta_include_word_list")]
-    public List<KeyPair2>? InstaIncludeWordList { get; set; } = [];
+    public List<KeyPair2>? InstaIncludeWordList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("insta_exclude_word_list")]
-    public List<KeyPair2>? InstaExcludeWordList { get; set; } = [];
+    public List<KeyPair2>? InstaExcludeWordList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("insta_reopen_post_tickets")]

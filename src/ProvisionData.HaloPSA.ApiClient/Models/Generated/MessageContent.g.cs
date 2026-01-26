@@ -56,7 +56,7 @@ public partial class MessageContent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("variables")]
-    public List<MessageContentVariable>? Variables { get; set; } = [];
+    public List<MessageContentVariable>? Variables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("multi_language")]
@@ -84,43 +84,43 @@ public partial class MessageContent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approvalprocesses")]
-    public List<KeyPair2>? Approvalprocesses { get; set; } = [];
+    public List<KeyPair2>? Approvalprocesses { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approvalprocessrules")]
-    public List<KeyPair2>? Approvalprocessrules { get; set; } = [];
+    public List<KeyPair2>? Approvalprocessrules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emailrules")]
-    public List<KeyPair2>? Emailrules { get; set; } = [];
+    public List<KeyPair2>? Emailrules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mailboxes")]
-    public List<KeyPair2>? Mailboxes { get; set; } = [];
+    public List<KeyPair2>? Mailboxes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notifications")]
-    public List<KeyPair2>? Notifications { get; set; } = [];
+    public List<KeyPair2>? Notifications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("outcomes")]
-    public List<KeyPair2>? Outcomes { get; set; } = [];
+    public List<KeyPair2>? Outcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("products")]
-    public List<KeyPair2>? Products { get; set; } = [];
+    public List<KeyPair2>? Products { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("statuses")]
-    public List<KeyPair2>? Statuses { get; set; } = [];
+    public List<KeyPair2>? Statuses { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettypes")]
-    public List<KeyPair2>? Tickettypes { get; set; } = [];
+    public List<KeyPair2>? Tickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("suppliers")]
-    public List<KeyPair2>? Suppliers { get; set; } = [];
+    public List<KeyPair2>? Suppliers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("type")]
@@ -140,7 +140,7 @@ public partial class MessageContent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

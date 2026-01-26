@@ -65,19 +65,19 @@ public partial class Tree
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agents")]
-    public List<UnameDepartment>? Agents { get; set; } = [];
+    public List<UnameDepartment>? Agents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")]
-    public List<UserDepartment>? Users { get; set; } = [];
+    public List<UserDepartment>? Users { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cannedtext")]
-    public List<CannedText>? Cannedtext { get; set; } = [];
+    public List<CannedText>? Cannedtext { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("templates")]
-    public List<StdRequestList>? Templates { get; set; } = [];
+    public List<StdRequestList>? Templates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("announcement")]
@@ -113,11 +113,11 @@ public partial class Tree
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")]
-    public List<ChargeRateArea>? Chargerates { get; set; } = [];
+    public List<ChargeRateArea>? Chargerates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("overriding_rates")]
-    public List<ChargeRate>? OverridingRates { get; set; } = [];
+    public List<ChargeRate>? OverridingRates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("organisation_id")]
@@ -145,15 +145,15 @@ public partial class Tree
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams")]
-    public List<SectionDetailList>? Teams { get; set; } = [];
+    public List<SectionDetailList>? Teams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_members")]
-    public List<UnameList>? AgentMembers { get; set; } = [];
+    public List<UnameList>? AgentMembers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("managers")]
-    public List<Manager>? Managers { get; set; } = [];
+    public List<Manager>? Managers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_count")]
@@ -177,7 +177,7 @@ public partial class Tree
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_department")]

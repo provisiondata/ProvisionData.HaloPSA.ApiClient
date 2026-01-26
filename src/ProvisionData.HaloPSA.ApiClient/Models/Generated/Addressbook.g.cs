@@ -57,7 +57,7 @@ public partial class Addressbook
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contactgroupcontacts")]
-    public List<Contactgroupcontacts>? Contactgroupcontacts { get; set; } = [];
+    public List<Contactgroupcontacts>? Contactgroupcontacts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contacttype")]

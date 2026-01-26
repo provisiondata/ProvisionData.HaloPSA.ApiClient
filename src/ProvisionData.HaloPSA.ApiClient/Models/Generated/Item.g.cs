@@ -281,7 +281,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isimport")]
@@ -301,11 +301,11 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_suppliers")]
-    public List<ItemSupplier>? ItemSuppliers { get; set; } = [];
+    public List<ItemSupplier>? ItemSuppliers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xero_salestax")]
@@ -349,7 +349,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stocklocations")]
-    public List<SiteList>? Stocklocations { get; set; } = [];
+    public List<SiteList>? Stocklocations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xero_tenant_id")]
@@ -468,7 +468,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_asset_defaults")]
-    public List<ItemDeviceDefaults>? LinkedAssetDefaults { get; set; } = [];
+    public List<ItemDeviceDefaults>? LinkedAssetDefaults { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maxitemdiscount")]
@@ -551,7 +551,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_match_thirdparty_id")]
@@ -714,7 +714,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relatedcategories")]
-    public List<KeyPair7>? Relatedcategories { get; set; } = [];
+    public List<KeyPair7>? Relatedcategories { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relatedcategories_list")]
@@ -730,7 +730,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("property_changes")]
-    public List<PropertyChange>? PropertyChanges { get; set; } = [];
+    public List<PropertyChange>? PropertyChanges { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("use_tiered_pricing")]
@@ -742,7 +742,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tiered_pricing")]
-    public List<ItemTieredPricing>? TieredPricing { get; set; } = [];
+    public List<ItemTieredPricing>? TieredPricing { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_supplier_part_code")]
@@ -786,7 +786,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dbc_dimensions")]
-    public List<BusinessCentralDimensions>? DbcDimensions { get; set; } = [];
+    public List<BusinessCentralDimensions>? DbcDimensions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynamics_dimensions_enabled")]
@@ -798,7 +798,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_accounts_links")]
-    public List<ItemAccountsLink>? ItemAccountsLinks { get; set; } = [];
+    public List<ItemAccountsLink>? ItemAccountsLinks { get; set; } = new();
 
     [JsonPropertyName("new_item_accounts_link")]
     public ItemAccountsLink NewItemAccountsLink { get; set; } = new();

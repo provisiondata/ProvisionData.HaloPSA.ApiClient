@@ -177,7 +177,7 @@ public partial class EmailRule
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings")]
-    public List<EmailRuleFieldMapping>? Fieldmappings { get; set; } = [];
+    public List<EmailRuleFieldMapping>? Fieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("endtagmatchtype")]

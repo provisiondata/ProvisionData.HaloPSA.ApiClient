@@ -49,7 +49,7 @@ public partial class PowerShellScript
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldmappings_powershell")]
-    public List<PowerShellScriptCriteria>? FieldmappingsPowershell { get; set; } = [];
+    public List<PowerShellScriptCriteria>? FieldmappingsPowershell { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("method")]
@@ -65,7 +65,7 @@ public partial class PowerShellScript
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowedclientidslist")]
-    public List<KeyPair3>? HalointegratorAllowedclientidslist { get; set; } = [];
+    public List<KeyPair3>? HalointegratorAllowedclientidslist { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowedclientids")]

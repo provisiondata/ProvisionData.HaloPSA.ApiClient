@@ -10,7 +10,7 @@ public partial class InvoiceDetail
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
@@ -276,23 +276,23 @@ public partial class InvoiceDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prorata_data")]
-    public List<InvoiceDetailProRata>? ProrataData { get; set; } = [];
+    public List<InvoiceDetailProRata>? ProrataData { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quantity_users")]
-    public List<InvoiceDetailQuantity>? QuantityUsers { get; set; } = [];
+    public List<InvoiceDetailQuantity>? QuantityUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quantity_assets")]
-    public List<InvoiceDetailQuantity>? QuantityAssets { get; set; } = [];
+    public List<InvoiceDetailQuantity>? QuantityAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quantity_licences")]
-    public List<InvoiceDetailQuantity>? QuantityLicences { get; set; } = [];
+    public List<InvoiceDetailQuantity>? QuantityLicences { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quantity_subscriptions")]
-    public List<InvoiceDetailQuantity>? QuantitySubscriptions { get; set; } = [];
+    public List<InvoiceDetailQuantity>? QuantitySubscriptions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("recurring_invoice_quantity_type")]
@@ -460,7 +460,7 @@ public partial class InvoiceDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meter_tiers")]
-    public List<InvoiceDetailMeterTiers>? MeterTiers { get; set; } = [];
+    public List<InvoiceDetailMeterTiers>? MeterTiers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meter_min_quantity")]
@@ -755,7 +755,7 @@ public partial class InvoiceDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("taxRuleResult")]
-    public List<TaxRuleResult>? TaxRuleResult { get; set; } = [];
+    public List<TaxRuleResult>? TaxRuleResult { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("decimalplacesforinvoices")]

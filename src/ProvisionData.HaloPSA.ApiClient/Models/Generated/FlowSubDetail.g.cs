@@ -121,19 +121,19 @@ public partial class FlowSubDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("conditions")]
-    public List<AutoassignCriteria>? Conditions { get; set; } = [];
+    public List<AutoassignCriteria>? Conditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("conditions_exec")]
-    public List<AutoassignCriteria>? ConditionsExec { get; set; } = [];
+    public List<AutoassignCriteria>? ConditionsExec { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("restrictions")]
-    public List<FlowSubDetailRestriction>? Restrictions { get; set; } = [];
+    public List<FlowSubDetailRestriction>? Restrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_restrictions")]
-    public List<CriteriaGroup>? GroupRestrictions { get; set; } = [];
+    public List<CriteriaGroup>? GroupRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("todo_group_id")]
@@ -145,7 +145,7 @@ public partial class FlowSubDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_selection_order")]

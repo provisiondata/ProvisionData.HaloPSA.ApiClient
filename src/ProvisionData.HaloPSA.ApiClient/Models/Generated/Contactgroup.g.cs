@@ -29,7 +29,7 @@ public partial class Contactgroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contactgroupcontacts")]
-    public List<Contactgroupcontacts>? Contactgroupcontacts { get; set; } = [];
+    public List<Contactgroupcontacts>? Contactgroupcontacts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

@@ -217,15 +217,15 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<Attachment>? Attachments { get; set; } = [];
+    public List<Attachment>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relationship_id")]
@@ -233,7 +233,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_relationships")]
-    public List<XTypeRole>? UserRelationships { get; set; } = [];
+    public List<XTypeRole>? UserRelationships { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("uddevsite")]
@@ -704,11 +704,11 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addresses")]
-    public List<AddressStore>? Addresses { get; set; } = [];
+    public List<AddressStore>? Addresses { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("departments")]
-    public List<UserDepartment>? Departments { get; set; } = [];
+    public List<UserDepartment>? Departments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("organisation_id")]
@@ -716,7 +716,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_notes")]
-    public List<AreaPopup>? PopupNotes { get; set; } = [];
+    public List<AreaPopup>? PopupNotes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("open_ticket_count")]
@@ -752,7 +752,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("usercompany")]
-    public List<UserCompany>? Usercompany { get; set; } = [];
+    public List<UserCompany>? Usercompany { get; set; } = new();
 
     [JsonPropertyName("supplier")]
     public Supplier Supplier { get; set; } = new();
@@ -763,7 +763,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("claims")]
-    public List<NHDClaim>? Claims { get; set; } = [];
+    public List<NHDClaim>? Claims { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("app_colour")]
@@ -858,7 +858,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("software")]
-    public List<DeviceApplications>? Software { get; set; } = [];
+    public List<DeviceApplications>? Software { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("canaccessinvoices")]
@@ -906,7 +906,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")]
-    public List<DeviceList>? Assets { get; set; } = [];
+    public List<DeviceList>? Assets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("locked")]
@@ -1002,7 +1002,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_match_thirdparty_id")]
@@ -1034,7 +1034,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")]
-    public List<UserRoles>? Roles { get; set; } = [];
+    public List<UserRoles>? Roles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_roleid")]
@@ -1042,7 +1042,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_roles")]
-    public List<UserRoles>? AddRoles { get; set; } = [];
+    public List<UserRoles>? AddRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("facebook_id")]
@@ -1078,7 +1078,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_customfields")]
-    public List<CustomField>? TicketCustomfields { get; set; } = [];
+    public List<CustomField>? TicketCustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("manager_email")]
@@ -1098,11 +1098,11 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartygroups")]
-    public List<UserThirdPartyGroup>? Thirdpartygroups { get; set; } = [];
+    public List<UserThirdPartyGroup>? Thirdpartygroups { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_sites")]
-    public List<ExternalLinkList>? LinkedSites { get; set; } = [];
+    public List<ExternalLinkList>? LinkedSites { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dontackemails2")]
@@ -1146,7 +1146,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("gocardless_customfields")]
-    public Object? GocardlessCustomfields { get; set; } = new Object();
+    public UnknownType? GocardlessCustomfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_account_overridden")]
@@ -1158,7 +1158,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("informifack")]
@@ -1170,7 +1170,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("marketing_unsubscribes")]
-    public List<MarketingUnsubscribe>? MarketingUnsubscribes { get; set; } = [];
+    public List<MarketingUnsubscribe>? MarketingUnsubscribes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_account_name")]
@@ -1340,7 +1340,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("role_ids")]
-    public List<Int32>? RoleIds { get; set; } = [];
+    public List<Int32>? RoleIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("avalara_tenant")]

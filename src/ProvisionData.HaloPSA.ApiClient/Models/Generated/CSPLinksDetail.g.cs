@@ -18,7 +18,7 @@ public partial class CSPLinksDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("headers")]
-    public List<CSPHeadersDetail>? Headers { get; set; } = [];
+    public List<CSPHeadersDetail>? Headers { get; set; } = new();
 
 }
 

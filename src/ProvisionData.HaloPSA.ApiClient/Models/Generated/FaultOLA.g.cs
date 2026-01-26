@@ -45,7 +45,7 @@ public partial class FaultOLA
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dates")]
-    public List<FaultOLADates>? Dates { get; set; } = [];
+    public List<FaultOLADates>? Dates { get; set; } = new();
 
     [JsonPropertyName("target")]
     public WorkflowTarget Target { get; set; } = new();

@@ -68,7 +68,7 @@ public partial class FlowDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("actions")]
-    public List<FlowSubDetail>? Actions { get; set; } = [];
+    public List<FlowSubDetail>? Actions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("overrideprobabiliywhenatthisstep")]
@@ -124,15 +124,15 @@ public partial class FlowDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("step_conditions")]
-    public List<AutoassignCriteria>? StepConditions { get; set; } = [];
+    public List<AutoassignCriteria>? StepConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_teams")]
-    public List<SectionDetailList>? ChatTeams { get; set; } = [];
+    public List<SectionDetailList>? ChatTeams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rules")]
-    public List<Autoassign>? Rules { get; set; } = [];
+    public List<Autoassign>? Rules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_image_type")]
@@ -192,27 +192,27 @@ public partial class FlowDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("output_variables")]
-    public List<OutboundIntegrationMethodValue>? OutputVariables { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? OutputVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("runbook_variable_mappings")]
-    public List<OutboundIntegrationMethodValue>? RunbookVariableMappings { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? RunbookVariableMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("uri_params")]
-    public List<OutboundIntegrationMethodValue>? UriParams { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? UriParams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_input_suggestions")]
-    public List<ChatInputSuggestion>? ChatInputSuggestions { get; set; } = [];
+    public List<ChatInputSuggestion>? ChatInputSuggestions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_step_questions")]
-    public List<ChatStepQuestion>? ChatStepQuestions { get; set; } = [];
+    public List<ChatStepQuestion>? ChatStepQuestions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ai_failure_step")]
@@ -236,7 +236,7 @@ public partial class FlowDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_statuses")]
-    public List<FlowDetailStatus>? AllowedStatuses { get; set; } = [];
+    public List<FlowDetailStatus>? AllowedStatuses { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("duration")]
@@ -244,7 +244,7 @@ public partial class FlowDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notifications")]
-    public List<UnameNotification>? Notifications { get; set; } = [];
+    public List<UnameNotification>? Notifications { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("encrypt_response_body")]

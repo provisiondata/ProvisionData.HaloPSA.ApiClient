@@ -201,39 +201,39 @@ public partial class AnalyzerProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("available_columns")]
-    public List<AnalyzerProfileColumn>? AvailableColumns { get; set; } = [];
+    public List<AnalyzerProfileColumn>? AvailableColumns { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("columns")]
-    public List<AnalyzerProfileColumn>? Columns { get; set; } = [];
+    public List<AnalyzerProfileColumn>? Columns { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<AnalyzerFilter>? Filters { get; set; } = [];
+    public List<AnalyzerFilter>? Filters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("conditions")]
-    public List<AnalyzerFilter>? Conditions { get; set; } = [];
+    public List<AnalyzerFilter>? Conditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filterable_columns")]
-    public List<AnalyzerProfileColumn>? FilterableColumns { get; set; } = [];
+    public List<AnalyzerProfileColumn>? FilterableColumns { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filterable_columns_conditions")]
-    public List<AnalyzerProfileColumn>? FilterableColumnsConditions { get; set; } = [];
+    public List<AnalyzerProfileColumn>? FilterableColumnsConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("permissions_agent")]
-    public List<UnameAnalyzer>? PermissionsAgent { get; set; } = [];
+    public List<UnameAnalyzer>? PermissionsAgent { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("permissions_user")]
-    public List<UserAnalyzer>? PermissionsUser { get; set; } = [];
+    public List<UserAnalyzer>? PermissionsUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("schedule")]
-    public List<StdRequestList>? Schedule { get; set; } = [];
+    public List<StdRequestList>? Schedule { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("local_library_id")]
@@ -253,7 +253,7 @@ public partial class AnalyzerProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filter_lookup_values")]
-    public List<KeyPair2>? FilterLookupValues { get; set; } = [];
+    public List<KeyPair2>? FilterLookupValues { get; set; } = new();
 
     [JsonPropertyName("report")]
     public ReportContent Report { get; set; } = new();
@@ -442,11 +442,11 @@ public partial class AnalyzerProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("series")]
-    public List<AnalyzerProfileSeries>? Series { get; set; } = [];
+    public List<AnalyzerProfileSeries>? Series { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("colours")]
-    public List<AnalyzerProfileColour>? Colours { get; set; } = [];
+    public List<AnalyzerProfileColour>? Colours { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_id")]
@@ -545,7 +545,7 @@ public partial class AnalyzerProfile
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

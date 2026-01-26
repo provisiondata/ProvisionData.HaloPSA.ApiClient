@@ -49,7 +49,7 @@ public partial class ContractRule
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rule_criteria")]
-    public List<AutoassignCriteria>? RuleCriteria { get; set; } = [];
+    public List<AutoassignCriteria>? RuleCriteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_matched")]

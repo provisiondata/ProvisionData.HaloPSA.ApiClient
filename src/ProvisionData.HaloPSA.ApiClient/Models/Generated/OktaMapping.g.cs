@@ -25,7 +25,7 @@ public partial class OktaMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("included_statuses_list")]
-    public List<KeyPair2>? IncludedStatusesList { get; set; } = [];
+    public List<KeyPair2>? IncludedStatusesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("included_statuses_display")]
@@ -65,7 +65,7 @@ public partial class OktaMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<IntegrationFilter>? Filters { get; set; } = [];
+    public List<IntegrationFilter>? Filters { get; set; } = new();
 
 }
 

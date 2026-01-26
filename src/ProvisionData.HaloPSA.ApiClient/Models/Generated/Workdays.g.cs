@@ -133,15 +133,15 @@ public partial class Workdays
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("holidays")]
-    public List<Holidays>? Holidays { get; set; } = [];
+    public List<Holidays>? Holidays { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timeslots")]
-    public List<Timeslot>? Timeslots { get; set; } = [];
+    public List<Timeslot>? Timeslots { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -149,7 +149,7 @@ public partial class Workdays
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("breaks")]
-    public List<WorkdayBreak>? Breaks { get; set; } = [];
+    public List<WorkdayBreak>? Breaks { get; set; } = new();
 
 }
 

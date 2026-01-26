@@ -69,7 +69,7 @@ public partial class SlackDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("scopes")]
-    public List<String>? Scopes { get; set; } = [];
+    public List<String>? Scopes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("team_id")]

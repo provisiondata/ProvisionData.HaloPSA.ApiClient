@@ -89,7 +89,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fieldidlist")]
-    public List<Int32>? Fieldidlist { get; set; } = [];
+    public List<Int32>? Fieldidlist { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enduserscanselect")]
@@ -297,11 +297,11 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_teams")]
-    public List<SectionRequestType>? AllowedTeams { get; set; } = [];
+    public List<SectionRequestType>? AllowedTeams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_actions")]
-    public List<Restriction>? AllowedActions { get; set; } = [];
+    public List<Restriction>? AllowedActions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_status")]
@@ -309,7 +309,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_status")]
-    public List<RequestTypeStatus>? AllowedStatus { get; set; } = [];
+    public List<RequestTypeStatus>? AllowedStatus { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category1")]
@@ -317,7 +317,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category1")]
-    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category2")]
@@ -325,7 +325,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category2")]
-    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category3")]
@@ -333,7 +333,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category3")]
-    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category4")]
@@ -341,7 +341,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category4")]
-    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approval_process_id")]
@@ -445,7 +445,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_estimate")]
@@ -533,11 +533,11 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_clients")]
-    public List<AreaRequestType>? AllowedClients { get; set; } = [];
+    public List<AreaRequestType>? AllowedClients { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_client_rules")]
-    public List<AreaRequestTypeRule>? AllowedClientRules { get; set; } = [];
+    public List<AreaRequestTypeRule>? AllowedClientRules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("closedrequestreplylimit")]
@@ -644,11 +644,11 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_services")]
-    public List<ServSiteList>? DefaultServices { get; set; } = [];
+    public List<ServSiteList>? DefaultServices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -744,7 +744,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_resourcebooking_teams")]
-    public List<SectionRequestType>? AllowedResourcebookingTeams { get; set; } = [];
+    public List<SectionRequestType>? AllowedResourcebookingTeams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("defaultresourcetype_name_agent")]
@@ -852,7 +852,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_appointment_types")]
-    public List<AppointmentTypeRequestType>? AllowedAppointmentTypes { get; set; } = [];
+    public List<AppointmentTypeRequestType>? AllowedAppointmentTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_iframe_customtabs")]
@@ -860,7 +860,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_iframe_customtabs")]
-    public List<IframeTabRequestType>? AllowedIframeCustomtabs { get; set; } = [];
+    public List<IframeTabRequestType>? AllowedIframeCustomtabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_sync_to_salesforce")]
@@ -912,7 +912,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auto_create_appt")]
@@ -940,7 +940,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cors_whitelist_list")]
-    public List<KeyPair2>? CorsWhitelistList { get; set; } = [];
+    public List<KeyPair2>? CorsWhitelistList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_ack_attachments")]
@@ -980,7 +980,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tab_config")]
-    public List<TabConfig>? TabConfig { get; set; } = [];
+    public List<TabConfig>? TabConfig { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableusermentions")]
@@ -1100,7 +1100,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_suggestion_faqlists")]
-    public List<FaqRequestType>? AllowedSuggestionFaqlists { get; set; } = [];
+    public List<FaqRequestType>? AllowedSuggestionFaqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("startdate_validation")]
@@ -1231,7 +1231,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_child_tickettypes")]
-    public List<ChildRequestType>? AllowedChildTickettypes { get; set; } = [];
+    public List<ChildRequestType>? AllowedChildTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portal_summary_hint_is_placeholder")]
@@ -1327,7 +1327,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("load_balance_agent_limits")]
-    public List<UnameLoadBalanceLimit>? LoadBalanceAgentLimits { get; set; } = [];
+    public List<UnameLoadBalanceLimit>? LoadBalanceAgentLimits { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticketdetails_headerwidget_1")]
@@ -1407,7 +1407,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")]
-    public List<Restriction>? Chargerates { get; set; } = [];
+    public List<Restriction>? Chargerates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("load_balance_max_tickets_team_specific")]
@@ -1415,7 +1415,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("load_balance_team_limits")]
-    public List<SectionLoadBalanceLimit>? LoadBalanceTeamLimits { get; set; } = [];
+    public List<SectionLoadBalanceLimit>? LoadBalanceTeamLimits { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("only_send_reply_to_incoming_email")]
@@ -1447,7 +1447,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enduser_role_ids")]
-    public List<Int32>? EnduserRoleIds { get; set; } = [];
+    public List<Int32>? EnduserRoleIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portal_multi_page")]
@@ -1463,7 +1463,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portal_asset_table")]
-    public List<ViewColumnsDetails>? PortalAssetTable { get; set; } = [];
+    public List<ViewColumnsDetails>? PortalAssetTable { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portal_allow_drafts")]
@@ -1543,7 +1543,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kanbanstatuschoice")]
-    public List<KeyPair>? Kanbanstatuschoice { get; set; } = [];
+    public List<KeyPair>? Kanbanstatuschoice { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kanbanstatuschoice_list")]

@@ -61,7 +61,7 @@ public partial class IncomingEvent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("output_variables")]
-    public List<OutboundIntegrationMethodValue>? OutputVariables { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? OutputVariables { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_retry")]

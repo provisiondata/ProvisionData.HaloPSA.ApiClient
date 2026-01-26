@@ -10,11 +10,11 @@ public partial class FreshdeskTicket
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<FreshdeskAttachment>? Attachments { get; set; } = [];
+    public List<FreshdeskAttachment>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cc_emails")]
-    public List<String>? CcEmails { get; set; } = [];
+    public List<String>? CcEmails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("company_id")]
@@ -58,7 +58,7 @@ public partial class FreshdeskTicket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fwd_emails")]
-    public List<String>? FwdEmails { get; set; } = [];
+    public List<String>? FwdEmails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_id")]
@@ -89,7 +89,7 @@ public partial class FreshdeskTicket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reply_cc_emails")]
-    public List<String>? ReplyCcEmails { get; set; } = [];
+    public List<String>? ReplyCcEmails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("requester_id")]
@@ -117,11 +117,11 @@ public partial class FreshdeskTicket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tags")]
-    public List<String>? Tags { get; set; } = [];
+    public List<String>? Tags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("to_emails")]
-    public List<String>? ToEmails { get; set; } = [];
+    public List<String>? ToEmails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twitter_id")]
@@ -153,7 +153,7 @@ public partial class FreshdeskTicket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custom_fields")]
-    public Object? CustomFields { get; set; } = new Object();
+    public UnknownType? CustomFields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("association_type")]
@@ -161,7 +161,7 @@ public partial class FreshdeskTicket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("associated_tickets_list")]
-    public List<Int32>? AssociatedTicketsList { get; set; } = [];
+    public List<Int32>? AssociatedTicketsList { get; set; } = new();
 
 }
 

@@ -33,7 +33,7 @@ public partial class ToDoGroup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("todo_list")]
-    public List<FaultToDo>? TodoList { get; set; } = [];
+    public List<FaultToDo>? TodoList { get; set; } = new();
 
 }
 

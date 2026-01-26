@@ -69,7 +69,7 @@ public partial class PRTGDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("asset_fieldmappings")]
-    public List<IntegrationFieldMapping>? AssetFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AssetFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enable_webhooks")]

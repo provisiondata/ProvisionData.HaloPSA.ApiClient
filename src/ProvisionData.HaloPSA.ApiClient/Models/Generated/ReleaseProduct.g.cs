@@ -34,11 +34,11 @@ public partial class ReleaseProduct
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("release_emails")]
-    public List<ReleaseProductEmail>? ReleaseEmails { get; set; } = [];
+    public List<ReleaseProductEmail>? ReleaseEmails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("components")]
-    public List<ReleaseComponent>? Components { get; set; } = [];
+    public List<ReleaseComponent>? Components { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("third_party_name")]
@@ -53,7 +53,7 @@ public partial class ReleaseProduct
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("devops_otherfield_mappings")]
-    public List<IntegrationFieldMapping>? DevopsOtherfieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? DevopsOtherfieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("devops_details_id")]
@@ -76,7 +76,7 @@ public partial class ReleaseProduct
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("branches")]
-    public List<ReleaseBranch>? Branches { get; set; } = [];
+    public List<ReleaseBranch>? Branches { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_details_id")]
@@ -91,7 +91,7 @@ public partial class ReleaseProduct
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jirafield_mappings")]
-    public List<IntegrationFieldMapping>? JirafieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JirafieldMappings { get; set; } = new();
 
     [JsonPropertyName("jira_project")]
     public KeyPair2 JiraProject { get; set; } = new();
@@ -118,7 +118,7 @@ public partial class ReleaseProduct
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

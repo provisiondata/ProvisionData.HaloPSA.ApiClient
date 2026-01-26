@@ -18,7 +18,7 @@ public partial class FacebookPage
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("category_list")]
-    public List<FacebookKeyPair>? CategoryList { get; set; } = [];
+    public List<FacebookKeyPair>? CategoryList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("name")]
@@ -30,7 +30,7 @@ public partial class FacebookPage
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tasks")]
-    public List<String>? Tasks { get; set; } = [];
+    public List<String>? Tasks { get; set; } = new();
 
     [JsonPropertyName("instagram_business_account")]
     public InstagramBusinessAccount InstagramBusinessAccount { get; set; } = new();

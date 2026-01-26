@@ -137,11 +137,11 @@ public partial class PdfTemplate
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("detailcolumns")]
-    public List<PdfTemplateDetail>? Detailcolumns { get; set; } = [];
+    public List<PdfTemplateDetail>? Detailcolumns { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("pages")]
-    public List<PDFTemplatePage>? Pages { get; set; } = [];
+    public List<PDFTemplatePage>? Pages { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_preview")]
@@ -190,7 +190,7 @@ public partial class PdfTemplate
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reports")]
-    public List<PdfTemplateReport>? Reports { get; set; } = [];
+    public List<PdfTemplateReport>? Reports { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("composite_report_apid")]
@@ -202,11 +202,11 @@ public partial class PdfTemplate
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("permissions_user")]
-    public List<UserAnalyzer>? PermissionsUser { get; set; } = [];
+    public List<UserAnalyzer>? PermissionsUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("schedule")]
-    public List<StdRequestList>? Schedule { get; set; } = [];
+    public List<StdRequestList>? Schedule { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clientid")]
@@ -288,7 +288,7 @@ public partial class PdfTemplate
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bulkprint_asset_id_list")]
-    public List<Int32>? BulkprintAssetIdList { get; set; } = [];
+    public List<Int32>? BulkprintAssetIdList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("invoicexmltemplate")]
@@ -312,7 +312,7 @@ public partial class PdfTemplate
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

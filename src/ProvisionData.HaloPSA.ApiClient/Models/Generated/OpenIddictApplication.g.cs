@@ -10,7 +10,7 @@ public partial class OpenIddictApplication
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("authorizations")]
-    public List<OpenIddictAuthorization>? Authorizations { get; set; } = [];
+    public List<OpenIddictAuthorization>? Authorizations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clientId")]
@@ -54,7 +54,7 @@ public partial class OpenIddictApplication
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tokens")]
-    public List<OpenIddictToken>? Tokens { get; set; } = [];
+    public List<OpenIddictToken>? Tokens { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("type")]

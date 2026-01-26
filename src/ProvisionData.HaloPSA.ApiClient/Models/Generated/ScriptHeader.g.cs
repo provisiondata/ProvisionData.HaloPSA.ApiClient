@@ -25,7 +25,7 @@ public partial class ScriptHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("questions")]
-    public List<ScriptLine>? Questions { get; set; } = [];
+    public List<ScriptLine>? Questions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

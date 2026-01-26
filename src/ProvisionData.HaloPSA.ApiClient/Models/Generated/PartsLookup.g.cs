@@ -133,15 +133,15 @@ public partial class PartsLookup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<PartsLookupField>? Fields { get; set; } = [];
+    public List<PartsLookupField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_mappings")]
-    public List<PartsLookupMapping>? FieldMappings { get; set; } = [];
+    public List<PartsLookupMapping>? FieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_mappings")]
-    public List<TechPartsLookup>? AgentMappings { get; set; } = [];
+    public List<TechPartsLookup>? AgentMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("run")]
@@ -153,7 +153,7 @@ public partial class PartsLookup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonPropertyName("lookup")]
     public PartsLookupResult Lookup { get; set; } = new();
@@ -241,7 +241,7 @@ public partial class PartsLookup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rules")]
-    public List<Autoassign>? Rules { get; set; } = [];
+    public List<Autoassign>? Rules { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("integration_method_id")]
@@ -265,7 +265,7 @@ public partial class PartsLookup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

@@ -77,7 +77,7 @@ public partial class Timesheet
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("events")]
-    public List<TimesheetEvent>? Events { get; set; } = [];
+    public List<TimesheetEvent>? Events { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timesheet_manager")]

@@ -165,7 +165,7 @@ public partial class MailboxCredential
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("current_scopes")]
-    public List<String>? CurrentScopes { get; set; } = [];
+    public List<String>? CurrentScopes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_exchangecodefortoken")]

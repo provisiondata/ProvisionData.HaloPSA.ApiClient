@@ -72,7 +72,7 @@ public partial class SalesMailbox
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mailboxes")]
-    public List<SalesMailboxDetail>? Mailboxes { get; set; } = [];
+    public List<SalesMailboxDetail>? Mailboxes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("authorized")]

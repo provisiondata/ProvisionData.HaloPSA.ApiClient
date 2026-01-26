@@ -89,7 +89,7 @@ public partial class MailchimpCampaign
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_links")]
-    public List<MailchimpLinks>? Links { get; set; } = [];
+    public List<MailchimpLinks>? Links { get; set; } = new();
 
 }
 

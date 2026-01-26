@@ -25,7 +25,7 @@ public partial class CSVTemplate
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("detailcolumns")]
-    public List<CSVTemplateDetail>? Detailcolumns { get; set; } = [];
+    public List<CSVTemplateDetail>? Detailcolumns { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_preview")]
@@ -41,7 +41,7 @@ public partial class CSVTemplate
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("invoices")]
-    public List<InvoiceHeader>? Invoices { get; set; } = [];
+    public List<InvoiceHeader>? Invoices { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("csv_attachment_id")]

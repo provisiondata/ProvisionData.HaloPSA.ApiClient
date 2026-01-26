@@ -69,7 +69,7 @@ public partial class Generic
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assettypes")]
-    public List<Xtype>? Assettypes { get; set; } = [];
+    public List<Xtype>? Assettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartyid")]
@@ -117,7 +117,7 @@ public partial class Generic
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("accounts_mappings")]
-    public List<GenericAccountsMappings>? AccountsMappings { get; set; } = [];
+    public List<GenericAccountsMappings>? AccountsMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tax_id")]
@@ -176,7 +176,7 @@ public partial class Generic
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]

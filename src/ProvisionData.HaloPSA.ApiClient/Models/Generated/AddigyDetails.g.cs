@@ -41,7 +41,7 @@ public partial class AddigyDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_import_entities_list")]
-    public List<KeyPair2>? AddigyImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? AddigyImportEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_addigy")]
@@ -133,11 +133,11 @@ public partial class AddigyDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_clientmappings")]
-    public List<ExternalLinkList>? AddigyClientmappings { get; set; } = [];
+    public List<ExternalLinkList>? AddigyClientmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_assetfieldmappings")]
-    public List<IntegrationFieldMapping>? AddigyAssetfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AddigyAssetfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

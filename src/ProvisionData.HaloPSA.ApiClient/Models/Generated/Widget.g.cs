@@ -161,11 +161,11 @@ public partial class Widget
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("actions")]
-    public List<TOutcome>? Actions { get; set; } = [];
+    public List<TOutcome>? Actions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<WidgetField>? Fields { get; set; } = [];
+    public List<WidgetField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -205,11 +205,11 @@ public partial class Widget
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("series")]
-    public List<AnalyzerProfileSeries>? Series { get; set; } = [];
+    public List<AnalyzerProfileSeries>? Series { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("colours")]
-    public List<AnalyzerProfileColour>? Colours { get; set; } = [];
+    public List<AnalyzerProfileColour>? Colours { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("graphorderby")]
@@ -301,7 +301,7 @@ public partial class Widget
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("darkinitialcolour")]

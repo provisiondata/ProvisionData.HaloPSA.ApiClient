@@ -77,7 +77,7 @@ public partial class Contract
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")]
-    public List<DeviceList>? Assets { get; set; } = [];
+    public List<DeviceList>? Assets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isimport")]
@@ -89,11 +89,11 @@ public partial class Contract
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]
@@ -109,11 +109,11 @@ public partial class Contract
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contracts")]
-    public List<ContractHeaderContract>? Contracts { get; set; } = [];
+    public List<ContractHeaderContract>? Contracts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -121,11 +121,11 @@ public partial class Contract
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("configuration_items")]
-    public List<DeviceList>? ConfigurationItems { get; set; } = [];
+    public List<DeviceList>? ConfigurationItems { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_configuration_items")]
-    public List<DeviceList>? AddConfigurationItems { get; set; } = [];
+    public List<DeviceList>? AddConfigurationItems { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("renewedfrom_id")]
@@ -145,7 +145,7 @@ public partial class Contract
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("audit_log")]
-    public List<Audit>? AuditLog { get; set; } = [];
+    public List<Audit>? AuditLog { get; set; } = new();
 
 }
 

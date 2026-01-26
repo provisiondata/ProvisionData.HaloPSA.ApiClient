@@ -293,15 +293,15 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")]
-    public List<DeviceList>? Assets { get; set; } = [];
+    public List<DeviceList>? Assets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")]
-    public List<UsersList>? Users { get; set; } = [];
+    public List<UsersList>? Users { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("periods")]
-    public List<ContractPeriod>? Periods { get; set; } = [];
+    public List<ContractPeriod>? Periods { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("surchargeid")]
@@ -313,11 +313,11 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("overriding_rates")]
-    public List<ChargeRate>? OverridingRates { get; set; } = [];
+    public List<ChargeRate>? OverridingRates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")]
-    public List<Lookup>? Chargerates { get; set; } = [];
+    public List<Lookup>? Chargerates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isimport")]
@@ -341,7 +341,7 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_print_preview")]
@@ -369,11 +369,11 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("schedule")]
-    public List<ContractSchedule>? Schedule { get; set; } = [];
+    public List<ContractSchedule>? Schedule { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("scheduleplan")]
-    public List<ContractSchedulePlan>? Scheduleplan { get; set; } = [];
+    public List<ContractSchedulePlan>? Scheduleplan { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_send_outstanding_emails")]
@@ -437,11 +437,11 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contract_prepayhistory")]
-    public List<PrepayHistory>? ContractPrepayhistory { get; set; } = [];
+    public List<PrepayHistory>? ContractPrepayhistory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contract_periods")]
-    public List<PrepayPeriod>? ContractPeriods { get; set; } = [];
+    public List<PrepayPeriod>? ContractPeriods { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contract_prepayasamount")]
@@ -449,7 +449,7 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prepay_periods")]
-    public List<PrepayPeriod>? PrepayPeriods { get; set; } = [];
+    public List<PrepayPeriod>? PrepayPeriods { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prepayrecurringchargenextdate")]
@@ -493,11 +493,11 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contracts")]
-    public List<ContractHeaderContract>? Contracts { get; set; } = [];
+    public List<ContractHeaderContract>? Contracts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sites")]
-    public List<SiteList>? Sites { get; set; } = [];
+    public List<SiteList>? Sites { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emailaddress_to")]
@@ -513,11 +513,11 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<AttachmentList>? Attachments { get; set; } = [];
+    public List<AttachmentList>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("billingplans")]
-    public List<ContractDetail>? Billingplans { get; set; } = [];
+    public List<ContractDetail>? Billingplans { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("send_to_oracle")]
@@ -561,7 +561,7 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approvername")]
@@ -589,11 +589,11 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contractapprovalfields")]
-    public List<RequestTypeField>? Contractapprovalfields { get; set; } = [];
+    public List<RequestTypeField>? Contractapprovalfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("audit_log")]
-    public List<Audit>? AuditLog { get; set; } = [];
+    public List<Audit>? AuditLog { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("use")]
@@ -643,7 +643,7 @@ public partial class ContractHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("createdby_id")]

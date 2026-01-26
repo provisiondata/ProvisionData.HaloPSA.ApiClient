@@ -131,7 +131,7 @@ public partial class Holidays
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("change_freeze_clients")]
-    public List<AreaChangeFreeze>? ChangeFreezeClients { get; set; } = [];
+    public List<AreaChangeFreeze>? ChangeFreezeClients { get; set; } = new();
 
 }
 

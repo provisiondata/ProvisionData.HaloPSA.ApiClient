@@ -64,7 +64,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("managers")]
-    public List<Manager>? Managers { get; set; } = [];
+    public List<Manager>? Managers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teamphotopath")]
@@ -112,7 +112,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agents")]
-    public List<UnameSection>? Agents { get; set; } = [];
+    public List<UnameSection>? Agents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("organisation_id")]
@@ -120,11 +120,11 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("cannedtext")]
-    public List<CannedText>? Cannedtext { get; set; } = [];
+    public List<CannedText>? Cannedtext { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("templates")]
-    public List<StdRequestList>? Templates { get; set; } = [];
+    public List<StdRequestList>? Templates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category1")]
@@ -132,7 +132,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category1")]
-    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category2")]
@@ -140,7 +140,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category2")]
-    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category3")]
@@ -148,7 +148,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category3")]
-    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category4")]
@@ -160,7 +160,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category4")]
-    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("override_column_name")]
@@ -220,7 +220,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("recurring_shifts")]
-    public List<AppointmentList>? RecurringShifts { get; set; } = [];
+    public List<AppointmentList>? RecurringShifts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("third_party_migration_id")]
@@ -259,7 +259,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("load_balance_agent_limits")]
-    public List<UnameLoadBalanceLimit>? LoadBalanceAgentLimits { get; set; } = [];
+    public List<UnameLoadBalanceLimit>? LoadBalanceAgentLimits { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_cab_guid")]
@@ -283,7 +283,7 @@ public partial class SectionDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mailbox_override")]

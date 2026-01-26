@@ -21,7 +21,7 @@ public partial class ImportCsv
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings")]
-    public List<IntegrationFieldMapping>? Mappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Mappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("create_new_lines")]

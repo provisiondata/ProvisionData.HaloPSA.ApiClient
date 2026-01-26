@@ -45,11 +45,11 @@ public partial class CSPInvoice
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("taxreceipts")]
-    public List<CSPTaxReceipt>? Taxreceipts { get; set; } = [];
+    public List<CSPTaxReceipt>? Taxreceipts { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("invoicedetails")]
-    public List<CSPInvoiceDetail>? Invoicedetails { get; set; } = [];
+    public List<CSPInvoiceDetail>? Invoicedetails { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("documenttype")]
@@ -64,7 +64,7 @@ public partial class CSPInvoice
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attributes")]
-    public Object? Attributes { get; set; } = new Object();
+    public UnknownType? Attributes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

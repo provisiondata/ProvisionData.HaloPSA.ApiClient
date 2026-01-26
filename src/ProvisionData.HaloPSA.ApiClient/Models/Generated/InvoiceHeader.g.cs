@@ -14,7 +14,7 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }
@@ -274,11 +274,11 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lines")]
-    public List<InvoiceDetail>? Lines { get; set; } = [];
+    public List<InvoiceDetail>? Lines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_lines")]
-    public List<InvoiceDetail>? AddLines { get; set; } = [];
+    public List<InvoiceDetail>? AddLines { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_print_preview")]
@@ -408,7 +408,7 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_create_from_areaitems")]
-    public List<AreaItem>? CreateFromAreaitems { get; set; } = [];
+    public List<AreaItem>? CreateFromAreaitems { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_create_from_contract")]
@@ -495,7 +495,7 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("merge_data")]
-    public List<InvoiceHeaderMerge>? MergeData { get; set; } = [];
+    public List<InvoiceHeaderMerge>? MergeData { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snelstart_id")]
@@ -563,7 +563,7 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("payments")]
-    public List<InvoicePaymentList>? Payments { get; set; } = [];
+    public List<InvoicePaymentList>? Payments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("markaspaid")]
@@ -703,11 +703,11 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_users")]
-    public List<UsersList>? NewApprovalprocessUsers { get; set; } = [];
+    public List<UsersList>? NewApprovalprocessUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_cab")]
-    public List<CabMember>? NewApprovalprocessCab { get; set; } = [];
+    public List<CabMember>? NewApprovalprocessCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approval_process_id")]
@@ -989,11 +989,11 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_invoice_conversion_rate")]
@@ -1108,7 +1108,7 @@ public partial class InvoiceHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_importtypeid")]

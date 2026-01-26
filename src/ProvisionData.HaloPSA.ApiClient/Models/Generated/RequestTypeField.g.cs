@@ -79,19 +79,19 @@ public partial class RequestTypeField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("visibility_conditions")]
-    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = [];
+    public List<CustomFieldVisibility>? VisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("visibility_conditions_value")]
-    public List<CustomFieldVisibility>? VisibilityConditionsValue { get; set; } = [];
+    public List<CustomFieldVisibility>? VisibilityConditionsValue { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_visibility_conditions")]
-    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = [];
+    public List<CriteriaGroup>? GroupVisibilityConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("value_restrictions")]
-    public List<CustomFieldValueRestrictions>? ValueRestrictions { get; set; } = [];
+    public List<CustomFieldValueRestrictions>? ValueRestrictions { get; set; } = new();
 
     [JsonPropertyName("group")]
     public FieldGroup Group { get; set; } = new();
@@ -106,7 +106,7 @@ public partial class RequestTypeField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_restrictions")]
-    public List<RequestTypeFieldRestriction>? UpdateRestrictions { get; set; } = [];
+    public List<RequestTypeFieldRestriction>? UpdateRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("techtab_id")]
@@ -162,7 +162,7 @@ public partial class RequestTypeField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("read_restrictions")]
-    public List<RequestTypeFieldRestriction>? ReadRestrictions { get; set; } = [];
+    public List<RequestTypeFieldRestriction>? ReadRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("techtab_columns")]
@@ -186,7 +186,7 @@ public partial class RequestTypeField
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("display_type")]

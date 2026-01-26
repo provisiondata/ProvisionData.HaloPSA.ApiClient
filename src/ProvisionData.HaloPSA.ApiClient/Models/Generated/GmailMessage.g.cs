@@ -33,7 +33,7 @@ public partial class GmailMessage
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("labelIds")]
-    public List<String>? LabelIds { get; set; } = [];
+    public List<String>? LabelIds { get; set; } = new();
 
     [JsonPropertyName("payload")]
     public MessagePart Payload { get; set; } = new();

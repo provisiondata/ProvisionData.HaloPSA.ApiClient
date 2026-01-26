@@ -21,7 +21,7 @@ public partial class QualificationCategory
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<AutoassignCriteria>? Fields { get; set; } = [];
+    public List<AutoassignCriteria>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

@@ -43,6 +43,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\src\ProvisionData.HaloPSA.ApiClient\ProvisionData.HaloPSA.ApiClient.csproj" />
+        <ProjectReference Include="..\..\src\ProvisionData.HaloPSA.ApiClient.Generator\ProvisionData.HaloPSA.ApiClient.ModelGenerator.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -161,11 +161,11 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<TypeInfo>? Fields { get; set; } = [];
+    public List<TypeInfo>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_list")]
-    public List<Field>? FieldList { get; set; } = [];
+    public List<Field>? FieldList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_code")]
@@ -221,11 +221,11 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bookingtypes")]
-    public List<BookingType>? Bookingtypes { get; set; } = [];
+    public List<BookingType>? Bookingtypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timeslots")]
-    public List<BookingTypeTimeslot>? Timeslots { get; set; } = [];
+    public List<BookingTypeTimeslot>? Timeslots { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timeslot_bookingtype")]
@@ -260,7 +260,7 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xtype_roles")]
-    public List<XTypeRole>? XtypeRoles { get; set; } = [];
+    public List<XTypeRole>? XtypeRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("asset_details_tab_display")]
@@ -268,7 +268,7 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tab_config")]
-    public List<TabConfig>? TabConfig { get; set; } = [];
+    public List<TabConfig>? TabConfig { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resourcebookingtype")]
@@ -276,7 +276,7 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_status")]
-    public List<XTypeStatus>? AllowedStatus { get; set; } = [];
+    public List<XTypeStatus>? AllowedStatus { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_status")]
@@ -324,11 +324,11 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("booking_sites")]
-    public List<SiteList>? BookingSites { get; set; } = [];
+    public List<SiteList>? BookingSites { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newticket_priority")]
@@ -368,11 +368,11 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services")]
-    public List<ServSiteList>? Services { get; set; } = [];
+    public List<ServSiteList>? Services { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_restrictions")]
-    public List<FieldRoleRestriction>? FieldRestrictions { get; set; } = [];
+    public List<FieldRoleRestriction>? FieldRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_visibility")]
@@ -412,7 +412,7 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_custombuttons")]
-    public List<XTypeButton>? AllowedCustombuttons { get; set; } = [];
+    public List<XTypeButton>? AllowedCustombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_device_template_name")]
@@ -428,7 +428,7 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_asset_defaults")]
-    public List<ItemDeviceDefaults>? LinkedAssetDefaults { get; set; } = [];
+    public List<ItemDeviceDefaults>? LinkedAssetDefaults { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_asset_maintenance")]
@@ -436,7 +436,7 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maintenance_windows")]
-    public List<Holidays>? MaintenanceWindows { get; set; } = [];
+    public List<Holidays>? MaintenanceWindows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_portfolio")]
@@ -456,11 +456,11 @@ public partial class Xtype
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("upstream_relationship_restrictions")]
-    public List<DeviceRelationshipRestriction>? UpstreamRelationshipRestrictions { get; set; } = [];
+    public List<DeviceRelationshipRestriction>? UpstreamRelationshipRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("downstream_relationship_restrictions")]
-    public List<DeviceRelationshipRestriction>? DownstreamRelationshipRestrictions { get; set; } = [];
+    public List<DeviceRelationshipRestriction>? DownstreamRelationshipRestrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("primary_instance_type")]

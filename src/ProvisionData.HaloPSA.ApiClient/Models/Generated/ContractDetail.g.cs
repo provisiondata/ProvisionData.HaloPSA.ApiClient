@@ -161,7 +161,7 @@ public partial class ContractDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extra_filters")]
-    public List<BillingPlanCriteria>? ExtraFilters { get; set; } = [];
+    public List<BillingPlanCriteria>? ExtraFilters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("end_date")]

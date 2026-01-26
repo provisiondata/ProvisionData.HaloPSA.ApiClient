@@ -37,7 +37,7 @@ public partial class CabHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("members")]
-    public List<CabMember>? Members { get; set; } = [];
+    public List<CabMember>? Members { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ldapstring")]
@@ -45,7 +45,7 @@ public partial class CabHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")]
-    public List<CabRole>? Roles { get; set; } = [];
+    public List<CabRole>? Roles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams_webhook_url")]

@@ -89,7 +89,7 @@ public partial class SQLImport
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<SQLImportField>? Fields { get; set; } = [];
+    public List<SQLImportField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqlserver")]
@@ -141,7 +141,7 @@ public partial class SQLImport
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowed_clientids_list")]
-    public List<KeyPair2>? HalointegratorAllowedClientidsList { get; set; } = [];
+    public List<KeyPair2>? HalointegratorAllowedClientidsList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halointegrator_allowed_clientids")]

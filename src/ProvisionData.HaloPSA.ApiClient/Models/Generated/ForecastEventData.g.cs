@@ -25,7 +25,7 @@ public partial class ForecastEventData
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("forecast_ids")]
-    public List<KeyPair>? ForecastIds { get; set; } = [];
+    public List<KeyPair>? ForecastIds { get; set; } = new();
 
 }
 

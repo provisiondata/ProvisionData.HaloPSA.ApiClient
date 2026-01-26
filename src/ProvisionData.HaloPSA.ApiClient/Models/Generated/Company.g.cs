@@ -65,11 +65,11 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contract_count")]
@@ -177,7 +177,7 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")]
-    public List<UsersList>? Users { get; set; } = [];
+    public List<UsersList>? Users { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_api_access")]
@@ -284,7 +284,7 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_requesttype_mappings")]
-    public List<IntegrationFieldMapping>? JiraRequesttypeMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JiraRequesttypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_user_id")]
@@ -299,11 +299,11 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_priority_mappings")]
-    public List<IntegrationFieldMapping>? JiraPriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JiraPriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_status_mappings")]
-    public List<IntegrationFieldMapping>? JiraStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JiraStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_status_after_update")]
@@ -327,7 +327,7 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_location_id_list")]
-    public List<KeyPair2>? IntacctLocationIdList { get; set; } = [];
+    public List<KeyPair2>? IntacctLocationIdList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_location_type")]
@@ -351,7 +351,7 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -379,23 +379,23 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_priority_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowPriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowPriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_status_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_impact_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowImpactMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowImpactMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_urgency_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowUrgencyMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowUrgencyMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_category_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowCategoryMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowCategoryMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_assignment_group")]
@@ -433,7 +433,7 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonPropertyName("new_external_link")]
     public ExternalLinkList NewExternalLink { get; set; } = new();
@@ -456,7 +456,7 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_team_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowTeamMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowTeamMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_ticket_sync")]
@@ -464,15 +464,15 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_ticket_sync_list")]
-    public List<KeyPair2>? ServicenowTicketSyncList { get; set; } = [];
+    public List<KeyPair2>? ServicenowTicketSyncList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_fieldmappings")]
-    public List<IntegrationFieldMapping>? ServicenowFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_service_mappings")]
-    public List<ServiceMapping>? ServicenowServiceMappings { get; set; } = [];
+    public List<ServiceMapping>? ServicenowServiceMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_webhook_user")]
@@ -508,19 +508,19 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhdcustomfieldmappings")]
-    public List<IntegrationFieldMapping>? Thirdpartynhdcustomfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Thirdpartynhdcustomfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_status_mappings")]
-    public List<IntegrationFieldMapping>? ThirdpartynhdStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ThirdpartynhdStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_category_mappings")]
-    public List<IntegrationFieldMapping>? ThirdpartynhdCategoryMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ThirdpartynhdCategoryMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_outcome_mappings")]
-    public List<IntegrationFieldMapping>? ThirdpartynhdOutcomeMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ThirdpartynhdOutcomeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_status")]
@@ -584,7 +584,7 @@ public partial class Company
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dbc_dimensions")]
-    public List<BusinessCentralDimensions>? DbcDimensions { get; set; } = [];
+    public List<BusinessCentralDimensions>? DbcDimensions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynamics_dimensions_enabled")]

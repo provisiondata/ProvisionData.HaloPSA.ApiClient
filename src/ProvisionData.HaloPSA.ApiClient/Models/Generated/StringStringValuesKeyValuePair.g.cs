@@ -13,7 +13,7 @@ public partial class StringStringValuesKeyValuePair
     public String? Key { get; set; } = String.Empty;
 
     [JsonPropertyName("value")]
-    public List<String> Value { get; set; } = [];
+    public List<String> Value { get; set; } = new();
 
 }
 

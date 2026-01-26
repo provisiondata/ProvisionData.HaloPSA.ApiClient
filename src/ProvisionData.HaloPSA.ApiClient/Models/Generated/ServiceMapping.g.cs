@@ -41,7 +41,7 @@ public partial class ServiceMapping
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_field_mappings")]
-    public List<IntegrationFieldMapping>? ServiceFieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServiceFieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

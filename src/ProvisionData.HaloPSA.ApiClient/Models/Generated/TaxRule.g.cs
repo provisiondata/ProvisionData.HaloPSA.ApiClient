@@ -29,7 +29,7 @@ public partial class TaxRule
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tax_conditions")]
-    public List<TaxRuleConditions>? TaxConditions { get; set; } = [];
+    public List<TaxRuleConditions>? TaxConditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

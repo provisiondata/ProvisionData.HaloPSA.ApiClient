@@ -120,19 +120,19 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = [];
+    public List<CustomButton>? Custombuttons { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<Attachment>? Attachments { get; set; } = [];
+    public List<Attachment>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_fields")]
-    public List<FieldHelper>? SiteFields { get; set; } = [];
+    public List<FieldHelper>? SiteFields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("pritech")]
@@ -624,7 +624,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_organisations")]
-    public List<Organisation>? AllowedOrganisations { get; set; } = [];
+    public List<Organisation>? AllowedOrganisations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("override_signature")]
@@ -640,7 +640,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_update")]
-    public List<Site>? SiteUpdate { get; set; } = [];
+    public List<Site>? SiteUpdate { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newclient_sitename")]
@@ -695,11 +695,11 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faqlists")]
-    public List<FAQListHead>? Faqlists { get; set; } = [];
+    public List<FAQListHead>? Faqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_notes")]
-    public List<AreaPopup>? PopupNotes { get; set; } = [];
+    public List<AreaPopup>? PopupNotes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_reassign_all_to_user")]
@@ -711,7 +711,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_tickettypes")]
-    public List<RequestTypeList>? AllowedTickettypes { get; set; } = [];
+    public List<RequestTypeList>? AllowedTickettypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category1")]
@@ -719,7 +719,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category1")]
-    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory1 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category2")]
@@ -727,7 +727,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category2")]
-    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory2 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category3")]
@@ -735,7 +735,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category3")]
-    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory3 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category4")]
@@ -747,7 +747,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category4")]
-    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = [];
+    public List<CategoryRestriction>? AllowedCategory4 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("onhold_ticket_count")]
@@ -763,11 +763,11 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("billingplans")]
-    public List<ContractDetail>? Billingplans { get; set; } = [];
+    public List<ContractDetail>? Billingplans { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("overriding_rates")]
-    public List<ChargeRate>? OverridingRates { get; set; } = [];
+    public List<ChargeRate>? OverridingRates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowallchargerates")]
@@ -775,7 +775,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")]
-    public List<ChargeRateArea>? Chargerates { get; set; } = [];
+    public List<ChargeRateArea>? Chargerates { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newclient_siteguid")]
@@ -819,7 +819,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("areaitems")]
-    public List<AreaItem>? Areaitems { get; set; } = [];
+    public List<AreaItem>? Areaitems { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portal_logo")]
@@ -867,11 +867,11 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prepayhistory")]
-    public List<PrepayHistory>? Prepayhistory { get; set; } = [];
+    public List<PrepayHistory>? Prepayhistory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("periods")]
-    public List<PrepayPeriod>? Periods { get; set; } = [];
+    public List<PrepayPeriod>? Periods { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prepayrecurringminimumdeduction")]
@@ -976,7 +976,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_notes")]
-    public List<AreaNote>? ImportNotes { get; set; } = [];
+    public List<AreaNote>? ImportNotes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ateraid")]
@@ -1000,11 +1000,11 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_service_access")]
-    public List<CriteriaGroup>? GroupServiceAccess { get; set; } = [];
+    public List<CriteriaGroup>? GroupServiceAccess { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_service_subscriptions")]
-    public List<CriteriaGroup>? GroupServiceSubscriptions { get; set; } = [];
+    public List<CriteriaGroup>? GroupServiceSubscriptions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snelstart_id")]
@@ -1047,7 +1047,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbentries")]
-    public List<KBEntryList>? Kbentries { get; set; } = [];
+    public List<KBEntryList>? Kbentries { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_id")]
@@ -1135,7 +1135,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonPropertyName("new_external_link")]
     public ExternalLinkList NewExternalLink { get; set; } = new();
@@ -1257,27 +1257,27 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_priority_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowPriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowPriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_status_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_impact_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowImpactMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowImpactMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_urgency_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowUrgencyMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowUrgencyMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_category_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowCategoryMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowCategoryMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_service_mappings")]
-    public List<ServiceMapping>? ServicenowServiceMappings { get; set; } = [];
+    public List<ServiceMapping>? ServicenowServiceMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_assignment_group")]
@@ -1335,7 +1335,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_location_id_list")]
-    public List<KeyPair2>? IntacctLocationIdList { get; set; } = [];
+    public List<KeyPair2>? IntacctLocationIdList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_location_type")]
@@ -1343,7 +1343,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_categories")]
-    public List<String>? NewCategories { get; set; } = [];
+    public List<String>? NewCategories { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_url")]
@@ -1374,7 +1374,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_requesttype_mappings")]
-    public List<IntegrationFieldMapping>? JiraRequesttypeMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JiraRequesttypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_user_id")]
@@ -1389,11 +1389,11 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_priority_mappings")]
-    public List<IntegrationFieldMapping>? JiraPriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JiraPriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_status_mappings")]
-    public List<IntegrationFieldMapping>? JiraStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? JiraStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_status_after_update")]
@@ -1575,11 +1575,11 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = [];
+    public List<Tabname>? Extratabs { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_team_mappings")]
-    public List<IntegrationFieldMapping>? ServicenowTeamMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowTeamMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_ticket_sync")]
@@ -1587,11 +1587,11 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_ticket_sync_list")]
-    public List<KeyPair2>? ServicenowTicketSyncList { get; set; } = [];
+    public List<KeyPair2>? ServicenowTicketSyncList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_fieldmappings")]
-    public List<IntegrationFieldMapping>? ServicenowFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ServicenowFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("matching_value")]
@@ -1671,23 +1671,23 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhdcustomfieldmappings")]
-    public List<IntegrationFieldMapping>? Thirdpartynhdcustomfieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? Thirdpartynhdcustomfieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_status_mappings")]
-    public List<IntegrationFieldMapping>? ThirdpartynhdStatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ThirdpartynhdStatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_category_mappings")]
-    public List<IntegrationFieldMapping>? ThirdpartynhdCategoryMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ThirdpartynhdCategoryMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_tickettype_mappings")]
-    public List<IntegrationFieldMapping>? ThirdpartynhdTickettypeMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ThirdpartynhdTickettypeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_outcome_mappings")]
-    public List<IntegrationFieldMapping>? ThirdpartynhdOutcomeMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? ThirdpartynhdOutcomeMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_status")]
@@ -1731,7 +1731,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("audit_log")]
-    public List<Audit>? AuditLog { get; set; } = [];
+    public List<Audit>? AuditLog { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_allow_webhooks")]
@@ -1751,7 +1751,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dbc_dimensions")]
-    public List<BusinessCentralDimensions>? DbcDimensions { get; set; } = [];
+    public List<BusinessCentralDimensions>? DbcDimensions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dbc_template")]
@@ -1885,7 +1885,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenants")]
-    public List<AreaAzureTenant>? AzureTenants { get; set; } = [];
+    public List<AreaAzureTenant>? AzureTenants { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenant_id")]
@@ -1897,7 +1897,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snowLicences")]
-    public List<SnowLicenseAbstract>? SnowLicences { get; set; } = [];
+    public List<SnowLicenseAbstract>? SnowLicences { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qbo_company_id")]
@@ -1925,7 +1925,7 @@ public partial class Area
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship")]
-    public List<KeyPair>? CustomerRelationship { get; set; } = [];
+    public List<KeyPair>? CustomerRelationship { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship_list")]

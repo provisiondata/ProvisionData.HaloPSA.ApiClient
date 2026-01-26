@@ -34,11 +34,11 @@ public partial class AzureMonitorEssentials
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("alertTargetIds")]
-    public List<String>? AlertTargetIds { get; set; } = [];
+    public List<String>? AlertTargetIds { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("configurationItems")]
-    public List<String>? ConfigurationItems { get; set; } = [];
+    public List<String>? ConfigurationItems { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("originAlertId")]

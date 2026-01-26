@@ -73,7 +73,7 @@ public partial class SnowDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snow_fieldmappings")]
-    public List<IntegrationFieldMapping>? SnowFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? SnowFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableintegrator")]
@@ -93,7 +93,7 @@ public partial class SnowDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("halo_integrator_import_types")]
-    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = [];
+    public List<KeyPair2>? HaloIntegratorImportTypes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_devices")]
@@ -117,7 +117,7 @@ public partial class SnowDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_links")]
-    public List<ExternalLinkList>? ClientLinks { get; set; } = [];
+    public List<ExternalLinkList>? ClientLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("guid")]

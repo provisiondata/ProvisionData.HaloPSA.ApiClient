@@ -57,7 +57,7 @@ public partial class IngramMicroResellerDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sync_entities_list")]
-    public List<KeyPair2>? SyncEntitiesList { get; set; } = [];
+    public List<KeyPair2>? SyncEntitiesList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("api_app_type")]

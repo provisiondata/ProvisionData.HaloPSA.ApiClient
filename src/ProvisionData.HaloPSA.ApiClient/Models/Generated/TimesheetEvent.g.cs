@@ -125,7 +125,7 @@ public partial class TimesheetEvent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agents")]
-    public List<KeyPair>? Agents { get; set; } = [];
+    public List<KeyPair>? Agents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clear_end")]

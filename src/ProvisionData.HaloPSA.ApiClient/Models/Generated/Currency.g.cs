@@ -33,7 +33,7 @@ public partial class Currency
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("history")]
-    public List<CurrencyHistory>? History { get; set; } = [];
+    public List<CurrencyHistory>? History { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

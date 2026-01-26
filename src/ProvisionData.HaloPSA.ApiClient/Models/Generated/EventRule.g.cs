@@ -69,19 +69,19 @@ public partial class EventRule
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("values")]
-    public List<OutboundIntegrationMethodValue>? Values { get; set; } = [];
+    public List<OutboundIntegrationMethodValue>? Values { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("criteria")]
-    public List<AutoassignCriteria>? Criteria { get; set; } = [];
+    public List<AutoassignCriteria>? Criteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_matching_criteria")]
-    public List<AutoassignCriteria>? TicketMatchingCriteria { get; set; } = [];
+    public List<AutoassignCriteria>? TicketMatchingCriteria { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings")]
-    public List<EventMapping>? Mappings { get; set; } = [];
+    public List<EventMapping>? Mappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("active")]

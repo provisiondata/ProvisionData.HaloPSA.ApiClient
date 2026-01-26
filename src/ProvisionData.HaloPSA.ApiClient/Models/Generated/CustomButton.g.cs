@@ -77,7 +77,7 @@ public partial class CustomButton
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("button_visibility_statuses")]
-    public List<KeyPair>? ButtonVisibilityStatuses { get; set; } = [];
+    public List<KeyPair>? ButtonVisibilityStatuses { get; set; } = new();
 
 }
 

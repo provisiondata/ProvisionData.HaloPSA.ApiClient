@@ -75,7 +75,7 @@ public partial class EcommerceOrder
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_tickets")]
-    public List<EcommerceOrderFault>? LinkedTickets { get; set; } = [];
+    public List<EcommerceOrderFault>? LinkedTickets { get; set; } = new();
 
 }
 

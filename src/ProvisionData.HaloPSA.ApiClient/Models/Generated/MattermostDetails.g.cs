@@ -41,7 +41,7 @@ public partial class MattermostDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("channels")]
-    public List<MattermostChannelDetails>? Channels { get; set; } = [];
+    public List<MattermostChannelDetails>? Channels { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enableintegrator")]

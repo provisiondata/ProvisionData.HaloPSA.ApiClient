@@ -10,7 +10,7 @@ public partial class Appointment
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agents")]
-    public List<Uname>? Agents { get; set; } = [];
+    public List<Uname>? Agents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("collection_id")]
@@ -186,7 +186,7 @@ public partial class Appointment
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("followup_agents")]
-    public List<Uname>? FollowupAgents { get; set; } = [];
+    public List<Uname>? FollowupAgents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("followup_user_id")]
@@ -253,7 +253,7 @@ public partial class Appointment
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("outcomes")]
-    public List<TOutcome>? Outcomes { get; set; } = [];
+    public List<TOutcome>? Outcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("utcoffset")]
@@ -397,7 +397,7 @@ public partial class Appointment
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_resourcebooking_teams")]
-    public List<SectionRequestType>? AllowedResourcebookingTeams { get; set; } = [];
+    public List<SectionRequestType>? AllowedResourcebookingTeams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resourcebookingteam")]
@@ -511,11 +511,11 @@ public partial class Appointment
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("booking_fields")]
-    public List<RequestTypeField>? BookingFields { get; set; } = [];
+    public List<RequestTypeField>? BookingFields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_cf_update")]
-    public List<CustomField>? TicketCfUpdate { get; set; } = [];
+    public List<CustomField>? TicketCfUpdate { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_starting_shift")]
@@ -753,7 +753,7 @@ public partial class Appointment
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("shift_breaks")]
-    public List<TimesheetEvent>? ShiftBreaks { get; set; } = [];
+    public List<TimesheetEvent>? ShiftBreaks { get; set; } = new();
 
 }
 

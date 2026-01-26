@@ -17,35 +17,35 @@ public partial class ReportContent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("rows")]
-    public List<UnknownType>? Rows { get; set; } = [];
+    public List<UnknownType>? Rows { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chart_labels")]
-    public List<UnknownType>? ChartLabels { get; set; } = [];
+    public List<UnknownType>? ChartLabels { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chart_dataset")]
-    public List<UnknownType>? ChartDataset { get; set; } = [];
+    public List<UnknownType>? ChartDataset { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chart_dataset1")]
-    public List<UnknownType>? ChartDataset1 { get; set; } = [];
+    public List<UnknownType>? ChartDataset1 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chart_dataset2")]
-    public List<UnknownType>? ChartDataset2 { get; set; } = [];
+    public List<UnknownType>? ChartDataset2 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chart_dataset3")]
-    public List<UnknownType>? ChartDataset3 { get; set; } = [];
+    public List<UnknownType>? ChartDataset3 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chart_dataset4")]
-    public List<UnknownType>? ChartDataset4 { get; set; } = [];
+    public List<UnknownType>? ChartDataset4 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chart_dataset5")]
-    public List<UnknownType>? ChartDataset5 { get; set; } = [];
+    public List<UnknownType>? ChartDataset5 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("base_link")]
@@ -57,7 +57,7 @@ public partial class ReportContent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datasets")]
-    public Object? Datasets { get; set; } = new Object();
+    public UnknownType? Datasets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("counter_value")]
@@ -65,7 +65,7 @@ public partial class ReportContent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("forecast_output")]
-    public List<ForecastOutputValue>? ForecastOutput { get; set; } = [];
+    public List<ForecastOutputValue>? ForecastOutput { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("forecast_run_date")]

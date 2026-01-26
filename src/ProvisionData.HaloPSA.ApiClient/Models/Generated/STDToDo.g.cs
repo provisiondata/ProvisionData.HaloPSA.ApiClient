@@ -25,7 +25,7 @@ public partial class STDToDo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_clients")]
-    public List<AreaToDo>? AllowedClients { get; set; } = [];
+    public List<AreaToDo>? AllowedClients { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_id")]

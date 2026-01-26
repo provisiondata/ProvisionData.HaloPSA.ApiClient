@@ -18,7 +18,7 @@ public partial class CreateTeamsChat
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("members")]
-    public List<Users>? Members { get; set; } = [];
+    public List<Users>? Members { get; set; } = new();
 
 }
 

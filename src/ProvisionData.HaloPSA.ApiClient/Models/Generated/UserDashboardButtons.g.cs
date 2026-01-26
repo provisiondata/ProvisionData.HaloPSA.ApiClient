@@ -101,11 +101,11 @@ public partial class UserDashboardButtons
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("restrictions")]
-    public List<UserDashboardRestrictions>? Restrictions { get; set; } = [];
+    public List<UserDashboardRestrictions>? Restrictions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customhtml")]
@@ -141,7 +141,7 @@ public partial class UserDashboardButtons
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portal_ticket_list")]
-    public List<RequestTypeList>? PortalTicketList { get; set; } = [];
+    public List<RequestTypeList>? PortalTicketList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_column_override")]

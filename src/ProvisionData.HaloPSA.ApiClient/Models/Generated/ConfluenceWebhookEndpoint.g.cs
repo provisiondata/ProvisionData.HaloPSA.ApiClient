@@ -22,7 +22,7 @@ public partial class ConfluenceWebhookEndpoint
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("events")]
-    public List<String>? Events { get; set; } = [];
+    public List<String>? Events { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]

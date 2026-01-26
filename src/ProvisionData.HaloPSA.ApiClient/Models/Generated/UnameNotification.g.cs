@@ -137,7 +137,7 @@ public partial class UnameNotification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agents")]
-    public List<UnameNotificationLink>? Agents { get; set; } = [];
+    public List<UnameNotificationLink>? Agents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("condition_count")]
@@ -157,7 +157,7 @@ public partial class UnameNotification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("conditions")]
-    public List<NotificationConditions>? Conditions { get; set; } = [];
+    public List<NotificationConditions>? Conditions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_canupdate")]
@@ -201,7 +201,7 @@ public partial class UnameNotification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")]
-    public List<UnameNotificationLink>? Roles { get; set; } = [];
+    public List<UnameNotificationLink>? Roles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mattermost_channelid")]
@@ -225,7 +225,7 @@ public partial class UnameNotification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_roles")]
-    public List<UnameNotificationLink>? UserRoles { get; set; } = [];
+    public List<UnameNotificationLink>? UserRoles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filter_type")]
@@ -241,7 +241,7 @@ public partial class UnameNotification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")]
-    public List<AccessControl>? AccessControl { get; set; } = [];
+    public List<AccessControl>? AccessControl { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")]
@@ -253,7 +253,7 @@ public partial class UnameNotification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("safe_instance_list")]
-    public List<Instance>? SafeInstanceList { get; set; } = [];
+    public List<Instance>? SafeInstanceList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twilio_details")]
@@ -273,7 +273,7 @@ public partial class UnameNotification
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("outcomes")]
-    public List<NotificationOutcome>? Outcomes { get; set; } = [];
+    public List<NotificationOutcome>? Outcomes { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("acknowledge_type")]

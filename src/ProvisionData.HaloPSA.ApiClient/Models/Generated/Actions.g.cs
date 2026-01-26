@@ -104,7 +104,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("personal_unread")]
@@ -136,11 +136,11 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reactions")]
-    public List<ActionReaction>? Reactions { get; set; } = [];
+    public List<ActionReaction>? Reactions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")]
-    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? Translations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("email_message_id")]
@@ -148,7 +148,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("post_translations")]
-    public List<LanguagePackTranslationsCustom>? PostTranslations { get; set; } = [];
+    public List<LanguagePackTranslationsCustom>? PostTranslations { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_guid")]
@@ -766,7 +766,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_users")]
-    public List<UsersList>? NewApprovalprocessUsers { get; set; } = [];
+    public List<UsersList>? NewApprovalprocessUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_email")]
@@ -778,7 +778,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_cab")]
-    public List<CabMember>? NewApprovalprocessCab { get; set; } = [];
+    public List<CabMember>? NewApprovalprocessCab { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_product_id")]
@@ -870,7 +870,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<Attachment>? Attachments { get; set; } = [];
+    public List<Attachment>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_children")]
@@ -970,7 +970,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")]
-    public List<DeviceList>? Assets { get; set; } = [];
+    public List<DeviceList>? Assets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dont_do_rules")]
@@ -1202,7 +1202,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_jira_components")]
-    public List<KeyPair2>? NewJiraComponents { get; set; } = [];
+    public List<KeyPair2>? NewJiraComponents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faultidfrom")]
@@ -1250,15 +1250,15 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_tags")]
-    public List<Tag>? NewTags { get; set; } = [];
+    public List<Tag>? NewTags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_faqlists")]
-    public List<FAQListHead>? NewFaqlists { get; set; } = [];
+    public List<FAQListHead>? NewFaqlists { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_related_articles")]
-    public List<KBEntryList>? NewRelatedArticles { get; set; } = [];
+    public List<KBEntryList>? NewRelatedArticles { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ignoredatedoneisstartdate")]
@@ -1354,7 +1354,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = [];
+    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
 
     [JsonPropertyName("new_external_link")]
     public ExternalLinkList NewExternalLink { get; set; } = new();
@@ -1385,7 +1385,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_consignment")]
-    public List<ConsignmentHeader>? NewConsignment { get; set; } = [];
+    public List<ConsignmentHeader>? NewConsignment { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faultstimeentryid")]
@@ -1428,11 +1428,11 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("followers_user")]
-    public List<UsersList>? FollowersUser { get; set; } = [];
+    public List<UsersList>? FollowersUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_items_issued")]
-    public List<FaultItem>? NewItemsIssued { get; set; } = [];
+    public List<FaultItem>? NewItemsIssued { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("purchaseordernumber")]
@@ -1523,7 +1523,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_additional_agents")]
-    public List<FaultAdditionalAgents>? NewAdditionalAgents { get; set; } = [];
+    public List<FaultAdditionalAgents>? NewAdditionalAgents { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("instagramid")]
@@ -1674,7 +1674,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_contributors")]
-    public List<Contributors>? NewContributors { get; set; } = [];
+    public List<Contributors>? NewContributors { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("nextcalldate")]
@@ -1745,7 +1745,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bulkemail_users")]
-    public List<Int32>? BulkemailUsers { get; set; } = [];
+    public List<Int32>? BulkemailUsers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_novalidate")]
@@ -1793,7 +1793,7 @@ public partial class Actions
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_apply_ai_suggestions")]
-    public List<Int32>? ApplyAiSuggestions { get; set; } = [];
+    public List<Int32>? ApplyAiSuggestions { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("subject_exceeds_max_length")]

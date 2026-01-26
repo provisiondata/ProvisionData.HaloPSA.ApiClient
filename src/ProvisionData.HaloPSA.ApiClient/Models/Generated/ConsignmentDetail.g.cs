@@ -69,7 +69,7 @@ public partial class ConsignmentDetail
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("serialised_assets")]
-    public List<DeviceList>? SerialisedAssets { get; set; } = [];
+    public List<DeviceList>? SerialisedAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stockbin_id")]

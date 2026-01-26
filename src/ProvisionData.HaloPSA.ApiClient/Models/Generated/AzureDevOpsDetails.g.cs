@@ -42,7 +42,7 @@ public partial class AzureDevOpsDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields_to_sync_list")]
-    public List<KeyPair2>? FieldsToSyncList { get; set; } = [];
+    public List<KeyPair2>? FieldsToSyncList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sync_mapped_fields")]
@@ -78,23 +78,23 @@ public partial class AzureDevOpsDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("status_mappings")]
-    public List<IntegrationFieldMapping>? StatusMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? StatusMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("priority_mappings")]
-    public List<IntegrationFieldMapping>? PriorityMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? PriorityMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("areapath_mappings")]
-    public List<IntegrationFieldMapping>? AreapathMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AreapathMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("iterationpath_mappings")]
-    public List<IntegrationFieldMapping>? IterationpathMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? IterationpathMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("otherfield_mappings")]
-    public List<IntegrationFieldMapping>? OtherfieldMappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? OtherfieldMappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("area_path_field")]
@@ -186,7 +186,7 @@ public partial class AzureDevOpsDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public List<IntegrationFilter>? Filters { get; set; } = [];
+    public List<IntegrationFilter>? Filters { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_entities")]
@@ -194,7 +194,7 @@ public partial class AzureDevOpsDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_entities_list")]
-    public List<KeyPair2>? ImportEntitiesList { get; set; } = [];
+    public List<KeyPair2>? ImportEntitiesList { get; set; } = new();
 
 }
 

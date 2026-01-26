@@ -26,7 +26,7 @@ public partial class FreshdeskCompany
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("domains")]
-    public List<String>? Domains { get; set; } = [];
+    public List<String>? Domains { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("created_at")]
@@ -38,7 +38,7 @@ public partial class FreshdeskCompany
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custom_fields")]
-    public Object? CustomFields { get; set; } = new Object();
+    public UnknownType? CustomFields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("health_score")]

@@ -50,7 +50,7 @@ public partial class SnowLicenseAbstract
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snowDevices")]
-    public List<SnowDevice>? SnowDevices { get; set; } = [];
+    public List<SnowDevice>? SnowDevices { get; set; } = new();
 
 }
 

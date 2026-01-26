@@ -133,7 +133,7 @@ public partial class NCentralDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("mappings_xtype")]
-    public List<XTypeMapping>? MappingsXtype { get; set; } = [];
+    public List<XTypeMapping>? MappingsXtype { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_assettype_name")]
@@ -141,15 +141,15 @@ public partial class NCentralDetails
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_links")]
-    public List<ExternalLinkList>? ClientLinks { get; set; } = [];
+    public List<ExternalLinkList>? ClientLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_links")]
-    public List<ExternalLinkList>? SiteLinks { get; set; } = [];
+    public List<ExternalLinkList>? SiteLinks { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("asset_fieldmappings")]
-    public List<IntegrationFieldMapping>? AssetFieldmappings { get; set; } = [];
+    public List<IntegrationFieldMapping>? AssetFieldmappings { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_password")]

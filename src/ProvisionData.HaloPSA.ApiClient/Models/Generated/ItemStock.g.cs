@@ -89,7 +89,7 @@ public partial class ItemStock
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("serialised_assets")]
-    public List<DeviceList>? SerialisedAssets { get; set; } = [];
+    public List<DeviceList>? SerialisedAssets { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_stock_take")]

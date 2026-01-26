@@ -185,11 +185,11 @@ public partial class FaultApproval
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")]
-    public List<RequestTypeField>? Fields { get; set; } = [];
+    public List<RequestTypeField>? Fields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = [];
+    public List<CustomField>? Customfields { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_name")]
@@ -297,7 +297,7 @@ public partial class FaultApproval
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public List<Attachment>? Attachments { get; set; } = [];
+    public List<Attachment>? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("admin_overridden")]
@@ -353,7 +353,7 @@ public partial class FaultApproval
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_allowed_customers")]
-    public List<AreaList>? KbAllowedCustomers { get; set; } = [];
+    public List<AreaList>? KbAllowedCustomers { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_article_description")]
@@ -369,7 +369,7 @@ public partial class FaultApproval
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_article_teams")]
-    public List<SectionDetail>? KbArticleTeams { get; set; } = [];
+    public List<SectionDetail>? KbArticleTeams { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_article_type")]
@@ -385,7 +385,7 @@ public partial class FaultApproval
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_tags")]
-    public List<Tag>? KbTags { get; set; } = [];
+    public List<Tag>? KbTags { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kb_new_template_when_linked")]

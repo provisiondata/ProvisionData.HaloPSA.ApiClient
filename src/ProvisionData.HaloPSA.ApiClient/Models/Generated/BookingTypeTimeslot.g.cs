@@ -20,7 +20,7 @@ public partial class BookingTypeTimeslot
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resources")]
-    public List<KeyPair4>? Resources { get; set; } = [];
+    public List<KeyPair4>? Resources { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bookedResourceId")]
