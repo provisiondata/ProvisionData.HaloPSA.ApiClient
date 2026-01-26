@@ -18,6 +18,8 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public class HaloPsaApiClientOptions
 {
+    public static String SectionName { get; set; } = nameof(HaloPsaApiClientOptions);
+
     public String AuthUrl { get; set; } = String.Empty;
 
     public String ApiUrl { get; set; } = String.Empty;

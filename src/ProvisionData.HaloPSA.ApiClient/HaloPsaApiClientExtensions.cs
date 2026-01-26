@@ -15,6 +15,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Options;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
@@ -27,25 +28,23 @@ public static class HaloPsaApiClientExtensions
     /// <param name="configuration">The configuration instance.</param>
     /// <param name="configurationSectionName">The configuration section name. Defaults to "HaloPsaApiClient".</param>
     /// <returns>An <see cref="IHttpClientBuilder"/> for further configuration.</returns>
-    public static IHttpClientBuilder AddHaloPsaApiClient(
-        this IServiceCollection services,
-        IConfiguration configuration,
-        String configurationSectionName = "HaloPsaApiClient")
+    public static IHttpClientBuilder AddHaloPsaApiClient(this IServiceCollection services, IConfiguration configuration)
     {
         ArgumentNullException.ThrowIfNull(services);
         ArgumentNullException.ThrowIfNull(configuration);
-        ArgumentException.ThrowIfNullOrWhiteSpace(configurationSectionName);
 
         // Configure options from configuration
-        services.Configure<HaloPsaApiClientOptions>(configuration.GetSection(configurationSectionName));
+        services.Configure<HaloPsaApiClientOptions>(configuration.GetSection(HaloPsaApiClientOptions.SectionName));
 
         // Register TimeProvider as singleton if not already registered
         services.TryAddSingleton(TimeProvider.System);
 
         // Register HttpClient with factory pattern
-        return services.AddHttpClient<HaloPsaApiClient>((serviceProvider, httpClient) =>
+        return services.AddHttpClient<HaloPsaApiClient>((sp, httpClient) =>
         {
             // Additional HttpClient configuration can be done here if needed
+            var options = sp.GetRequiredService<IOptions<HaloPsaApiClientOptions>>().Value;
+            httpClient.BaseAddress = new Uri(options.ApiUrl);
             httpClient.Timeout = TimeSpan.FromMinutes(5);
         });
     }
@@ -70,8 +69,10 @@ public static class HaloPsaApiClientExtensions
         services.TryAddSingleton(TimeProvider.System);
 
         // Register HttpClient with factory pattern
-        return services.AddHttpClient<HaloPsaApiClient>((serviceProvider, httpClient) =>
+        return services.AddHttpClient<HaloPsaApiClient>((sp, httpClient) =>
         {
+            var options = sp.GetRequiredService<IOptions<HaloPsaApiClientOptions>>().Value;
+            httpClient.BaseAddress = new Uri(options.ApiUrl);
             httpClient.Timeout = TimeSpan.FromMinutes(5);
         });
     }

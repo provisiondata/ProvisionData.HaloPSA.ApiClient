@@ -38,7 +38,7 @@ builder.Services.AddHaloPsaApiClient(options =>
 
 ```json
 {
-  "HaloPsaApiClient": {
+  "HaloPsaApiClientOptions": {
     "AuthUrl": "https://your-instance.halopsa.com/auth/",
     "ApiUrl": "https://your-instance.halopsa.com/api/",
     "ClientId": "your-client-id",

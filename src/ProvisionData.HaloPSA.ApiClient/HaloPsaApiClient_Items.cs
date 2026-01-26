@@ -31,10 +31,10 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<GetItemsResult>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize<List<Item>>(json, Options.JsonSerializerOptions)
                 ?? throw new InvalidOperationException("Failed to deserialize ItemsList.");
 
-            return list.Items;
+            return list;
         }
         catch (Exception ex)
         {
@@ -65,7 +65,7 @@ public partial class HaloPsaApiClient
         }
     }
 
-    public async Task<Item> CreateItemAsync(CreateItem item, CancellationToken cancellationToken = default)
+    public async Task<Item> CreateItemAsync(Item item, CancellationToken cancellationToken = default)
     {
         var payload = JsonSerializer.Serialize(item, Options.JsonSerializerOptions);
 
@@ -75,7 +75,4 @@ public partial class HaloPsaApiClient
 
         return JsonSerializer.Deserialize<Item>(json, Options.JsonSerializerOptions)!;
     }
-
-    public Task UpdateItemAsync(Client value, CancellationToken cancellationToken = default)
-        => throw new NotImplementedException();
 }

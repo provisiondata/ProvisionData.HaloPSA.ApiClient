@@ -21,7 +21,7 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
-    public async Task<IReadOnlyCollection<Asset>> ListAssetsAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyCollection<DeviceList>?> ListAssetsAsync(CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Asset")
@@ -31,7 +31,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<GetAssetsResult>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize<DeviceView>(json, Options.JsonSerializerOptions)
                 ?? throw new InvalidOperationException("Failed to deserialize AssetsList.");
 
             return list.Assets;
@@ -43,7 +43,7 @@ public partial class HaloPsaApiClient
         }
     }
 
-    public async Task<Asset> GetAssetAsync(Int32 assetId, CancellationToken cancellationToken = default)
+    public async Task<Device> GetAssetAsync(Int32 assetId, CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Asset")
@@ -53,7 +53,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var asset = JsonSerializer.Deserialize<Asset>(json, Options.JsonSerializerOptions)
+            var asset = JsonSerializer.Deserialize<Device>(json, Options.JsonSerializerOptions)
                 ?? throw new InvalidOperationException("Failed to deserialize AssetsList.");
 
             return asset;
@@ -65,7 +65,7 @@ public partial class HaloPsaApiClient
         }
     }
 
-    public async Task<Asset> CreateAssetAsync(CreateAsset asset, CancellationToken cancellationToken = default)
+    public async Task<Device> CreateAssetAsync(Device asset, CancellationToken cancellationToken = default)
     {
         var payload = JsonSerializer.Serialize(asset, Options.JsonSerializerOptions);
 
@@ -73,6 +73,6 @@ public partial class HaloPsaApiClient
 
         Logger.LogDebug("Create Asset Response: {json}", json);
 
-        return JsonSerializer.Deserialize<Asset>(json, Options.JsonSerializerOptions)!;
+        return JsonSerializer.Deserialize<Device>(json, Options.JsonSerializerOptions)!;
     }
 }

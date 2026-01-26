@@ -21,7 +21,7 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
-    public async Task<IReadOnlyCollection<RecurringInvoice>> ListRecurringInvoicesAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyCollection<InvoiceHeader>> ListRecurringInvoicesAsync(CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("RecurringInvoice")
@@ -35,10 +35,10 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var result = JsonSerializer.Deserialize<GetRecurringInvoicesResult>(json, Options.JsonSerializerOptions)
+            var invoiceHeaders = JsonSerializer.Deserialize<List<InvoiceHeader>>(json, Options.JsonSerializerOptions)
                 ?? throw new InvalidOperationException("Failed to deserialize GetRecurringInvoicesResult.");
 
-            return result.Invoices;
+            return invoiceHeaders;
         }
         catch (Exception ex)
         {
@@ -47,7 +47,7 @@ public partial class HaloPsaApiClient
         }
     }
 
-    public async Task<RecurringInvoice> GetRecurringInvoiceAsync(Int32 recurringinvoiceId, CancellationToken cancellationToken = default)
+    public async Task<InvoiceHeader> GetRecurringInvoiceAsync(Int32 recurringinvoiceId, CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("RecurringInvoice")
@@ -57,7 +57,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var recurringinvoice = JsonSerializer.Deserialize<RecurringInvoice>(json, Options.JsonSerializerOptions)
+            var recurringinvoice = JsonSerializer.Deserialize<InvoiceHeader>(json, Options.JsonSerializerOptions)
                 ?? throw new InvalidOperationException("Failed to deserialize RecurringInvoice.");
 
             return recurringinvoice;
@@ -69,7 +69,7 @@ public partial class HaloPsaApiClient
         }
     }
 
-    public async Task<RecurringInvoice> CreateRecurringInvoiceAsync(CreateRecurringInvoice request, CancellationToken cancellationToken = default)
+    public async Task<InvoiceHeader> CreateRecurringInvoiceAsync(InvoiceHeader request, CancellationToken cancellationToken = default)
     {
         var payload = JsonSerializer.Serialize(request, Options.JsonSerializerOptions);
 
@@ -77,24 +77,22 @@ public partial class HaloPsaApiClient
 
         Logger.LogTrace("CreateRecurringInvoiceAsync Response: {json}", invoiceResponse);
 
-        var response = JsonSerializer.Deserialize<RecurringInvoice>(invoiceResponse, Options.JsonSerializerOptions)!;
+        var response = JsonSerializer.Deserialize<InvoiceHeader>(invoiceResponse, Options.JsonSerializerOptions)!;
 
         await CreateRecurringInvoiceSchedule(response, cancellationToken);
 
         return response;
     }
 
-    public Task UpdateRecurringInvoiceAsync(RecurringInvoice value, CancellationToken cancellationToken = default)
-        => throw new NotImplementedException();
-
-    public async Task CreateRecurringInvoiceSchedule(RecurringInvoice invoice, CancellationToken cancellationToken = default)
+    public async Task CreateRecurringInvoiceSchedule(InvoiceHeader invoice, CancellationToken cancellationToken = default)
     {
-        var schedule = new CreateRecurringInvoiceSchedule(invoice.Id)
+        var schedule = new StdRequest()
         {
+            Id = invoice.Id,
             Period = invoice.Schedule.Period,
-            LastCreated = invoice.Schedule.LastCreated,
+            Lastcreated = invoice.Schedule.Lastcreated,
             NextCreationDate = invoice.Schedule.NextCreationDate,
-            StartDate = invoice.Schedule.StartDate
+            Startdate = invoice.Schedule.Startdate
         };
 
         try
@@ -103,11 +101,16 @@ public partial class HaloPsaApiClient
             // STDREQUEST
             var json = await HttpPostAsync("Template", $"[{payload}]", cancellationToken);
 
-            var scheduleResponse = JsonSerializer.Deserialize<CreateRecurringScheduleResponse>(json, Options.JsonSerializerOptions)
-                ?? throw new InvalidOperationException("Failed to deserialize CreateRecurringScheduleResponse.");
+            var scheduleResponse = JsonSerializer.Deserialize<StdRequest>(json, Options.JsonSerializerOptions)
+                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(StdRequest)}.");
 
-            var poco = new UpdateRecurringScheduleRequest() { Id = scheduleResponse.Id, NextCreationDate = invoice.Schedule.NextCreationDate };
-            Logger.LogDebug("CreateRecurringInvoiceSchedule Response: {json}", json);
+            var poco = new UpdateRecurringScheduleRequest()
+            {
+                Id = scheduleResponse.Id,
+                NextCreationDate = invoice.Schedule.NextCreationDate.Value
+            };
+
+            Logger.LogTrace("CreateRecurringInvoiceSchedule Response: {json}", json);
         }
         catch (Exception ex)
         {
@@ -120,6 +123,6 @@ public partial class HaloPsaApiClient
     {
         public required Int32 Id { get; init; }
 
-        public required DateTime NextCreationDate { get; init; }
+        public required DateTimeOffset NextCreationDate { get; init; }
     }
 }

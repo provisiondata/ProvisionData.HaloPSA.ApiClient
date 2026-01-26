@@ -22,7 +22,7 @@ namespace ProvisionData.HaloPSA.ApiClient;
 public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApiClientOptions> options, TimeProvider timeProvider, ILogger<HaloPsaApiClient> logger)
     : HaloPsaApiClientBase(httpClient, options.Value, timeProvider, logger)
 {
-    public async Task<InstanceInfo> GetInstanceInfo(CancellationToken cancellationToken = default)
+    public async Task<InstanceInfo> GetInstanceInfoAsync(CancellationToken cancellationToken = default)
     {
         try
         {

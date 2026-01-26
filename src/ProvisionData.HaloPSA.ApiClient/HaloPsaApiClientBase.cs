@@ -17,14 +17,33 @@ using Microsoft.Extensions.Logging;
 using ProvisionData.HaloPSA.ApiClient.Models;
 using System.Net;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Text.Json;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
 public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClientOptions options, TimeProvider timeProvider, ILogger logger)
 {
-    private AuthToken? _accessToken;
+    private class Token
+    {
+        [JsonPropertyName("access_token")]
+        public String AccessToken { get; set; } = String.Empty;
+
+        [JsonPropertyName("token_type")]
+        public String TokenType { get; set; } = String.Empty;
+
+        [JsonPropertyName("expires_in")]
+        public Int32 ExpiresIn { get; set; }
+
+        [JsonPropertyName("refresh_token")]
+        public String RefreshToken { get; set; } = String.Empty;
+
+        public DateTimeOffset IssuedAt { get; set; }
+
+        public Boolean IsExpired(DateTimeOffset now)
+            => IssuedAt.AddSeconds(ExpiresIn) <= now;
+    }
+
+    private Token? _token;
 
     protected HttpClient HttpClient { get; } = httpClient;
     protected HaloPsaApiClientOptions Options { get; } = options;
@@ -35,7 +54,7 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
 
     private async Task EnsureAuthorizedAsync(CancellationToken cancellationToken)
     {
-        if (_accessToken?.IsExpired(TimeProvider.GetUtcNow()) != false)
+        if (_token?.IsExpired(TimeProvider.GetUtcNow()) != false)
         {
             await GetToken(cancellationToken);
         }
@@ -62,23 +81,23 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
 
             response.EnsureSuccessStatusCode();
 
-            _accessToken = JsonSerializer.Deserialize<AuthToken>(json, Options.JsonSerializerOptions);
+            _token = JsonSerializer.Deserialize<Token>(json, Options.JsonSerializerOptions);
 
-            if (_accessToken is null)
+            if (_token is null)
             {
-                throw new HaloPsaApiClientException("Failed to get access token.") { JSON = json };
+                throw new HaloPsaApiClientException("Failed to get access token.", json);
             }
 
-            _accessToken.IssuedAt = TimeProvider.GetUtcNow();
+            _token.IssuedAt = TimeProvider.GetUtcNow();
 
-            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken.AccessToken);
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token.AccessToken);
 
-            Logger.LogDebug("Access token acquired: {AccessToken}", _accessToken.AccessToken);
+            Logger.LogDebug("Access token acquired: {AccessToken}", _token.AccessToken);
 
         }
         catch (Exception ex)
         {
-            throw new HaloPsaApiClientException("Failed to get access token.", ex) { JSON = json };
+            throw new HaloPsaApiClientException("Failed to get access token.", json, ex);
         }
     }
 
@@ -89,7 +108,7 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
         var json = await HttpGetAsync(uri, cancellationToken);
 
         return JsonSerializer.Deserialize<T>(json, Options.JsonSerializerOptions)
-            ?? throw new InvalidOperationException($"Failed to deserialize {typeof(T).Name}.");
+            ?? throw new HaloApiException($"Failed to deserialize {typeof(T).Name}.", json);
     }
 
     protected async Task<String> HttpGetAsync(Uri uri, CancellationToken cancellationToken = default)
@@ -127,7 +146,7 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
     {
         Logger.LogTrace("HttpPostAsync: {api} => {requestBody}", api, requestBody);
 
-        var response = await HttpClient.PostAsync(Options.ApiUrl + api, new StringContent(requestBody, Encoding.UTF8, "application/json"), cancellationToken);
+        var response = await HttpClient.PostAsync(Options.ApiUrl + api, new StringContent(requestBody, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
         if (!response.IsSuccessStatusCode)
         {
@@ -142,7 +161,7 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
 
     protected async Task<String> HttpPutAsync(String api, String requestBody, CancellationToken cancellationToken = default)
     {
-        var response = await HttpClient.PutAsync(Options.ApiUrl + api, new StringContent(requestBody, Encoding.UTF8, "application/json"), cancellationToken);
+        var response = await HttpClient.PutAsync(Options.ApiUrl + api, new StringContent(requestBody, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
         if (!response.IsSuccessStatusCode)
         {

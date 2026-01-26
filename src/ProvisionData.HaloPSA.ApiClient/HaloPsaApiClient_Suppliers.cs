@@ -21,7 +21,7 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
-    public async Task<IReadOnlyList<Supplier>> ListSuppliersAsync()
+    public async Task<IReadOnlyList<Company>> ListSuppliersAsync()
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Supplier")
@@ -31,10 +31,10 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<SuppliersList>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize<List<Company>>(json, Options.JsonSerializerOptions)
                 ?? throw new InvalidOperationException("Failed to deserialize SuppliersList.");
 
-            return list.Suppliers;
+            return list;
         }
         catch (Exception ex)
         {

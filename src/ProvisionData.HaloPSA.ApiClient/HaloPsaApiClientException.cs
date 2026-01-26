@@ -20,13 +20,21 @@ public class HaloPsaApiClientException : Exception
     {
     }
 
-    public HaloPsaApiClientException(String? message) : base(message)
+    public HaloPsaApiClientException(String? message, String? json = null) : base(message)
+    {
+        JSON = json ?? String.Empty;
+    }
+
+    public HaloPsaApiClientException(String? message, Exception? innerException)
+        : base(message, innerException)
     {
     }
 
-    public HaloPsaApiClientException(String? message, Exception? innerException) : base(message, innerException)
+    public HaloPsaApiClientException(String? message, String? json, Exception? innerException)
+        : base(message, innerException)
     {
+        JSON = json ?? String.Empty;
     }
 
-    public String? JSON { get; init; }
+    public String JSON { get; } = String.Empty;
 }

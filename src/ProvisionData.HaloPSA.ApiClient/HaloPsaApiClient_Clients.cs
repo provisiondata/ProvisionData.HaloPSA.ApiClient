@@ -21,7 +21,7 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
-    public async Task<IEnumerable<ListClient>> ListClientsAsync(CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<AreaList>?> ListClientsAsync(CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Client")
@@ -32,7 +32,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<ListClientsResponse>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize<AreaView>(json, Options.JsonSerializerOptions)
                 ?? throw new InvalidOperationException("Failed to deserialize ListClientsResponse.");
 
             return list.Clients;
@@ -44,56 +44,33 @@ public partial class HaloPsaApiClient
         }
     }
 
-    public async Task<Client> GetClientAsync(Int32 clientId, CancellationToken cancellationToken = default)
+    public async Task<Area> GetCustomer(Int32 customerId, Boolean includeDetails = false, CancellationToken cancellationToken = default)
     {
+        // https://halo.pdsint.net/api/Client/172?includedetails=true
         var clientUri = Options.ApiUrl
             .AppendPathSegment("Client")
-            .AppendPathSegment(clientId)
+            .AppendPathSegment(customerId)
+            .AppendQueryParam("includedetails", includeDetails)
             .ToUri();
-        var clientJson = await HttpGetAsync(clientUri, cancellationToken);
-        Logger.LogTrace("GetClientAsync Client Response: {JSON}", clientJson);
 
-        var siteUri = Options.ApiUrl
-            .AppendPathSegment("Site")
-            .AppendQueryParam("client_id", clientId)
-            .ToUri();
-        var sitesJson = await HttpGetAsync(siteUri, cancellationToken);
-        Logger.LogTrace("GetClientAsync Site Response: {JSON}", sitesJson);
+        var json = await HttpGetAsync(clientUri, cancellationToken);
+        Logger.LogTrace("GetCustomer Response: {JSON}", json);
 
         try
         {
-            var client = JsonSerializer.Deserialize<Client>(clientJson, Options.JsonSerializerOptions)
-                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Client)}.");
+            var area = JsonSerializer.Deserialize<Area>(json, Options.JsonSerializerOptions)
+                ?? throw new HaloPsaApiClientException($"Failed to deserialize {nameof(Area)}.", json);
 
-            var sitesResponse = JsonSerializer.Deserialize<ListSitesResponse>(sitesJson, Options.JsonSerializerOptions)
-                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Site)}.");
-
-            foreach (var site in sitesResponse.Sites)
-            {
-                var addressUri = Options.ApiUrl
-                    .AppendPathSegment("Address")
-                    .AppendQueryParam("site_id", site.Id)
-                    .ToUri();
-
-                var addressesJson = await HttpGetAsync(addressUri, cancellationToken);
-                Logger.LogTrace("GetClientAsync Site Address Response: {JSON}", sitesJson);
-
-                site.Addresses = JsonSerializer.Deserialize<List<Address>>(addressesJson, Options.JsonSerializerOptions)
-                    ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Address)}.");
-            }
-
-            client.Sites = sitesResponse.Sites;
-
-            return client;
+            return area;
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to get client: {ClientID}", clientId);
+            Logger.LogError(ex, "Failed to get area: {ClientID}", customerId);
             throw;
         }
     }
 
-    public async Task<Client> GetClientAsync(String name, CancellationToken cancellationToken = default)
+    public async Task<Area> GetClientAsync(String name, CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Client")
@@ -104,21 +81,15 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var client = JsonSerializer.Deserialize<Client>(json, Options.JsonSerializerOptions)
-                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Client)}.");
+            var client = JsonSerializer.Deserialize<Area>(json, Options.JsonSerializerOptions)
+                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Area)}.");
 
             return client;
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to get client: {Name}", name);
+            Logger.LogError(ex, "Failed to get area: {Name}", name);
             throw;
         }
     }
-
-    public Task<Int32> CreateClientAsync(CreateClient client, CancellationToken cancellationToken = default)
-        => throw new NotImplementedException();
-
-    public Task UpdateClientAsync(Client value, CancellationToken cancellationToken = default)
-        => throw new NotImplementedException();
 }
