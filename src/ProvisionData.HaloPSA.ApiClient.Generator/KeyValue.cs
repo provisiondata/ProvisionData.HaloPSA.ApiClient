@@ -14,17 +14,8 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Generator;
 
-public class GeneratorOptions
+public class KeyValue
 {
-    public static String SectionName { get; set; } = nameof(GeneratorOptions);
-
-    public String SpecificationPath { get; set; } = String.Empty;
-    public String OutputPath { get; set; } = String.Empty;
-    public String Namespace { get; set; } = String.Empty;
-    public Boolean DeletePreviousOutputs { get; set; } = true;
-
-    public Boolean IsValid()
-        => !String.IsNullOrWhiteSpace(OutputPath)
-        && !String.IsNullOrWhiteSpace(Namespace)
-        && !String.IsNullOrWhiteSpace(SpecificationPath);
+    public String Key { get; set; } = String.Empty;
+    public String Value { get; set; } = String.Empty;
 }

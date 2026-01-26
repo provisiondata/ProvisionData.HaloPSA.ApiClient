@@ -14,22 +14,21 @@
 
 using Humanizer;
 using Microsoft.Extensions.Options;
-using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
 namespace ProvisionData.HaloPSA.ApiClient.Generator;
 
-public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOptions> options)
+public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOptions> options, IOptions<ModelChanges> modelChangesOptions)
 {
     private const String UnknownType = "UnknownType";
 
     private readonly ILogger<Generator> _logger = logger;
     private readonly GeneratorOptions _options = options.Value;
     private readonly Dictionary<String, String> _overrides
-        = new(options.Value.Overrides.ToDictionary(e => e.Key, e => e.Value), StringComparer.InvariantCultureIgnoreCase);
-    private readonly HashSet<String> _skip = new([.. options.Value.Skip], StringComparer.InvariantCultureIgnoreCase);
+        = new(modelChangesOptions.Value.Overrides.ToDictionary(e => e.Key, e => e.Value), StringComparer.InvariantCultureIgnoreCase);
+    private readonly HashSet<String> _skip = new([.. modelChangesOptions.Value.Skip], StringComparer.InvariantCultureIgnoreCase);
 
     public async Task GenerateAsync(CancellationToken cancellationToken = default)
     {
@@ -57,6 +56,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
             {
                 File.Delete(file);
             }
+
             _logger.LogInformation("Deleted {Count} previous output files in directory: {OutputPath}",
                 files.Length, _options.OutputPath);
         }
@@ -96,9 +96,6 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                 var className = NormalizeName(schemaEntry.Name);
                 var schema = schemaEntry.Value;
                 var code = String.Empty;
-
-                if (className is "KBEntry")
-                    Debugger.Break();
 
                 // Only generate for object types
                 if (schema.TryGetProperty("type", out var typeProp) && typeProp.GetString() == "object")

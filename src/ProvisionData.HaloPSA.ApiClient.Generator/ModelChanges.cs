@@ -14,17 +14,10 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Generator;
 
-public class GeneratorOptions
+public class ModelChanges
 {
-    public static String SectionName { get; set; } = nameof(GeneratorOptions);
+    public static String SectionName { get; set; } = nameof(ModelChanges);
 
-    public String SpecificationPath { get; set; } = String.Empty;
-    public String OutputPath { get; set; } = String.Empty;
-    public String Namespace { get; set; } = String.Empty;
-    public Boolean DeletePreviousOutputs { get; set; } = true;
-
-    public Boolean IsValid()
-        => !String.IsNullOrWhiteSpace(OutputPath)
-        && !String.IsNullOrWhiteSpace(Namespace)
-        && !String.IsNullOrWhiteSpace(SpecificationPath);
+    public KeyValue[] Overrides { get; set; } = [];
+    public String[] Skip { get; set; } = [];
 }

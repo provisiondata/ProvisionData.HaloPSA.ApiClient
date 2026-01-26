@@ -21,6 +21,7 @@ public class Program
         var builder = Host.CreateApplicationBuilder(args);
 
         builder.Services.Configure<GeneratorOptions>(builder.Configuration.GetSection(GeneratorOptions.SectionName));
+        builder.Services.Configure<ModelChanges>(builder.Configuration.GetSection(ModelChanges.SectionName));
 
         builder.Services.AddSingleton<Generator>();
 

@@ -101,15 +101,6 @@ public partial class HaloPsaApiClient
             // STDREQUEST
             var json = await HttpPostAsync("Template", $"[{payload}]", cancellationToken);
 
-            var scheduleResponse = JsonSerializer.Deserialize<StdRequest>(json, Options.JsonSerializerOptions)
-                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(StdRequest)}.");
-
-            var poco = new UpdateRecurringScheduleRequest()
-            {
-                Id = scheduleResponse.Id,
-                NextCreationDate = invoice.Schedule.NextCreationDate.Value
-            };
-
             Logger.LogTrace("CreateRecurringInvoiceSchedule Response: {json}", json);
         }
         catch (Exception ex)
@@ -117,12 +108,5 @@ public partial class HaloPsaApiClient
             Logger.LogError(ex, "CreateRecurringInvoiceSchedule failed.");
             throw;
         }
-    }
-
-    public class UpdateRecurringScheduleRequest
-    {
-        public required Int32 Id { get; init; }
-
-        public required DateTimeOffset NextCreationDate { get; init; }
     }
 }
