@@ -18,11 +18,11 @@ public partial class PropertyChange
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("oldvalue")]
-    public Object? Oldvalue { get; set; } = new Object();
+    public UnknownType? Oldvalue { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newvalue")]
-    public Object? Newvalue { get; set; } = new Object();
+    public UnknownType? Newvalue { get; set; } = new();
 
 }
 

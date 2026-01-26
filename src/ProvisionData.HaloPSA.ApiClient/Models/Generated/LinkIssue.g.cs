@@ -19,7 +19,7 @@ public partial class LinkIssue
     public Int32 ExternalLinkId { get; set; }
 
     [JsonPropertyName("ticket")]
-    public Faults Ticket { get; set; } = new();
+    public Tickets Ticket { get; set; } = new();
 
     [JsonPropertyName("product")]
     public ReleaseProduct Product { get; set; } = new();

@@ -13,7 +13,7 @@ public partial class AzureMonitorData
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("alertContext")]
-    public Object? AlertContext { get; set; } = new Object();
+    public UnknownType? AlertContext { get; set; } = new();
 
 }
 

@@ -29,6 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{97FDE202-0
 		docs\CONVENTIONS.md = docs\CONVENTIONS.md
 		docs\NUIGET.md = docs\NUIGET.md
 		docs\schema.sql = docs\schema.sql
+		swagger-20260125.json = swagger-20260125.json
 		docs\TODO.md = docs\TODO.md
 		docs\USAGE.md = docs\USAGE.md
 	EndProjectSection

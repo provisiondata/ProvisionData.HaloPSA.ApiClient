@@ -289,7 +289,7 @@ public partial class OrderHead
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("projects_to_invoice")]
-    public List<Faults>? ProjectsToInvoice { get; set; } = [];
+    public List<Tickets>? ProjectsToInvoice { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_create_invoice_invoice_date")]

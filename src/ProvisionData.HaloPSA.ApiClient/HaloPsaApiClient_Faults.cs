@@ -21,36 +21,36 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
-    public async Task<IReadOnlyList<Company>> ListSuppliersAsync()
+    public async Task<IReadOnlyList<Tickets>> ListFaultsAsync()
     {
         var uri = Options.ApiUrl
-            .AppendPathSegment("Supplier")
+            .AppendPathSegment("Tickets")
             .AppendQueryParam("count", 5000)
             .ToUri();
         var json = await HttpGetAsync(uri);
 
         try
         {
-            var list = JsonSerializer.Deserialize<List<Company>>(json, Options.JsonSerializerOptions)
-                ?? throw new InvalidOperationException("Failed to deserialize SuppliersList.");
+            var list = JsonSerializer.Deserialize<List<Tickets>>(json, Options.JsonSerializerOptions)
+                ?? throw new InvalidOperationException("Failed to deserialize FaultsList.");
 
             return list;
         }
         catch (Exception ex)
         {
-            throw new HaloApiException("Failed to deserialize AssetRoot.", json, ex);
+            throw new HaloApiException("Failed to deserialize FaultsList.", json, ex);
         }
     }
 
-    public async Task<String> CreateSupplierAsync(Supplier supplier)
+    public async Task<String> CreateFaultAsync(Tickets fault)
     {
-        ArgumentNullException.ThrowIfNull(supplier);
+        ArgumentNullException.ThrowIfNull(fault);
 
-        var payload = JsonSerializer.Serialize(supplier, Options.JsonSerializerOptions);
+        var payload = JsonSerializer.Serialize(fault, Options.JsonSerializerOptions);
 
-        var json = await HttpPostAsync("Supplier", $"[{payload}]");
+        var json = await HttpPostAsync("Tickets", $"[{payload}]");
 
-        Logger.LogDebug("Create Supplier Response: {json}", json);
+        Logger.LogDebug("Create Fault Response: {json}", json);
 
         return json;
     }

@@ -14,6 +14,7 @@
 
 using Humanizer;
 using Microsoft.Extensions.Options;
+using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -22,6 +23,8 @@ namespace ProvisionData.HaloPSA.ApiClient.Generator;
 
 public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOptions> options)
 {
+    private const String UnknownType = "UnknownType";
+
     private readonly ILogger<Generator> _logger = logger;
     private readonly GeneratorOptions _options = options.Value;
     private readonly Dictionary<String, String> _overrides
@@ -90,9 +93,12 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                     continue;
                 }
 
-                var className = ToPascalCase(schemaEntry.Name);
+                var className = NormalizeName(schemaEntry.Name);
                 var schema = schemaEntry.Value;
                 var code = String.Empty;
+
+                if (className is "KBEntry")
+                    Debugger.Break();
 
                 // Only generate for object types
                 if (schema.TryGetProperty("type", out var typeProp) && typeProp.GetString() == "object")
@@ -169,7 +175,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         {
             foreach (var prop in properties.EnumerateObject())
             {
-                var propName = ToPascalCase(prop.Name, className);
+                var propName = NormalizeName(prop.Name, className);
                 var propSchema = prop.Value;
 
                 var (type, typeName, isNullable) = MapType(propSchema, className);
@@ -261,8 +267,8 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         {
             if (propSchema.TryGetProperty("items", out var items))
             {
-                var (itemType, _) = MapRefOrType(items);
-                return (type, $"List<{ToPascalCase(itemType)}>", isNullable);
+                var (typeName, _) = MapRefOrType(items);
+                return (type, $"List<{NormalizeName(typeName)}>", isNullable);
             }
 
             return (type, "List<Object>", isNullable);
@@ -272,20 +278,20 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         resolvedType = resolvedType switch
         {
             "String" when String.Equals(format, "date-time", StringComparison.OrdinalIgnoreCase) => "DateTimeOffset",
-            _ => ToPascalCase(resolvedType, className)
+            _ => NormalizeName(resolvedType, className)
         };
 
         return (type, resolvedType, isNullable);
     }
 
-    private static (String typeName, Boolean isNullable) MapRefOrType(JsonElement schema)
+    private (String typeName, Boolean isNullable) MapRefOrType(JsonElement schema)
     {
         // Handle $ref first
         if (schema.TryGetProperty("$ref", out var refProp))
         {
             var refValue = refProp.GetString() ?? String.Empty;
             var name = refValue.Split('/').Last();
-            return (name, false);
+            return (NormalizeName(name), false);
         }
 
         if (schema.TryGetProperty("type", out var typeProp))
@@ -318,11 +324,11 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                 case "object":
                     return ("Object", false);
                 default:
-                    return ("Object", false);
+                    return (UnknownType, false);
             }
         }
 
-        return ("Object", false);
+        return (UnknownType, false);
     }
 
     private static Boolean IsValueType(String typeName)
@@ -338,7 +344,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         return IsValueType(typeName);
     }
 
-    private String ToPascalCase(String name, String? className = null)
+    private String NormalizeName(String name, String? className = null)
     {
         if (String.IsNullOrWhiteSpace(name) || IsKnownType(name))
         {

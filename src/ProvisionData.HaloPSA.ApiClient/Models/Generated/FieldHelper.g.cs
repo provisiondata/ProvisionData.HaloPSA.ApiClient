@@ -21,7 +21,7 @@ public partial class FieldHelper
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("value")]
-    public Object? Value { get; set; } = new Object();
+    public UnknownType? Value { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("display")]

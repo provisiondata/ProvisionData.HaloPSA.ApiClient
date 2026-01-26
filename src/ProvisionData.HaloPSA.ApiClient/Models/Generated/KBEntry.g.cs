@@ -339,7 +339,7 @@ public partial class KBEntry
     public List<Permalinks>? Kbpermalinks { get; set; } = [];
 
     [JsonPropertyName("negativeFeedbackTicket")]
-    public Faults NegativeFeedbackTicket { get; set; } = new();
+    public Tickets NegativeFeedbackTicket { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("generatetoken")]

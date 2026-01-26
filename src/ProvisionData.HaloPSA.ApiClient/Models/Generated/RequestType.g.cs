@@ -1471,7 +1471,7 @@ public partial class RequestType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("draft_json_content")]
-    public Object? DraftJsonContent { get; set; } = new Object();
+    public UnknownType? DraftJsonContent { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enable_close_fields_on_new_request")]

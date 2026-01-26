@@ -161,7 +161,7 @@ public partial class SupplierOrderHeader
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user")]
-    public Object? User { get; set; } = new Object();
+    public UnknownType? User { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_id")]

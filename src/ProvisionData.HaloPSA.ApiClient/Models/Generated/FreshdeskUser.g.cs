@@ -38,7 +38,7 @@ public partial class FreshdeskUser
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("avatar")]
-    public Object? Avatar { get; set; } = new Object();
+    public UnknownType? Avatar { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("company_id")]

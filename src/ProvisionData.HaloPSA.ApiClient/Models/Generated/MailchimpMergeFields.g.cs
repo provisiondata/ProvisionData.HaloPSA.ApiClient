@@ -10,11 +10,11 @@ public partial class MailchimpMergeFields
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("property1")]
-    public Object? Property1 { get; set; } = new Object();
+    public UnknownType? Property1 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("property2")]
-    public Object? Property2 { get; set; } = new Object();
+    public UnknownType? Property2 { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fname")]

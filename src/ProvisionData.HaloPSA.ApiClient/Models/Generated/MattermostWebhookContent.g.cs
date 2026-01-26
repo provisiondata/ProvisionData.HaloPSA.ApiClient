@@ -30,7 +30,7 @@ public partial class MattermostWebhookContent
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")]
-    public Object? Attachments { get; set; } = new Object();
+    public UnknownType? Attachments { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("type")]

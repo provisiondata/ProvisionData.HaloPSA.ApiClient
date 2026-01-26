@@ -26,7 +26,7 @@ public partial class ConfluenceWebhookEndpoint
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("filters")]
-    public Object? Filters { get; set; } = new Object();
+    public UnknownType? Filters { get; set; } = new();
 
     [JsonPropertyName("enabled")]
     public Boolean Enabled { get; set; }

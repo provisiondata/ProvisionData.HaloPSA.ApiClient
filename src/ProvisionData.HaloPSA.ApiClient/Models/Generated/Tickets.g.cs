@@ -6,7 +6,7 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
-public partial class Faults
+public partial class Tickets
 {
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }

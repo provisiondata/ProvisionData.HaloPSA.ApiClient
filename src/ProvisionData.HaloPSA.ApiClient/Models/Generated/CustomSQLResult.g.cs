@@ -10,7 +10,7 @@ public partial class CustomSQLResult
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sql_result")]
-    public Object? SqlResult { get; set; } = new Object();
+    public UnknownType? SqlResult { get; set; } = new();
 
     [JsonPropertyName("success")]
     public Boolean Success { get; set; }

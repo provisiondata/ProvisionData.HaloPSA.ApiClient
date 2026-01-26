@@ -18,7 +18,7 @@ public partial class PartsLookup
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lookup_value_obj")]
-    public Object? LookupValueObj { get; set; } = new Object();
+    public UnknownType? LookupValueObj { get; set; } = new();
 
     [JsonPropertyName("id")]
     public Int32 Id { get; set; }

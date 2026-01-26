@@ -34,7 +34,7 @@ public partial class SharePointGraphSite
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("root")]
-    public Object? Root { get; set; } = new Object();
+    public UnknownType? Root { get; set; } = new();
 
     [JsonPropertyName("siteCollection")]
     public SharePointSitecollection SiteCollection { get; set; } = new();

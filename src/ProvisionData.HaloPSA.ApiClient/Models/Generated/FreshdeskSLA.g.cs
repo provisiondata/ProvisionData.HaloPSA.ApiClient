@@ -46,11 +46,11 @@ public partial class FreshdeskSLA
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("applicable_to")]
-    public Object? ApplicableTo { get; set; } = new Object();
+    public UnknownType? ApplicableTo { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("escalation")]
-    public Object? Escalation { get; set; } = new Object();
+    public UnknownType? Escalation { get; set; } = new();
 
 }
 

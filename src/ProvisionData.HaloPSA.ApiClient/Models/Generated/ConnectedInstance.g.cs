@@ -45,7 +45,7 @@ public partial class ConnectedInstance
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_test_result")]
-    public Object? TestResult { get; set; } = new Object();
+    public UnknownType? TestResult { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")]

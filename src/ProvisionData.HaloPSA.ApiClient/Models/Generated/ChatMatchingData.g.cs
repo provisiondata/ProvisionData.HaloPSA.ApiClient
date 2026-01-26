@@ -18,7 +18,7 @@ public partial class ChatMatchingData
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("json_content")]
-    public Object? JsonContent { get; set; } = new Object();
+    public UnknownType? JsonContent { get; set; } = new();
 
 }
 

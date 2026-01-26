@@ -14,7 +14,7 @@ public partial class StringObjectDbTypeTuple
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item2")]
-    public Object? Item2 { get; set; } = new Object();
+    public UnknownType? Item2 { get; set; } = new();
 
     [JsonPropertyName("item3")]
     public DbType Item3 { get; set; } = new();
