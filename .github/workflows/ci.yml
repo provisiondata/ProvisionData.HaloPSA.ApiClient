@@ -13,7 +13,6 @@ on:
 jobs:
   build-test-pack-publish:
     runs-on: windows-latest
-    environment: production
     permissions:
       contents: read
       id-token: write  # enable GitHub OIDC token issuance for this job
