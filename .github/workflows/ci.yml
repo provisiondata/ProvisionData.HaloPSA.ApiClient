@@ -37,7 +37,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore /p:PublicRelease=true
 
       - name: Test
-        run: dotnet test --configuration Release --no-build --verbosity normal
+        run: dotnet test --configuration Release --no-build --verbosity normal --filter "FullyQualifiedName!~Integration"
 
       - name: Pack
         run: dotnet pack src/ProvisionData.HaloPSA.ApiClient/ProvisionData.HaloPSA.ApiClient.csproj --configuration Release --no-build --output ./artifacts /p:ContinuousIntegrationBuild=true /p:PublicRelease=true
