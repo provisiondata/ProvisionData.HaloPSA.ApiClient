@@ -16,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
@@ -28,6 +29,8 @@ public static class HaloPsaApiClientExtensions
     /// <param name="configuration">The configuration instance.</param>
     /// <param name="configurationSectionName">The configuration section name. Defaults to "HaloPsaApiClient".</param>
     /// <returns>An <see cref="IHttpClientBuilder"/> for further configuration.</returns>
+    [UnconditionalSuppressMessage("Trimming", "IL2026", Justification = "HaloPsaApiClientOptions properties are simple types")]
+    [UnconditionalSuppressMessage("AOT", "IL3050", Justification = "HaloPsaApiClientOptions properties are simple types")]
     public static IHttpClientBuilder AddHaloPsaApiClient(this IServiceCollection services, IConfiguration configuration)
     {
         ArgumentNullException.ThrowIfNull(services);

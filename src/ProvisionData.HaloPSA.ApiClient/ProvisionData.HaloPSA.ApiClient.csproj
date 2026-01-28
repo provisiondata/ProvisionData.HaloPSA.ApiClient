@@ -5,6 +5,10 @@
         <PackageId>ProvisionData.HaloPSA.ApiClient</PackageId>
         <Title>ProvisionData HaloPSA API Client</Title>
         <Description>HaloPSA API Client for .NET providing typed models and client helpers.</Description>
+        <PackageTags>HaloPSA;API;Client</PackageTags>
+
+        <IsTrimmable>True</IsTrimmable>
+        <IsAotCompatible>True</IsAotCompatible>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,7 +20,6 @@
         <PackageReference Include="Flurl" Version="4.0.0" />
         <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
         <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.2" />
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All" />
         <PackageReference Include="Polly" Version="8.6.5" />
     </ItemGroup>
 

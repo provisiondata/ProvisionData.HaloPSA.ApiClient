@@ -14,11 +14,14 @@
 
 using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
 using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Services;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator;
 
 public class Program
 {
+    [UnconditionalSuppressMessage("Trimming", "IL2026", Justification = "GeneratorOptions and ModelChanges properties are simple types")]
+    [UnconditionalSuppressMessage("AOT", "IL3050", Justification = "GeneratorOptions and ModelChanges properties are simple types")]
     public static async Task Main(String[] args)
     {
         var builder = Host.CreateApplicationBuilder(args);

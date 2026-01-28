@@ -21,6 +21,11 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
+    /// <summary>
+    /// Lists all items from the HaloPSA API.
+    /// </summary>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>A collection of items.</returns>
     public async Task<IReadOnlyCollection<Item>> ListItemsAsync(CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
@@ -31,7 +36,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<List<Item>>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.ListItem)
                 ?? throw new InvalidOperationException("Failed to deserialize ItemsList.");
 
             return list;
@@ -43,6 +48,12 @@ public partial class HaloPsaApiClient
         }
     }
 
+    /// <summary>
+    /// Gets a specific item by ID.
+    /// </summary>
+    /// <param name="itemId">The item ID.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The item details.</returns>
     public async Task<Item> GetItemAsync(Int32 itemId, CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
@@ -53,7 +64,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var item = JsonSerializer.Deserialize<Item>(json, Options.JsonSerializerOptions)
+            var item = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Item)
                 ?? throw new InvalidOperationException("Failed to deserialize ItemsList.");
 
             return item;
@@ -65,14 +76,20 @@ public partial class HaloPsaApiClient
         }
     }
 
+    /// <summary>
+    /// Creates a new item in HaloPSA.
+    /// </summary>
+    /// <param name="item">The item to create.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The created item.</returns>
     public async Task<Item> CreateItemAsync(Item item, CancellationToken cancellationToken = default)
     {
-        var payload = JsonSerializer.Serialize(item, Options.JsonSerializerOptions);
+        var payload = JsonSerializer.Serialize(item, HaloPsaApiJsonSerializerContext.Default.Item);
 
         var json = await HttpPostAsync("Item", $"[{payload}]", cancellationToken);
 
         Logger.LogDebug("Create Item Response: {json}", json);
 
-        return JsonSerializer.Deserialize<Item>(json, Options.JsonSerializerOptions)!;
+        return JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Item)!;
     }
 }

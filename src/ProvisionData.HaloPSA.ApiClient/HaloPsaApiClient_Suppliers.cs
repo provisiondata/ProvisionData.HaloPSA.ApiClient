@@ -21,6 +21,10 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
+    /// <summary>
+    /// Lists all suppliers from the HaloPSA API.
+    /// </summary>
+    /// <returns>A collection of companies representing suppliers.</returns>
     public async Task<IReadOnlyList<Company>> ListSuppliersAsync()
     {
         var uri = Options.ApiUrl
@@ -31,7 +35,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<List<Company>>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.ListCompany)
                 ?? throw new InvalidOperationException("Failed to deserialize SuppliersList.");
 
             return list;
@@ -42,11 +46,16 @@ public partial class HaloPsaApiClient
         }
     }
 
+    /// <summary>
+    /// Creates a new supplier in HaloPSA.
+    /// </summary>
+    /// <param name="supplier">The supplier to create.</param>
+    /// <returns>The JSON response from the API.</returns>
     public async Task<String> CreateSupplierAsync(Supplier supplier)
     {
         ArgumentNullException.ThrowIfNull(supplier);
 
-        var payload = JsonSerializer.Serialize(supplier, Options.JsonSerializerOptions);
+        var payload = JsonSerializer.Serialize(supplier, HaloPsaApiJsonSerializerContext.Default.Supplier);
 
         var json = await HttpPostAsync("Supplier", $"[{payload}]");
 

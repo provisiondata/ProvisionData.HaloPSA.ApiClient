@@ -16,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using ProvisionData.HaloPSA.ApiClient.Testing;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;
 
@@ -25,6 +26,9 @@ public class ApiClientTestFixture : IntegrationTestFixture
 
     public ApiClientTestData TestData
         => _testData ??= Services.GetRequiredService<IOptions<ApiClientTestData>>().Value;
+    
+    [UnconditionalSuppressMessage("Trimming", "IL2026", Justification = "ApiClientTestData and HaloPsaApiClientOptions properties are simple types")]
+    [UnconditionalSuppressMessage("AOT", "IL3050", Justification = "ApiClientTestData and HaloPsaApiClientOptions properties are simple types")]
     protected override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<ApiClientTestData>(configuration.GetSection(nameof(ApiClientTestData)));

@@ -14,6 +14,7 @@
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProvisionData.HaloPSA.ApiClient.Testing;
 
@@ -24,6 +25,7 @@ public abstract class IntegrationTestBase<TSut, TFixture> :
     where TFixture : class, ITestFixture
 {
     private readonly TFixture _fixture;
+    [UnconditionalSuppressMessage("Trimming", "IL2091", Justification = "Lazy<TSut> uses a factory function, parameterless constructor not required")]
     private readonly Lazy<TSut> _lazySut;
     private Boolean _disposed;
 
@@ -31,6 +33,7 @@ public abstract class IntegrationTestBase<TSut, TFixture> :
     {
         _fixture = fixture;
         _fixture.BeginTest();
+        // The Lazy<TSut> factory retrieves from DI, so no parameterless constructor is needed
         _lazySut = new Lazy<TSut>(() => _fixture.Services.GetRequiredService<TSut>());
     }
 

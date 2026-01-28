@@ -18,49 +18,63 @@ using ProvisionData.HaloPSA.ApiClient.Models;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using System.Text.Json.Serialization.Metadata;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
+/// <summary>
+/// Internal token model for OAuth authentication responses.
+/// </summary>
+internal sealed class AuthToken
+{
+    [JsonPropertyName("access_token")]
+    public String AccessToken { get; set; } = String.Empty;
+
+    [JsonPropertyName("token_type")]
+    public String TokenType { get; set; } = String.Empty;
+
+    [JsonPropertyName("expires_in")]
+    public Int32 ExpiresIn { get; set; }
+
+    [JsonPropertyName("refresh_token")]
+    public String RefreshToken { get; set; } = String.Empty;
+
+    public DateTimeOffset IssuedAt { get; set; }
+
+    public Boolean IsExpired(DateTimeOffset now)
+        => IssuedAt.AddSeconds(ExpiresIn) <= now;
+}
+
+/// <summary>
+/// Source-generated JSON serializer context for internal authentication types.
+/// </summary>
+[JsonSerializable(typeof(AuthToken))]
+[JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
+internal partial class AuthJsonSerializerContext : JsonSerializerContext
+{
+}
+
+/// <summary>
+/// Base class for HaloPSA API clients providing HTTP operations and authentication.
+/// </summary>
 public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClientOptions options, TimeProvider timeProvider, ILogger logger)
 {
-    private class Token
-    {
-        [JsonPropertyName("access_token")]
-        public String AccessToken { get; set; } = String.Empty;
-
-        [JsonPropertyName("token_type")]
-        public String TokenType { get; set; } = String.Empty;
-
-        [JsonPropertyName("expires_in")]
-        public Int32 ExpiresIn { get; set; }
-
-        [JsonPropertyName("refresh_token")]
-        public String RefreshToken { get; set; } = String.Empty;
-
-        public DateTimeOffset IssuedAt { get; set; }
-
-        public Boolean IsExpired(DateTimeOffset now)
-            => IssuedAt.AddSeconds(ExpiresIn) <= now;
-    }
-
-    private Token? _token;
+    private AuthToken? _token;
 
     protected HttpClient HttpClient { get; } = httpClient;
     protected HaloPsaApiClientOptions Options { get; } = options;
     protected TimeProvider TimeProvider { get; } = timeProvider;
-
-    public JsonSerializerOptions JsonSerializerOptions => Options.JsonSerializerOptions;
     public ILogger Logger { get; } = logger;
 
     private async Task EnsureAuthorizedAsync(CancellationToken cancellationToken)
     {
         if (_token?.IsExpired(TimeProvider.GetUtcNow()) != false)
         {
-            await GetToken(cancellationToken);
+            await GetTokenAsync(cancellationToken);
         }
     }
 
-    private async Task GetToken(CancellationToken cancellationToken)
+    private async Task GetTokenAsync(CancellationToken cancellationToken)
     {
         var json = String.Empty;
         try
@@ -81,7 +95,7 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
 
             response.EnsureSuccessStatusCode();
 
-            _token = JsonSerializer.Deserialize<Token>(json, Options.JsonSerializerOptions);
+            _token = JsonSerializer.Deserialize(json, AuthJsonSerializerContext.Default.AuthToken);
 
             if (_token is null)
             {
@@ -101,13 +115,21 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
         }
     }
 
-    protected async Task<T> GetAsync<T>(Uri uri, CancellationToken cancellationToken = default)
+    /// <summary>
+    /// Performs an HTTP GET request and deserializes the response to the specified type.
+    /// </summary>
+    /// <typeparam name="T">The type to deserialize to. Must be registered in <see cref="HaloPsaApiJsonSerializerContext"/>.</typeparam>
+    /// <param name="uri">The URI to request.</param>
+    /// <param name="typeInfo">The JSON type info for AOT-compatible deserialization.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The deserialized response.</returns>
+    protected async Task<T> GetAsync<T>(Uri uri, JsonTypeInfo<T> typeInfo, CancellationToken cancellationToken = default)
     {
         await EnsureAuthorizedAsync(cancellationToken);
 
         var json = await HttpGetAsync(uri, cancellationToken);
 
-        return JsonSerializer.Deserialize<T>(json, Options.JsonSerializerOptions)
+        return JsonSerializer.Deserialize(json, typeInfo)
             ?? throw new HaloApiException($"Failed to deserialize {typeof(T).Name}.", json);
     }
 
@@ -174,10 +196,10 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
         return await response.Content.ReadAsStringAsync(cancellationToken);
     }
 
-    public async Task<String> HttpGetPage(String api, Int32 pagenumber, CancellationToken cancellationToken = default)
-        => await HttpGetPage(api, pagenumber, Options.PageSize, cancellationToken);
+    public async Task<String> HttpGetPageAsync(String api, Int32 pagenumber, CancellationToken cancellationToken = default)
+        => await HttpGetPageAsync(api, pagenumber, Options.PageSize, cancellationToken);
 
-    public async Task<String> HttpGetPage(String api, Int32 pagenumber, Int32 pageSize, CancellationToken cancellationToken = default)
+    public async Task<String> HttpGetPageAsync(String api, Int32 pagenumber, Int32 pageSize, CancellationToken cancellationToken = default)
     {
         var url = api.AppendQueryParam("pageinate", true)
                      .AppendQueryParam("page_no", pagenumber)

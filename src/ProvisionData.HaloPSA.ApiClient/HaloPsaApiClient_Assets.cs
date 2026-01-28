@@ -21,6 +21,11 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
+    /// <summary>
+    /// Lists all assets from the HaloPSA API.
+    /// </summary>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>A collection of device list items.</returns>
     public async Task<IReadOnlyCollection<DeviceList>?> ListAssetsAsync(CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
@@ -31,7 +36,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<DeviceView>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.DeviceView)
                 ?? throw new InvalidOperationException("Failed to deserialize AssetsList.");
 
             return list.Assets;
@@ -43,6 +48,12 @@ public partial class HaloPsaApiClient
         }
     }
 
+    /// <summary>
+    /// Gets a specific asset by ID.
+    /// </summary>
+    /// <param name="assetId">The asset ID.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The device details.</returns>
     public async Task<Device> GetAssetAsync(Int32 assetId, CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
@@ -53,7 +64,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var asset = JsonSerializer.Deserialize<Device>(json, Options.JsonSerializerOptions)
+            var asset = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Device)
                 ?? throw new InvalidOperationException("Failed to deserialize AssetsList.");
 
             return asset;
@@ -65,14 +76,20 @@ public partial class HaloPsaApiClient
         }
     }
 
+    /// <summary>
+    /// Creates a new asset in HaloPSA.
+    /// </summary>
+    /// <param name="asset">The asset to create.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The created device.</returns>
     public async Task<Device> CreateAssetAsync(Device asset, CancellationToken cancellationToken = default)
     {
-        var payload = JsonSerializer.Serialize(asset, Options.JsonSerializerOptions);
+        var payload = JsonSerializer.Serialize(asset, HaloPsaApiJsonSerializerContext.Default.Device);
 
         var json = await HttpPostAsync("Asset", $"[{payload}]", cancellationToken);
 
         Logger.LogDebug("Create Asset Response: {json}", json);
 
-        return JsonSerializer.Deserialize<Device>(json, Options.JsonSerializerOptions)!;
+        return JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Device)!;
     }
 }

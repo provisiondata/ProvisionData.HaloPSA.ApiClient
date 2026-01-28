@@ -1,46 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project>
 
     <PropertyGroup>
-        <TargetFramework>net10.0</TargetFramework>
+
+        <TargetFrameworks>net10.0</TargetFrameworks>
+
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <DebugType>portable</DebugType>
+        <IsPublishable>False</IsPublishable>
+        <NoWarn>1701;1702</NoWarn>
 
         <!-- NuGet package metadata -->
         <Authors>ProvisionData</Authors>
         <Company>Provision Data Systems Inc.</Company>
+        <Copyright>Provision Data Systems Inc.</Copyright>
         <RepositoryUrl>https://github.com/provisiondata/ProvisionData.HaloPSA.ApiClient</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
         <PackageProjectUrl>https://github.com/provisiondata/ProvisionData.HaloPSA.ApiClient</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <ApplicationIcon>..\..\pdsi.ico</ApplicationIcon>
+        <PackageIcon>pdsi.png</PackageIcon>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <Copyright>Provision Data Systems Inc.</Copyright>
-        <PackageTags>HaloPSA;API;Client</PackageTags>
-        <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
-        <PublishRepositoryUrl>true</PublishRepositoryUrl>
-        <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <RepositoryBranch>main</RepositoryBranch>
         <RepositoryCommit>$(SourceRevisionId)</RepositoryCommit>
+
+        <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Debug'">false</GeneratePackageOnBuild>
+        <PublishRepositoryUrl Condition="'$(Configuration)' == 'Debug'">false</PublishRepositoryUrl>
+        <IncludeSymbols Condition="'$(Configuration)' == 'Debug'">false</IncludeSymbols>
+
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+        <NuGetAuditMode>direct</NuGetAuditMode>
+        <NeutralLanguage>en</NeutralLanguage>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 
         <!-- GitVersioning -->
         <GitVersionBaseDirectory>$(MSBuildThisFileDirectory)</GitVersionBaseDirectory>
         <NBGV_ThisAssemblyNamespace>ProvisionData</NBGV_ThisAssemblyNamespace>
+        <NBGV_ThisAssemblyIncludesPackageVersion>true</NBGV_ThisAssemblyIncludesPackageVersion>
+    </PropertyGroup>
+
+    <!-- CI build settings -->
+    <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
 
     <!-- Ensure README and LICENSE are packed -->
     <ItemGroup>
-        <None Include="../../README.md" Pack="true" PackagePath="/" />
-        <None Include="../../LICENSE.md" Pack="true" PackagePath="/" />
-        <None Include="../../pdsi.png" Pack="true" PackagePath="\"/>
+        <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="/" />
+        <None Include="$(MSBuildThisFileDirectory)LICENSE.md" Pack="true" PackagePath="/" />
+        <None Include="$(MSBuildThisFileDirectory)pdsi.png" Pack="true" PackagePath="/"/>
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Nerdbank.GitVersioning" Condition="!Exists('packages.config')">
             <PrivateAssets>all</PrivateAssets>
             <Version>3.9.50</Version>
+        </PackageReference>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
 

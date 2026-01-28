@@ -70,6 +70,7 @@ public class HaloPsaApiClientTests
         options.PageSize.ShouldBe(50);
         options.AuthUrl.ShouldBe(String.Empty);
         options.ApiUrl.ShouldBe(String.Empty);
-        options.JsonSerializerOptions.ShouldNotBeNull();
+        options.ClientId.ShouldBe(String.Empty);
+        options.ClientSecret.ShouldBe(String.Empty);
     }
 }

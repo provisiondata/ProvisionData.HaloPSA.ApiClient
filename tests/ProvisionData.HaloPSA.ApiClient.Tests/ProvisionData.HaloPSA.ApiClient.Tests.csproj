@@ -17,6 +17,12 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Using Include="Xunit" />
+        <Using Include="Moq" />
+        <Using Include="Shouldly" />
+    </ItemGroup>
+
+    <ItemGroup>
 
         <PackageReference Include="coverlet.collector" Version="6.0.4">
             <PrivateAssets>all</PrivateAssets>
@@ -28,7 +34,7 @@
         <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" Version="10.2.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
         <PackageReference Include="Moq" Version="4.20.72" />
-        <PackageReference Include="Scrutor" Version="4.2.0" />
+        <PackageReference Include="Scrutor" Version="7.0.0" />
         <PackageReference Include="Shouldly" Version="4.3.0" />
         <PackageReference Include="xunit.analyzers" Version="1.27.0">
             <PrivateAssets>all</PrivateAssets>
@@ -44,12 +50,6 @@
     <ItemGroup>
         <ProjectReference Include="..\..\src\ProvisionData.HaloPSA.ApiClient\ProvisionData.HaloPSA.ApiClient.csproj" />
         <ProjectReference Include="..\..\src\ProvisionData.HaloPSA.ApiClient.Generator\ProvisionData.HaloPSA.ApiClient.ModelGenerator.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Using Include="Xunit" />
-        <Using Include="Moq" />
-        <Using Include="Shouldly" />
     </ItemGroup>
 
 </Project>

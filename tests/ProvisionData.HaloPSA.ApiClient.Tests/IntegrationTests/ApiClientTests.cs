@@ -40,7 +40,7 @@ public class ApiClientTests(ApiClientTestFixture fixture)
         // Arrange
 
         // Act
-        var client = await SUT.GetCustomer(TestData.TestCompanyId, cancellationToken: CancellationToken);
+        var client = await SUT.GetCustomerAsync(TestData.TestCompanyId, cancellationToken: CancellationToken);
 
         // Assert
         client.ShouldNotBeNull();
@@ -57,7 +57,7 @@ public class ApiClientTests(ApiClientTestFixture fixture)
         };
 
         // Act
-        var client = await SUT.GetCustomer(TestData.TestCompanyId, cancellationToken: CancellationToken);
+        var client = await SUT.GetCustomerAsync(TestData.TestCompanyId, cancellationToken: CancellationToken);
 
         // Assert
         client.ShouldNotBeNull();

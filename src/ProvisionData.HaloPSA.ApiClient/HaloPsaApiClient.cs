@@ -19,15 +19,23 @@ using ProvisionData.HaloPSA.ApiClient.Models;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
+/// <summary>
+/// HaloPSA API client providing typed access to the HaloPSA REST API.
+/// </summary>
 public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApiClientOptions> options, TimeProvider timeProvider, ILogger<HaloPsaApiClient> logger)
     : HaloPsaApiClientBase(httpClient, options.Value, timeProvider, logger)
 {
+    /// <summary>
+    /// Gets information about the HaloPSA instance.
+    /// </summary>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The instance information.</returns>
     public async Task<InstanceInfo> GetInstanceInfoAsync(CancellationToken cancellationToken = default)
     {
         try
         {
             var uri = Options.ApiUrl.AppendPathSegment("InstanceInfo").ToUri();
-            var info = await GetAsync<InstanceInfo>(uri, cancellationToken);
+            var info = await GetAsync(uri, HaloPsaApiJsonSerializerContext.Default.InstanceInfo, cancellationToken);
             Logger.LogInformation("{Instance}", info);
 
             return info;

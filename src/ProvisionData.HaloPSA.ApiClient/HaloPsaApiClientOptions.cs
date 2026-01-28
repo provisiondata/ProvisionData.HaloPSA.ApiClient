@@ -12,22 +12,40 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using System.Text.Json;
-
 namespace ProvisionData.HaloPSA.ApiClient;
 
+/// <summary>
+/// Configuration options for the HaloPSA API client.
+/// </summary>
 public class HaloPsaApiClientOptions
 {
+    /// <summary>
+    /// Gets or sets the configuration section name used when binding from IConfiguration.
+    /// </summary>
     public static String SectionName { get; set; } = nameof(HaloPsaApiClientOptions);
 
+    /// <summary>
+    /// Gets or sets the authentication URL for the HaloPSA OAuth endpoint.
+    /// </summary>
     public String AuthUrl { get; set; } = String.Empty;
 
+    /// <summary>
+    /// Gets or sets the base API URL for the HaloPSA REST API.
+    /// </summary>
     public String ApiUrl { get; set; } = String.Empty;
+
+    /// <summary>
+    /// Gets or sets the OAuth client ID.
+    /// </summary>
     public String ClientId { get; set; } = String.Empty;
 
+    /// <summary>
+    /// Gets or sets the OAuth client secret.
+    /// </summary>
     public String ClientSecret { get; set; } = String.Empty;
 
+    /// <summary>
+    /// Gets or sets the default page size for paginated API requests.
+    /// </summary>
     public Int32 PageSize { get; set; } = 50;
-
-    public JsonSerializerOptions JsonSerializerOptions { get; set; } = new();
 }

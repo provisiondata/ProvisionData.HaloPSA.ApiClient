@@ -21,6 +21,11 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 public partial class HaloPsaApiClient
 {
+    /// <summary>
+    /// Lists all clients from the HaloPSA API.
+    /// </summary>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>A collection of area list items representing clients.</returns>
     public async Task<IEnumerable<AreaList>?> ListClientsAsync(CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
@@ -32,7 +37,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var list = JsonSerializer.Deserialize<AreaView>(json, Options.JsonSerializerOptions)
+            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.AreaView)
                 ?? throw new InvalidOperationException("Failed to deserialize ListClientsResponse.");
 
             return list.Clients;
@@ -44,7 +49,14 @@ public partial class HaloPsaApiClient
         }
     }
 
-    public async Task<Area> GetCustomer(Int32 customerId, Boolean includeDetails = false, CancellationToken cancellationToken = default)
+    /// <summary>
+    /// Gets a customer by ID.
+    /// </summary>
+    /// <param name="customerId">The customer ID.</param>
+    /// <param name="includeDetails">Whether to include detailed information.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The area representing the customer.</returns>
+    public async Task<Area> GetCustomerAsync(Int32 customerId, Boolean includeDetails = false, CancellationToken cancellationToken = default)
     {
         // https://halo.pdsint.net/api/Client/172?includedetails=true
         var clientUri = Options.ApiUrl
@@ -54,11 +66,11 @@ public partial class HaloPsaApiClient
             .ToUri();
 
         var json = await HttpGetAsync(clientUri, cancellationToken);
-        Logger.LogTrace("GetCustomer Response: {JSON}", json);
+        Logger.LogTrace("GetCustomerAsync Response: {JSON}", json);
 
         try
         {
-            var area = JsonSerializer.Deserialize<Area>(json, Options.JsonSerializerOptions)
+            var area = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Area)
                 ?? throw new HaloPsaApiClientException($"Failed to deserialize {nameof(Area)}.", json);
 
             return area;
@@ -70,6 +82,12 @@ public partial class HaloPsaApiClient
         }
     }
 
+    /// <summary>
+    /// Gets a client by name.
+    /// </summary>
+    /// <param name="name">The client name to search for.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The area representing the client.</returns>
     public async Task<Area> GetClientAsync(String name, CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
@@ -81,7 +99,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var client = JsonSerializer.Deserialize<Area>(json, Options.JsonSerializerOptions)
+            var client = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Area)
                 ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Area)}.");
 
             return client;
