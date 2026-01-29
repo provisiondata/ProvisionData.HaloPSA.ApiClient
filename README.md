@@ -6,6 +6,10 @@
 
 A .NET API client library for **HaloPSA** (a Professional Services Automation platform). It provides typed .NET models and HTTP client wrappers to interact with the HaloPSA REST API.
 
+> **NOTE**:It is early days for this library and it is still under active development. The API will change as more endpoints are added and feedback is received.
+> Specifically, many of the Halo PSA API types are named differently than what is exposed in the UI. As more endpoints are added, the naming conventions will be
+> aligned with the UI which means the models and some of their properties will change.
+
 ## Installation
 
 
