@@ -46,7 +46,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
             {
                 isInvalid = true;
                 _logger.LogWarning("Invalid Change: {JsonModelName}{ClassOrPropertyName}  Errors:\n{Error}\n",
-                    change.JsonModelName, change.ClientClasslName ?? change.JsonPropertyName ?? String.Empty, error);
+                    change.JsonModelName, change.ClientClassName ?? change.JsonPropertyName ?? String.Empty, error);
                 continue;
             }
 
@@ -76,9 +76,9 @@ public partial class ModelChangeProvider : IModelChangeProvider
 
         var key = GetKey(jsonModelName);
 
-        if (_changes.TryGetValue(key, out var change) && !String.IsNullOrEmpty(change.ClientClasslName))
+        if (_changes.TryGetValue(key, out var change) && !String.IsNullOrEmpty(change.ClientClassName))
         {
-            return change.ClientClasslName;
+            return change.ClientClassName;
         }
 
         return jsonModelName.ToPascalCase();
@@ -162,7 +162,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
         ArgumentException.ThrowIfNullOrWhiteSpace(change.JsonModelName);
         ArgumentException.ThrowIfNullOrWhiteSpace(change.JsonPropertyName);
 
-        change.ClientClasslName = GetClassName(change.JsonModelName);
+        change.ClientClassName = GetClassName(change.JsonModelName);
         change.ClientPropertyName = GetPropertyName(change.JsonModelName, change.JsonPropertyName);
 
         if (jsonschema.TryGetProperty("type", out var typeProp))

@@ -27,7 +27,7 @@ public class ModelChangeValidatorTests
         var change = new ModelChange
         {
             JsonModelName = null!,
-            ClientClasslName = null,
+            ClientClassName = null,
             JsonPropertyName = null,
             ClientPropertyName = null,
             Nullable = null,
@@ -43,7 +43,7 @@ public class ModelChangeValidatorTests
         var change = new ModelChange
         {
             JsonModelName = "   ",
-            ClientClasslName = null,
+            ClientClassName = null,
             JsonPropertyName = null,
             ClientPropertyName = null,
             Nullable = null,
@@ -59,7 +59,7 @@ public class ModelChangeValidatorTests
         var change = new ModelChange
         {
             JsonModelName = "Ticket",
-            ClientClasslName = "TicketModel",
+            ClientClassName = "TicketModel",
             JsonPropertyName = null,
             ClientPropertyName = null,
             Nullable = null,
@@ -75,7 +75,7 @@ public class ModelChangeValidatorTests
         var change = new ModelChange
         {
             JsonModelName = "Ticket",
-            ClientClasslName = "TicketModel",
+            ClientClassName = "TicketModel",
             JsonPropertyName = "Id",
             ClientPropertyName = null,
             Nullable = null,
@@ -151,7 +151,7 @@ public class ModelChangeValidatorTests
         var change = new ModelChange
         {
             JsonModelName = "Ticket",
-            ClientClasslName = null,
+            ClientClassName = null,
             JsonPropertyName = null,
             ClientPropertyName = null,
             Nullable = null,
