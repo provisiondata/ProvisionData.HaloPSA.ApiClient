@@ -16,16 +16,16 @@ using Flurl;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Http.Headers;
-using System.Text.Json;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
 /// <summary>
 /// Base class for HaloPSA API clients providing HTTP operations and authentication.
 /// </summary>
-public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClientOptions options, TimeProvider timeProvider, ILogger logger)
+public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClientOptions options, IAuthTokenProvider tokenRepository, TimeProvider timeProvider, ILogger logger)
 {
-    private AuthToken? _token;
+    // private AuthToken? _token;
+    private readonly IAuthTokenProvider _tokenRepository = tokenRepository;
 
     protected HttpClient HttpClient { get; } = httpClient;
     protected HaloPsaApiClientOptions Options { get; } = options;
@@ -34,63 +34,27 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
 
     private async Task EnsureAuthorizedAsync(CancellationToken cancellationToken)
     {
-        if (_token?.IsExpired(TimeProvider.GetUtcNow()) != false)
-        {
-            await GetTokenAsync(cancellationToken);
-        }
-    }
+        var token = await _tokenRepository.GetTokenAsync(cancellationToken)
+            ?? throw new HaloPsaApiClientException("Failed to obtain authentication token.");
 
-    private async Task GetTokenAsync(CancellationToken cancellationToken)
-    {
-        var json = String.Empty;
-        try
-        {
-            var form = new Dictionary<String, String>
-                {
-                    {"client_id", Options.ClientId},
-                    {"client_secret", Options.ClientSecret},
-                    {"grant_type", "client_credentials"},
-                    {"scope", "all"},
-                };
-
-            var uri = Options.AuthUrl
-                .AppendPathSegment("token")
-                .ToUri();
-
-            var response = await HttpClient.PostAsync(uri, new FormUrlEncodedContent(form), cancellationToken);
-
-            json = await response.Content.ReadAsStringAsync(cancellationToken);
-
-            response.EnsureSuccessStatusCode();
-
-            _token = JsonSerializer.Deserialize(json, AuthJsonSerializerContext.Default.AuthToken);
-
-            if (_token is null)
-            {
-                throw new HaloPsaApiClientException("Failed to get access token.", json);
-            }
-
-            _token.IssuedAt = TimeProvider.GetUtcNow();
-
-            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token.AccessToken);
-
-            Logger.LogDebug("Access token acquired: {AccessToken}", _token.AccessToken);
-
-        }
-        catch (Exception ex)
-        {
-            throw new HaloPsaApiClientException("Failed to get access token.", json, ex);
-        }
+        HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.AccessToken);
     }
 
     protected async Task<String> HttpGetAsync(Uri uri, CancellationToken cancellationToken = default)
     {
         await EnsureAuthorizedAsync(cancellationToken);
 
+        var retryCount = 0;
         while (true)
         {
             try
             {
+                if (retryCount >= Options.MaxRetries)
+                {
+                    throw new HaloPsaApiClientException($"Maximum retry attempts reached for API call: {uri}");
+                }
+
+                retryCount++;
                 var response = await HttpClient.GetAsync(uri, cancellationToken);
                 if (response.StatusCode == HttpStatusCode.TooManyRequests)
                 {
@@ -109,7 +73,7 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
             catch (Exception ex)
             {
                 Logger.LogError(ex, "An error occured while calling: {URI}", uri);
-                throw;
+                throw new HaloPsaApiClientException($"API call failed: {uri}", ex);
             }
         }
     }
@@ -119,32 +83,36 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
         await EnsureAuthorizedAsync(cancellationToken);
 
         Logger.LogTrace("HttpPostAsync: {api} => {payload}", uri, payload);
-        Console.WriteLine(payload);
+
         var response = await HttpClient.PostAsync(uri, new StringContent(payload, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
         if (!response.IsSuccessStatusCode)
         {
-            var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
+            var errorResponse = await response.Content.ReadAsStringAsync(cancellationToken);
+
             Logger.LogError("Failed to POST to {uri} => {HttpStatus}: {HttpMessage}\n\tRequest: {request}\n\tResponse: {response}",
-                uri, response.StatusCode, response.ReasonPhrase, payload, responseBody);
-            throw new HttpRequestException($"Failed to POST to {uri} => {response.StatusCode}: {response.ReasonPhrase}");
+                uri, response.StatusCode, response.ReasonPhrase, payload, errorResponse);
+
+            throw new HaloPsaApiClientException($"Failed to POST to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload);
         }
 
         return await response.Content.ReadAsStringAsync(cancellationToken);
     }
 
-    protected async Task<String> HttpPutAsync(Uri uri, String requestBody, CancellationToken cancellationToken = default)
+    protected async Task<String> HttpPutAsync(Uri uri, String payload, CancellationToken cancellationToken = default)
     {
         await EnsureAuthorizedAsync(cancellationToken);
 
-        var response = await HttpClient.PutAsync(uri, new StringContent(requestBody, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
+        var response = await HttpClient.PutAsync(uri, new StringContent(payload, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
         if (!response.IsSuccessStatusCode)
         {
-            var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
+            var errorResponse = await response.Content.ReadAsStringAsync(cancellationToken);
+
             Logger.LogError("Failed to PUT to {uri} => {HttpStatus}: {HttpMessage}\n\tRequest: {request}\n\tResponse: {response}",
-                uri, response.StatusCode, response.ReasonPhrase, requestBody, responseBody);
-            throw new HttpRequestException($"Failed to PUT to {uri} => {response.StatusCode}: {response.ReasonPhrase}");
+                uri, response.StatusCode, response.ReasonPhrase, payload, errorResponse);
+
+            throw new HaloPsaApiClientException($"Failed to PUT to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload);
         }
 
         return await response.Content.ReadAsStringAsync(cancellationToken);

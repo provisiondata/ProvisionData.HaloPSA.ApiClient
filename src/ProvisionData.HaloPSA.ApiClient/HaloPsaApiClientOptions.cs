@@ -48,4 +48,9 @@ public class HaloPsaApiClientOptions
     /// Gets or sets the default page size for paginated API requests.
     /// </summary>
     public Int32 PageSize { get; set; } = 50;
+
+    /// <summary>
+    /// The maximum number of retries for TooManyRequests failures.
+    /// </summary>
+    public Int32 MaxRetries { get; set; } = 10;
 }

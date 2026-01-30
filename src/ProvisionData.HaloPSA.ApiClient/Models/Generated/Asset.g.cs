@@ -197,7 +197,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Asset>? Customfields { get; set; } = [];
+    public List<Asset>? Customfields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relationship_id")] // Original Type: integer
@@ -205,7 +205,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
-    public List<Asset>? Custombuttons { get; set; } = [];
+    public List<Asset>? Custombuttons { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_contract_value")] // Original Type: number
@@ -277,7 +277,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ascendant_assets")] // Original Type: #/components/schemas/Device
-    public List<Asset>? AscendantAssets { get; set; } = [];
+    public List<Asset>? AscendantAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("descendant_count")] // Original Type: integer
@@ -285,7 +285,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("descendant_assets")] // Original Type: #/components/schemas/Device
-    public List<Asset>? DescendantAssets { get; set; } = [];
+    public List<Asset>? DescendantAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_count")] // Original Type: integer
@@ -373,23 +373,23 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("children")] // Original Type: #/components/schemas/Device
-    public List<Asset>? Children { get; set; } = [];
+    public List<Asset>? Children { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("parent_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? ParentAssets { get; set; } = [];
+    public List<Asset>? ParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("child_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? ChildAssets { get; set; } = [];
+    public List<Asset>? ChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hierarchy")] // Original Type: #/components/schemas/Device
-    public List<Asset>? Hierarchy { get; set; } = [];
+    public List<Asset>? Hierarchy { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")] // Original Type: #/components/schemas/Users_List
-    public List<Asset>? Users { get; set; } = [];
+    public List<Asset>? Users { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clone_count")] // Original Type: integer
@@ -429,11 +429,11 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contracts")] // Original Type: #/components/schemas/ContractHeader_List
-    public List<Asset>? Contracts { get; set; } = [];
+    public List<Asset>? Contracts { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("scheduled_tickets")] // Original Type: #/components/schemas/StdRequest_List
-    public List<Asset>? ScheduledTickets { get; set; } = [];
+    public List<Asset>? ScheduledTickets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_guid")] // Original Type: string
@@ -449,7 +449,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("software")] // Original Type: #/components/schemas/DeviceApplications
-    public List<Asset>? Software { get; set; } = [];
+    public List<Asset>? Software { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("businesscentral_id")] // Original Type: string
@@ -471,8 +471,9 @@ public partial class Asset
     [JsonPropertyName("azure_userprincipalname")] // Original Type: string
     public String? AzureUserprincipalname { get; set; }
 
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stockdetails")] // Original Type: #/components/schemas/ItemStock
-    public ItemStock Stockdetails { get; set; } = new();
+    public ItemStock? StockDetails { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assetgroup_name")] // Original Type: string
@@ -492,7 +493,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services")] // Original Type: #/components/schemas/ServSite_List
-    public List<Asset>? Services { get; set; } = [];
+    public List<Asset>? Services { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datto_site_uid")] // Original Type: string
@@ -504,7 +505,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("items_issued")] // Original Type: #/components/schemas/FaultItem
-    public List<Asset>? ItemsIssued { get; set; } = [];
+    public List<Asset>? ItemsIssued { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_id")] // Original Type: string
@@ -516,7 +517,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_software")] // Original Type: #/components/schemas/LansweeperSoftware
-    public List<Asset>? LansweeperSoftware { get; set; } = [];
+    public List<Asset>? LansweeperSoftware { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dlastupdate")] // Original Type: string
@@ -542,7 +543,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_role_breakdown")] // Original Type: #/components/schemas/DeviceUserCount
-    public List<Asset>? UserRoleBreakdown { get; set; } = [];
+    public List<Asset>? UserRoleBreakdown { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itglue_id")] // Original Type: string
@@ -610,15 +611,15 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("parent_third_party_ids")] // Original Type: array
-    public List<Asset>? ParentThirdPartyIds { get; set; } = [];
+    public List<Asset>? ParentThirdPartyIds { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snowUsers")] // Original Type: #/components/schemas/SnowComputerUserAbstract
-    public List<Asset>? SnowUsers { get; set; } = [];
+    public List<Asset>? SnowUsers { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tab_config")] // Original Type: #/components/schemas/TabConfig
-    public List<Asset>? TabConfig { get; set; } = [];
+    public List<Asset>? TabConfig { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualys_id")] // Original Type: string
@@ -637,11 +638,11 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_applications")] // Original Type: #/components/schemas/AddigyApplication
-    public List<Asset>? AddigyApplications { get; set; } = [];
+    public List<Asset>? AddigyApplications { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addigy_users")] // Original Type: array
-    public List<Asset>? AddigyUsers { get; set; } = [];
+    public List<Asset>? AddigyUsers { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")] // Original Type: string
@@ -673,15 +674,15 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualys_software")] // Original Type: #/components/schemas/QualysHostAssetSoftwareHostAssetSoftware
-    public List<Asset>? QualysSoftware { get; set; } = [];
+    public List<Asset>? QualysSoftware { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xtypeunamecanedit")] // Original Type: #/components/schemas/RT_Permission
-    public List<Asset>? Xtypeunamecanedit { get; set; } = [];
+    public List<Asset>? Xtypeunamecanedit { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Asset>? ExternalLinks { get; set; } = [];
+    public List<Asset>? ExternalLinks { get; set; }
 
     // Property new_external_link is ignored as per ModelChanges configuration.
 
@@ -715,7 +716,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services_hierarchy")] // Original Type: #/components/schemas/ServSite
-    public List<Asset>? ServicesHierarchy { get; set; } = [];
+    public List<Asset>? ServicesHierarchy { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_validateonly")] // Original Type: boolean
@@ -731,11 +732,11 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("lansweeper_relations")] // Original Type: #/components/schemas/LansweeperRelation
-    public List<Asset>? LansweeperRelations { get; set; } = [];
+    public List<Asset>? LansweeperRelations { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbs")] // Original Type: #/components/schemas/KBEntry_List
-    public List<Asset>? Kbs { get; set; } = [];
+    public List<Asset>? Kbs { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_external_link_id")] // Original Type: string
@@ -747,7 +748,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sibling_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? SiblingAssets { get; set; } = [];
+    public List<Asset>? SiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_details_id")] // Original Type: integer
@@ -759,11 +760,11 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")] // Original Type: #/components/schemas/AccessControl
-    public List<Asset>? AccessControl { get; set; } = [];
+    public List<Asset>? AccessControl { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_access_control")] // Original Type: #/components/schemas/AccessControl
-    public List<Asset>? NewAccessControl { get; set; } = [];
+    public List<Asset>? NewAccessControl { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jamf_details_id")] // Original Type: integer
@@ -827,11 +828,11 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynatrace_to_relations")] // Original Type: #/components/schemas/DynatraceRelationship
-    public List<Asset>? DynatraceToRelations { get; set; } = [];
+    public List<Asset>? DynatraceToRelations { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynatrace_from_relations")] // Original Type: #/components/schemas/DynatraceRelationship
-    public List<Asset>? DynatraceFromRelations { get; set; } = [];
+    public List<Asset>? DynatraceFromRelations { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("open_incident_count")] // Original Type: integer
@@ -875,15 +876,15 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licences")] // Original Type: #/components/schemas/Licence_List
-    public List<Asset>? Licences { get; set; } = [];
+    public List<Asset>? Licences { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_licences")] // Original Type: #/components/schemas/Licence_List
-    public List<Asset>? AddLicences { get; set; } = [];
+    public List<Asset>? AddLicences { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("licences_hierarchy")] // Original Type: #/components/schemas/Licence_List
-    public List<Asset>? LicencesHierarchy { get; set; } = [];
+    public List<Asset>? LicencesHierarchy { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqlimport_accountsid")] // Original Type: string
@@ -899,7 +900,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")] // Original Type: #/components/schemas/Tabname
-    public List<Asset>? Extratabs { get; set; } = [];
+    public List<Asset>? Extratabs { get; set; }
 
     // Property linked_service is ignored as per ModelChanges configuration.
 
@@ -925,39 +926,39 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_parent_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? AddParentAssets { get; set; } = [];
+    public List<Asset>? AddParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_child_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? AddChildAssets { get; set; } = [];
+    public List<Asset>? AddChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_sibling_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? AddSiblingAssets { get; set; } = [];
+    public List<Asset>? AddSiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_parent_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? EditParentAssets { get; set; } = [];
+    public List<Asset>? EditParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_child_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? EditChildAssets { get; set; } = [];
+    public List<Asset>? EditChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("edit_sibling_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? EditSiblingAssets { get; set; } = [];
+    public List<Asset>? EditSiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_parent_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? DeleteParentAssets { get; set; } = [];
+    public List<Asset>? DeleteParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_child_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? DeleteChildAssets { get; set; } = [];
+    public List<Asset>? DeleteChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("delete_sibling_assets")] // Original Type: #/components/schemas/Device_List
-    public List<Asset>? DeleteSiblingAssets { get; set; } = [];
+    public List<Asset>? DeleteSiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auto_tag")] // Original Type: boolean
@@ -989,7 +990,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("environments")] // Original Type: #/components/schemas/Lookup
-    public List<Asset>? Environments { get; set; } = [];
+    public List<Asset>? Environments { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("environment")] // Original Type: integer
@@ -997,7 +998,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maintenance_windows")] // Original Type: #/components/schemas/Holidays
-    public List<Asset>? MaintenanceWindows { get; set; } = [];
+    public List<Asset>? MaintenanceWindows { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_asset_maintenance")] // Original Type: boolean
@@ -1181,7 +1182,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_status")] // Original Type: #/components/schemas/XTypeStatus
-    public List<Asset>? AllowedStatus { get; set; } = [];
+    public List<Asset>? AllowedStatus { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowallcustombuttons")] // Original Type: boolean
@@ -1189,7 +1190,7 @@ public partial class Asset
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_custombuttons")] // Original Type: #/components/schemas/XTypeButton
-    public List<Asset>? AllowedCustombuttons { get; set; } = [];
+    public List<Asset>? AllowedCustombuttons { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datto_id")] // Original Type: string

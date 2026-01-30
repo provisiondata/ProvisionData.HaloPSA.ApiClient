@@ -12,14 +12,9 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using Microsoft.Extensions.Configuration;
+namespace ProvisionData.HaloPSA.ApiClient;
 
-namespace ProvisionData.HaloPSA.ApiClient.Testing;
-
-public interface ITestFixture
+public interface IAuthTokenProvider
 {
-    IConfiguration Configuration { get; }
-    IServiceProvider Services { get; }
-    void BeginTest();
-    void EndTest();
+    Task<AuthToken?> GetTokenAsync(CancellationToken cancellationToken);
 }

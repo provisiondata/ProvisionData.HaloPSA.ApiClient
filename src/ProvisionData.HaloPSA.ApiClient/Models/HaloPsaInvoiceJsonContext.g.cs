@@ -7,6 +7,8 @@ using System.Text.Json.Serialization;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
+[JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.InvoiceDetail))]
+[JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.InvoiceDetail>))]
 [JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.InvoiceHeader))]
 [JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.InvoiceHeader>))]
 [JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.InvoiceTotals))]

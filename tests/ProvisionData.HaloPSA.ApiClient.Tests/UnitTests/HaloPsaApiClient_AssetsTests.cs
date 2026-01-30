@@ -20,6 +20,7 @@ namespace ProvisionData.HaloPSA.ApiClient.UnitTests;
 
 public class HaloPsaApiClient_AssetsTests
 {
+    private readonly Mock<IAuthTokenProvider> _tokenProviderMock;
     private readonly Mock<ILogger<HaloPsaApiClient>> _loggerMock;
     private readonly Mock<IOptions<HaloPsaApiClientOptions>> _optionsMock;
     private readonly Mock<TimeProvider> _timeProviderMock;
@@ -27,9 +28,13 @@ public class HaloPsaApiClient_AssetsTests
 
     public HaloPsaApiClient_AssetsTests()
     {
+        _tokenProviderMock = new Mock<IAuthTokenProvider>();
         _loggerMock = new Mock<ILogger<HaloPsaApiClient>>();
         _optionsMock = new Mock<IOptions<HaloPsaApiClientOptions>>();
         _timeProviderMock = new Mock<TimeProvider>();
+
+        _tokenProviderMock.Setup(tp => tp.GetTokenAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AuthToken());
 
         _options = new HaloPsaApiClientOptions
         {
@@ -53,6 +58,7 @@ public class HaloPsaApiClient_AssetsTests
         var client = new HaloPsaApiClient(
             httpClient,
             _optionsMock.Object,
+            _tokenProviderMock.Object,
             _timeProviderMock.Object,
             _loggerMock.Object
         );

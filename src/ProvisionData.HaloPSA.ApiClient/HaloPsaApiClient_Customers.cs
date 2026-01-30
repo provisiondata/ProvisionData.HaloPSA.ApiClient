@@ -100,7 +100,7 @@ public partial class HaloPsaApiClient
         try
         {
             var client = JsonSerializer.Deserialize(json, HaloPsaCustomerJsonContext.Default.Customer)
-                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Customer)}.");
+                ?? throw new HaloPsaApiClientException($"Failed to deserialize {nameof(Customer)}.", json);
 
             return client;
         }

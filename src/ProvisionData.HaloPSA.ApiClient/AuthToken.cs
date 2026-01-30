@@ -17,7 +17,7 @@ namespace ProvisionData.HaloPSA.ApiClient;
 /// <summary>
 /// Internal token model for OAuth authentication responses.
 /// </summary>
-internal sealed class AuthToken
+public sealed class AuthToken
 {
     [JsonPropertyName("access_token")]
     public String AccessToken { get; set; } = String.Empty;

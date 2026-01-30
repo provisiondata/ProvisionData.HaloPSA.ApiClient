@@ -30,7 +30,7 @@ public partial class AttachmentView
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")] // Original Type: #/components/schemas/Attachment_List
-    public List<AttachmentView>? Attachments { get; set; } = [];
+    public List<AttachmentView>? Attachments { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("page_no")] // Original Type: integer
@@ -42,7 +42,7 @@ public partial class AttachmentView
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("folders")] // Original Type: #/components/schemas/KeyPair4
-    public List<AttachmentView>? Folders { get; set; } = [];
+    public List<AttachmentView>? Folders { get; set; }
 
 }
 

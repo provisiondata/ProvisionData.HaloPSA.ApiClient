@@ -109,19 +109,19 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<CustomerList>? Customfields { get; set; } = [];
+    public List<CustomerList>? Customfields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
-    public List<CustomerList>? Custombuttons { get; set; } = [];
+    public List<CustomerList>? Custombuttons { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")] // Original Type: #/components/schemas/Attachment
-    public List<CustomerList>? Attachments { get; set; } = [];
+    public List<CustomerList>? Attachments { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_fields")] // Original Type: #/components/schemas/FieldHelper
-    public List<CustomerList>? SiteFields { get; set; } = [];
+    public List<CustomerList>? SiteFields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("pritech")] // Original Type: integer
@@ -291,7 +291,7 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenants")] // Original Type: #/components/schemas/AreaAzureTenant
-    public List<CustomerList>? AzureTenants { get; set; } = [];
+    public List<CustomerList>? AzureTenants { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenant_id")] // Original Type: string
@@ -303,7 +303,7 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snowLicences")] // Original Type: #/components/schemas/SnowLicenseAbstract
-    public List<CustomerList>? SnowLicences { get; set; } = [];
+    public List<CustomerList>? SnowLicences { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qbo_company_id")] // Original Type: string
@@ -331,7 +331,7 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship")] // Original Type: #/components/schemas/KeyPair
-    public List<CustomerList>? CustomerRelationship { get; set; } = [];
+    public List<CustomerList>? CustomerRelationship { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship_list")] // Original Type: string

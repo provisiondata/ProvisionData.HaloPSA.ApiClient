@@ -23,6 +23,8 @@ namespace ProvisionData.HaloPSA.ApiClient;
 [JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.KeyPair3>))]
 [JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.KeyPair4))]
 [JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.KeyPair4>))]
+[JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.LineTotals))]
+[JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.LineTotals>))]
 [JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.StdRequest))]
 [JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.StdRequest>))]
 [JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.StripePaymentMethod))]

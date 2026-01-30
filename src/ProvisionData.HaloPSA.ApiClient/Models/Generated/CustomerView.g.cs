@@ -22,7 +22,7 @@ public partial class CustomerView
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clients")] // Original Type: #/components/schemas/Area_List
-    public List<CustomerView>? Clients { get; set; } = [];
+    public List<CustomerView>? Clients { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("columns_id")] // Original Type: integer
@@ -34,7 +34,7 @@ public partial class CustomerView
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("columns")] // Original Type: #/components/schemas/ViewColumnsDetails
-    public List<CustomerView>? Columns { get; set; } = [];
+    public List<CustomerView>? Columns { get; set; }
 
 }
 

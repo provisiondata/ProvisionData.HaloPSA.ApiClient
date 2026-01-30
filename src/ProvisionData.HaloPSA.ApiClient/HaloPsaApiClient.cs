@@ -23,8 +23,8 @@ namespace ProvisionData.HaloPSA.ApiClient;
 /// <summary>
 /// HaloPSA API client providing typed access to the HaloPSA REST API.
 /// </summary>
-public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApiClientOptions> options, TimeProvider timeProvider, ILogger<HaloPsaApiClient> logger)
-    : HaloPsaApiClientBase(httpClient, options.Value, timeProvider, logger)
+public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApiClientOptions> options, IAuthTokenProvider tokenRepository, TimeProvider timeProvider, ILogger<HaloPsaApiClient> logger)
+    : HaloPsaApiClientBase(httpClient, options.Value, tokenRepository, timeProvider, logger)
 {
     /// <summary>
     /// Gets information about the HaloPSA instance.
@@ -41,7 +41,7 @@ public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApi
             var json = await HttpGetAsync(uri, cancellationToken);
 
             var instanceInfo = JsonSerializer.Deserialize<InstanceInfo>(json, HaloPsaApiJsonSerializerContext.Default.InstanceInfo)
-                ?? throw new InvalidOperationException("Failed to deserialize InstanceInfo.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize InstanceInfo.", json);
 
             Logger.LogInformation("{Instance}", instanceInfo);
 

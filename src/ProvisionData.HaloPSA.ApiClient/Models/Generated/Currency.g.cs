@@ -34,7 +34,7 @@ public partial class Currency
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("history")] // Original Type: #/components/schemas/CurrencyHistory
-    public List<Currency>? History { get; set; } = [];
+    public List<Currency>? History { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")] // Original Type: string

@@ -24,5 +24,7 @@ public class ModelChanges
 
     public ModelChange[] Changes { get; set; } = [];
 
-    public String[] Skip { get; set; } = [];
+    public String[] IgnoredJsonPropteryNames { get; set; } = [];
+
+    public Boolean InitializeArrays { get; set; }
 }

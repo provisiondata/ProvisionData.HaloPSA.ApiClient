@@ -38,7 +38,7 @@ public partial class HaloPsaApiClient
         try
         {
             var list = JsonSerializer.Deserialize(json, HaloPsaItemJsonContext.Default.ListItem)
-                ?? throw new InvalidOperationException("Failed to deserialize ItemsList.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize ItemsList.", json);
 
             return list;
         }
@@ -67,7 +67,7 @@ public partial class HaloPsaApiClient
         try
         {
             var item = JsonSerializer.Deserialize(json, HaloPsaItemJsonContext.Default.Item)
-                ?? throw new InvalidOperationException("Failed to deserialize ItemsList.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize ItemsList.", json);
 
             return item;
         }

@@ -16,7 +16,7 @@ using Bogus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using ProvisionData.HaloPSA.ApiClient.Testing;
+using ProvisionData.Testing;
 using System.Diagnostics.CodeAnalysis;
 
 namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;

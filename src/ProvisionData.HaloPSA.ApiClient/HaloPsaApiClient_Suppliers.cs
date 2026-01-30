@@ -37,7 +37,7 @@ public partial class HaloPsaApiClient
         try
         {
             var list = JsonSerializer.Deserialize(json, HaloPsaVendorJsonContext.Default.ListCompany)
-                ?? throw new InvalidOperationException("Failed to deserialize SuppliersList.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize SuppliersList.", json);
 
             return list;
         }

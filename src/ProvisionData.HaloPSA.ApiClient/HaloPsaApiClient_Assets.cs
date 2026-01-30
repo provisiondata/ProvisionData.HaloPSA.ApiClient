@@ -32,19 +32,20 @@ public partial class HaloPsaApiClient
             .AppendPathSegment("Asset")
             .AppendQueryParam("count", 5000)
             .ToUri();
+
         var json = await HttpGetAsync(uri, cancellationToken);
 
         try
         {
             var list = JsonSerializer.Deserialize(json, HaloPsaAssetJsonContext.Default.AssetView)
-                ?? throw new InvalidOperationException("Failed to deserialize AssetsList.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize AssetsList.", json);
 
             return list.Assets;
         }
         catch (Exception ex)
         {
             Logger.LogError(ex, "Failed to list Assets.");
-            throw;
+            throw new HaloPsaApiClientException("Failed to GET Assets.", ex);
         }
     }
 
@@ -66,7 +67,7 @@ public partial class HaloPsaApiClient
         try
         {
             var asset = JsonSerializer.Deserialize(json, HaloPsaAssetJsonContext.Default.Asset)
-                ?? throw new InvalidOperationException("Failed to deserialize AssetsList.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize AssetsList.", json);
 
             return asset;
         }

@@ -82,11 +82,11 @@ public partial class AssetApplications
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_users")] // Original Type: #/components/schemas/Users
-    public List<AssetApplications>? NewUsers { get; set; } = [];
+    public List<AssetApplications>? NewUsers { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_devices")] // Original Type: #/components/schemas/Device
-    public List<AssetApplications>? NewDevices { get; set; } = [];
+    public List<AssetApplications>? NewDevices { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_warning")] // Original Type: string

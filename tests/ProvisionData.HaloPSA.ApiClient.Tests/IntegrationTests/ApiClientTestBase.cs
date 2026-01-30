@@ -13,7 +13,7 @@
 // program. If not, see <https://www.gnu.org/licenses/>.
 
 using Bogus;
-using ProvisionData.HaloPSA.ApiClient.Testing;
+using ProvisionData.Testing;
 
 namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;
 

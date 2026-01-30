@@ -410,7 +410,7 @@ public partial class InvoiceTotals
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itemGroups")] // Original Type: array
-    public List<InvoiceTotals>? ItemGroups { get; set; } = [];
+    public List<InvoiceTotals>? ItemGroups { get; set; }
 
 }
 

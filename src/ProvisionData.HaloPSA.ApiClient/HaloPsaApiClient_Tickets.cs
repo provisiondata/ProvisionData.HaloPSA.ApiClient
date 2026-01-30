@@ -25,7 +25,7 @@ public partial class HaloPsaApiClient
     /// Lists all faults/tickets from the HaloPSA API.
     /// </summary>
     /// <returns>A collection of tickets.</returns>
-    public async Task<IReadOnlyList<Ticket>> ListFaultsAsync()
+    public async Task<IReadOnlyList<Ticket>> ListTicketsAsync()
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Tickets")
@@ -37,7 +37,7 @@ public partial class HaloPsaApiClient
         try
         {
             var list = JsonSerializer.Deserialize(json, HaloPsaTicketJsonContext.Default.ListTicket)
-                ?? throw new InvalidOperationException("Failed to deserialize FaultsList.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize FaultsList.", json);
 
             return list;
         }
@@ -52,7 +52,7 @@ public partial class HaloPsaApiClient
     /// </summary>
     /// <param name="fault">The ticket to create.</param>
     /// <returns>The JSON response from the API.</returns>
-    public async Task<String> CreateFaultAsync(Ticket fault)
+    public async Task<String> CreateTicketAsync(Ticket fault)
     {
         ArgumentNullException.ThrowIfNull(fault);
 

@@ -39,8 +39,9 @@ public static class HaloPsaApiClientExtensions
         // Configure options from configuration
         services.Configure<HaloPsaApiClientOptions>(configuration.GetSection(HaloPsaApiClientOptions.SectionName));
 
-        // Register TimeProvider as singleton if not already registered
+        // Register singleton services if not already registered
         services.TryAddSingleton(TimeProvider.System);
+        services.TryAddSingleton<IAuthTokenProvider, AuthTokenProvider>();
 
         // Register HttpClient with factory pattern
         return services.AddHttpClient<HaloPsaApiClient>((sp, httpClient) =>
@@ -68,8 +69,9 @@ public static class HaloPsaApiClientExtensions
         // Configure options using action
         services.Configure(configureOptions);
 
-        // Register TimeProvider as singleton if not already registered
+        // Register singleton services if not already registered
         services.TryAddSingleton(TimeProvider.System);
+        services.TryAddSingleton<IAuthTokenProvider, AuthTokenProvider>();
 
         // Register HttpClient with factory pattern
         return services.AddHttpClient<HaloPsaApiClient>((sp, httpClient) =>

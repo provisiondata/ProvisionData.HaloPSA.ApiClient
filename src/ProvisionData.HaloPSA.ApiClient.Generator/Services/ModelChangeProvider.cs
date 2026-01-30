@@ -15,7 +15,6 @@
 using Microsoft.Extensions.Options;
 using ProvisionData.HaloPSA.ApiClient.Generator;
 using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
-using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 
@@ -25,6 +24,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
 {
     private readonly ModelChanges _options;
     private readonly Dictionary<String, ModelChange> _changes;
+    private readonly List<String> _ignoredJsonPropertyNames = [];
     private readonly ILogger<ModelChangeProvider> _logger;
     private readonly IModelChangeValidator _validator;
 
@@ -34,6 +34,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
         _validator = validator;
         _options = optionsAccessor.Value;
         _changes = ValidateChanges();
+        _ignoredJsonPropertyNames.AddRange(_options.IgnoredJsonPropteryNames);
     }
 
     private Dictionary<String, ModelChange> ValidateChanges()
@@ -163,6 +164,12 @@ public partial class ModelChangeProvider : IModelChangeProvider
         ArgumentException.ThrowIfNullOrWhiteSpace(change.JsonModelName);
         ArgumentException.ThrowIfNullOrWhiteSpace(change.JsonPropertyName);
 
+        if (_ignoredJsonPropertyNames.Contains(change.JsonPropertyName))
+        {
+            change.Ignore = true;
+            return;
+        }
+
         change.ClientClassName = GetClassName(change.JsonModelName);
         change.ClientPropertyName = GetPropertyName(change.JsonModelName, change.JsonPropertyName);
 
@@ -186,10 +193,10 @@ public partial class ModelChangeProvider : IModelChangeProvider
             change.Required = requiredElement.ValueKind == JsonValueKind.True;
         }
 
-        if (change.JsonPropertyName == "new_asset")
-        {
-            Debugger.Break();
-        }
+        //if (change.JsonPropertyName == "new_asset")
+        //{
+        //    Debugger.Break();
+        //}
 
         if (String.IsNullOrWhiteSpace(change.ClientPropertyType))
         {
@@ -280,7 +287,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
         change.ClientPropertyType = _options.UnknownTypeName;
     }
 
-    private static void SetDefaultValue(ModelChange change)
+    private void SetDefaultValue(ModelChange change)
     {
         if (String.IsNullOrWhiteSpace(change.ClientPropertyType) || change.ClientPropertyType.IsKnownType())
         {
@@ -290,7 +297,11 @@ public partial class ModelChangeProvider : IModelChangeProvider
 
         if (change.JsonPropertyType == "array" || change.ClientPropertyType.StartsWith("List<"))
         {
-            change.DefaultValue = " = [];";
+            if (_options.InitializeArrays || change.Required || change.Nullable == false)
+            {
+                change.DefaultValue = " = [];";
+            }
+
             return;
         }
 

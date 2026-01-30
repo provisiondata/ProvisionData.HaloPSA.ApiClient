@@ -48,6 +48,19 @@ public class ApiClientTests(ApiClientTestFixture fixture)
     }
 
     [Fact]
+    public async Task ShouldGet_Invoice_with_Details()
+    {
+        // Act
+        var invoice = await SUT.GetInvoiceAsync(TestData.TestInvoiceId, cancellationToken: CancellationToken);
+
+        // Assert
+        invoice.Should().NotBeNull();
+        invoice.Id.Should().Be(TestData.TestInvoiceId);
+        invoice.Lines.Should().NotBeEmpty();
+        invoice.Lines.Single().Description.Should().StartWith("MISCELLANEOUS");
+    }
+
+    [Fact]
     public async Task Should_CreateAsset()
     {
         // Arrange

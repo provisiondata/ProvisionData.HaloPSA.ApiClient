@@ -104,7 +104,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Action>? Customfields { get; set; } = [];
+    public List<Action>? Customfields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("personal_unread")] // Original Type: boolean
@@ -136,11 +136,11 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("reactions")] // Original Type: #/components/schemas/ActionReaction
-    public List<Action>? Reactions { get; set; } = [];
+    public List<Action>? Reactions { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("translations")] // Original Type: #/components/schemas/LanguagePackTranslationsCustom
-    public List<Action>? Translations { get; set; } = [];
+    public List<Action>? Translations { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("email_message_id")] // Original Type: string
@@ -148,7 +148,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("post_translations")] // Original Type: #/components/schemas/LanguagePackTranslationsCustom
-    public List<Action>? PostTranslations { get; set; } = [];
+    public List<Action>? PostTranslations { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_guid")] // Original Type: string
@@ -766,7 +766,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_users")] // Original Type: #/components/schemas/Users_List
-    public List<Action>? NewApprovalprocessUsers { get; set; } = [];
+    public List<Action>? NewApprovalprocessUsers { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_email")] // Original Type: string
@@ -778,7 +778,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_cab")] // Original Type: #/components/schemas/CabMember
-    public List<Action>? NewApprovalprocessCab { get; set; } = [];
+    public List<Action>? NewApprovalprocessCab { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_product_id")] // Original Type: integer
@@ -870,7 +870,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")] // Original Type: #/components/schemas/Attachment
-    public List<Action>? Attachments { get; set; } = [];
+    public List<Action>? Attachments { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("update_children")] // Original Type: boolean
@@ -970,7 +970,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")] // Original Type: #/components/schemas/Device_List
-    public List<Action>? Assets { get; set; } = [];
+    public List<Action>? Assets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dont_do_rules")] // Original Type: boolean
@@ -1202,7 +1202,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_jira_components")] // Original Type: #/components/schemas/KeyPair2
-    public List<Action>? NewJiraComponents { get; set; } = [];
+    public List<Action>? NewJiraComponents { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faultidfrom")] // Original Type: integer
@@ -1250,15 +1250,15 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_tags")] // Original Type: #/components/schemas/Tag
-    public List<Action>? NewTags { get; set; } = [];
+    public List<Action>? NewTags { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_faqlists")] // Original Type: #/components/schemas/FAQListHead
-    public List<Action>? NewFaqlists { get; set; } = [];
+    public List<Action>? NewFaqlists { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_related_articles")] // Original Type: #/components/schemas/KBEntry_List
-    public List<Action>? NewRelatedArticles { get; set; } = [];
+    public List<Action>? NewRelatedArticles { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ignoredatedoneisstartdate")] // Original Type: boolean
@@ -1354,7 +1354,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Action>? ExternalLinks { get; set; } = [];
+    public List<Action>? ExternalLinks { get; set; }
 
     // Property new_external_link is ignored as per ModelChanges configuration.
 
@@ -1384,7 +1384,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_consignment")] // Original Type: #/components/schemas/ConsignmentHeader
-    public List<Action>? NewConsignment { get; set; } = [];
+    public List<Action>? NewConsignment { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faultstimeentryid")] // Original Type: integer
@@ -1427,11 +1427,11 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("followers_user")] // Original Type: #/components/schemas/Users_List
-    public List<Action>? FollowersUser { get; set; } = [];
+    public List<Action>? FollowersUser { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_items_issued")] // Original Type: #/components/schemas/FaultItem
-    public List<Action>? NewItemsIssued { get; set; } = [];
+    public List<Action>? NewItemsIssued { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("purchaseordernumber")] // Original Type: string
@@ -1521,7 +1521,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_additional_agents")] // Original Type: #/components/schemas/FaultAdditionalAgents
-    public List<Action>? NewAdditionalAgents { get; set; } = [];
+    public List<Action>? NewAdditionalAgents { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("instagramid")] // Original Type: string
@@ -1671,7 +1671,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_contributors")] // Original Type: #/components/schemas/Contributors
-    public List<Action>? NewContributors { get; set; } = [];
+    public List<Action>? NewContributors { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("nextcalldate")] // Original Type: string
@@ -1740,7 +1740,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bulkemail_users")] // Original Type: array
-    public List<Action>? BulkemailUsers { get; set; } = [];
+    public List<Action>? BulkemailUsers { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_novalidate")] // Original Type: boolean
@@ -1788,7 +1788,7 @@ public partial class Action
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_apply_ai_suggestions")] // Original Type: array
-    public List<Action>? ApplyAiSuggestions { get; set; } = [];
+    public List<Action>? ApplyAiSuggestions { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("subject_exceeds_max_length")] // Original Type: boolean

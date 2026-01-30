@@ -41,7 +41,7 @@ public partial class HaloPsaApiClient
         try
         {
             var invoiceHeaders = JsonSerializer.Deserialize(json, HaloPsaInvoiceJsonContext.Default.ListInvoiceHeader)
-                ?? throw new InvalidOperationException("Failed to deserialize GetRecurringInvoicesResult.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize GetRecurringInvoicesResult.", json);
 
             return invoiceHeaders;
         }
@@ -69,7 +69,7 @@ public partial class HaloPsaApiClient
         try
         {
             var recurringinvoice = JsonSerializer.Deserialize(json, HaloPsaInvoiceJsonContext.Default.InvoiceHeader)
-                ?? throw new InvalidOperationException("Failed to deserialize RecurringInvoice.");
+                ?? throw new HaloPsaApiClientException("Failed to deserialize RecurringInvoice.", json);
 
             return recurringinvoice;
         }
@@ -94,11 +94,12 @@ public partial class HaloPsaApiClient
 
         var payload = JsonSerializer.Serialize(request, HaloPsaInvoiceJsonContext.Default.InvoiceHeader);
 
-        var invoiceResponse = await HttpPostAsync(uri, $"[{payload}]", cancellationToken);
+        var json = await HttpPostAsync(uri, $"[{payload}]", cancellationToken);
 
-        Logger.LogTrace("CreateRecurringInvoiceAsync Response: {json}", invoiceResponse);
+        Logger.LogTrace("CreateRecurringInvoiceAsync Response: {json}", json);
 
-        var response = JsonSerializer.Deserialize(invoiceResponse, HaloPsaInvoiceJsonContext.Default.InvoiceHeader)!;
+        var response = JsonSerializer.Deserialize(json, HaloPsaInvoiceJsonContext.Default.InvoiceHeader)
+            ?? throw new HaloPsaApiClientException("Failed to deserialize CreateRecurringInvoiceAsync response.", json);
 
         await CreateRecurringInvoiceScheduleAsync(response, cancellationToken);
 

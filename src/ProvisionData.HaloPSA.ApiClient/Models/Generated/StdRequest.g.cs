@@ -78,11 +78,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("creation_rules")] // Original Type: #/components/schemas/StdRequestRule
-    public List<StdRequest>? CreationRules { get; set; } = [];
+    public List<StdRequest>? CreationRules { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("todo_list")] // Original Type: #/components/schemas/STDToDo
-    public List<StdRequest>? TodoList { get; set; } = [];
+    public List<StdRequest>? TodoList { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emailto")] // Original Type: string
@@ -394,11 +394,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<StdRequest>? Customfields { get; set; } = [];
+    public List<StdRequest>? Customfields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")] // Original Type: #/components/schemas/Device_List
-    public List<StdRequest>? Assets { get; set; } = [];
+    public List<StdRequest>? Assets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqltoselectassets")] // Original Type: boolean
@@ -410,7 +410,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("users")] // Original Type: #/components/schemas/Users_List
-    public List<StdRequest>? Users { get; set; } = [];
+    public List<StdRequest>? Users { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("itil_request_type")] // Original Type: integer
@@ -466,7 +466,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("budgets")] // Original Type: #/components/schemas/STDrequestbudget
-    public List<StdRequest>? Budgets { get; set; } = [];
+    public List<StdRequest>? Budgets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("budgettype_id")] // Original Type: integer
@@ -482,7 +482,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services")] // Original Type: #/components/schemas/ServSite_List
-    public List<StdRequest>? Services { get; set; } = [];
+    public List<StdRequest>? Services { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_canupdate")] // Original Type: boolean
@@ -506,7 +506,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")] // Original Type: #/components/schemas/AccessControl
-    public List<StdRequest>? AccessControl { get; set; } = [];
+    public List<StdRequest>? AccessControl { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control_level")] // Original Type: integer
@@ -538,7 +538,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automationcriteria")] // Original Type: #/components/schemas/AutoassignCriteria
-    public List<StdRequest>? Automationcriteria { get; set; } = [];
+    public List<StdRequest>? Automationcriteria { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("isclone")] // Original Type: boolean
@@ -566,7 +566,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("milestones")] // Original Type: #/components/schemas/MileStone
-    public List<StdRequest>? Milestones { get; set; } = [];
+    public List<StdRequest>? Milestones { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqltoselectusers")] // Original Type: boolean
@@ -582,15 +582,15 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("additional_agents")] // Original Type: #/components/schemas/FaultAdditionalAgents
-    public List<StdRequest>? AdditionalAgents { get; set; } = [];
+    public List<StdRequest>? AdditionalAgents { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_audits")] // Original Type: #/components/schemas/Audit
-    public List<StdRequest>? NewAudits { get; set; } = [];
+    public List<StdRequest>? NewAudits { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_changes")] // Original Type: #/components/schemas/InvoiceChange
-    public List<StdRequest>? NewChanges { get; set; } = [];
+    public List<StdRequest>? NewChanges { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("child_count_of_ticket_to_save")] // Original Type: integer
@@ -626,7 +626,7 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("date_dependencies")] // Original Type: #/components/schemas/StdrequestDateDependencies
-    public List<StdRequest>? DateDependencies { get; set; } = [];
+    public List<StdRequest>? DateDependencies { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("upload_type")] // Original Type: integer
@@ -697,11 +697,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("article_tags")] // Original Type: #/components/schemas/Tag
-    public List<StdRequest>? ArticleTags { get; set; } = [];
+    public List<StdRequest>? ArticleTags { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faqlists")] // Original Type: #/components/schemas/FAQListHead
-    public List<StdRequest>? Faqlists { get; set; } = [];
+    public List<StdRequest>? Faqlists { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("integration_drive")] // Original Type: string
@@ -783,11 +783,11 @@ public partial class StdRequest
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_customfields")] // Original Type: #/components/schemas/CustomField
-    public List<StdRequest>? OptionalCustomfields { get; set; } = [];
+    public List<StdRequest>? OptionalCustomfields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_assets")] // Original Type: #/components/schemas/Device_List
-    public List<StdRequest>? OptionalAssets { get; set; } = [];
+    public List<StdRequest>? OptionalAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_forwardinboundupdates")] // Original Type: integer
