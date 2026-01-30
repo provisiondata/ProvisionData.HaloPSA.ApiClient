@@ -86,7 +86,7 @@ public partial class AreaNote
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<AreaNote>? Customfields { get; set; }
+    public List<AreaNote>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticketid")] // Original Type: integer

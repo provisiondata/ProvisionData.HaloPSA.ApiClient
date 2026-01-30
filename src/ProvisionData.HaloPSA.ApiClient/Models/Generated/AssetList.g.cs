@@ -190,11 +190,11 @@ public partial class AssetList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")] // Original Type: #/components/schemas/FieldHelper
-    public List<AssetList>? Fields { get; set; }
+    public List<AssetList>? Fields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<AssetList>? Customfields { get; set; }
+    public List<AssetList>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relationship_id")] // Original Type: integer
@@ -202,7 +202,7 @@ public partial class AssetList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
-    public List<AssetList>? Custombuttons { get; set; }
+    public List<AssetList>? Custombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_contract_value")] // Original Type: number
@@ -434,7 +434,7 @@ public partial class AssetList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_status")] // Original Type: #/components/schemas/XTypeStatus
-    public List<AssetList>? AllowedStatus { get; set; }
+    public List<AssetList>? AllowedStatus { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowallcustombuttons")] // Original Type: boolean
@@ -442,7 +442,7 @@ public partial class AssetList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_custombuttons")] // Original Type: #/components/schemas/XTypeButton
-    public List<AssetList>? AllowedCustombuttons { get; set; }
+    public List<AssetList>? AllowedCustombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("datto_id")] // Original Type: string

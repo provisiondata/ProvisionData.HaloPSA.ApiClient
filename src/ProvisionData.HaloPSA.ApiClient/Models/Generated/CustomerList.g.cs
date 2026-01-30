@@ -61,7 +61,7 @@ public partial class CustomerList
     public String? OverrideOrgName { get; set; }
 
     [JsonPropertyName("override_org_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore OverrideOrgAddress { get; set; }
+    public AddressStore OverrideOrgAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("override_org_phone")] // Original Type: string
@@ -109,19 +109,19 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<CustomerList>? Customfields { get; set; }
+    public List<CustomerList>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
-    public List<CustomerList>? Custombuttons { get; set; }
+    public List<CustomerList>? Custombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")] // Original Type: #/components/schemas/Attachment
-    public List<CustomerList>? Attachments { get; set; }
+    public List<CustomerList>? Attachments { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_fields")] // Original Type: #/components/schemas/FieldHelper
-    public List<CustomerList>? SiteFields { get; set; }
+    public List<CustomerList>? SiteFields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("pritech")] // Original Type: integer
@@ -183,7 +183,7 @@ public partial class CustomerList
     public Int32 Key { get; set; }
 
     [JsonPropertyName("table")] // Original Type: #/components/schemas/TableEnum
-    public TableEnum Table { get; set; }
+    public TableEnum Table { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("logo")] // Original Type: string
@@ -291,7 +291,7 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenants")] // Original Type: #/components/schemas/AreaAzureTenant
-    public List<CustomerList>? AzureTenants { get; set; }
+    public List<CustomerList>? AzureTenants { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenant_id")] // Original Type: string
@@ -303,7 +303,7 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snowLicences")] // Original Type: #/components/schemas/SnowLicenseAbstract
-    public List<CustomerList>? SnowLicences { get; set; }
+    public List<CustomerList>? SnowLicences { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qbo_company_id")] // Original Type: string
@@ -331,7 +331,7 @@ public partial class CustomerList
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship")] // Original Type: #/components/schemas/KeyPair
-    public List<CustomerList>? CustomerRelationship { get; set; }
+    public List<CustomerList>? CustomerRelationship { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship_list")] // Original Type: string
@@ -435,8 +435,7 @@ public partial class CustomerList
     [JsonPropertyName("_importtype")] // Original Type: string
     public String? Importtype { get; set; }
 
-    [JsonPropertyName("new_external_link")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList NewExternalLink { get; set; }
+    // Property new_external_link is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_details_id")] // Original Type: integer

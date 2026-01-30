@@ -90,7 +90,7 @@ public partial class ItemStock
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("serialised_assets")] // Original Type: #/components/schemas/Device_List
-    public List<ItemStock>? SerialisedAssets { get; set; }
+    public List<ItemStock>? SerialisedAssets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_stock_take")] // Original Type: boolean

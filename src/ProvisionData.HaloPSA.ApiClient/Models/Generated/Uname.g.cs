@@ -11,7 +11,7 @@ public partial class Uname
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sites")] // Original Type: #/components/schemas/UnameSite
-    public List<Uname>? Sites { get; set; }
+    public List<Uname>? Sites { get; set; } = [];
 
     [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
@@ -102,23 +102,23 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("teams")] // Original Type: #/components/schemas/UnameSection
-    public List<Uname>? Teams { get; set; }
+    public List<Uname>? Teams { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("departments")] // Original Type: #/components/schemas/UnameDepartment
-    public List<Uname>? Departments { get; set; }
+    public List<Uname>? Departments { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clients")] // Original Type: #/components/schemas/UnameAreaRestriction
-    public List<Uname>? Clients { get; set; }
+    public List<Uname>? Clients { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tickettypes")] // Original Type: #/components/schemas/UnameRequestType
-    public List<Uname>? Tickettypes { get; set; }
+    public List<Uname>? Tickettypes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualifications")] // Original Type: #/components/schemas/UnameQualification
-    public List<Uname>? Qualifications { get; set; }
+    public List<Uname>? Qualifications { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualification_weighting")] // Original Type: integer
@@ -142,7 +142,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assettypes")] // Original Type: #/components/schemas/UnameXtype
-    public List<Uname>? Assettypes { get; set; }
+    public List<Uname>? Assettypes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("googleemail")] // Original Type: string
@@ -458,15 +458,15 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")] // Original Type: #/components/schemas/NHD_Roles
-    public List<Uname>? Roles { get; set; }
+    public List<Uname>? Roles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_roles")] // Original Type: #/components/schemas/NHD_Roles
-    public List<Uname>? AddRoles { get; set; }
+    public List<Uname>? AddRoles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("claims")] // Original Type: #/components/schemas/NHD_Claim
-    public List<Uname>? Claims { get; set; }
+    public List<Uname>? Claims { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("department")] // Original Type: string
@@ -482,7 +482,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AccessControl { get; set; }
+    public List<Uname>? AccessControl { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("twofactor_enabled")] // Original Type: boolean
@@ -506,11 +506,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notifications")] // Original Type: #/components/schemas/UnameNotification
-    public List<Uname>? Notifications { get; set; }
+    public List<Uname>? Notifications { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("notifications_personal")] // Original Type: #/components/schemas/UnameNotification
-    public List<Uname>? NotificationsPersonal { get; set; }
+    public List<Uname>? NotificationsPersonal { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("emailconfirmed")] // Original Type: boolean
@@ -554,11 +554,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Uname>? Customfields { get; set; }
+    public List<Uname>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")] // Original Type: #/components/schemas/Restriction
-    public List<Uname>? Chargerates { get; set; }
+    public List<Uname>? Chargerates { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("warnifnoscan_integrator")] // Original Type: boolean
@@ -766,7 +766,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_holiday_allowances")] // Original Type: #/components/schemas/UnameHolidayAllowance
-    public List<Uname>? AgentHolidayAllowances { get; set; }
+    public List<Uname>? AgentHolidayAllowances { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("remaining_holiday_allowance")] // Original Type: number
@@ -802,91 +802,91 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_tickettypes")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcTickettypes { get; set; }
+    public List<Uname>? AcTickettypes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_approvals")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcApprovals { get; set; }
+    public List<Uname>? AcApprovals { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_rules")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcRules { get; set; }
+    public List<Uname>? AcRules { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_cannedtext")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcCannedtext { get; set; }
+    public List<Uname>? AcCannedtext { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_customfields")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcCustomfields { get; set; }
+    public List<Uname>? AcCustomfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_customtables")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcCustomtables { get; set; }
+    public List<Uname>? AcCustomtables { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_dashboards")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcDashboards { get; set; }
+    public List<Uname>? AcDashboards { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_workflows")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcWorkflows { get; set; }
+    public List<Uname>? AcWorkflows { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_roles")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcRoles { get; set; }
+    public List<Uname>? AcRoles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_slas")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcSlas { get; set; }
+    public List<Uname>? AcSlas { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_templates")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcTemplates { get; set; }
+    public List<Uname>? AcTemplates { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_outcomes")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcOutcomes { get; set; }
+    public List<Uname>? AcOutcomes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_workdays")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcWorkdays { get; set; }
+    public List<Uname>? AcWorkdays { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_emailtemplates")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcEmailtemplates { get; set; }
+    public List<Uname>? AcEmailtemplates { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_messagegroups")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcMessagegroups { get; set; }
+    public List<Uname>? AcMessagegroups { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_reportgroups")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcReportgroups { get; set; }
+    public List<Uname>? AcReportgroups { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_fieldgroups")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcFieldgroups { get; set; }
+    public List<Uname>? AcFieldgroups { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_languagepacks")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcLanguagepacks { get; set; }
+    public List<Uname>? AcLanguagepacks { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_itemgroups")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcItemgroups { get; set; }
+    public List<Uname>? AcItemgroups { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_reports")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcReports { get; set; }
+    public List<Uname>? AcReports { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_datasources")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcDatasources { get; set; }
+    public List<Uname>? AcDatasources { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_compositereports")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcCompositereports { get; set; }
+    public List<Uname>? AcCompositereports { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_columns_id_clients")] // Original Type: integer
@@ -958,27 +958,27 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_assettypes")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcAssettypes { get; set; }
+    public List<Uname>? AcAssettypes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_assetgroups")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcAssetgroups { get; set; }
+    public List<Uname>? AcAssetgroups { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_servicecategories")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcServicecategories { get; set; }
+    public List<Uname>? AcServicecategories { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_services")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcServices { get; set; }
+    public List<Uname>? AcServices { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_suppliers")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcSuppliers { get; set; }
+    public List<Uname>? AcSuppliers { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_suppliercontracts")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcSuppliercontracts { get; set; }
+    public List<Uname>? AcSuppliercontracts { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("last_modified")] // Original Type: string
@@ -1041,15 +1041,15 @@ public partial class Uname
     public String? DefaultSplashtopChannelname { get; set; }
 
     [JsonPropertyName("splashtop_channel")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 SplashtopChannel { get; set; }
+    public KeyPair2 SplashtopChannel { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_chatprofiles")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcChatprofiles { get; set; }
+    public List<Uname>? AcChatprofiles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_faqlists")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcFaqlists { get; set; }
+    public List<Uname>? AcFaqlists { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_automatic_call_scripts")] // Original Type: boolean
@@ -1061,7 +1061,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_devices")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcDevices { get; set; }
+    public List<Uname>? AcDevices { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_connectionid")] // Original Type: integer
@@ -1135,11 +1135,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("calendar_options_multi")] // Original Type: #/components/schemas/KeyPair2
-    public List<Uname>? CalendarOptionsMulti { get; set; }
+    public List<Uname>? CalendarOptionsMulti { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_databaselookups")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcDatabaselookups { get; set; }
+    public List<Uname>? AcDatabaselookups { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_columns_id_pos")] // Original Type: integer
@@ -1183,11 +1183,11 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_notifications")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcNotifications { get; set; }
+    public List<Uname>? AcNotifications { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("load_balance_agent_limits")] // Original Type: #/components/schemas/UnameLoadBalanceLimit
-    public List<Uname>? LoadBalanceAgentLimits { get; set; }
+    public List<Uname>? LoadBalanceAgentLimits { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("federated_identity_id")] // Original Type: string
@@ -1195,15 +1195,15 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_columnprofiles")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcColumnprofiles { get; set; }
+    public List<Uname>? AcColumnprofiles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_lists")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcLists { get; set; }
+    public List<Uname>? AcLists { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_filterprofiles")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcFilterprofiles { get; set; }
+    public List<Uname>? AcFilterprofiles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_ac_agent")] // Original Type: integer
@@ -1217,8 +1217,7 @@ public partial class Uname
     [JsonPropertyName("import_details_id")] // Original Type: integer
     public Int32? ImportDetailsId { get; set; }
 
-    [JsonPropertyName("new_external_link")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList NewExternalLink { get; set; }
+    // Property new_external_link is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_columns_id_sos")] // Original Type: integer
@@ -1254,23 +1253,23 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_webhooks")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcWebhooks { get; set; }
+    public List<Uname>? AcWebhooks { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_customintegrations")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcCustomintegrations { get; set; }
+    public List<Uname>? AcCustomintegrations { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_azuread")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcAzuread { get; set; }
+    public List<Uname>? AcAzuread { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_pdftemplates")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcPdftemplates { get; set; }
+    public List<Uname>? AcPdftemplates { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_assetfields")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcAssetfields { get; set; }
+    public List<Uname>? AcAssetfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isclone")] // Original Type: boolean
@@ -1290,23 +1289,23 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_cost_tracking")] // Original Type: #/components/schemas/UnameCostTracking
-    public List<Uname>? AgentCostTracking { get; set; }
+    public List<Uname>? AgentCostTracking { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_softwareproducts")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcSoftwareproducts { get; set; }
+    public List<Uname>? AcSoftwareproducts { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("agent_integration_credentials")] // Original Type: #/components/schemas/UnameIntegration
-    public List<Uname>? AgentIntegrationCredentials { get; set; }
+    public List<Uname>? AgentIntegrationCredentials { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_folders")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcFolders { get; set; }
+    public List<Uname>? AcFolders { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ac_qualifications")] // Original Type: #/components/schemas/AccessControl
-    public List<Uname>? AcQualifications { get; set; }
+    public List<Uname>? AcQualifications { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contact_pref1")] // Original Type: integer
@@ -1330,15 +1329,15 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assetfields")] // Original Type: #/components/schemas/UnameField
-    public List<Uname>? Assetfields { get; set; }
+    public List<Uname>? Assetfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("unamecustomfields")] // Original Type: #/components/schemas/UnameCustom
-    public List<Uname>? Unamecustomfields { get; set; }
+    public List<Uname>? Unamecustomfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("unameappointmenttypes")] // Original Type: #/components/schemas/UnameAppointment
-    public List<Uname>? Unameappointmenttypes { get; set; }
+    public List<Uname>? Unameappointmenttypes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_canupdate")] // Original Type: boolean
@@ -1362,7 +1361,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/UnameButton
-    public List<Uname>? Custombuttons { get; set; }
+    public List<Uname>? Custombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("namewithinactive")] // Original Type: string
@@ -1386,7 +1385,7 @@ public partial class Uname
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("uname_usercustomfields")] // Original Type: #/components/schemas/UnameCustom
-    public List<Uname>? UnameUsercustomfields { get; set; }
+    public List<Uname>? UnameUsercustomfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("can_approve_purchaseorder")] // Original Type: boolean

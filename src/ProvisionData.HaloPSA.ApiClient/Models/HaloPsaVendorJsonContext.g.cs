@@ -11,10 +11,6 @@ namespace ProvisionData.HaloPSA.ApiClient;
 [JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.Company>))]
 [JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.Supplier))]
 [JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.Supplier>))]
-[JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.SupplierOrderHeader))]
-[JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.SupplierOrderHeader>))]
-[JsonSerializable(typeof(ProvisionData.HaloPSA.ApiClient.Models.SupplierOrderTotals))]
-[JsonSerializable(typeof(List<ProvisionData.HaloPSA.ApiClient.Models.SupplierOrderTotals>))]
 [JsonSourceGenerationOptions(
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]

@@ -73,7 +73,7 @@ public partial class Customer
     public String? OverrideOrgName { get; set; }
 
     [JsonPropertyName("override_org_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore OverrideOrgAddress { get; set; }
+    public AddressStore OverrideOrgAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("override_org_phone")] // Original Type: string
@@ -121,19 +121,19 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Customer>? Customfields { get; set; }
+    public List<Customer>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
-    public List<Customer>? Custombuttons { get; set; }
+    public List<Customer>? Custombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")] // Original Type: #/components/schemas/Attachment
-    public List<Customer>? Attachments { get; set; }
+    public List<Customer>? Attachments { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_fields")] // Original Type: #/components/schemas/FieldHelper
-    public List<Customer>? SiteFields { get; set; }
+    public List<Customer>? SiteFields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("pritech")] // Original Type: integer
@@ -625,7 +625,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_organisations")] // Original Type: #/components/schemas/Organisation
-    public List<Customer>? AllowedOrganisations { get; set; }
+    public List<Customer>? AllowedOrganisations { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("override_signature")] // Original Type: string
@@ -641,7 +641,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_update")] // Original Type: #/components/schemas/Site
-    public List<Customer>? SiteUpdate { get; set; }
+    public List<Customer>? SiteUpdate { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newclient_sitename")] // Original Type: string
@@ -684,7 +684,7 @@ public partial class Customer
     public Boolean? NewclientSendwelcomeemail { get; set; }
 
     [JsonPropertyName("newclient_delivery_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore NewclientDeliveryAddress { get; set; }
+    public AddressStore NewclientDeliveryAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newclient_countrycode")] // Original Type: string
@@ -696,11 +696,11 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("faqlists")] // Original Type: #/components/schemas/FAQListHead
-    public List<Customer>? Faqlists { get; set; }
+    public List<Customer>? Faqlists { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_notes")] // Original Type: #/components/schemas/AreaPopup
-    public List<Customer>? PopupNotes { get; set; }
+    public List<Customer>? PopupNotes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_reassign_all_to_user")] // Original Type: integer
@@ -712,7 +712,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_tickettypes")] // Original Type: #/components/schemas/RequestType_List
-    public List<Customer>? AllowedTickettypes { get; set; }
+    public List<Customer>? AllowedTickettypes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category1")] // Original Type: boolean
@@ -720,7 +720,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category1")] // Original Type: #/components/schemas/CategoryRestriction
-    public List<Customer>? AllowedCategory1 { get; set; }
+    public List<Customer>? AllowedCategory1 { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category2")] // Original Type: boolean
@@ -728,7 +728,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category2")] // Original Type: #/components/schemas/CategoryRestriction
-    public List<Customer>? AllowedCategory2 { get; set; }
+    public List<Customer>? AllowedCategory2 { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category3")] // Original Type: boolean
@@ -736,7 +736,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category3")] // Original Type: #/components/schemas/CategoryRestriction
-    public List<Customer>? AllowedCategory3 { get; set; }
+    public List<Customer>? AllowedCategory3 { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_category4")] // Original Type: boolean
@@ -748,7 +748,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_category4")] // Original Type: #/components/schemas/CategoryRestriction
-    public List<Customer>? AllowedCategory4 { get; set; }
+    public List<Customer>? AllowedCategory4 { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("onhold_ticket_count")] // Original Type: integer
@@ -764,11 +764,11 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("billingplans")] // Original Type: #/components/schemas/ContractDetail
-    public List<Customer>? Billingplans { get; set; }
+    public List<Customer>? Billingplans { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("overriding_rates")] // Original Type: #/components/schemas/ChargeRate
-    public List<Customer>? OverridingRates { get; set; }
+    public List<Customer>? OverridingRates { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowallchargerates")] // Original Type: boolean
@@ -776,7 +776,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chargerates")] // Original Type: #/components/schemas/ChargeRateArea
-    public List<Customer>? Chargerates { get; set; }
+    public List<Customer>? Chargerates { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newclient_siteguid")] // Original Type: string
@@ -820,7 +820,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("areaitems")] // Original Type: #/components/schemas/AreaItem
-    public List<Customer>? Areaitems { get; set; }
+    public List<Customer>? Areaitems { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("portal_logo")] // Original Type: string
@@ -868,11 +868,11 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prepayhistory")] // Original Type: #/components/schemas/PrepayHistory
-    public List<Customer>? Prepayhistory { get; set; }
+    public List<Customer>? Prepayhistory { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("periods")] // Original Type: #/components/schemas/PrepayPeriod
-    public List<Customer>? Periods { get; set; }
+    public List<Customer>? Periods { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("prepayrecurringminimumdeduction")] // Original Type: number
@@ -962,7 +962,7 @@ public partial class Customer
     public String? Qbodefaulttaxcodename { get; set; }
 
     [JsonPropertyName("qbo_default_tax_code")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 QboDefaultTaxCode { get; set; }
+    public KeyPair2 QboDefaultTaxCode { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwiseid")] // Original Type: integer
@@ -973,11 +973,11 @@ public partial class Customer
     public Int32? Autotaskid { get; set; }
 
     [JsonPropertyName("import_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore ImportAddress { get; set; }
+    public AddressStore ImportAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_notes")] // Original Type: #/components/schemas/AreaNote
-    public List<Customer>? ImportNotes { get; set; }
+    public List<Customer>? ImportNotes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ateraid")] // Original Type: integer
@@ -1001,11 +1001,11 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_service_access")] // Original Type: #/components/schemas/CriteriaGroup
-    public List<Customer>? GroupServiceAccess { get; set; }
+    public List<Customer>? GroupServiceAccess { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("group_service_subscriptions")] // Original Type: #/components/schemas/CriteriaGroup
-    public List<Customer>? GroupServiceSubscriptions { get; set; }
+    public List<Customer>? GroupServiceSubscriptions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snelstart_id")] // Original Type: string
@@ -1047,7 +1047,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kbentries")] // Original Type: #/components/schemas/KBEntry_List
-    public List<Customer>? Kbentries { get; set; }
+    public List<Customer>? Kbentries { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auvik_id")] // Original Type: string
@@ -1135,10 +1135,9 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Customer>? ExternalLinks { get; set; }
+    public List<Customer>? ExternalLinks { get; set; } = [];
 
-    [JsonPropertyName("new_external_link")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList NewExternalLink { get; set; }
+    // Property new_external_link is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_match_thirdparty_id")] // Original Type: string
@@ -1233,7 +1232,7 @@ public partial class Customer
     public String? StripePaymentMethodName { get; set; }
 
     [JsonPropertyName("stripe_paymentmethod")] // Original Type: #/components/schemas/StripePaymentMethod
-    public StripePaymentMethod StripePaymentmethod { get; set; }
+    public StripePaymentMethod StripePaymentmethod { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("current_licences")] // Original Type: string
@@ -1257,27 +1256,27 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_priority_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ServicenowPriorityMappings { get; set; }
+    public List<Customer>? ServicenowPriorityMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_status_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ServicenowStatusMappings { get; set; }
+    public List<Customer>? ServicenowStatusMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_impact_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ServicenowImpactMappings { get; set; }
+    public List<Customer>? ServicenowImpactMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_urgency_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ServicenowUrgencyMappings { get; set; }
+    public List<Customer>? ServicenowUrgencyMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_category_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ServicenowCategoryMappings { get; set; }
+    public List<Customer>? ServicenowCategoryMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_service_mappings")] // Original Type: #/components/schemas/ServiceMapping
-    public List<Customer>? ServicenowServiceMappings { get; set; }
+    public List<Customer>? ServicenowServiceMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_assignment_group")] // Original Type: string
@@ -1288,7 +1287,7 @@ public partial class Customer
     public String? ServicenowAssignmentGroupName { get; set; }
 
     [JsonPropertyName("servicenow_assignmentgroup")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 ServicenowAssignmentgroup { get; set; }
+    public KeyPair2 ServicenowAssignmentgroup { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_defaultuser_id")] // Original Type: string
@@ -1299,7 +1298,7 @@ public partial class Customer
     public String? ServicenowDefaultuserName { get; set; }
 
     [JsonPropertyName("servicenow_defaultuser")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 ServicenowDefaultuser { get; set; }
+    public KeyPair2 ServicenowDefaultuser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("test_servicenow")] // Original Type: boolean
@@ -1335,7 +1334,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_location_id_list")] // Original Type: #/components/schemas/KeyPair2
-    public List<Customer>? IntacctLocationIdList { get; set; }
+    public List<Customer>? IntacctLocationIdList { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("intacct_location_type")] // Original Type: string
@@ -1343,7 +1342,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_categories")] // Original Type: array
-    public List<Customer>? NewCategories { get; set; }
+    public List<Customer>? NewCategories { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_url")] // Original Type: string
@@ -1370,11 +1369,11 @@ public partial class Customer
     public String? JiraServicedeskName { get; set; }
 
     [JsonPropertyName("jira_servicedesk")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 JiraServicedesk { get; set; }
+    public KeyPair2 JiraServicedesk { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_requesttype_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? JiraRequesttypeMappings { get; set; }
+    public List<Customer>? JiraRequesttypeMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_user_id")] // Original Type: string
@@ -1385,15 +1384,15 @@ public partial class Customer
     public String? JiraUserName { get; set; }
 
     [JsonPropertyName("jira_user")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 JiraUser { get; set; }
+    public KeyPair2 JiraUser { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_priority_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? JiraPriorityMappings { get; set; }
+    public List<Customer>? JiraPriorityMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_status_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? JiraStatusMappings { get; set; }
+    public List<Customer>? JiraStatusMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_status_after_update")] // Original Type: integer
@@ -1444,10 +1443,10 @@ public partial class Customer
     public Boolean? DontFireAutomations { get; set; }
 
     [JsonPropertyName("main_delivery_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore MainDeliveryAddress { get; set; }
+    public AddressStore MainDeliveryAddress { get; set; } = new();
 
     [JsonPropertyName("main_invoice_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore MainInvoiceAddress { get; set; }
+    public AddressStore MainInvoiceAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("main_contact_name")] // Original Type: string
@@ -1575,11 +1574,11 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")] // Original Type: #/components/schemas/Tabname
-    public List<Customer>? Extratabs { get; set; }
+    public List<Customer>? Extratabs { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_team_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ServicenowTeamMappings { get; set; }
+    public List<Customer>? ServicenowTeamMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_ticket_sync")] // Original Type: string
@@ -1587,11 +1586,11 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_ticket_sync_list")] // Original Type: #/components/schemas/KeyPair2
-    public List<Customer>? ServicenowTicketSyncList { get; set; }
+    public List<Customer>? ServicenowTicketSyncList { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("servicenow_fieldmappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ServicenowFieldmappings { get; set; }
+    public List<Customer>? ServicenowFieldmappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("matching_value")] // Original Type: string
@@ -1671,23 +1670,23 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhdcustomfieldmappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? Thirdpartynhdcustomfieldmappings { get; set; }
+    public List<Customer>? Thirdpartynhdcustomfieldmappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_status_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ThirdpartynhdStatusMappings { get; set; }
+    public List<Customer>? ThirdpartynhdStatusMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_category_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ThirdpartynhdCategoryMappings { get; set; }
+    public List<Customer>? ThirdpartynhdCategoryMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_tickettype_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ThirdpartynhdTickettypeMappings { get; set; }
+    public List<Customer>? ThirdpartynhdTickettypeMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_outcome_mappings")] // Original Type: #/components/schemas/IntegrationFieldMapping
-    public List<Customer>? ThirdpartynhdOutcomeMappings { get; set; }
+    public List<Customer>? ThirdpartynhdOutcomeMappings { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartynhd_status")] // Original Type: integer
@@ -1731,7 +1730,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("audit_log")] // Original Type: #/components/schemas/Audit
-    public List<Customer>? AuditLog { get; set; }
+    public List<Customer>? AuditLog { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("jira_allow_webhooks")] // Original Type: boolean
@@ -1751,7 +1750,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dbc_dimensions")] // Original Type: #/components/schemas/BusinessCentralDimensions
-    public List<Customer>? DbcDimensions { get; set; }
+    public List<Customer>? DbcDimensions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dbc_template")] // Original Type: string
@@ -1777,7 +1776,7 @@ public partial class Customer
     public Int32 Key { get; set; }
 
     [JsonPropertyName("table")] // Original Type: #/components/schemas/TableEnum
-    public TableEnum Table { get; set; }
+    public TableEnum Table { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("logo")] // Original Type: string
@@ -1885,7 +1884,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenants")] // Original Type: #/components/schemas/AreaAzureTenant
-    public List<Customer>? AzureTenants { get; set; }
+    public List<Customer>? AzureTenants { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenant_id")] // Original Type: string
@@ -1897,7 +1896,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("snowLicences")] // Original Type: #/components/schemas/SnowLicenseAbstract
-    public List<Customer>? SnowLicences { get; set; }
+    public List<Customer>? SnowLicences { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qbo_company_id")] // Original Type: string
@@ -1925,7 +1924,7 @@ public partial class Customer
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship")] // Original Type: #/components/schemas/KeyPair
-    public List<Customer>? CustomerRelationship { get; set; }
+    public List<Customer>? CustomerRelationship { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customer_relationship_list")] // Original Type: string

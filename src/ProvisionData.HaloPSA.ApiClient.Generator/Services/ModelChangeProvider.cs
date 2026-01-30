@@ -15,6 +15,7 @@
 using Microsoft.Extensions.Options;
 using ProvisionData.HaloPSA.ApiClient.Generator;
 using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 
@@ -185,10 +186,10 @@ public partial class ModelChangeProvider : IModelChangeProvider
             change.Required = requiredElement.ValueKind == JsonValueKind.True;
         }
 
-        //if (change.ClientPropertyName == "Fields")
-        //{
-        //    Debugger.Break();
-        //}
+        if (change.JsonPropertyName == "new_asset")
+        {
+            Debugger.Break();
+        }
 
         if (String.IsNullOrWhiteSpace(change.ClientPropertyType))
         {
@@ -281,9 +282,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
 
     private static void SetDefaultValue(ModelChange change)
     {
-        if (String.IsNullOrWhiteSpace(change.ClientPropertyType)
-            || change.ClientPropertyType.IsValueType()
-            || change.Nullable is null or true)
+        if (String.IsNullOrWhiteSpace(change.ClientPropertyType) || change.ClientPropertyType.IsKnownType())
         {
             change.DefaultValue = String.Empty;
             return;
@@ -292,6 +291,11 @@ public partial class ModelChangeProvider : IModelChangeProvider
         if (change.JsonPropertyType == "array" || change.ClientPropertyType.StartsWith("List<"))
         {
             change.DefaultValue = " = [];";
+            return;
+        }
+
+        if (change.Nullable == true)
+        {
             return;
         }
 

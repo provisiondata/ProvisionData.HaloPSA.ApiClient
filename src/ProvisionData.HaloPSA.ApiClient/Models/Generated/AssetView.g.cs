@@ -22,7 +22,7 @@ public partial class AssetView
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")] // Original Type: #/components/schemas/Device_List
-    public List<AssetView>? Assets { get; set; }
+    public List<AssetView>? Assets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("columns_id")] // Original Type: integer
@@ -34,11 +34,11 @@ public partial class AssetView
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("columns")] // Original Type: #/components/schemas/ViewColumnsDetails
-    public List<AssetView>? Columns { get; set; }
+    public List<AssetView>? Columns { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xtypeunamecancreatenew")] // Original Type: #/components/schemas/RT_Permission
-    public List<AssetView>? Xtypeunamecancreatenew { get; set; }
+    public List<AssetView>? Xtypeunamecancreatenew { get; set; } = [];
 
 }
 

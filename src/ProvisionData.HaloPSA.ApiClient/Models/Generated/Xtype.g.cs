@@ -162,11 +162,11 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("fields")] // Original Type: #/components/schemas/TypeInfo
-    public List<XType>? Fields { get; set; }
+    public List<XType>? Fields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_list")] // Original Type: #/components/schemas/Field
-    public List<XType>? FieldList { get; set; }
+    public List<XType>? FieldList { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_code")] // Original Type: string
@@ -222,11 +222,11 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("bookingtypes")] // Original Type: #/components/schemas/BookingType
-    public List<XType>? Bookingtypes { get; set; }
+    public List<XType>? Bookingtypes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timeslots")] // Original Type: #/components/schemas/BookingTypeTimeslot
-    public List<XType>? Timeslots { get; set; }
+    public List<XType>? Timeslots { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timeslot_bookingtype")] // Original Type: integer
@@ -261,7 +261,7 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xtype_roles")] // Original Type: #/components/schemas/XTypeRole
-    public List<XType>? XtypeRoles { get; set; }
+    public List<XType>? XtypeRoles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("asset_details_tab_display")] // Original Type: integer
@@ -269,7 +269,7 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tab_config")] // Original Type: #/components/schemas/TabConfig
-    public List<XType>? TabConfig { get; set; }
+    public List<XType>? TabConfig { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("resourcebookingtype")] // Original Type: integer
@@ -277,7 +277,7 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_status")] // Original Type: #/components/schemas/XTypeStatus
-    public List<XType>? AllowedStatus { get; set; }
+    public List<XType>? AllowedStatus { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowall_status")] // Original Type: boolean
@@ -325,11 +325,11 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("booking_sites")] // Original Type: #/components/schemas/Site_List
-    public List<XType>? BookingSites { get; set; }
+    public List<XType>? BookingSites { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("access_control")] // Original Type: #/components/schemas/AccessControl
-    public List<XType>? AccessControl { get; set; }
+    public List<XType>? AccessControl { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("newticket_priority")] // Original Type: integer
@@ -369,11 +369,11 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("services")] // Original Type: #/components/schemas/ServSite_List
-    public List<XType>? Services { get; set; }
+    public List<XType>? Services { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("field_restrictions")] // Original Type: #/components/schemas/FieldRoleRestriction
-    public List<XType>? FieldRestrictions { get; set; }
+    public List<XType>? FieldRestrictions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_visibility")] // Original Type: integer
@@ -413,7 +413,7 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allowed_custombuttons")] // Original Type: #/components/schemas/XTypeButton
-    public List<XType>? AllowedCustombuttons { get; set; }
+    public List<XType>? AllowedCustombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_device_template_name")] // Original Type: string
@@ -429,7 +429,7 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_asset_defaults")] // Original Type: #/components/schemas/ItemDeviceDefaults
-    public List<XType>? LinkedAssetDefaults { get; set; }
+    public List<XType>? LinkedAssetDefaults { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("allow_asset_maintenance")] // Original Type: boolean
@@ -437,7 +437,7 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maintenance_windows")] // Original Type: #/components/schemas/Holidays
-    public List<XType>? MaintenanceWindows { get; set; }
+    public List<XType>? MaintenanceWindows { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("is_portfolio")] // Original Type: boolean
@@ -457,11 +457,11 @@ public partial class XType
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("upstream_relationship_restrictions")] // Original Type: #/components/schemas/DeviceRelationshipRestriction
-    public List<XType>? UpstreamRelationshipRestrictions { get; set; }
+    public List<XType>? UpstreamRelationshipRestrictions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("downstream_relationship_restrictions")] // Original Type: #/components/schemas/DeviceRelationshipRestriction
-    public List<XType>? DownstreamRelationshipRestrictions { get; set; }
+    public List<XType>? DownstreamRelationshipRestrictions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("primary_instance_type")] // Original Type: integer

@@ -282,7 +282,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Item>? Customfields { get; set; }
+    public List<Item>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_isimport")] // Original Type: boolean
@@ -302,11 +302,11 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
-    public List<Item>? Custombuttons { get; set; }
+    public List<Item>? Custombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_suppliers")] // Original Type: #/components/schemas/ItemSupplier
-    public List<Item>? ItemSuppliers { get; set; }
+    public List<Item>? ItemSuppliers { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xero_salestax")] // Original Type: string
@@ -350,7 +350,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("stocklocations")] // Original Type: #/components/schemas/Site_List
-    public List<Item>? Stocklocations { get; set; }
+    public List<Item>? Stocklocations { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("xero_tenant_id")] // Original Type: string
@@ -377,13 +377,13 @@ public partial class Item
     public String? AssetAccountName { get; set; }
 
     [JsonPropertyName("income_account")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 IncomeAccount { get; set; }
+    public KeyPair2 IncomeAccount { get; set; } = new();
 
     [JsonPropertyName("expense_account")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 ExpenseAccount { get; set; }
+    public KeyPair2 ExpenseAccount { get; set; } = new();
 
     [JsonPropertyName("asset_account")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 AssetAccount { get; set; }
+    public KeyPair2 AssetAccount { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qbosku")] // Original Type: string
@@ -398,7 +398,7 @@ public partial class Item
     public String? Qbocategoryname { get; set; }
 
     [JsonPropertyName("qbo_category")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 QboCategory { get; set; }
+    public KeyPair2 QboCategory { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("autotaskserviceid")] // Original Type: integer
@@ -465,11 +465,11 @@ public partial class Item
     public String? SnelstartDepartmentName { get; set; }
 
     [JsonPropertyName("snelstart_department")] // Original Type: #/components/schemas/KeyPair2
-    public KeyPair2 SnelstartDepartment { get; set; }
+    public KeyPair2 SnelstartDepartment { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_asset_defaults")] // Original Type: #/components/schemas/ItemDeviceDefaults
-    public List<Item>? LinkedAssetDefaults { get; set; }
+    public List<Item>? LinkedAssetDefaults { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("maxitemdiscount")] // Original Type: number
@@ -551,7 +551,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Item>? ExternalLinks { get; set; }
+    public List<Item>? ExternalLinks { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_match_thirdparty_id")] // Original Type: string
@@ -694,7 +694,7 @@ public partial class Item
     public String? PurchaseCurrencyCodeName { get; set; }
 
     [JsonPropertyName("purchase_currency")] // Original Type: #/components/schemas/Currency
-    public Currency PurchaseCurrency { get; set; }
+    public Currency PurchaseCurrency { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("autorenew_quote_line_default")] // Original Type: boolean
@@ -714,7 +714,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relatedcategories")] // Original Type: #/components/schemas/KeyPair7
-    public List<Item>? Relatedcategories { get; set; }
+    public List<Item>? Relatedcategories { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relatedcategories_list")] // Original Type: string
@@ -730,7 +730,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("property_changes")] // Original Type: #/components/schemas/PropertyChange
-    public List<Item>? PropertyChanges { get; set; }
+    public List<Item>? PropertyChanges { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("use_tiered_pricing")] // Original Type: boolean
@@ -742,7 +742,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tiered_pricing")] // Original Type: #/components/schemas/ItemTieredPricing
-    public List<Item>? TieredPricing { get; set; }
+    public List<Item>? TieredPricing { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_supplier_part_code")] // Original Type: string
@@ -786,7 +786,7 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dbc_dimensions")] // Original Type: #/components/schemas/BusinessCentralDimensions
-    public List<Item>? DbcDimensions { get; set; }
+    public List<Item>? DbcDimensions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynamics_dimensions_enabled")] // Original Type: boolean
@@ -798,10 +798,10 @@ public partial class Item
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("item_accounts_links")] // Original Type: #/components/schemas/ItemAccountsLink
-    public List<Item>? ItemAccountsLinks { get; set; }
+    public List<Item>? ItemAccountsLinks { get; set; } = [];
 
     [JsonPropertyName("new_item_accounts_link")] // Original Type: #/components/schemas/ItemAccountsLink
-    public ItemAccountsLink NewItemAccountsLink { get; set; }
+    public ItemAccountsLink NewItemAccountsLink { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dynamics_bc_synced")] // Original Type: boolean
@@ -819,8 +819,7 @@ public partial class Item
     [JsonPropertyName("_importtype")] // Original Type: string
     public String? Importtype { get; set; }
 
-    [JsonPropertyName("new_external_link")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList NewExternalLink { get; set; }
+    // Property new_external_link is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_details_id")] // Original Type: integer

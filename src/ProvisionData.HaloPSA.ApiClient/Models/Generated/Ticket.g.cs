@@ -417,7 +417,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("child_ticket_ids")] // Original Type: array
-    public List<Ticket>? ChildTicketIds { get; set; }
+    public List<Ticket>? ChildTicketIds { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("nextactivitydate")] // Original Type: string
@@ -504,7 +504,7 @@ public partial class Ticket
     public String? StartdateTimezone { get; set; }
 
     [JsonPropertyName("startdate_with_timezone")] // Original Type: #/components/schemas/DateTimeZone
-    public DateTimeZone StartdateWithTimezone { get; set; }
+    public DateTimeZone StartdateWithTimezone { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("starttime")] // Original Type: string
@@ -523,7 +523,7 @@ public partial class Ticket
     public String? TargetdateTimezone { get; set; }
 
     [JsonPropertyName("targetdate_with_timezone")] // Original Type: #/components/schemas/DateTimeZone
-    public DateTimeZone TargetdateWithTimezone { get; set; }
+    public DateTimeZone TargetdateWithTimezone { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("targettime")] // Original Type: string
@@ -763,11 +763,11 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Ticket>? Customfields { get; set; }
+    public List<Ticket>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("timeentries")] // Original Type: #/components/schemas/FaultsTimeEntry
-    public List<Ticket>? Timeentries { get; set; }
+    public List<Ticket>? Timeentries { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("section_timezone")] // Original Type: string
@@ -1290,7 +1290,7 @@ public partial class Ticket
     public String? Deliverycontact { get; set; }
 
     [JsonPropertyName("delivery_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore DeliveryAddress { get; set; }
+    public AddressStore DeliveryAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("surveyneeded")] // Original Type: boolean
@@ -1581,7 +1581,7 @@ public partial class Ticket
     public String? ContractRef { get; set; }
 
     [JsonPropertyName("billing_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore BillingAddress { get; set; }
+    public AddressStore BillingAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("workflow_stepstarted")] // Original Type: string
@@ -1745,11 +1745,11 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approvers")] // Original Type: #/components/schemas/FaultApproval
-    public List<Ticket>? Approvers { get; set; }
+    public List<Ticket>? Approvers { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("approvers_history")] // Original Type: #/components/schemas/FaultApproval
-    public List<Ticket>? ApproversHistory { get; set; }
+    public List<Ticket>? ApproversHistory { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("appointment_count")] // Original Type: integer
@@ -1769,7 +1769,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("qualifications")] // Original Type: #/components/schemas/Qualification
-    public List<Ticket>? Qualifications { get; set; }
+    public List<Ticket>? Qualifications { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("target_adjust")] // Original Type: integer
@@ -1829,15 +1829,15 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")] // Original Type: #/components/schemas/Attachment
-    public List<Ticket>? Attachments { get; set; }
+    public List<Ticket>? Attachments { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("documents")] // Original Type: #/components/schemas/Attachment
-    public List<Ticket>? Documents { get; set; }
+    public List<Ticket>? Documents { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_notes")] // Original Type: #/components/schemas/AreaPopup
-    public List<Ticket>? PopupNotes { get; set; }
+    public List<Ticket>? PopupNotes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("current_action_type")] // Original Type: string
@@ -1853,7 +1853,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")] // Original Type: #/components/schemas/Device_List
-    public List<Ticket>? Assets { get; set; }
+    public List<Ticket>? Assets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("nochangesequpdate")] // Original Type: boolean
@@ -1884,7 +1884,7 @@ public partial class Ticket
     public Int32? FollowerCount { get; set; }
 
     [JsonPropertyName("contact_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore ContactAddress { get; set; }
+    public AddressStore ContactAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("chat_id")] // Original Type: integer
@@ -1908,7 +1908,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("todo_list")] // Original Type: #/components/schemas/FaultToDo
-    public List<Ticket>? TodoList { get; set; }
+    public List<Ticket>? TodoList { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("service_count")] // Original Type: integer
@@ -1936,11 +1936,11 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("items_issued")] // Original Type: #/components/schemas/FaultItem
-    public List<Ticket>? ItemsIssued { get; set; }
+    public List<Ticket>? ItemsIssued { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("project_items_issued")] // Original Type: #/components/schemas/FaultItem
-    public List<Ticket>? ProjectItemsIssued { get; set; }
+    public List<Ticket>? ProjectItemsIssued { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("quotation_count")] // Original Type: integer
@@ -2012,7 +2012,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("budgets")] // Original Type: #/components/schemas/FaultBudget
-    public List<Ticket>? Budgets { get; set; }
+    public List<Ticket>? Budgets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("process_ai")] // Original Type: boolean
@@ -2050,8 +2050,7 @@ public partial class Ticket
     [JsonPropertyName("form_id")] // Original Type: string
     public String? FormId { get; set; }
 
-    [JsonPropertyName("database_lookup_result")] // Original Type: #/components/schemas/PartsLookupResult
-    public PartsLookupResult DatabaseLookupResult { get; set; }
+    // Property database_lookup_result is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_tenants")] // Original Type: string
@@ -2139,7 +2138,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("journeys")] // Original Type: #/components/schemas/Journey
-    public List<Ticket>? Journeys { get; set; }
+    public List<Ticket>? Journeys { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("devops_agent")] // Original Type: string
@@ -2411,7 +2410,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("audit_log")] // Original Type: #/components/schemas/Audit
-    public List<Ticket>? AuditLog { get; set; }
+    public List<Ticket>? AuditLog { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("meraki_device")] // Original Type: string
@@ -2423,7 +2422,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("matched_rules")] // Original Type: #/components/schemas/FaultRuleMatch
-    public List<Ticket>? MatchedRules { get; set; }
+    public List<Ticket>? MatchedRules { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("powershell_script_count")] // Original Type: integer
@@ -2523,7 +2522,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("tags")] // Original Type: #/components/schemas/Tag
-    public List<Ticket>? Tags { get; set; }
+    public List<Ticket>? Tags { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dontcreatechild")] // Original Type: boolean
@@ -2671,7 +2670,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Ticket>? ExternalLinks { get; set; }
+    public List<Ticket>? ExternalLinks { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_match_thirdparty_id")] // Original Type: string
@@ -2727,7 +2726,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linktypesarray")] // Original Type: #/components/schemas/KeyPair
-    public List<Ticket>? Linktypesarray { get; set; }
+    public List<Ticket>? Linktypesarray { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("kaseyaid")] // Original Type: string
@@ -2766,7 +2765,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("expenses")] // Original Type: #/components/schemas/Expense
-    public List<Ticket>? Expenses { get; set; }
+    public List<Ticket>? Expenses { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("clear_feedback")] // Original Type: boolean
@@ -2902,7 +2901,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("milestones")] // Original Type: #/components/schemas/MileStone
-    public List<Ticket>? Milestones { get; set; }
+    public List<Ticket>? Milestones { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("disable_milestone_modification")] // Original Type: boolean
@@ -2926,7 +2925,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")] // Original Type: #/components/schemas/Tabname
-    public List<Ticket>? Extratabs { get; set; }
+    public List<Ticket>? Extratabs { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_approvalprocess_role_id")] // Original Type: integer
@@ -2946,43 +2945,43 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("parent_milestones")] // Original Type: #/components/schemas/MileStone
-    public List<Ticket>? ParentMilestones { get; set; }
+    public List<Ticket>? ParentMilestones { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("vectors")] // Original Type: #/components/schemas/FaultVector
-    public List<Ticket>? Vectors { get; set; }
+    public List<Ticket>? Vectors { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ai_matched_tickets")] // Original Type: #/components/schemas/FaultVectorScore
-    public List<Ticket>? AiMatchedTickets { get; set; }
+    public List<Ticket>? AiMatchedTickets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ai_matched_tickets_incidents")] // Original Type: #/components/schemas/FaultVectorScore
-    public List<Ticket>? AiMatchedTicketsIncidents { get; set; }
+    public List<Ticket>? AiMatchedTicketsIncidents { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ai_matched_tickets_requests")] // Original Type: #/components/schemas/FaultVectorScore
-    public List<Ticket>? AiMatchedTicketsRequests { get; set; }
+    public List<Ticket>? AiMatchedTicketsRequests { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ai_matched_tickets_problems")] // Original Type: #/components/schemas/FaultVectorScore
-    public List<Ticket>? AiMatchedTicketsProblems { get; set; }
+    public List<Ticket>? AiMatchedTicketsProblems { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ai_matched_articles")] // Original Type: #/components/schemas/FaultVectorScore
-    public List<Ticket>? AiMatchedArticles { get; set; }
+    public List<Ticket>? AiMatchedArticles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ai_suggestions")] // Original Type: #/components/schemas/AiSuggestionFault
-    public List<Ticket>? AiSuggestions { get; set; }
+    public List<Ticket>? AiSuggestions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_apply_ai_suggestions")] // Original Type: array
-    public List<Ticket>? ApplyAiSuggestions { get; set; }
+    public List<Ticket>? ApplyAiSuggestions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_dismiss_ai_suggestions")] // Original Type: array
-    public List<Ticket>? DismissAiSuggestions { get; set; }
+    public List<Ticket>? DismissAiSuggestions { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("suggested_category1")] // Original Type: string
@@ -3030,11 +3029,11 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("related_tickets")] // Original Type: #/components/schemas/Faults_List
-    public List<Ticket>? RelatedTickets { get; set; }
+    public List<Ticket>? RelatedTickets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_related_tickets")] // Original Type: #/components/schemas/Faults_List
-    public List<Ticket>? NewRelatedTickets { get; set; }
+    public List<Ticket>? NewRelatedTickets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("unrelate_from_ticket_id")] // Original Type: integer
@@ -3042,7 +3041,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ecommerce_orders")] // Original Type: #/components/schemas/EcommerceOrderFault
-    public List<Ticket>? EcommerceOrders { get; set; }
+    public List<Ticket>? EcommerceOrders { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hide_feedback")] // Original Type: boolean
@@ -3050,7 +3049,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("workflow_history")] // Original Type: #/components/schemas/WorkflowHistory
-    public List<Ticket>? WorkflowHistory { get; set; }
+    public List<Ticket>? WorkflowHistory { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("connectwisermm_ticketid")] // Original Type: string
@@ -3086,7 +3085,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("contributors")] // Original Type: #/components/schemas/Contributors
-    public List<Ticket>? Contributors { get; set; }
+    public List<Ticket>? Contributors { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("internet_message_id")] // Original Type: string
@@ -3106,7 +3105,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("date_dependencies")] // Original Type: #/components/schemas/FaultsDateDependencies
-    public List<Ticket>? DateDependencies { get; set; }
+    public List<Ticket>? DateDependencies { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_milestone_ticket")] // Original Type: integer
@@ -3114,7 +3113,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets_columns")] // Original Type: #/components/schemas/ViewColumnsDetails
-    public List<Ticket>? AssetsColumns { get; set; }
+    public List<Ticket>? AssetsColumns { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("slaresponseexcuse")] // Original Type: string
@@ -3134,7 +3133,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("olas")] // Original Type: #/components/schemas/FaultOLA
-    public List<Ticket>? Olas { get; set; }
+    public List<Ticket>? Olas { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ola_count")] // Original Type: integer
@@ -3142,7 +3141,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_workflow_history")] // Original Type: #/components/schemas/WorkflowHistory
-    public List<Ticket>? NewWorkflowHistory { get; set; }
+    public List<Ticket>? NewWorkflowHistory { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("default_slack_channel_name")] // Original Type: string
@@ -3342,10 +3341,9 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_linked_sites")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Ticket>? UserLinkedSites { get; set; }
+    public List<Ticket>? UserLinkedSites { get; set; } = [];
 
-    [JsonPropertyName("prepay_threshold")] // Original Type: #/components/schemas/PrePayThreshold
-    public PrePayThreshold PrepayThreshold { get; set; }
+    // Property prepay_threshold is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("automation_entity_type")] // Original Type: integer
@@ -3361,7 +3359,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_tags")] // Original Type: #/components/schemas/Tag
-    public List<Ticket>? AddTags { get; set; }
+    public List<Ticket>? AddTags { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("locked_by_agentid")] // Original Type: integer
@@ -3451,7 +3449,7 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("enduser_role_ids")] // Original Type: array
-    public List<Ticket>? EnduserRoleIds { get; set; }
+    public List<Ticket>? EnduserRoleIds { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("order_sequence")] // Original Type: integer
@@ -3502,7 +3500,7 @@ public partial class Ticket
     public Int32? BillingType { get; set; }
 
     [JsonPropertyName("table")] // Original Type: #/components/schemas/TableEnum
-    public TableEnum Table { get; set; }
+    public TableEnum Table { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("use")] // Original Type: string
@@ -3710,17 +3708,15 @@ public partial class Ticket
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("additional_agents")] // Original Type: #/components/schemas/FaultAdditionalAgents
-    public List<Ticket>? AdditionalAgents { get; set; }
+    public List<Ticket>? AdditionalAgents { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_to_invoice_to_id")] // Original Type: integer
     public Int32? ClientToInvoiceToId { get; set; }
 
-    [JsonPropertyName("primary_issue")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList PrimaryIssue { get; set; }
+    // Property primary_issue is ignored as per ModelChanges configuration.
 
-    [JsonPropertyName("primary_workitem")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList PrimaryWorkitem { get; set; }
+    // Property primary_workitem is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("billing_plan_text")] // Original Type: string
@@ -3789,8 +3785,7 @@ public partial class Ticket
     [JsonPropertyName("_importtype")] // Original Type: string
     public String? Importtype { get; set; }
 
-    [JsonPropertyName("new_external_link")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList NewExternalLink { get; set; }
+    // Property new_external_link is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_details_id")] // Original Type: integer

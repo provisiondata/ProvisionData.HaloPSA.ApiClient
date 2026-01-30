@@ -218,15 +218,15 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Users>? Customfields { get; set; }
+    public List<Users>? Customfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("attachments")] // Original Type: #/components/schemas/Attachment
-    public List<Users>? Attachments { get; set; }
+    public List<Users>? Attachments { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
-    public List<Users>? Custombuttons { get; set; }
+    public List<Users>? Custombuttons { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("relationship_id")] // Original Type: integer
@@ -234,7 +234,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("user_relationships")] // Original Type: #/components/schemas/XTypeRole
-    public List<Users>? UserRelationships { get; set; }
+    public List<Users>? UserRelationships { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("uddevsite")] // Original Type: integer
@@ -701,15 +701,15 @@ public partial class Users
     public Boolean? Ismaincontact { get; set; }
 
     [JsonPropertyName("primary_address")] // Original Type: #/components/schemas/AddressStore
-    public AddressStore PrimaryAddress { get; set; }
+    public AddressStore PrimaryAddress { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("addresses")] // Original Type: #/components/schemas/AddressStore
-    public List<Users>? Addresses { get; set; }
+    public List<Users>? Addresses { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("departments")] // Original Type: #/components/schemas/UserDepartment
-    public List<Users>? Departments { get; set; }
+    public List<Users>? Departments { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("organisation_id")] // Original Type: integer
@@ -717,7 +717,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("popup_notes")] // Original Type: #/components/schemas/AreaPopup
-    public List<Users>? PopupNotes { get; set; }
+    public List<Users>? PopupNotes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("open_ticket_count")] // Original Type: integer
@@ -753,7 +753,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("usercompany")] // Original Type: #/components/schemas/UserCompany
-    public List<Users>? Usercompany { get; set; }
+    public List<Users>? Usercompany { get; set; } = [];
 
     // Property supplier is ignored as per ModelChanges configuration.
 
@@ -763,7 +763,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("claims")] // Original Type: #/components/schemas/NHD_Claim
-    public List<Users>? Claims { get; set; }
+    public List<Users>? Claims { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("app_colour")] // Original Type: string
@@ -858,7 +858,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("software")] // Original Type: #/components/schemas/DeviceApplications
-    public List<Users>? Software { get; set; }
+    public List<Users>? Software { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("canaccessinvoices")] // Original Type: boolean
@@ -906,7 +906,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assets")] // Original Type: #/components/schemas/Device_List
-    public List<Users>? Assets { get; set; }
+    public List<Users>? Assets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("locked")] // Original Type: boolean
@@ -1002,7 +1002,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("external_links")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Users>? ExternalLinks { get; set; }
+    public List<Users>? ExternalLinks { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("_match_thirdparty_id")] // Original Type: string
@@ -1034,7 +1034,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("roles")] // Original Type: #/components/schemas/UserRoles
-    public List<Users>? Roles { get; set; }
+    public List<Users>? Roles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("azure_roleid")] // Original Type: integer
@@ -1042,7 +1042,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("add_roles")] // Original Type: #/components/schemas/UserRoles
-    public List<Users>? AddRoles { get; set; }
+    public List<Users>? AddRoles { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("facebook_id")] // Original Type: integer
@@ -1078,7 +1078,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("ticket_customfields")] // Original Type: #/components/schemas/CustomField
-    public List<Users>? TicketCustomfields { get; set; }
+    public List<Users>? TicketCustomfields { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("manager_email")] // Original Type: string
@@ -1098,11 +1098,11 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("thirdpartygroups")] // Original Type: #/components/schemas/UserThirdPartyGroup
-    public List<Users>? Thirdpartygroups { get; set; }
+    public List<Users>? Thirdpartygroups { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("linked_sites")] // Original Type: #/components/schemas/ExternalLink_List
-    public List<Users>? LinkedSites { get; set; }
+    public List<Users>? LinkedSites { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dontackemails2")] // Original Type: boolean
@@ -1158,7 +1158,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("extratabs")] // Original Type: #/components/schemas/Tabname
-    public List<Users>? Extratabs { get; set; }
+    public List<Users>? Extratabs { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("informifack")] // Original Type: boolean
@@ -1170,7 +1170,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("marketing_unsubscribes")] // Original Type: #/components/schemas/MarketingUnsubscribe
-    public List<Users>? MarketingUnsubscribes { get; set; }
+    public List<Users>? MarketingUnsubscribes { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("new_account_name")] // Original Type: string
@@ -1264,7 +1264,7 @@ public partial class Users
     public Int32 Key { get; set; }
 
     [JsonPropertyName("table")] // Original Type: #/components/schemas/TableEnum
-    public TableEnum Table { get; set; }
+    public TableEnum Table { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_id")] // Original Type: integer
@@ -1340,7 +1340,7 @@ public partial class Users
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("role_ids")] // Original Type: array
-    public List<Users>? RoleIds { get; set; }
+    public List<Users>? RoleIds { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("avalara_tenant")] // Original Type: integer
@@ -1354,8 +1354,7 @@ public partial class Users
     [JsonPropertyName("_importthirdpartyid")] // Original Type: string
     public String? Importthirdpartyid { get; set; }
 
-    [JsonPropertyName("new_external_link")] // Original Type: #/components/schemas/ExternalLink_List
-    public ExternalLinkList NewExternalLink { get; set; }
+    // Property new_external_link is ignored as per ModelChanges configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_details_id")] // Original Type: integer
