@@ -6,98 +6,99 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: AddressStore, Category: 
 public partial class AddressStore
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("type")]
+    [JsonPropertyName("type")] // Original Type: integer
     public Int32? Type { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("description")]
-    public String? Description { get; set; } = String.Empty;
+    [JsonPropertyName("description")] // Original Type: string
+    public String? Description { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("note")]
-    public String? Note { get; set; } = String.Empty;
+    [JsonPropertyName("note")] // Original Type: string
+    public String? Note { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("line1")]
-    public String? Line1 { get; set; } = String.Empty;
+    [JsonPropertyName("line1")] // Original Type: string
+    public String? Line1 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("line2")]
-    public String? Line2 { get; set; } = String.Empty;
+    [JsonPropertyName("line2")] // Original Type: string
+    public String? Line2 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("line3")]
-    public String? Line3 { get; set; } = String.Empty;
+    [JsonPropertyName("line3")] // Original Type: string
+    public String? Line3 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("line4")]
-    public String? Line4 { get; set; } = String.Empty;
+    [JsonPropertyName("line4")] // Original Type: string
+    public String? Line4 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("postcode")]
-    public String? Postcode { get; set; } = String.Empty;
+    [JsonPropertyName("postcode")] // Original Type: string
+    public String? Postcode { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("primary")]
+    [JsonPropertyName("primary")] // Original Type: boolean
     public Boolean? Primary { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("inactive")]
+    [JsonPropertyName("inactive")] // Original Type: boolean
     public Boolean? Inactive { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("date_active")]
+    [JsonPropertyName("date_active")] // Original Type: string
     public DateTimeOffset? DateActive { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("date_inactive")]
+    [JsonPropertyName("date_inactive")] // Original Type: string
     public DateTimeOffset? DateInactive { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("lat")]
+    [JsonPropertyName("lat")] // Original Type: number
     public Double? Lat { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("long")]
+    [JsonPropertyName("long")] // Original Type: number
     public Double? Long { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("client_name")]
-    public String? ClientName { get; set; } = String.Empty;
+    [JsonPropertyName("client_name")] // Original Type: string
+    public String? ClientName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("site_id")]
+    [JsonPropertyName("site_id")] // Original Type: integer
     public Int32? SiteId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("site_name")]
-    public String? SiteName { get; set; } = String.Empty;
+    [JsonPropertyName("site_name")] // Original Type: string
+    public String? SiteName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("user_id")]
+    [JsonPropertyName("user_id")] // Original Type: integer
     public Int32? UserId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("user_name")]
-    public String? UserName { get; set; } = String.Empty;
+    [JsonPropertyName("user_name")] // Original Type: string
+    public String? UserName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("user_email")]
-    public String? UserEmail { get; set; } = String.Empty;
+    [JsonPropertyName("user_email")] // Original Type: string
+    public String? UserEmail { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_isimport")]
+    [JsonPropertyName("_isimport")] // Original Type: boolean
     public Boolean? Isimport { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_warning")]
-    public String? Warning { get; set; } = String.Empty;
+    [JsonPropertyName("_warning")] // Original Type: string
+    public String? Warning { get; set; }
 
 }
 

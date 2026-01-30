@@ -112,7 +112,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
             {
                 if (_changeProvider.ShouldSkip(typeElement.Name))
                 {
-                    _logger.LogInformation("Skipping generation of {SchemaName} as per configuration.", typeElement.Name);
+                    _logger.LogInformation("Skipping generation of {SchemaName}: not included in ModelChanges configuration.", typeElement.Name);
                     continue;
                 }
 
@@ -404,19 +404,28 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
             foreach (var prop in properties.EnumerateObject())
             {
                 var change = _changeProvider.GetChange(jsonModelName, prop);
-
-                var reqired = change.Required ? "required " : String.Empty;
-                var nullableSuffix = String.Empty;
-
-                if (change.Nullable == true)
+                if (change.Ignore)
                 {
-                    nullableSuffix = "?";
-                    sb.AppendLine("    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]");
+                    sb.AppendLine($"    // Property {change.JsonPropertyName} is ignored as per ModelChanges configuration.");
+                    sb.AppendLine();
                 }
+                else
+                {
 
-                sb.AppendLine($"    [JsonPropertyName(\"{prop.Name}\")]");
-                sb.AppendLine($"    public {reqired}{change.ClientPropertyType}{nullableSuffix} {change.ClientPropertyName} {{ get; set; }}{change.DefaultValue}");
-                sb.AppendLine();
+                    var reqired = change.Required ? "required " : String.Empty;
+                    var nullableSuffix = String.Empty;
+
+                    if (change.Nullable == true)
+                    {
+                        nullableSuffix = "?";
+                        sb.AppendLine("    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]");
+                    }
+
+                    sb.AppendLine($"    [JsonPropertyName(\"{prop.Name}\")] // Original Type: {change.JsonPropertyType}");
+                    sb.AppendLine($"    public {reqired}{change.ClientPropertyType}{nullableSuffix} {change.ClientPropertyName} {{ get; set; }}{change.DefaultValue}");
+                    sb.AppendLine();
+
+                }
             }
         }
         else

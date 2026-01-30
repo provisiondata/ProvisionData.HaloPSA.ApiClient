@@ -6,38 +6,39 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: Currency, Category: 
 public partial class Currency
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("name")]
-    public String? Name { get; set; } = String.Empty;
+    [JsonPropertyName("name")] // Original Type: string
+    public String? Name { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("symbol")]
-    public String? Symbol { get; set; } = String.Empty;
+    [JsonPropertyName("symbol")] // Original Type: string
+    public String? Symbol { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("code")]
-    public String? Code { get; set; } = String.Empty;
+    [JsonPropertyName("code")] // Original Type: string
+    public String? Code { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("conversion_rate")]
+    [JsonPropertyName("conversion_rate")] // Original Type: number
     public Double? ConversionRate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("last_updated")]
+    [JsonPropertyName("last_updated")] // Original Type: string
     public DateTimeOffset? LastUpdated { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("history")]
-    public List<CurrencyHistory>? History { get; set; } = new();
+    [JsonPropertyName("history")] // Original Type: #/components/schemas/CurrencyHistory
+    public List<Currency>? History { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_warning")]
-    public String? Warning { get; set; } = String.Empty;
+    [JsonPropertyName("_warning")] // Original Type: string
+    public String? Warning { get; set; }
 
 }
 

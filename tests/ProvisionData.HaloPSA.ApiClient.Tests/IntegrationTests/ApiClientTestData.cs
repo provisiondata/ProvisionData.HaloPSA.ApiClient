@@ -16,18 +16,15 @@ namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;
 
 public class ApiClientTestData
 {
-    public Int32 TestAssetId { get; set; }
     public Int32 NonExistingAssetId { get; set; }
-
-    public Int32 TestCustomerId { get; set; }
     public Int32 NonExistingCustomerId { get; set; }
-
-    public Int32 TestInvoiceId { get; set; }
     public Int32 NonExistingInvoiceId { get; set; }
-
-    public Int32 TestTicketId { get; set; }
     public Int32 NonExistingTicketId { get; set; }
+    public Int32 TestAssetId { get; set; }
+    public Int32 TestAssetTypeId { get; set; }
+    public Int32 TestCustomerId { get; set; }
+    public Int32 TestInvoiceId { get; set; }
     public Int32 TestSiteId { get; set; }
-    public Int32 TestAssetTypeId { get; internal set; }
-    public Int32 TestTechnicalOwnerId { get; internal set; }
+    public Int32 TestTechnicalOwnerId { get; set; }
+    public Int32 TestTicketId { get; set; }
 }

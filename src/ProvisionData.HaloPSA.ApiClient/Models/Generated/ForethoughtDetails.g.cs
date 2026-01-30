@@ -6,26 +6,27 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: ForethoughtDetails, Category: 
 public partial class ForethoughtDetails
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("name")]
-    public String? Name { get; set; } = String.Empty;
+    [JsonPropertyName("name")] // Original Type: string
+    public String? Name { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("new_integration_key")]
-    public String? NewIntegrationKey { get; set; } = String.Empty;
+    [JsonPropertyName("new_integration_key")] // Original Type: string
+    public String? NewIntegrationKey { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("api_key")]
-    public String? ApiKey { get; set; } = String.Empty;
+    [JsonPropertyName("api_key")] // Original Type: string
+    public String? ApiKey { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("attributes")]
-    public List<ForethoughtConfigItem>? Attributes { get; set; } = new();
+    [JsonPropertyName("attributes")] // Original Type: #/components/schemas/ForethoughtConfigItem
+    public List<ForethoughtDetails>? Attributes { get; set; }
 
 }
 

@@ -16,6 +16,17 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 public partial class Asset
 {
+    [JsonPropertyName("infofield_101")] // Original Type: string
+    public String? Infofield101 { get; set; }
+    [JsonPropertyName("infofield_148")] // Original Type: string
+    public String? Infofield148 { get; set; }
+    [JsonPropertyName("infofield_51")] // Original Type: string
+    public String? Infofield51 { get; set; }
+    [JsonPropertyName("infofield_117")] // Original Type: string
+    public String? Infofield117 { get; set; }
+    [JsonPropertyName("infofield_24")] // Original Type: string
+    public String? Infofield24 { get; set; }
+
     public static Asset Create(Int32 customerId, Int32 assetTypeId, Int32 customerSiteId, Int32 technicalOwnerId, String assetNumber, String name, String user, String model, String serialNumber, DateTime purchaseDate)
     {
         ArgumentOutOfRangeException.ThrowIfLessThan(customerId, 1);
@@ -31,7 +42,16 @@ public partial class Asset
             AssettypeId = assetTypeId,
             SiteId = customerSiteId,
             AssetNumber = assetNumber,
-            TechnicalOwnerId = technicalOwnerId
+            TechnicalOwnerId = technicalOwnerId,
+            BusinessOwnerId = -99,
+            BusinessOwnerCabId = 1,
+            TechnicalOwnerCabId = 0,
+            SlaId = -1,
+            PriorityId = -1,
+            StatusId = 1,
+            Criticality = 0,
+            Inactive = false,
+
         };
 
         asset.Fields.Add(new IdValue() { Id = 101, Value = name }); // Name

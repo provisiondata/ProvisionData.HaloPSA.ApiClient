@@ -6,38 +6,39 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: PrePayThreshold, Category: 
 public partial class PrePayThreshold
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("asAmount")]
+    [JsonPropertyName("asAmount")] // Original Type: boolean
     public Boolean? AsAmount { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("newHours")]
+    [JsonPropertyName("newHours")] // Original Type: number
     public Double? NewHours { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("newAmount")]
+    [JsonPropertyName("newAmount")] // Original Type: number
     public Double? NewAmount { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("currentUsed")]
+    [JsonPropertyName("currentUsed")] // Original Type: number
     public Double? CurrentUsed { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("lastAddedAmount")]
+    [JsonPropertyName("lastAddedAmount")] // Original Type: number
     public Double? LastAddedAmount { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("total")]
+    [JsonPropertyName("total")] // Original Type: number
     public Double? Total { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("clientID")]
+    [JsonPropertyName("clientID")] // Original Type: integer
     public Int32? ClientID { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("contractID")]
+    [JsonPropertyName("contractID")] // Original Type: integer
     public Int32? ContractID { get; set; }
 
 }

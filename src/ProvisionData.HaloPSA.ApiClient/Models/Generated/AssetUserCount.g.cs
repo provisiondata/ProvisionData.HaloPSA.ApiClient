@@ -6,16 +6,19 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
-// JSON Type Name: Supplier, Category: Vendor
-public partial class Supplier
+// JSON Type Name: DeviceUserCount, Category: Asset
+public partial class AssetUserCount
 {
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("id")] // Original Type: integer
-    public Int32? Id { get; set; }
+    public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("name")] // Original Type: string
     public String? Name { get; set; }
+
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonPropertyName("count")] // Original Type: integer
+    public Int32? Count { get; set; }
 
 }
 

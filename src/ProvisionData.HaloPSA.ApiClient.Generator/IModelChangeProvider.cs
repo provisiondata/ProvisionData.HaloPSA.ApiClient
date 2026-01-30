@@ -23,6 +23,14 @@ public interface IModelChangeProvider
     String GetClassName(String jsonModelName);
     ModelChange? GetChange([DisallowNull] String jsonModelName);
     ModelChange GetChange([DisallowNull] String jsonModelName, JsonProperty jsonProperty);
+
+    /// <summary>
+    /// Determines if a model type should be skipped during generation.
+    /// A type is skipped if it has no corresponding entries in ModelChanges.
+    /// Types are included only if they have at least one model-level or property-level change defined.
+    /// </summary>
+    /// <param name="jsonModelName">The JSON model name to check.</param>
+    /// <returns>True if the type should be skipped, false if it should be included.</returns>
     Boolean ShouldSkip(String jsonModelName);
     Boolean ShouldSkip(ModelChange change) => ShouldSkip(change.JsonModelName);
 }

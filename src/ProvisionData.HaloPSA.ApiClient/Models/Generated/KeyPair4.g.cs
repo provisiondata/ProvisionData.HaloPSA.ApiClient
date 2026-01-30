@@ -6,14 +6,15 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: KeyPair4, Category: 
 public partial class KeyPair4
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int64 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("name")]
-    public String? Name { get; set; } = String.Empty;
+    [JsonPropertyName("name")] // Original Type: string
+    public String? Name { get; set; }
 
 }
 

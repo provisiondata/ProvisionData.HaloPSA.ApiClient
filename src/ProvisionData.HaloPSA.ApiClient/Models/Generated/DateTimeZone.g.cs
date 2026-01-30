@@ -6,15 +6,16 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: DateTimeZone, Category: 
 public partial class DateTimeZone
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("datetime")]
+    [JsonPropertyName("datetime")] // Original Type: string
     public DateTimeOffset? Datetime { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("timezone")]
-    public String? Timezone { get; set; } = String.Empty;
+    [JsonPropertyName("timezone")] // Original Type: string
+    public String? Timezone { get; set; }
 
 }
 

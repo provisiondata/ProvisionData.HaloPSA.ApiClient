@@ -6,398 +6,399 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: SupplierOrderTotals, Category: Vendor
 public partial class SupplierOrderTotals
 {
-    [JsonPropertyName("currentTotal")]
+    [JsonPropertyName("currentTotal")] // Original Type: number
     public Double CurrentTotal { get; set; }
 
-    [JsonPropertyName("currentTotalConverted")]
+    [JsonPropertyName("currentTotalConverted")] // Original Type: number
     public Double CurrentTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTermSubTotal")]
+    [JsonPropertyName("recurringTermSubTotal")] // Original Type: number
     public Double RecurringTermSubTotal { get; set; }
 
-    [JsonPropertyName("recurringTermSubTotalConverted")]
+    [JsonPropertyName("recurringTermSubTotalConverted")] // Original Type: number
     public Double RecurringTermSubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTermTaxTotal")]
+    [JsonPropertyName("recurringTermTaxTotal")] // Original Type: number
     public Double RecurringTermTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringTermTaxTotalConverted")]
+    [JsonPropertyName("recurringTermTaxTotalConverted")] // Original Type: number
     public Double RecurringTermTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTermTotal")]
+    [JsonPropertyName("recurringTermTotal")] // Original Type: number
     public Double RecurringTermTotal { get; set; }
 
-    [JsonPropertyName("recurringTermTotalConverted")]
+    [JsonPropertyName("recurringTermTotalConverted")] // Original Type: number
     public Double RecurringTermTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringSubTotal")]
+    [JsonPropertyName("recurringSubTotal")] // Original Type: number
     public Double RecurringSubTotal { get; set; }
 
-    [JsonPropertyName("recurringSubTotalConverted")]
+    [JsonPropertyName("recurringSubTotalConverted")] // Original Type: number
     public Double RecurringSubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTaxTotal")]
+    [JsonPropertyName("recurringTaxTotal")] // Original Type: number
     public Double RecurringTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringTaxTotalConverted")]
+    [JsonPropertyName("recurringTaxTotalConverted")] // Original Type: number
     public Double RecurringTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTotal")]
+    [JsonPropertyName("recurringTotal")] // Original Type: number
     public Double RecurringTotal { get; set; }
 
-    [JsonPropertyName("recurringTotalConverted")]
+    [JsonPropertyName("recurringTotalConverted")] // Original Type: number
     public Double RecurringTotalConverted { get; set; }
 
-    [JsonPropertyName("nonRecurringSubTotal")]
+    [JsonPropertyName("nonRecurringSubTotal")] // Original Type: number
     public Double NonRecurringSubTotal { get; set; }
 
-    [JsonPropertyName("nonRecurringSubTotalConverted")]
+    [JsonPropertyName("nonRecurringSubTotalConverted")] // Original Type: number
     public Double NonRecurringSubTotalConverted { get; set; }
 
-    [JsonPropertyName("nonRecurringTaxTotal")]
+    [JsonPropertyName("nonRecurringTaxTotal")] // Original Type: number
     public Double NonRecurringTaxTotal { get; set; }
 
-    [JsonPropertyName("nonRecurringTaxTotalConverted")]
+    [JsonPropertyName("nonRecurringTaxTotalConverted")] // Original Type: number
     public Double NonRecurringTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("nonRecurringTotal")]
+    [JsonPropertyName("nonRecurringTotal")] // Original Type: number
     public Double NonRecurringTotal { get; set; }
 
-    [JsonPropertyName("nonRecurringTotalConverted")]
+    [JsonPropertyName("nonRecurringTotalConverted")] // Original Type: number
     public Double NonRecurringTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalSubTotal")]
+    [JsonPropertyName("optionalSubTotal")] // Original Type: number
     public Double OptionalSubTotal { get; set; }
 
-    [JsonPropertyName("optionalSubTotalConverted")]
+    [JsonPropertyName("optionalSubTotalConverted")] // Original Type: number
     public Double OptionalSubTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalTaxTotal")]
+    [JsonPropertyName("optionalTaxTotal")] // Original Type: number
     public Double OptionalTaxTotal { get; set; }
 
-    [JsonPropertyName("optionalTaxTotalConverted")]
+    [JsonPropertyName("optionalTaxTotalConverted")] // Original Type: number
     public Double OptionalTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalTotal")]
+    [JsonPropertyName("optionalTotal")] // Original Type: number
     public Double OptionalTotal { get; set; }
 
-    [JsonPropertyName("optionalTotalConverted")]
+    [JsonPropertyName("optionalTotalConverted")] // Original Type: number
     public Double OptionalTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalSubTotal")]
+    [JsonPropertyName("nonOptionalSubTotal")] // Original Type: number
     public Double NonOptionalSubTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalSubTotalConverted")]
+    [JsonPropertyName("nonOptionalSubTotalConverted")] // Original Type: number
     public Double NonOptionalSubTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalTaxTotal")]
+    [JsonPropertyName("nonOptionalTaxTotal")] // Original Type: number
     public Double NonOptionalTaxTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalTaxTotalConverted")]
+    [JsonPropertyName("nonOptionalTaxTotalConverted")] // Original Type: number
     public Double NonOptionalTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalTotal")]
+    [JsonPropertyName("nonOptionalTotal")] // Original Type: number
     public Double NonOptionalTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalTotalConverted")]
+    [JsonPropertyName("nonOptionalTotalConverted")] // Original Type: number
     public Double NonOptionalTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalRecurringSubTotal")]
+    [JsonPropertyName("optionalRecurringSubTotal")] // Original Type: number
     public Double OptionalRecurringSubTotal { get; set; }
 
-    [JsonPropertyName("optionalRecurringSubTotalConverted")]
+    [JsonPropertyName("optionalRecurringSubTotalConverted")] // Original Type: number
     public Double OptionalRecurringSubTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalRecurringTaxTotal")]
+    [JsonPropertyName("optionalRecurringTaxTotal")] // Original Type: number
     public Double OptionalRecurringTaxTotal { get; set; }
 
-    [JsonPropertyName("optionalRecurringTaxTotalConverted")]
+    [JsonPropertyName("optionalRecurringTaxTotalConverted")] // Original Type: number
     public Double OptionalRecurringTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalRecurringTotal")]
+    [JsonPropertyName("optionalRecurringTotal")] // Original Type: number
     public Double OptionalRecurringTotal { get; set; }
 
-    [JsonPropertyName("optionalRecurringTotalConverted")]
+    [JsonPropertyName("optionalRecurringTotalConverted")] // Original Type: number
     public Double OptionalRecurringTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalNonRecurringSubTotal")]
+    [JsonPropertyName("optionalNonRecurringSubTotal")] // Original Type: number
     public Double OptionalNonRecurringSubTotal { get; set; }
 
-    [JsonPropertyName("optionalNonRecurringSubTotalConverted")]
+    [JsonPropertyName("optionalNonRecurringSubTotalConverted")] // Original Type: number
     public Double OptionalNonRecurringSubTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalNonRecurringTaxTotal")]
+    [JsonPropertyName("optionalNonRecurringTaxTotal")] // Original Type: number
     public Double OptionalNonRecurringTaxTotal { get; set; }
 
-    [JsonPropertyName("optionalNonRecurringTaxTotalConverted")]
+    [JsonPropertyName("optionalNonRecurringTaxTotalConverted")] // Original Type: number
     public Double OptionalNonRecurringTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("optionalNonRecurringTotal")]
+    [JsonPropertyName("optionalNonRecurringTotal")] // Original Type: number
     public Double OptionalNonRecurringTotal { get; set; }
 
-    [JsonPropertyName("optionalNonRecurringTotalConverted")]
+    [JsonPropertyName("optionalNonRecurringTotalConverted")] // Original Type: number
     public Double OptionalNonRecurringTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalRecurringSubTotal")]
+    [JsonPropertyName("nonOptionalRecurringSubTotal")] // Original Type: number
     public Double NonOptionalRecurringSubTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalRecurringSubTotalConverted")]
+    [JsonPropertyName("nonOptionalRecurringSubTotalConverted")] // Original Type: number
     public Double NonOptionalRecurringSubTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalRecurringTaxTotal")]
+    [JsonPropertyName("nonOptionalRecurringTaxTotal")] // Original Type: number
     public Double NonOptionalRecurringTaxTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalRecurringTaxTotalConverted")]
+    [JsonPropertyName("nonOptionalRecurringTaxTotalConverted")] // Original Type: number
     public Double NonOptionalRecurringTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalRecurringTotal")]
+    [JsonPropertyName("nonOptionalRecurringTotal")] // Original Type: number
     public Double NonOptionalRecurringTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalRecurringTotalConverted")]
+    [JsonPropertyName("nonOptionalRecurringTotalConverted")] // Original Type: number
     public Double NonOptionalRecurringTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalNonRecurringSubTotal")]
+    [JsonPropertyName("nonOptionalNonRecurringSubTotal")] // Original Type: number
     public Double NonOptionalNonRecurringSubTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalNonRecurringSubTotalConverted")]
+    [JsonPropertyName("nonOptionalNonRecurringSubTotalConverted")] // Original Type: number
     public Double NonOptionalNonRecurringSubTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalNonRecurringTaxTotal")]
+    [JsonPropertyName("nonOptionalNonRecurringTaxTotal")] // Original Type: number
     public Double NonOptionalNonRecurringTaxTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalNonRecurringTaxTotalConverted")]
+    [JsonPropertyName("nonOptionalNonRecurringTaxTotalConverted")] // Original Type: number
     public Double NonOptionalNonRecurringTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("nonOptionalNonRecurringTotal")]
+    [JsonPropertyName("nonOptionalNonRecurringTotal")] // Original Type: number
     public Double NonOptionalNonRecurringTotal { get; set; }
 
-    [JsonPropertyName("nonOptionalNonRecurringTotalConverted")]
+    [JsonPropertyName("nonOptionalNonRecurringTotalConverted")] // Original Type: number
     public Double NonOptionalNonRecurringTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringAnnualSubTotal")]
+    [JsonPropertyName("recurringAnnualSubTotal")] // Original Type: number
     public Double RecurringAnnualSubTotal { get; set; }
 
-    [JsonPropertyName("recurringAnnualSubTotalConverted")]
+    [JsonPropertyName("recurringAnnualSubTotalConverted")] // Original Type: number
     public Double RecurringAnnualSubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringAnnualTaxTotal")]
+    [JsonPropertyName("recurringAnnualTaxTotal")] // Original Type: number
     public Double RecurringAnnualTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringAnnualTaxTotalConverted")]
+    [JsonPropertyName("recurringAnnualTaxTotalConverted")] // Original Type: number
     public Double RecurringAnnualTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringAnnualTotal")]
+    [JsonPropertyName("recurringAnnualTotal")] // Original Type: number
     public Double RecurringAnnualTotal { get; set; }
 
-    [JsonPropertyName("recurringAnnualTotalConverted")]
+    [JsonPropertyName("recurringAnnualTotalConverted")] // Original Type: number
     public Double RecurringAnnualTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringMonthlySubTotal")]
+    [JsonPropertyName("recurringMonthlySubTotal")] // Original Type: number
     public Double RecurringMonthlySubTotal { get; set; }
 
-    [JsonPropertyName("recurringMonthlySubTotalConverted")]
+    [JsonPropertyName("recurringMonthlySubTotalConverted")] // Original Type: number
     public Double RecurringMonthlySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringMonthlyTaxTotal")]
+    [JsonPropertyName("recurringMonthlyTaxTotal")] // Original Type: number
     public Double RecurringMonthlyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringMonthlyTaxTotalConverted")]
+    [JsonPropertyName("recurringMonthlyTaxTotalConverted")] // Original Type: number
     public Double RecurringMonthlyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringMonthlyTotal")]
+    [JsonPropertyName("recurringMonthlyTotal")] // Original Type: number
     public Double RecurringMonthlyTotal { get; set; }
 
-    [JsonPropertyName("recurringMonthlyTotalConverted")]
+    [JsonPropertyName("recurringMonthlyTotalConverted")] // Original Type: number
     public Double RecurringMonthlyTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringWeeklySubTotal")]
+    [JsonPropertyName("recurringWeeklySubTotal")] // Original Type: number
     public Double RecurringWeeklySubTotal { get; set; }
 
-    [JsonPropertyName("recurringWeeklySubTotalConverted")]
+    [JsonPropertyName("recurringWeeklySubTotalConverted")] // Original Type: number
     public Double RecurringWeeklySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringWeeklyTaxTotal")]
+    [JsonPropertyName("recurringWeeklyTaxTotal")] // Original Type: number
     public Double RecurringWeeklyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringWeeklyTaxTotalConverted")]
+    [JsonPropertyName("recurringWeeklyTaxTotalConverted")] // Original Type: number
     public Double RecurringWeeklyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringWeeklyTotal")]
+    [JsonPropertyName("recurringWeeklyTotal")] // Original Type: number
     public Double RecurringWeeklyTotal { get; set; }
 
-    [JsonPropertyName("recurringWeeklyTotalConverted")]
+    [JsonPropertyName("recurringWeeklyTotalConverted")] // Original Type: number
     public Double RecurringWeeklyTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringQuarterlySubTotal")]
+    [JsonPropertyName("recurringQuarterlySubTotal")] // Original Type: number
     public Double RecurringQuarterlySubTotal { get; set; }
 
-    [JsonPropertyName("recurringQuarterlySubTotalConverted")]
+    [JsonPropertyName("recurringQuarterlySubTotalConverted")] // Original Type: number
     public Double RecurringQuarterlySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringQuarterlyTaxTotal")]
+    [JsonPropertyName("recurringQuarterlyTaxTotal")] // Original Type: number
     public Double RecurringQuarterlyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringQuarterlyTaxTotalConverted")]
+    [JsonPropertyName("recurringQuarterlyTaxTotalConverted")] // Original Type: number
     public Double RecurringQuarterlyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringQuarterlyTotal")]
+    [JsonPropertyName("recurringQuarterlyTotal")] // Original Type: number
     public Double RecurringQuarterlyTotal { get; set; }
 
-    [JsonPropertyName("recurringQuarterlyTotalConverted")]
+    [JsonPropertyName("recurringQuarterlyTotalConverted")] // Original Type: number
     public Double RecurringQuarterlyTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringSixMonthlySubTotal")]
+    [JsonPropertyName("recurringSixMonthlySubTotal")] // Original Type: number
     public Double RecurringSixMonthlySubTotal { get; set; }
 
-    [JsonPropertyName("recurringSixMonthlySubTotalConverted")]
+    [JsonPropertyName("recurringSixMonthlySubTotalConverted")] // Original Type: number
     public Double RecurringSixMonthlySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringSixMonthlyTaxTotal")]
+    [JsonPropertyName("recurringSixMonthlyTaxTotal")] // Original Type: number
     public Double RecurringSixMonthlyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringSixMonthlyTaxTotalConverted")]
+    [JsonPropertyName("recurringSixMonthlyTaxTotalConverted")] // Original Type: number
     public Double RecurringSixMonthlyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringSixMonthlyTotal")]
+    [JsonPropertyName("recurringSixMonthlyTotal")] // Original Type: number
     public Double RecurringSixMonthlyTotal { get; set; }
 
-    [JsonPropertyName("recurringSixMonthlyTotalConverted")]
+    [JsonPropertyName("recurringSixMonthlyTotalConverted")] // Original Type: number
     public Double RecurringSixMonthlyTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTwoYearlySubTotal")]
+    [JsonPropertyName("recurringTwoYearlySubTotal")] // Original Type: number
     public Double RecurringTwoYearlySubTotal { get; set; }
 
-    [JsonPropertyName("recurringTwoYearlySubTotalConverted")]
+    [JsonPropertyName("recurringTwoYearlySubTotalConverted")] // Original Type: number
     public Double RecurringTwoYearlySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTwoYearlyTaxTotal")]
+    [JsonPropertyName("recurringTwoYearlyTaxTotal")] // Original Type: number
     public Double RecurringTwoYearlyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringTwoYearlyTaxTotalConverted")]
+    [JsonPropertyName("recurringTwoYearlyTaxTotalConverted")] // Original Type: number
     public Double RecurringTwoYearlyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringTwoYearlyTotal")]
+    [JsonPropertyName("recurringTwoYearlyTotal")] // Original Type: number
     public Double RecurringTwoYearlyTotal { get; set; }
 
-    [JsonPropertyName("recurringTwoYearlyTotalConverted")]
+    [JsonPropertyName("recurringTwoYearlyTotalConverted")] // Original Type: number
     public Double RecurringTwoYearlyTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringThreeYearlySubTotal")]
+    [JsonPropertyName("recurringThreeYearlySubTotal")] // Original Type: number
     public Double RecurringThreeYearlySubTotal { get; set; }
 
-    [JsonPropertyName("recurringThreeYearlySubTotalConverted")]
+    [JsonPropertyName("recurringThreeYearlySubTotalConverted")] // Original Type: number
     public Double RecurringThreeYearlySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringThreeYearlyTaxTotal")]
+    [JsonPropertyName("recurringThreeYearlyTaxTotal")] // Original Type: number
     public Double RecurringThreeYearlyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringThreeYearlyTaxTotalConverted")]
+    [JsonPropertyName("recurringThreeYearlyTaxTotalConverted")] // Original Type: number
     public Double RecurringThreeYearlyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringThreeYearlyTotal")]
+    [JsonPropertyName("recurringThreeYearlyTotal")] // Original Type: number
     public Double RecurringThreeYearlyTotal { get; set; }
 
-    [JsonPropertyName("recurringThreeYearlyTotalConverted")]
+    [JsonPropertyName("recurringThreeYearlyTotalConverted")] // Original Type: number
     public Double RecurringThreeYearlyTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringFourYearlySubTotal")]
+    [JsonPropertyName("recurringFourYearlySubTotal")] // Original Type: number
     public Double RecurringFourYearlySubTotal { get; set; }
 
-    [JsonPropertyName("recurringFourYearlySubTotalConverted")]
+    [JsonPropertyName("recurringFourYearlySubTotalConverted")] // Original Type: number
     public Double RecurringFourYearlySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringFourYearlyTaxTotal")]
+    [JsonPropertyName("recurringFourYearlyTaxTotal")] // Original Type: number
     public Double RecurringFourYearlyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringFourYearlyTaxTotalConverted")]
+    [JsonPropertyName("recurringFourYearlyTaxTotalConverted")] // Original Type: number
     public Double RecurringFourYearlyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringFourYearlyTotal")]
+    [JsonPropertyName("recurringFourYearlyTotal")] // Original Type: number
     public Double RecurringFourYearlyTotal { get; set; }
 
-    [JsonPropertyName("recurringFourYearlyTotalConverted")]
+    [JsonPropertyName("recurringFourYearlyTotalConverted")] // Original Type: number
     public Double RecurringFourYearlyTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringFiveYearlySubTotal")]
+    [JsonPropertyName("recurringFiveYearlySubTotal")] // Original Type: number
     public Double RecurringFiveYearlySubTotal { get; set; }
 
-    [JsonPropertyName("recurringFiveYearlySubTotalConverted")]
+    [JsonPropertyName("recurringFiveYearlySubTotalConverted")] // Original Type: number
     public Double RecurringFiveYearlySubTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringFiveYearlyTaxTotal")]
+    [JsonPropertyName("recurringFiveYearlyTaxTotal")] // Original Type: number
     public Double RecurringFiveYearlyTaxTotal { get; set; }
 
-    [JsonPropertyName("recurringFiveYearlyTaxTotalConverted")]
+    [JsonPropertyName("recurringFiveYearlyTaxTotalConverted")] // Original Type: number
     public Double RecurringFiveYearlyTaxTotalConverted { get; set; }
 
-    [JsonPropertyName("recurringFiveYearlyTotal")]
+    [JsonPropertyName("recurringFiveYearlyTotal")] // Original Type: number
     public Double RecurringFiveYearlyTotal { get; set; }
 
-    [JsonPropertyName("recurringFiveYearlyTotalConverted")]
+    [JsonPropertyName("recurringFiveYearlyTotalConverted")] // Original Type: number
     public Double RecurringFiveYearlyTotalConverted { get; set; }
 
-    [JsonPropertyName("totalRecurringPeriodAmount")]
+    [JsonPropertyName("totalRecurringPeriodAmount")] // Original Type: number
     public Double TotalRecurringPeriodAmount { get; set; }
 
-    [JsonPropertyName("totalRecurringPeriodAmountConverted")]
+    [JsonPropertyName("totalRecurringPeriodAmountConverted")] // Original Type: number
     public Double TotalRecurringPeriodAmountConverted { get; set; }
 
-    [JsonPropertyName("cost")]
+    [JsonPropertyName("cost")] // Original Type: number
     public Double Cost { get; set; }
 
-    [JsonPropertyName("costConverted")]
+    [JsonPropertyName("costConverted")] // Original Type: number
     public Double CostConverted { get; set; }
 
-    [JsonPropertyName("profit")]
+    [JsonPropertyName("profit")] // Original Type: number
     public Double Profit { get; set; }
 
-    [JsonPropertyName("profitConverted")]
+    [JsonPropertyName("profitConverted")] // Original Type: number
     public Double ProfitConverted { get; set; }
 
-    [JsonPropertyName("taxTotal")]
+    [JsonPropertyName("taxTotal")] // Original Type: number
     public Double TaxTotal { get; set; }
 
-    [JsonPropertyName("taxTotalConverted")]
+    [JsonPropertyName("taxTotalConverted")] // Original Type: number
     public Double TaxTotalConverted { get; set; }
 
-    [JsonPropertyName("total")]
+    [JsonPropertyName("total")] // Original Type: number
     public Double Total { get; set; }
 
-    [JsonPropertyName("totalConverted")]
+    [JsonPropertyName("totalConverted")] // Original Type: number
     public Double TotalConverted { get; set; }
 
-    [JsonPropertyName("subTotal")]
+    [JsonPropertyName("subTotal")] // Original Type: number
     public Double SubTotal { get; set; }
 
-    [JsonPropertyName("subTotalConverted")]
+    [JsonPropertyName("subTotalConverted")] // Original Type: number
     public Double SubTotalConverted { get; set; }
 
-    [JsonPropertyName("totalDifference")]
+    [JsonPropertyName("totalDifference")] // Original Type: number
     public Double TotalDifference { get; set; }
 
-    [JsonPropertyName("totalDifferenceConverted")]
+    [JsonPropertyName("totalDifferenceConverted")] // Original Type: number
     public Double TotalDifferenceConverted { get; set; }
 
-    [JsonPropertyName("discount")]
+    [JsonPropertyName("discount")] // Original Type: number
     public Double Discount { get; set; }
 
-    [JsonPropertyName("discountConverted")]
+    [JsonPropertyName("discountConverted")] // Original Type: number
     public Double DiscountConverted { get; set; }
 
-    [JsonPropertyName("discountPercentage")]
+    [JsonPropertyName("discountPercentage")] // Original Type: number
     public Double DiscountPercentage { get; set; }
 
-    [JsonPropertyName("discountPercentageConverted")]
+    [JsonPropertyName("discountPercentageConverted")] // Original Type: number
     public Double DiscountPercentageConverted { get; set; }
 
-    [JsonPropertyName("conversionRate")]
+    [JsonPropertyName("conversionRate")] // Original Type: number
     public Double ConversionRate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("itemGroups")]
-    public List<Int32>? ItemGroups { get; set; } = new();
+    [JsonPropertyName("itemGroups")] // Original Type: array
+    public List<SupplierOrderTotals>? ItemGroups { get; set; }
 
 }
 

@@ -6,133 +6,134 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: ItemStock, Category: Item
 public partial class ItemStock
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("item_id")]
+    [JsonPropertyName("item_id")] // Original Type: integer
     public Int32? ItemId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("item_name")]
-    public String? ItemName { get; set; } = String.Empty;
+    [JsonPropertyName("item_name")] // Original Type: string
+    public String? ItemName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("item_assettype_id")]
+    [JsonPropertyName("item_assettype_id")] // Original Type: integer
     public Int32? ItemAssettypeId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("stocklocation_id")]
+    [JsonPropertyName("stocklocation_id")] // Original Type: integer
     public Int32? StocklocationId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("stocklocation_name")]
-    public String? StocklocationName { get; set; } = String.Empty;
+    [JsonPropertyName("stocklocation_name")] // Original Type: string
+    public String? StocklocationName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("date")]
+    [JsonPropertyName("date")] // Original Type: string
     public DateTimeOffset? Date { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("quantity_in")]
+    [JsonPropertyName("quantity_in")] // Original Type: number
     public Double? QuantityIn { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("quantity_issued")]
+    [JsonPropertyName("quantity_issued")] // Original Type: number
     public Double? QuantityIssued { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("quantity_remaining")]
+    [JsonPropertyName("quantity_remaining")] // Original Type: number
     public Double? QuantityRemaining { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("cost")]
+    [JsonPropertyName("cost")] // Original Type: number
     public Double? Cost { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("supplier_id")]
+    [JsonPropertyName("supplier_id")] // Original Type: integer
     public Int32? SupplierId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("supplier_name")]
-    public String? SupplierName { get; set; } = String.Empty;
+    [JsonPropertyName("supplier_name")] // Original Type: string
+    public String? SupplierName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("purchaseorder_id")]
+    [JsonPropertyName("purchaseorder_id")] // Original Type: integer
     public Int32? PurchaseorderId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("purchaseorder_line_id")]
+    [JsonPropertyName("purchaseorder_line_id")] // Original Type: integer
     public Int32? PurchaseorderLineId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("purchaseorder_ref")]
-    public String? PurchaseorderRef { get; set; } = String.Empty;
+    [JsonPropertyName("purchaseorder_ref")] // Original Type: string
+    public String? PurchaseorderRef { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("salesorder_id")]
+    [JsonPropertyName("salesorder_id")] // Original Type: integer
     public Int32? SalesorderId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("ticket_id")]
+    [JsonPropertyName("ticket_id")] // Original Type: integer
     public Int32? TicketId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("serialised_asset_count")]
+    [JsonPropertyName("serialised_asset_count")] // Original Type: integer
     public Int32? SerialisedAssetCount { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("serialised_assets_in_stock")]
+    [JsonPropertyName("serialised_assets_in_stock")] // Original Type: integer
     public Int32? SerialisedAssetsInStock { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("serialised_assets")]
-    public List<DeviceList>? SerialisedAssets { get; set; } = new();
+    [JsonPropertyName("serialised_assets")] // Original Type: #/components/schemas/Device_List
+    public List<ItemStock>? SerialisedAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("is_stock_take")]
+    [JsonPropertyName("is_stock_take")] // Original Type: boolean
     public Boolean? IsStockTake { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("delivering_to_user")]
+    [JsonPropertyName("delivering_to_user")] // Original Type: boolean
     public Boolean? DeliveringToUser { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_warning")]
-    public String? Warning { get; set; } = String.Empty;
+    [JsonPropertyName("_warning")] // Original Type: string
+    public String? Warning { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("line_site_id")]
+    [JsonPropertyName("line_site_id")] // Original Type: integer
     public Int32? LineSiteId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("stockbin_id")]
+    [JsonPropertyName("stockbin_id")] // Original Type: integer
     public Int32? StockbinId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("note")]
-    public String? Note { get; set; } = String.Empty;
+    [JsonPropertyName("note")] // Original Type: string
+    public String? Note { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("real_quantity_in")]
+    [JsonPropertyName("real_quantity_in")] // Original Type: number
     public Double? RealQuantityIn { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_isimport")]
+    [JsonPropertyName("_isimport")] // Original Type: boolean
     public Boolean? Isimport { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("stockbin_name")]
-    public String? StockbinName { get; set; } = String.Empty;
+    [JsonPropertyName("stockbin_name")] // Original Type: string
+    public String? StockbinName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("serialise_only_one")]
+    [JsonPropertyName("serialise_only_one")] // Original Type: boolean
     public Boolean? SerialiseOnlyOne { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("dont_track_stock")]
+    [JsonPropertyName("dont_track_stock")] // Original Type: boolean
     public Boolean? DontTrackStock { get; set; }
 
 }

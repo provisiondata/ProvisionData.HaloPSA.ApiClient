@@ -6,19 +6,20 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: StripePaymentMethod, Category: 
 public partial class StripePaymentMethod
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("id")]
-    public String? Id { get; set; } = String.Empty;
+    [JsonPropertyName("id")] // Original Type: string
+    public String? Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("name")]
-    public String? Name { get; set; } = String.Empty;
+    [JsonPropertyName("name")] // Original Type: string
+    public String? Name { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("hint")]
-    public String? Hint { get; set; } = String.Empty;
+    [JsonPropertyName("hint")] // Original Type: string
+    public String? Hint { get; set; }
 
 }
 

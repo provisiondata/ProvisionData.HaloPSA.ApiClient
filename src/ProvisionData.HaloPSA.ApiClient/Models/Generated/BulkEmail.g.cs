@@ -6,81 +6,82 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: BulkEmail, Category: 
 public partial class BulkEmail
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("serviceid")]
+    [JsonPropertyName("serviceid")] // Original Type: integer
     public Int32? Serviceid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("subject")]
-    public String? Subject { get; set; } = String.Empty;
+    [JsonPropertyName("subject")] // Original Type: string
+    public String? Subject { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("body")]
-    public String? Body { get; set; } = String.Empty;
+    [JsonPropertyName("body")] // Original Type: string
+    public String? Body { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("timestamp")]
+    [JsonPropertyName("timestamp")] // Original Type: string
     public DateTimeOffset? Timestamp { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("service_id")]
+    [JsonPropertyName("service_id")] // Original Type: integer
     public Int32? ServiceId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("status")]
+    [JsonPropertyName("status")] // Original Type: integer
     public Int32? Status { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("next_retry_date")]
+    [JsonPropertyName("next_retry_date")] // Original Type: string
     public DateTimeOffset? NextRetryDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("last_attempt_date")]
+    [JsonPropertyName("last_attempt_date")] // Original Type: string
     public DateTimeOffset? LastAttemptDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("mailcampaignid")]
+    [JsonPropertyName("mailcampaignid")] // Original Type: integer
     public Int32? Mailcampaignid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("mailcampaignemailid")]
+    [JsonPropertyName("mailcampaignemailid")] // Original Type: integer
     public Int32? Mailcampaignemailid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("mailboxfrom")]
+    [JsonPropertyName("mailboxfrom")] // Original Type: integer
     public Int32? Mailboxfrom { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("mailboxreplyto")]
-    public String? Mailboxreplyto { get; set; } = String.Empty;
+    [JsonPropertyName("mailboxreplyto")] // Original Type: string
+    public String? Mailboxreplyto { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("trace")]
-    public List<Trace>? Trace { get; set; } = new();
+    [JsonPropertyName("trace")] // Original Type: #/components/schemas/Trace
+    public List<BulkEmail>? Trace { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("request_body")]
-    public String? RequestBody { get; set; } = String.Empty;
+    [JsonPropertyName("request_body")] // Original Type: string
+    public String? RequestBody { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_warning")]
-    public String? Warning { get; set; } = String.Empty;
+    [JsonPropertyName("_warning")] // Original Type: string
+    public String? Warning { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("fault_id")]
+    [JsonPropertyName("fault_id")] // Original Type: integer
     public Int32? FaultId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("actionnumber")]
+    [JsonPropertyName("actionnumber")] // Original Type: integer
     public Int32? Actionnumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("distribution_list")]
+    [JsonPropertyName("distribution_list")] // Original Type: integer
     public Int32? DistributionList { get; set; }
 
 }

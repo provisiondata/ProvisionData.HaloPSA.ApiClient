@@ -24,7 +24,6 @@ public partial class ModelChangeProvider : IModelChangeProvider
 {
     private readonly ModelChanges _options;
     private readonly Dictionary<String, ModelChange> _changes;
-    private readonly HashSet<String> _skips;
     private readonly ILogger<ModelChangeProvider> _logger;
     private readonly IModelChangeValidator _validator;
 
@@ -34,8 +33,6 @@ public partial class ModelChangeProvider : IModelChangeProvider
         _validator = validator;
         _options = optionsAccessor.Value;
         _changes = ValidateChanges();
-
-        _skips = new HashSet<String>(_options.Skip, StringComparer.InvariantCultureIgnoreCase);
     }
 
     private Dictionary<String, ModelChange> ValidateChanges()
@@ -122,7 +119,20 @@ public partial class ModelChangeProvider : IModelChangeProvider
     }
 
     public Boolean ShouldSkip(String jsonModelName)
-        => _skips.Contains(jsonModelName);
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(jsonModelName);
+
+        // A type is included if there's a model-level change or any property-level change
+        var modelLevelKey = GetKey(jsonModelName, null);
+        if (_changes.ContainsKey(modelLevelKey))
+        {
+            return false; // Has model-level change, include it
+        }
+
+        // Check if there are any property-level changes for this model
+        var propertyKeyPrefix = $"{jsonModelName}:";
+        return !_changes.Keys.Any(k => k.StartsWith(propertyKeyPrefix, StringComparison.InvariantCultureIgnoreCase));
+    }
 
     private String GetPropertyName(String jsonModelName, String jsonPropertyName)
     {
@@ -217,6 +227,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
         if (schema.TryGetProperty("$ref", out var refProp))
         {
             var refValue = refProp.GetString() ?? String.Empty;
+            change.JsonPropertyType = refValue;
             var name = refValue.Split('/').Last();
             change.ClientPropertyType = name.ToPascalCase();
             return;
@@ -271,7 +282,8 @@ public partial class ModelChangeProvider : IModelChangeProvider
     private static void SetDefaultValue(ModelChange change)
     {
         if (String.IsNullOrWhiteSpace(change.ClientPropertyType)
-            || change.ClientPropertyType.IsValueType())
+            || change.ClientPropertyType.IsValueType()
+            || change.Nullable is null or true)
         {
             change.DefaultValue = String.Empty;
             return;

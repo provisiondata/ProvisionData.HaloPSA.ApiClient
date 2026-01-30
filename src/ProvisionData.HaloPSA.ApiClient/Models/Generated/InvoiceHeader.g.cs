@@ -6,1131 +6,1132 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: InvoiceHeader, Category: Invoice
 public partial class InvoiceHeader
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("disabled")]
+    [JsonPropertyName("disabled")] // Original Type: boolean
     public Boolean? Disabled { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = new();
+    [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
+    public List<InvoiceHeader>? Customfields { get; set; }
 
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("use")]
-    public String? Use { get; set; } = String.Empty;
+    [JsonPropertyName("use")] // Original Type: string
+    public String? Use { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("client_id")]
+    [JsonPropertyName("client_id")] // Original Type: integer
     public Int32? ClientId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("client_name")]
-    public String? ClientName { get; set; } = String.Empty;
+    [JsonPropertyName("client_name")] // Original Type: string
+    public String? ClientName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("sitenumber")]
+    [JsonPropertyName("sitenumber")] // Original Type: integer
     public Int32? Sitenumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("site_name")]
-    public String? SiteName { get; set; } = String.Empty;
+    [JsonPropertyName("site_name")] // Original Type: string
+    public String? SiteName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("accountsid")]
-    public String? Accountsid { get; set; } = String.Empty;
+    [JsonPropertyName("accountsid")] // Original Type: string
+    public String? Accountsid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("uid")]
+    [JsonPropertyName("uid")] // Original Type: integer
     public Int32? Uid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoicenumber")]
-    public String? Invoicenumber { get; set; } = String.Empty;
+    [JsonPropertyName("invoicenumber")] // Original Type: string
+    public String? Invoicenumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("thirdpartyinvoicenumber")]
-    public String? Thirdpartyinvoicenumber { get; set; } = String.Empty;
+    [JsonPropertyName("thirdpartyinvoicenumber")] // Original Type: string
+    public String? Thirdpartyinvoicenumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("posted")]
+    [JsonPropertyName("posted")] // Original Type: boolean
     public Boolean? Posted { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("name")]
-    public String? Name { get; set; } = String.Empty;
+    [JsonPropertyName("name")] // Original Type: string
+    public String? Name { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("address1")]
-    public String? Address1 { get; set; } = String.Empty;
+    [JsonPropertyName("address1")] // Original Type: string
+    public String? Address1 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("address2")]
-    public String? Address2 { get; set; } = String.Empty;
+    [JsonPropertyName("address2")] // Original Type: string
+    public String? Address2 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("address3")]
-    public String? Address3 { get; set; } = String.Empty;
+    [JsonPropertyName("address3")] // Original Type: string
+    public String? Address3 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("address4")]
-    public String? Address4 { get; set; } = String.Empty;
+    [JsonPropertyName("address4")] // Original Type: string
+    public String? Address4 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("address5")]
-    public String? Address5 { get; set; } = String.Empty;
+    [JsonPropertyName("address5")] // Original Type: string
+    public String? Address5 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("deladdress1")]
-    public String? Deladdress1 { get; set; } = String.Empty;
+    [JsonPropertyName("deladdress1")] // Original Type: string
+    public String? Deladdress1 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("deladdress2")]
-    public String? Deladdress2 { get; set; } = String.Empty;
+    [JsonPropertyName("deladdress2")] // Original Type: string
+    public String? Deladdress2 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("deladdress3")]
-    public String? Deladdress3 { get; set; } = String.Empty;
+    [JsonPropertyName("deladdress3")] // Original Type: string
+    public String? Deladdress3 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("deladdress4")]
-    public String? Deladdress4 { get; set; } = String.Empty;
+    [JsonPropertyName("deladdress4")] // Original Type: string
+    public String? Deladdress4 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("deladdress5")]
-    public String? Deladdress5 { get; set; } = String.Empty;
+    [JsonPropertyName("deladdress5")] // Original Type: string
+    public String? Deladdress5 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("tel_number")]
-    public String? TelNumber { get; set; } = String.Empty;
+    [JsonPropertyName("tel_number")] // Original Type: string
+    public String? TelNumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("contactname")]
-    public String? Contactname { get; set; } = String.Empty;
+    [JsonPropertyName("contactname")] // Original Type: string
+    public String? Contactname { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("global_tax_code")]
-    public String? GlobalTaxCode { get; set; } = String.Empty;
+    [JsonPropertyName("global_tax_code")] // Original Type: string
+    public String? GlobalTaxCode { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_date")]
+    [JsonPropertyName("invoice_date")] // Original Type: string
     public DateTimeOffset? InvoiceDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("schedule_date")]
+    [JsonPropertyName("schedule_date")] // Original Type: string
     public DateTimeOffset? ScheduleDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("dateposted")]
+    [JsonPropertyName("dateposted")] // Original Type: string
     public DateTimeOffset? Dateposted { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("last_synced")]
+    [JsonPropertyName("last_synced")] // Original Type: string
     public DateTimeOffset? LastSynced { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("last_modified")]
+    [JsonPropertyName("last_modified")] // Original Type: string
     public DateTimeOffset? LastModified { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("notes_1")]
-    public String? Notes1 { get; set; } = String.Empty;
+    [JsonPropertyName("notes_1")] // Original Type: string
+    public String? Notes1 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("notes_2")]
-    public String? Notes2 { get; set; } = String.Empty;
+    [JsonPropertyName("notes_2")] // Original Type: string
+    public String? Notes2 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("notes_3")]
-    public String? Notes3 { get; set; } = String.Empty;
+    [JsonPropertyName("notes_3")] // Original Type: string
+    public String? Notes3 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("taken_by")]
-    public String? TakenBy { get; set; } = String.Empty;
+    [JsonPropertyName("taken_by")] // Original Type: string
+    public String? TakenBy { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("order_number")]
-    public String? OrderNumber { get; set; } = String.Empty;
+    [JsonPropertyName("order_number")] // Original Type: string
+    public String? OrderNumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("cust_order_number")]
-    public String? CustOrderNumber { get; set; } = String.Empty;
+    [JsonPropertyName("cust_order_number")] // Original Type: string
+    public String? CustOrderNumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("payment_ref")]
-    public String? PaymentRef { get; set; } = String.Empty;
+    [JsonPropertyName("payment_ref")] // Original Type: string
+    public String? PaymentRef { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("global_nom_code")]
-    public String? GlobalNomCode { get; set; } = String.Empty;
+    [JsonPropertyName("global_nom_code")] // Original Type: string
+    public String? GlobalNomCode { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("global_details")]
-    public String? GlobalDetails { get; set; } = String.Empty;
+    [JsonPropertyName("global_details")] // Original Type: string
+    public String? GlobalDetails { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_type_code")]
-    public String? InvoiceTypeCode { get; set; } = String.Empty;
+    [JsonPropertyName("invoice_type_code")] // Original Type: string
+    public String? InvoiceTypeCode { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("salesorder_id")]
+    [JsonPropertyName("salesorder_id")] // Original Type: integer
     public Int32? SalesorderId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("datetype")]
+    [JsonPropertyName("datetype")] // Original Type: integer
     public Int32? Datetype { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("percentold")]
+    [JsonPropertyName("percentold")] // Original Type: integer
     public Int32? Percentold { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("percent")]
+    [JsonPropertyName("percent")] // Original Type: number
     public Double? Percent { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("contract_id")]
+    [JsonPropertyName("contract_id")] // Original Type: integer
     public Int32? ContractId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("contract_ref")]
-    public String? ContractRef { get; set; } = String.Empty;
+    [JsonPropertyName("contract_ref")] // Original Type: string
+    public String? ContractRef { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("datesent")]
+    [JsonPropertyName("datesent")] // Original Type: string
     public DateTimeOffset? Datesent { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("currency")]
-    public String? Currency { get; set; } = String.Empty;
+    [JsonPropertyName("currency")] // Original Type: string
+    public String? Currency { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("currency_code")]
+    [JsonPropertyName("currency_code")] // Original Type: integer
     public Int32? CurrencyCode { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("currency_code_name")]
-    public String? CurrencyCodeName { get; set; } = String.Empty;
+    [JsonPropertyName("currency_code_name")] // Original Type: string
+    public String? CurrencyCodeName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("currency_conversion_rate")]
+    [JsonPropertyName("currency_conversion_rate")] // Original Type: number
     public Double? CurrencyConversionRate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("paymentterms")]
+    [JsonPropertyName("paymentterms")] // Original Type: integer
     public Int32? Paymentterms { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("hideinvoice")]
+    [JsonPropertyName("hideinvoice")] // Original Type: boolean
     public Boolean? Hideinvoice { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("ticket_id")]
+    [JsonPropertyName("ticket_id")] // Original Type: integer
     public Int32? TicketId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoicetype")]
+    [JsonPropertyName("invoicetype")] // Original Type: integer
     public Int32? Invoicetype { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("datepaid")]
+    [JsonPropertyName("datepaid")] // Original Type: string
     public DateTimeOffset? Datepaid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("paymentstatus")]
+    [JsonPropertyName("paymentstatus")] // Original Type: integer
     public Int32? Paymentstatus { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xeroid")]
-    public String? Xeroid { get; set; } = String.Empty;
+    [JsonPropertyName("xeroid")] // Original Type: string
+    public String? Xeroid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("amountpaid")]
+    [JsonPropertyName("amountpaid")] // Original Type: number
     public Double? Amountpaid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("amountdue")]
+    [JsonPropertyName("amountdue")] // Original Type: number
     public Double? Amountdue { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("amount_remaining")]
+    [JsonPropertyName("amount_remaining")] // Original Type: number
     public Double? AmountRemaining { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("emailstatus")]
+    [JsonPropertyName("emailstatus")] // Original Type: integer
     public Int32? Emailstatus { get; set; }
 
-    [JsonPropertyName("address")]
-    public AddressStore Address { get; set; } = new();
+    [JsonPropertyName("address")] // Original Type: #/components/schemas/AddressStore
+    public AddressStore Address { get; set; }
 
-    [JsonPropertyName("shipaddress")]
-    public AddressStore Shipaddress { get; set; } = new();
+    [JsonPropertyName("shipaddress")] // Original Type: #/components/schemas/AddressStore
+    public AddressStore Shipaddress { get; set; }
 
-    [JsonPropertyName("originaddress")]
-    public AddressStore Originaddress { get; set; } = new();
-
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("lines")]
-    public List<InvoiceDetail>? Lines { get; set; } = new();
+    [JsonPropertyName("originaddress")] // Original Type: #/components/schemas/AddressStore
+    public AddressStore Originaddress { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_lines")]
-    public List<InvoiceDetail>? AddLines { get; set; } = new();
+    [JsonPropertyName("lines")] // Original Type: #/components/schemas/InvoiceDetail
+    public List<InvoiceHeader>? Lines { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_print_preview")]
+    [JsonPropertyName("add_lines")] // Original Type: #/components/schemas/InvoiceDetail
+    public List<InvoiceHeader>? AddLines { get; set; }
+
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonPropertyName("_print_preview")] // Original Type: boolean
     public Boolean? PrintPreview { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_print_generate")]
+    [JsonPropertyName("_print_generate")] // Original Type: boolean
     public Boolean? PrintGenerate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("printhtml")]
-    public String? Printhtml { get; set; } = String.Empty;
+    [JsonPropertyName("printhtml")] // Original Type: string
+    public String? Printhtml { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("pdf_attachment_id")]
+    [JsonPropertyName("pdf_attachment_id")] // Original Type: integer
     public Int32? PdfAttachmentId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("pdf_attachment_date_created")]
+    [JsonPropertyName("pdf_attachment_date_created")] // Original Type: string
     public DateTimeOffset? PdfAttachmentDateCreated { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("pdftemplate_id")]
+    [JsonPropertyName("pdftemplate_id")] // Original Type: integer
     public Int32? PdftemplateId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("pdftemplate_name")]
-    public String? PdftemplateName { get; set; } = String.Empty;
+    [JsonPropertyName("pdftemplate_name")] // Original Type: string
+    public String? PdftemplateName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("composite_tax_total")]
+    [JsonPropertyName("composite_tax_total")] // Original Type: number
     public Double? CompositeTaxTotal { get; set; }
 
-    [JsonPropertyName("total")]
+    [JsonPropertyName("total")] // Original Type: number
     public Double Total { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("reference")]
-    public String? Reference { get; set; } = String.Empty;
+    [JsonPropertyName("reference")] // Original Type: string
+    public String? Reference { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("duedate")]
+    [JsonPropertyName("duedate")] // Original Type: string
     public DateTimeOffset? Duedate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("last_reminder_sent")]
+    [JsonPropertyName("last_reminder_sent")] // Original Type: string
     public DateTimeOffset? LastReminderSent { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_is_invoice_run")]
+    [JsonPropertyName("_is_invoice_run")] // Original Type: boolean
     public Boolean? IsInvoiceRun { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_billing_cut_off")]
+    [JsonPropertyName("_billing_cut_off")] // Original Type: string
     public DateTimeOffset? BillingCutOff { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("is_recurring_invoice")]
+    [JsonPropertyName("is_recurring_invoice")] // Original Type: boolean
     public Boolean? IsRecurringInvoice { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("schedule_id")]
+    [JsonPropertyName("schedule_id")] // Original Type: integer
     public Int32? ScheduleId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("lastcreated")]
+    [JsonPropertyName("lastcreated")] // Original Type: string
     public DateTimeOffset? Lastcreated { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("nextcreationdate")]
+    [JsonPropertyName("nextcreationdate")] // Original Type: string
     public DateTimeOffset? Nextcreationdate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("period")]
+    [JsonPropertyName("period")] // Original Type: integer
     public Int32? Period { get; set; }
 
-    [JsonPropertyName("schedule")]
-    public StdRequest Schedule { get; set; } = new();
+    [JsonPropertyName("schedule")] // Original Type: #/components/schemas/StdRequest
+    public StdRequest Schedule { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("create_recurring_invoice")]
+    [JsonPropertyName("create_recurring_invoice")] // Original Type: boolean
     public Boolean? CreateRecurringInvoice { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("take_auto_payment")]
+    [JsonPropertyName("take_auto_payment")] // Original Type: boolean
     public Boolean? TakeAutoPayment { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("recurring_invoice_id")]
+    [JsonPropertyName("recurring_invoice_id")] // Original Type: integer
     public Int32? RecurringInvoiceId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_contract_assets")]
+    [JsonPropertyName("add_contract_assets")] // Original Type: integer
     public Int32? AddContractAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_labour")]
+    [JsonPropertyName("add_labour")] // Original Type: integer
     public Int32? AddLabour { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_project")]
+    [JsonPropertyName("add_project")] // Original Type: integer
     public Int32? AddProject { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_travel")]
+    [JsonPropertyName("add_travel")] // Original Type: integer
     public Int32? AddTravel { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_mileage")]
+    [JsonPropertyName("add_mileage")] // Original Type: integer
     public Int32? AddMileage { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_itemsissued")]
+    [JsonPropertyName("add_itemsissued")] // Original Type: integer
     public Int32? AddItemsissued { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_prepay")]
+    [JsonPropertyName("add_prepay")] // Original Type: integer
     public Int32? AddPrepay { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_salesorder")]
+    [JsonPropertyName("add_salesorder")] // Original Type: integer
     public Int32? AddSalesorder { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("force_creation")]
+    [JsonPropertyName("force_creation")] // Original Type: boolean
     public Boolean? ForceCreation { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_create_from_areaitems")]
-    public List<AreaItem>? CreateFromAreaitems { get; set; } = new();
+    [JsonPropertyName("_create_from_areaitems")] // Original Type: #/components/schemas/AreaItem
+    public List<InvoiceHeader>? CreateFromAreaitems { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_create_from_contract")]
+    [JsonPropertyName("_create_from_contract")] // Original Type: integer
     public Int32? CreateFromContract { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_validateonly")]
+    [JsonPropertyName("_validateonly")] // Original Type: boolean
     public Boolean? Validateonly { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("qboid")]
+    [JsonPropertyName("qboid")] // Original Type: integer
     public Int32? Qboid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("billingcategory")]
+    [JsonPropertyName("billingcategory")] // Original Type: integer
     public Int32? Billingcategory { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_sendmassinvoice")]
+    [JsonPropertyName("_sendmassinvoice")] // Original Type: boolean
     public Boolean? Sendmassinvoice { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xero_tenant_id")]
-    public String? XeroTenantId { get; set; } = String.Empty;
+    [JsonPropertyName("xero_tenant_id")] // Original Type: string
+    public String? XeroTenantId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xero_branding_theme_id")]
-    public String? XeroBrandingThemeId { get; set; } = String.Empty;
+    [JsonPropertyName("xero_branding_theme_id")] // Original Type: string
+    public String? XeroBrandingThemeId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xero_branding_theme_name")]
-    public String? XeroBrandingThemeName { get; set; } = String.Empty;
+    [JsonPropertyName("xero_branding_theme_name")] // Original Type: string
+    public String? XeroBrandingThemeName { get; set; }
 
-    [JsonPropertyName("xero_branding_theme")]
-    public KeyPair2 XeroBrandingTheme { get; set; } = new();
+    [JsonPropertyName("xero_branding_theme")] // Original Type: #/components/schemas/KeyPair2
+    public KeyPair2 XeroBrandingTheme { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("due_date_int")]
+    [JsonPropertyName("due_date_int")] // Original Type: integer
     public Int32? DueDateInt { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("due_date_type")]
+    [JsonPropertyName("due_date_type")] // Original Type: integer
     public Int32? DueDateType { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("createdbyagentname")]
-    public String? Createdbyagentname { get; set; } = String.Empty;
+    [JsonPropertyName("createdbyagentname")] // Original Type: string
+    public String? Createdbyagentname { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("internal_note")]
-    public String? InternalNote { get; set; } = String.Empty;
+    [JsonPropertyName("internal_note")] // Original Type: string
+    public String? InternalNote { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("mailboxid")]
+    [JsonPropertyName("mailboxid")] // Original Type: integer
     public Int32? Mailboxid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("period_type")]
+    [JsonPropertyName("period_type")] // Original Type: integer
     public Int32? PeriodType { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("kashflow_tenant_id")]
+    [JsonPropertyName("kashflow_tenant_id")] // Original Type: integer
     public Int32? KashflowTenantId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("kashflowid")]
+    [JsonPropertyName("kashflowid")] // Original Type: integer
     public Int32? Kashflowid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("kashflow_pdf")]
-    public String? KashflowPdf { get; set; } = String.Empty;
+    [JsonPropertyName("kashflow_pdf")] // Original Type: string
+    public String? KashflowPdf { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("original_client_id")]
+    [JsonPropertyName("original_client_id")] // Original Type: integer
     public Int32? OriginalClientId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("original_client_name")]
-    public String? OriginalClientName { get; set; } = String.Empty;
+    [JsonPropertyName("original_client_name")] // Original Type: string
+    public String? OriginalClientName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xero_status")]
-    public String? XeroStatus { get; set; } = String.Empty;
+    [JsonPropertyName("xero_status")] // Original Type: string
+    public String? XeroStatus { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("merge_data")]
-    public List<InvoiceHeaderMerge>? MergeData { get; set; } = new();
+    [JsonPropertyName("merge_data")] // Original Type: #/components/schemas/InvoiceHeaderMerge
+    public List<InvoiceHeader>? MergeData { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("snelstart_id")]
-    public String? SnelstartId { get; set; } = String.Empty;
+    [JsonPropertyName("snelstart_id")] // Original Type: string
+    public String? SnelstartId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("time")]
+    [JsonPropertyName("time")] // Original Type: string
     public DateTimeOffset? Time { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("startdate")]
+    [JsonPropertyName("startdate")] // Original Type: string
     public DateTimeOffset? Startdate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("enddate")]
+    [JsonPropertyName("enddate")] // Original Type: string
     public DateTimeOffset? Enddate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("daysplus")]
+    [JsonPropertyName("daysplus")] // Original Type: integer
     public Int32? Daysplus { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoiceday")]
+    [JsonPropertyName("invoiceday")] // Original Type: integer
     public Int32? Invoiceday { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("periodname")]
-    public String? Periodname { get; set; } = String.Empty;
+    [JsonPropertyName("periodname")] // Original Type: string
+    public String? Periodname { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_isimport")]
+    [JsonPropertyName("_isimport")] // Original Type: boolean
     public Boolean? Isimport { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("duedatename")]
-    public String? Duedatename { get; set; } = String.Empty;
+    [JsonPropertyName("duedatename")] // Original Type: string
+    public String? Duedatename { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("date_created")]
+    [JsonPropertyName("date_created")] // Original Type: string
     public DateTimeOffset? DateCreated { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_prorata_periods_ahead")]
+    [JsonPropertyName("invoice_prorata_periods_ahead")] // Original Type: integer
     public Int32? InvoiceProrataPeriodsAhead { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("nextcreationperiod")]
-    public String? Nextcreationperiod { get; set; } = String.Empty;
+    [JsonPropertyName("nextcreationperiod")] // Original Type: string
+    public String? Nextcreationperiod { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("qbo_company_id")]
-    public String? QboCompanyId { get; set; } = String.Empty;
+    [JsonPropertyName("qbo_company_id")] // Original Type: string
+    public String? QboCompanyId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_recordno")]
+    [JsonPropertyName("intacct_recordno")] // Original Type: integer
     public Int32? IntacctRecordno { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("period_start_date")]
+    [JsonPropertyName("period_start_date")] // Original Type: string
     public DateTimeOffset? PeriodStartDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("period_end_date")]
+    [JsonPropertyName("period_end_date")] // Original Type: string
     public DateTimeOffset? PeriodEndDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("payments")]
-    public List<InvoicePaymentList>? Payments { get; set; } = new();
+    [JsonPropertyName("payments")] // Original Type: #/components/schemas/InvoicePayment_List
+    public List<InvoiceHeader>? Payments { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("markaspaid")]
+    [JsonPropertyName("markaspaid")] // Original Type: boolean
     public Boolean? Markaspaid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("markaspaidmoduleid")]
+    [JsonPropertyName("markaspaidmoduleid")] // Original Type: integer
     public Int32? Markaspaidmoduleid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("dbc_id")]
-    public String? DbcId { get; set; } = String.Empty;
+    [JsonPropertyName("dbc_id")] // Original Type: string
+    public String? DbcId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("dbc_company_id")]
-    public String? DbcCompanyId { get; set; } = String.Empty;
+    [JsonPropertyName("dbc_company_id")] // Original Type: string
+    public String? DbcCompanyId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("reviewrequired")]
+    [JsonPropertyName("reviewrequired")] // Original Type: boolean
     public Boolean? Reviewrequired { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_warning")]
-    public String? Warning { get; set; } = String.Empty;
+    [JsonPropertyName("_warning")] // Original Type: string
+    public String? Warning { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_xmlwarning")]
-    public String? Xmlwarning { get; set; } = String.Empty;
+    [JsonPropertyName("_xmlwarning")] // Original Type: string
+    public String? Xmlwarning { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("creditlinkedtoinvoiceid")]
+    [JsonPropertyName("creditlinkedtoinvoiceid")] // Original Type: integer
     public Int32? Creditlinkedtoinvoiceid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("creditlinkedtoinvoiceid_thirdpartynumber")]
-    public String? CreditlinkedtoinvoiceidThirdpartynumber { get; set; } = String.Empty;
+    [JsonPropertyName("creditlinkedtoinvoiceid_thirdpartynumber")] // Original Type: string
+    public String? CreditlinkedtoinvoiceidThirdpartynumber { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("creditlinkedtoinvoiceid_typeid")]
+    [JsonPropertyName("creditlinkedtoinvoiceid_typeid")] // Original Type: integer
     public Int32? CreditlinkedtoinvoiceidTypeid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("purchaseorder_id")]
+    [JsonPropertyName("purchaseorder_id")] // Original Type: integer
     public Int32? PurchaseorderId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("sage_business_cloud_details_id")]
+    [JsonPropertyName("sage_business_cloud_details_id")] // Original Type: integer
     public Int32? SageBusinessCloudDetailsId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("sage_business_cloud_id")]
-    public String? SageBusinessCloudId { get; set; } = String.Empty;
+    [JsonPropertyName("sage_business_cloud_id")] // Original Type: string
+    public String? SageBusinessCloudId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("exact_id")]
-    public String? ExactId { get; set; } = String.Empty;
+    [JsonPropertyName("exact_id")] // Original Type: string
+    public String? ExactId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("exact_division")]
+    [JsonPropertyName("exact_division")] // Original Type: integer
     public Int32? ExactDivision { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xero_line_tax")]
-    public String? XeroLineTax { get; set; } = String.Empty;
+    [JsonPropertyName("xero_line_tax")] // Original Type: string
+    public String? XeroLineTax { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_auto_increase_period")]
+    [JsonPropertyName("invoice_auto_increase_period")] // Original Type: integer
     public Int32? InvoiceAutoIncreasePeriod { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_percent_increase")]
+    [JsonPropertyName("invoice_percent_increase")] // Original Type: number
     public Double? InvoicePercentIncrease { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("schedule_ignore_delete")]
+    [JsonPropertyName("schedule_ignore_delete")] // Original Type: boolean
     public Boolean? ScheduleIgnoreDelete { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("assigned_agent")]
+    [JsonPropertyName("assigned_agent")] // Original Type: integer
     public Int32? AssignedAgent { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("assigned_agent_name")]
-    public String? AssignedAgentName { get; set; } = String.Empty;
+    [JsonPropertyName("assigned_agent_name")] // Original Type: string
+    public String? AssignedAgentName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approval_status")]
+    [JsonPropertyName("approval_status")] // Original Type: integer
     public Int32? ApprovalStatus { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approvalagent")]
+    [JsonPropertyName("approvalagent")] // Original Type: integer
     public Int32? Approvalagent { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approvalemailaddress")]
-    public String? Approvalemailaddress { get; set; } = String.Empty;
+    [JsonPropertyName("approvalemailaddress")] // Original Type: string
+    public String? Approvalemailaddress { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approvalnote")]
-    public String? Approvalnote { get; set; } = String.Empty;
+    [JsonPropertyName("approvalnote")] // Original Type: string
+    public String? Approvalnote { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approvalagentid")]
+    [JsonPropertyName("approvalagentid")] // Original Type: integer
     public Int32? Approvalagentid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approvaldatetime")]
+    [JsonPropertyName("approvaldatetime")] // Original Type: string
     public DateTimeOffset? Approvaldatetime { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approvalticketid")]
+    [JsonPropertyName("approvalticketid")] // Original Type: integer
     public Int32? Approvalticketid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("ticket_summary")]
-    public String? TicketSummary { get; set; } = String.Empty;
+    [JsonPropertyName("ticket_summary")] // Original Type: string
+    public String? TicketSummary { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("ticket_note")]
-    public String? TicketNote { get; set; } = String.Empty;
+    [JsonPropertyName("ticket_note")] // Original Type: string
+    public String? TicketNote { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approval_start")]
+    [JsonPropertyName("approval_start")] // Original Type: boolean
     public Boolean? ApprovalStart { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("new_approvalprocess_agent_id")]
+    [JsonPropertyName("new_approvalprocess_agent_id")] // Original Type: integer
     public Int32? NewApprovalprocessAgentId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("new_approvalprocess_email")]
-    public String? NewApprovalprocessEmail { get; set; } = String.Empty;
+    [JsonPropertyName("new_approvalprocess_email")] // Original Type: string
+    public String? NewApprovalprocessEmail { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("new_approvalprocess_cab_id")]
+    [JsonPropertyName("new_approvalprocess_cab_id")] // Original Type: integer
     public Int32? NewApprovalprocessCabId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("new_approvalprocess_users")]
-    public List<UsersList>? NewApprovalprocessUsers { get; set; } = new();
+    [JsonPropertyName("new_approvalprocess_users")] // Original Type: #/components/schemas/Users_List
+    public List<InvoiceHeader>? NewApprovalprocessUsers { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("new_approvalprocess_cab")]
-    public List<CabMember>? NewApprovalprocessCab { get; set; } = new();
+    [JsonPropertyName("new_approvalprocess_cab")] // Original Type: #/components/schemas/CabMember
+    public List<InvoiceHeader>? NewApprovalprocessCab { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("approval_process_id")]
+    [JsonPropertyName("approval_process_id")] // Original Type: integer
     public Int32? ApprovalProcessId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("requires_approval")]
+    [JsonPropertyName("requires_approval")] // Original Type: boolean
     public Boolean? RequiresApproval { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xero_online_invoice_payment_url")]
-    public String? XeroOnlineInvoicePaymentUrl { get; set; } = String.Empty;
+    [JsonPropertyName("xero_online_invoice_payment_url")] // Original Type: string
+    public String? XeroOnlineInvoicePaymentUrl { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("generic_online_invoice_payment_url")]
-    public String? GenericOnlineInvoicePaymentUrl { get; set; } = String.Empty;
+    [JsonPropertyName("generic_online_invoice_payment_url")] // Original Type: string
+    public String? GenericOnlineInvoicePaymentUrl { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_save_location")]
-    public String? IntacctSaveLocation { get; set; } = String.Empty;
+    [JsonPropertyName("intacct_save_location")] // Original Type: string
+    public String? IntacctSaveLocation { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacctseparatetaxline")]
+    [JsonPropertyName("intacctseparatetaxline")] // Original Type: integer
     public Int32? Intacctseparatetaxline { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_class")]
-    public String? IntacctClass { get; set; } = String.Empty;
+    [JsonPropertyName("intacct_class")] // Original Type: string
+    public String? IntacctClass { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_class_name")]
-    public String? IntacctClassName { get; set; } = String.Empty;
+    [JsonPropertyName("intacct_class_name")] // Original Type: string
+    public String? IntacctClassName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("take_payment_on_duedate")]
+    [JsonPropertyName("take_payment_on_duedate")] // Original Type: integer
     public Int32? TakePaymentOnDuedate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("contains_calculated_quantity")]
+    [JsonPropertyName("contains_calculated_quantity")] // Original Type: boolean
     public Boolean? ContainsCalculatedQuantity { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_tax_solution")]
-    public String? IntacctTaxSolution { get; set; } = String.Empty;
+    [JsonPropertyName("intacct_tax_solution")] // Original Type: string
+    public String? IntacctTaxSolution { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_tax_solution_name")]
-    public String? IntacctTaxSolutionName { get; set; } = String.Empty;
+    [JsonPropertyName("intacct_tax_solution_name")] // Original Type: string
+    public String? IntacctTaxSolutionName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_project")]
-    public String? IntacctProject { get; set; } = String.Empty;
+    [JsonPropertyName("intacct_project")] // Original Type: string
+    public String? IntacctProject { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("intacct_project_name")]
-    public String? IntacctProjectName { get; set; } = String.Empty;
+    [JsonPropertyName("intacct_project_name")] // Original Type: string
+    public String? IntacctProjectName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_create_credit_note")]
+    [JsonPropertyName("_create_credit_note")] // Original Type: boolean
     public Boolean? CreateCreditNote { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("credit_total")]
+    [JsonPropertyName("credit_total")] // Original Type: number
     public Double? CreditTotal { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("customer_paid_total")]
+    [JsonPropertyName("customer_paid_total")] // Original Type: number
     public Double? CustomerPaidTotal { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("supplier_id")]
+    [JsonPropertyName("supplier_id")] // Original Type: integer
     public Int32? SupplierId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("supplier_name")]
-    public String? SupplierName { get; set; } = String.Empty;
+    [JsonPropertyName("supplier_name")] // Original Type: string
+    public String? SupplierName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_dont_fire_automations")]
+    [JsonPropertyName("_dont_fire_automations")] // Original Type: boolean
     public Boolean? DontFireAutomations { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_is_process")]
+    [JsonPropertyName("_is_process")] // Original Type: boolean
     public Boolean? IsProcess { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_is_task_schedule")]
+    [JsonPropertyName("_is_task_schedule")] // Original Type: boolean
     public Boolean? IsTaskSchedule { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("payments_pending")]
+    [JsonPropertyName("payments_pending")] // Original Type: integer
     public Int32? PaymentsPending { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("include_in_autopay")]
+    [JsonPropertyName("include_in_autopay")] // Original Type: boolean
     public Boolean? IncludeInAutopay { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_forcethirdpartysync")]
+    [JsonPropertyName("_forcethirdpartysync")] // Original Type: boolean
     public Boolean? Forcethirdpartysync { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("client_to_invoice_to_id")]
+    [JsonPropertyName("client_to_invoice_to_id")] // Original Type: integer
     public Int32? ClientToInvoiceToId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("creation_source")]
-    public String? CreationSource { get; set; } = String.Empty;
+    [JsonPropertyName("creation_source")] // Original Type: string
+    public String? CreationSource { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("typeid")]
+    [JsonPropertyName("typeid")] // Original Type: integer
     public Int32? Typeid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("twilio_invoice")]
+    [JsonPropertyName("twilio_invoice")] // Original Type: boolean
     public Boolean? TwilioInvoice { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_separately")]
+    [JsonPropertyName("invoice_separately")] // Original Type: boolean
     public Boolean? InvoiceSeparately { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("minimum_price_active")]
+    [JsonPropertyName("minimum_price_active")] // Original Type: boolean
     public Boolean? MinimumPriceActive { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("minimum_line_description")]
-    public String? MinimumLineDescription { get; set; } = String.Empty;
+    [JsonPropertyName("minimum_line_description")] // Original Type: string
+    public String? MinimumLineDescription { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("minimum_amount")]
+    [JsonPropertyName("minimum_amount")] // Original Type: number
     public Double? MinimumAmount { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("avalara_details_id")]
+    [JsonPropertyName("avalara_details_id")] // Original Type: integer
     public Int32? AvalaraDetailsId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("qbo_term_name")]
-    public String? QboTermName { get; set; } = String.Empty;
+    [JsonPropertyName("qbo_term_name")] // Original Type: string
+    public String? QboTermName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("qbo_term_id")]
+    [JsonPropertyName("qbo_term_id")] // Original Type: integer
     public Int32? QboTermId { get; set; }
 
-    [JsonPropertyName("qbo_term")]
-    public KeyPair2 QboTerm { get; set; } = new();
+    [JsonPropertyName("qbo_term")] // Original Type: #/components/schemas/KeyPair2
+    public KeyPair2 QboTerm { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("exact_payment_conditon_name")]
-    public String? ExactPaymentConditonName { get; set; } = String.Empty;
+    [JsonPropertyName("exact_payment_conditon_name")] // Original Type: string
+    public String? ExactPaymentConditonName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("exact_payment_conditon_id")]
-    public String? ExactPaymentConditonId { get; set; } = String.Empty;
+    [JsonPropertyName("exact_payment_conditon_id")] // Original Type: string
+    public String? ExactPaymentConditonId { get; set; }
 
-    [JsonPropertyName("exact_payment_conditon")]
-    public KeyPair2 ExactPaymentConditon { get; set; } = new();
-
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("avalara_details_name")]
-    public String? AvalaraDetailsName { get; set; } = String.Empty;
+    [JsonPropertyName("exact_payment_conditon")] // Original Type: #/components/schemas/KeyPair2
+    public KeyPair2 ExactPaymentConditon { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("voided")]
+    [JsonPropertyName("avalara_details_name")] // Original Type: string
+    public String? AvalaraDetailsName { get; set; }
+
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonPropertyName("voided")] // Original Type: boolean
     public Boolean? Voided { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("credit_date")]
+    [JsonPropertyName("credit_date")] // Original Type: string
     public DateTimeOffset? CreditDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("credit_outstanding_for_customer")]
+    [JsonPropertyName("credit_outstanding_for_customer")] // Original Type: number
     public Double? CreditOutstandingForCustomer { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("credit_outstanding")]
+    [JsonPropertyName("credit_outstanding")] // Original Type: number
     public Double? CreditOutstanding { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("credit_used")]
+    [JsonPropertyName("credit_used")] // Original Type: number
     public Double? CreditUsed { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("mark_credit_as_used")]
+    [JsonPropertyName("mark_credit_as_used")] // Original Type: boolean
     public Boolean? MarkCreditAsUsed { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("apply_credit")]
+    [JsonPropertyName("apply_credit")] // Original Type: boolean
     public Boolean? ApplyCredit { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("apply_credit_id")]
+    [JsonPropertyName("apply_credit_id")] // Original Type: integer
     public Int32? ApplyCreditId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("apply_credit_amount")]
+    [JsonPropertyName("apply_credit_amount")] // Original Type: number
     public Double? ApplyCreditAmount { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("apply_credit_description")]
-    public String? ApplyCreditDescription { get; set; } = String.Empty;
+    [JsonPropertyName("apply_credit_description")] // Original Type: string
+    public String? ApplyCreditDescription { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("apply_credit_long_description")]
-    public String? ApplyCreditLongDescription { get; set; } = String.Empty;
+    [JsonPropertyName("apply_credit_long_description")] // Original Type: string
+    public String? ApplyCreditLongDescription { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("apply_credit_tax_type")]
+    [JsonPropertyName("apply_credit_tax_type")] // Original Type: integer
     public Int32? ApplyCreditTaxType { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_display")]
-    public String? InvoiceDisplay { get; set; } = String.Empty;
+    [JsonPropertyName("invoice_display")] // Original Type: string
+    public String? InvoiceDisplay { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_novalidate")]
+    [JsonPropertyName("_novalidate")] // Original Type: boolean
     public Boolean? Novalidate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("sqlimport_id")]
+    [JsonPropertyName("sqlimport_id")] // Original Type: integer
     public Int32? SqlimportId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_match_id")]
-    public String? InvoiceMatchId { get; set; } = String.Empty;
+    [JsonPropertyName("invoice_match_id")] // Original Type: string
+    public String? InvoiceMatchId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("sync_include_paid")]
+    [JsonPropertyName("sync_include_paid")] // Original Type: boolean
     public Boolean? SyncIncludePaid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("dont_set_original_client_id")]
+    [JsonPropertyName("dont_set_original_client_id")] // Original Type: boolean
     public Boolean? DontSetOriginalClientId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_docommitsync")]
+    [JsonPropertyName("_docommitsync")] // Original Type: boolean
     public Boolean? Docommitsync { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_ignore_dont_send_invoice")]
+    [JsonPropertyName("_ignore_dont_send_invoice")] // Original Type: boolean
     public Boolean? IgnoreDontSendInvoice { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("sendinvoicereminder")]
+    [JsonPropertyName("sendinvoicereminder")] // Original Type: boolean
     public Boolean? Sendinvoicereminder { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("ticket_client_to_invoice_to_id")]
+    [JsonPropertyName("ticket_client_to_invoice_to_id")] // Original Type: integer
     public Int32? TicketClientToInvoiceToId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("originaddress1")]
-    public String? Originaddress1 { get; set; } = String.Empty;
+    [JsonPropertyName("originaddress1")] // Original Type: string
+    public String? Originaddress1 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("originaddress2")]
-    public String? Originaddress2 { get; set; } = String.Empty;
+    [JsonPropertyName("originaddress2")] // Original Type: string
+    public String? Originaddress2 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("originaddress3")]
-    public String? Originaddress3 { get; set; } = String.Empty;
+    [JsonPropertyName("originaddress3")] // Original Type: string
+    public String? Originaddress3 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("originaddress4")]
-    public String? Originaddress4 { get; set; } = String.Empty;
+    [JsonPropertyName("originaddress4")] // Original Type: string
+    public String? Originaddress4 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("originaddress5")]
-    public String? Originaddress5 { get; set; } = String.Empty;
+    [JsonPropertyName("originaddress5")] // Original Type: string
+    public String? Originaddress5 { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("most_recent_invoice_id")]
+    [JsonPropertyName("most_recent_invoice_id")] // Original Type: integer
     public Int32? MostRecentInvoiceId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("most_recent_invoice_type")]
+    [JsonPropertyName("most_recent_invoice_type")] // Original Type: integer
     public Int32? MostRecentInvoiceType { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("custombuttons")]
-    public List<CustomButton>? Custombuttons { get; set; } = new();
+    [JsonPropertyName("custombuttons")] // Original Type: #/components/schemas/CustomButton
+    public List<InvoiceHeader>? Custombuttons { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("extratabs")]
-    public List<Tabname>? Extratabs { get; set; } = new();
+    [JsonPropertyName("extratabs")] // Original Type: #/components/schemas/Tabname
+    public List<InvoiceHeader>? Extratabs { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("update_invoice_conversion_rate")]
+    [JsonPropertyName("update_invoice_conversion_rate")] // Original Type: boolean
     public Boolean? UpdateInvoiceConversionRate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("conversion_rate")]
+    [JsonPropertyName("conversion_rate")] // Original Type: number
     public Double? ConversionRate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("dont_sync_to_3rd_party")]
+    [JsonPropertyName("dont_sync_to_3rd_party")] // Original Type: boolean
     public Boolean? DontSyncTo3rdParty { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("is_invoice_screen")]
+    [JsonPropertyName("is_invoice_screen")] // Original Type: boolean
     public Boolean? IsInvoiceScreen { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("note_count")]
+    [JsonPropertyName("note_count")] // Original Type: integer
     public Int32? NoteCount { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("csp_invoice_id")]
+    [JsonPropertyName("csp_invoice_id")] // Original Type: integer
     public Int32? CspInvoiceId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("cloned_from_client_id")]
+    [JsonPropertyName("cloned_from_client_id")] // Original Type: integer
     public Int32? ClonedFromClientId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("bcd_posted")]
+    [JsonPropertyName("bcd_posted")] // Original Type: boolean
     public Boolean? BcdPosted { get; set; }
 
-    [JsonPropertyName("invoice_totals")]
-    public InvoiceTotals InvoiceTotals { get; set; } = new();
+    [JsonPropertyName("invoice_totals")] // Original Type: #/components/schemas/InvoiceTotals
+    public InvoiceTotals InvoiceTotals { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("immediate_prorata_recurring_invoice_id")]
+    [JsonPropertyName("immediate_prorata_recurring_invoice_id")] // Original Type: integer
     public Int32? ImmediateProrataRecurringInvoiceId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("toplevel_name")]
-    public String? ToplevelName { get; set; } = String.Empty;
+    [JsonPropertyName("toplevel_name")] // Original Type: string
+    public String? ToplevelName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("suppliers_order_reference")]
-    public String? SuppliersOrderReference { get; set; } = String.Empty;
+    [JsonPropertyName("suppliers_order_reference")] // Original Type: string
+    public String? SuppliersOrderReference { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("apply_credit_credit_outstanding")]
+    [JsonPropertyName("apply_credit_credit_outstanding")] // Original Type: number
     public Double? ApplyCreditCreditOutstanding { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("quickbooks_close_period_date")]
+    [JsonPropertyName("quickbooks_close_period_date")] // Original Type: string
     public DateTimeOffset? QuickbooksClosePeriodDate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("quickbooks_period_closed")]
+    [JsonPropertyName("quickbooks_period_closed")] // Original Type: boolean
     public Boolean? QuickbooksPeriodClosed { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("change_seq")]
+    [JsonPropertyName("change_seq")] // Original Type: integer
     public Int32? ChangeSeq { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("last_change_agent")]
+    [JsonPropertyName("last_change_agent")] // Original Type: integer
     public Int32? LastChangeAgent { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("last_change_seq")]
+    [JsonPropertyName("last_change_seq")] // Original Type: integer
     public Int32? LastChangeSeq { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("ignore_change_seq")]
+    [JsonPropertyName("ignore_change_seq")] // Original Type: boolean
     public Boolean? IgnoreChangeSeq { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("invoice_template_id")]
+    [JsonPropertyName("invoice_template_id")] // Original Type: integer
     public Int32? InvoiceTemplateId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("is_down_payment")]
+    [JsonPropertyName("is_down_payment")] // Original Type: boolean
     public Boolean? IsDownPayment { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("is_recognition")]
+    [JsonPropertyName("is_recognition")] // Original Type: boolean
     public Boolean? IsRecognition { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("recognised_from_invoice")]
+    [JsonPropertyName("recognised_from_invoice")] // Original Type: integer
     public Int32? RecognisedFromInvoice { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("xero_default_payment_nominalcode")]
-    public String? XeroDefaultPaymentNominalcode { get; set; } = String.Empty;
+    [JsonPropertyName("xero_default_payment_nominalcode")] // Original Type: string
+    public String? XeroDefaultPaymentNominalcode { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("runbook_button_id")]
+    [JsonPropertyName("runbook_button_id")] // Original Type: integer
     public Int32? RunbookButtonId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_dotaxsync")]
+    [JsonPropertyName("_dotaxsync")] // Original Type: boolean
     public Boolean? Dotaxsync { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("tax_total")]
+    [JsonPropertyName("tax_total")] // Original Type: number
     public Double? TaxTotal { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("revenue")]
+    [JsonPropertyName("revenue")] // Original Type: number
     public Double? Revenue { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("external_links")]
-    public List<ExternalLinkList>? ExternalLinks { get; set; } = new();
+    [JsonPropertyName("external_links")] // Original Type: #/components/schemas/ExternalLink_List
+    public List<InvoiceHeader>? ExternalLinks { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_importtypeid")]
+    [JsonPropertyName("_importtypeid")] // Original Type: integer
     public Int32? Importtypeid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_importthirdpartyid")]
-    public String? Importthirdpartyid { get; set; } = String.Empty;
+    [JsonPropertyName("_importthirdpartyid")] // Original Type: string
+    public String? Importthirdpartyid { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_importtype")]
-    public String? Importtype { get; set; } = String.Empty;
+    [JsonPropertyName("_importtype")] // Original Type: string
+    public String? Importtype { get; set; }
 
-    [JsonPropertyName("new_external_link")]
-    public ExternalLinkList NewExternalLink { get; set; } = new();
+    [JsonPropertyName("new_external_link")] // Original Type: #/components/schemas/ExternalLink_List
+    public ExternalLinkList NewExternalLink { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("import_details_id")]
+    [JsonPropertyName("import_details_id")] // Original Type: integer
     public Int32? ImportDetailsId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("_isupdateimport")]
+    [JsonPropertyName("_isupdateimport")] // Original Type: boolean
     public Boolean? Isupdateimport { get; set; }
 
 }

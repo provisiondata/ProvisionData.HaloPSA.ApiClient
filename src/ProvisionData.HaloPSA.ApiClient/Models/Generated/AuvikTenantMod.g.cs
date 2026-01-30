@@ -6,29 +6,30 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: AuvikTenantMod, Category: 
 public partial class AuvikTenantMod
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("parentId")]
-    public String? ParentId { get; set; } = String.Empty;
+    [JsonPropertyName("parentId")] // Original Type: string
+    public String? ParentId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("parentName")]
-    public String? ParentName { get; set; } = String.Empty;
+    [JsonPropertyName("parentName")] // Original Type: string
+    public String? ParentName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("tenantId")]
-    public String? TenantId { get; set; } = String.Empty;
+    [JsonPropertyName("tenantId")] // Original Type: string
+    public String? TenantId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("tenantName")]
-    public String? TenantName { get; set; } = String.Empty;
+    [JsonPropertyName("tenantName")] // Original Type: string
+    public String? TenantName { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("tenantDomain")]
-    public String? TenantDomain { get; set; } = String.Empty;
+    [JsonPropertyName("tenantDomain")] // Original Type: string
+    public String? TenantDomain { get; set; }
 
-    [JsonPropertyName("enabled")]
+    [JsonPropertyName("enabled")] // Original Type: boolean
     public Boolean Enabled { get; set; }
 
 }

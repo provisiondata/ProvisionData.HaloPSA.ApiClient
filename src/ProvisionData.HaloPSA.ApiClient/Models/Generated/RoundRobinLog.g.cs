@@ -6,29 +6,30 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: RoundRobinLog, Category: 
 public partial class RoundRobinLog
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("ticket_id")]
+    [JsonPropertyName("ticket_id")] // Original Type: integer
     public Int32? TicketId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("team")]
-    public String? Team { get; set; } = String.Empty;
+    [JsonPropertyName("team")] // Original Type: string
+    public String? Team { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("agent_id")]
+    [JsonPropertyName("agent_id")] // Original Type: integer
     public Int32? AgentId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("assign_datetime")]
+    [JsonPropertyName("assign_datetime")] // Original Type: string
     public DateTimeOffset? AssignDatetime { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("type")]
+    [JsonPropertyName("type")] // Original Type: integer
     public Int32? Type { get; set; }
 
 }

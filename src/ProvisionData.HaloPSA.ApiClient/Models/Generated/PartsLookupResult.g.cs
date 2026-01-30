@@ -6,68 +6,69 @@ namespace ProvisionData.HaloPSA.ApiClient.Models;
 
 #nullable enable
 
+// JSON Type Name: PartsLookupResult, Category: 
 public partial class PartsLookupResult
 {
-    [JsonPropertyName("id")]
+    [JsonPropertyName("id")] // Original Type: integer
     public Int32 Id { get; set; }
 
-    [JsonPropertyName("field_id")]
+    [JsonPropertyName("field_id")] // Original Type: integer
     public Int32 FieldId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("lookup_value")]
-    public String? LookupValue { get; set; } = String.Empty;
+    [JsonPropertyName("lookup_value")] // Original Type: string
+    public String? LookupValue { get; set; }
 
-    [JsonPropertyName("success")]
+    [JsonPropertyName("success")] // Original Type: boolean
     public Boolean Success { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("error")]
-    public String? Error { get; set; } = String.Empty;
+    [JsonPropertyName("error")] // Original Type: string
+    public String? Error { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("data")]
-    public UnknownType? Data { get; set; } = new();
+    [JsonPropertyName("data")] // Original Type: object
+    public UnknownType? Data { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("field_values")]
-    public List<KeyPair>? FieldValues { get; set; } = new();
+    [JsonPropertyName("field_values")] // Original Type: #/components/schemas/KeyPair
+    public List<PartsLookupResult>? FieldValues { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("customfields")]
-    public List<CustomField>? Customfields { get; set; } = new();
+    [JsonPropertyName("customfields")] // Original Type: #/components/schemas/CustomField
+    public List<PartsLookupResult>? Customfields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("lookup_values")]
-    public String? LookupValues { get; set; } = String.Empty;
+    [JsonPropertyName("lookup_values")] // Original Type: string
+    public String? LookupValues { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("message")]
-    public String? Message { get; set; } = String.Empty;
+    [JsonPropertyName("message")] // Original Type: string
+    public String? Message { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("popup")]
-    public String? Popup { get; set; } = String.Empty;
+    [JsonPropertyName("popup")] // Original Type: string
+    public String? Popup { get; set; }
 
-    [JsonPropertyName("confirm_popup")]
+    [JsonPropertyName("confirm_popup")] // Original Type: boolean
     public Boolean ConfirmPopup { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("data_multiple")]
-    public List<UnknownType>? DataMultiple { get; set; } = new();
+    [JsonPropertyName("data_multiple")] // Original Type: array
+    public List<PartsLookupResult>? DataMultiple { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("message_multiple")]
-    public String? MessageMultiple { get; set; } = String.Empty;
+    [JsonPropertyName("message_multiple")] // Original Type: string
+    public String? MessageMultiple { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("customfields_multiple")]
-    public List<UnknownType>? CustomfieldsMultiple { get; set; } = new();
+    [JsonPropertyName("customfields_multiple")] // Original Type: array
+    public List<PartsLookupResult>? CustomfieldsMultiple { get; set; }
 
-    [JsonPropertyName("mapped_outcome_field_id")]
+    [JsonPropertyName("mapped_outcome_field_id")] // Original Type: integer
     public Int32 MappedOutcomeFieldId { get; set; }
 
-    [JsonPropertyName("mapped_outcome_inverted")]
+    [JsonPropertyName("mapped_outcome_inverted")] // Original Type: boolean
     public Boolean MappedOutcomeInverted { get; set; }
 
 }

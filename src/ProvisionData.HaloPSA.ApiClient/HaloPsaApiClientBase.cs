@@ -114,17 +114,19 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
         }
     }
 
-    protected async Task<String> HttpPostAsync(Uri uri, String requestBody, CancellationToken cancellationToken = default)
+    protected async Task<String> HttpPostAsync(Uri uri, String payload, CancellationToken cancellationToken = default)
     {
-        Logger.LogTrace("HttpPostAsync: {api} => {requestBody}", uri, requestBody);
+        await EnsureAuthorizedAsync(cancellationToken);
 
-        var response = await HttpClient.PostAsync(uri, new StringContent(requestBody, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
+        Logger.LogTrace("HttpPostAsync: {api} => {payload}", uri, payload);
+        Console.WriteLine(payload);
+        var response = await HttpClient.PostAsync(uri, new StringContent(payload, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
         if (!response.IsSuccessStatusCode)
         {
             var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
             Logger.LogError("Failed to POST to {uri} => {HttpStatus}: {HttpMessage}\n\tRequest: {request}\n\tResponse: {response}",
-                uri, response.StatusCode, response.ReasonPhrase, requestBody, responseBody);
+                uri, response.StatusCode, response.ReasonPhrase, payload, responseBody);
             throw new HttpRequestException($"Failed to POST to {uri} => {response.StatusCode}: {response.ReasonPhrase}");
         }
 
@@ -133,6 +135,8 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
 
     protected async Task<String> HttpPutAsync(Uri uri, String requestBody, CancellationToken cancellationToken = default)
     {
+        await EnsureAuthorizedAsync(cancellationToken);
+
         var response = await HttpClient.PutAsync(uri, new StringContent(requestBody, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
         if (!response.IsSuccessStatusCode)
@@ -151,6 +155,8 @@ public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClie
 
     public async Task<String> HttpGetPagedAsync(Uri uri, Int32 pagenumber, Int32 pageSize, CancellationToken cancellationToken = default)
     {
+        await EnsureAuthorizedAsync(cancellationToken);
+
         var url = uri.AppendQueryParam("pageinate", true)
                      .AppendQueryParam("page_no", pagenumber)
                      .AppendQueryParam("page_size", pageSize)
