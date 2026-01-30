@@ -58,9 +58,11 @@ public class HaloPsaApiClient_AssetsTests
         );
 
         // Act & Assert
-        await Should.ThrowAsync<HaloPsaApiClientException>(
+        var exception = await Record.ExceptionAsync(
             async () => await client.ListAssetsAsync(CancellationToken.None)
         );
+
+        exception.Should().BeOfType<HaloPsaApiClientException>();
     }
 }
 

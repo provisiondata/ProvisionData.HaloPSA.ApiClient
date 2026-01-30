@@ -18,5 +18,5 @@ namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator;
 
 public interface IModelChangeValidator
 {
-    Boolean IsValid(ModelChange change);
+    Boolean IsValid(ModelChange change, out String error);
 }

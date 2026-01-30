@@ -1,0 +1,47 @@
+[
+  {
+    "_dontaddnewfields": true,
+    "do_not_apply_template_in_the_api": false,
+    "isassetdetails": true,
+    "assettype_id": "130", // Monitor
+    "site_id": 800,
+    "inventory_number": "ff31d5a8-2ac5-4a8f-82ce-f1910723acb3", // Asset Number
+    "business_owner_id": "-99", // Unknown Owner
+    "business_owner_cab_id": "1", // Unknown CAB
+    "technical_owner_id": "8", // Agent
+    "technical_owner_cab_id": "0", // No CAB
+    "sla_id": "-1", // No SLA
+    "priority_id": "-1", // *No Change*
+    "status_id": 1, // Active
+    "criticality": "0", // Not Set
+    "inactive": false,
+    "infofield_101": null,
+    "infofield_148": null,
+    "infofield_51": null,
+    "infofield_117": null,
+    "infofield_24": null,
+    "notes": "These are the notes",
+    "fields": [
+      {
+        "id": "101", // Name/Keyfield 
+        "value": "Test Product"
+      },
+      {
+        "id": "148", // User/Keyfield2
+        "value": "This is a User"
+      },
+      {
+        "id": "51", // Model/Keyfield3
+        "value": "This Is the Model"
+      },
+      {
+        "id": "117", // Serial Number
+        "value": "ff31d5a8-2ac5-4a8f-82ce-f1910723acb3"
+      },
+      {
+        "id": "24", // Purchase Date
+        "value": "2026-01-29T20:00:00.000Z"
+      }
+    ]
+  }
+]

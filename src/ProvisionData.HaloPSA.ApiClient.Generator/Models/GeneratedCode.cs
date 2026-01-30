@@ -16,6 +16,7 @@ namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
 
 internal class GeneratedCode
 {
-    public required String ClassName { get; init; }
+    public required String JsonModelName { get; init; }
+    public required String ClientClassName { get; init; }
     public String Code { get; set; } = String.Empty;
 }

@@ -12,6 +12,7 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
+using Bogus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -26,7 +27,11 @@ public class ApiClientTestFixture : IntegrationTestFixture
 
     public ApiClientTestData TestData
         => _testData ??= Services.GetRequiredService<IOptions<ApiClientTestData>>().Value;
-    
+
+    [SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "I want a new Faker for each fixture instance.")]
+    private Lazy<Faker> LazyFaker => new(() => new Faker());
+    public Faker Bogus => LazyFaker.Value;
+
     [UnconditionalSuppressMessage("Trimming", "IL2026", Justification = "ApiClientTestData and HaloPsaApiClientOptions properties are simple types")]
     [UnconditionalSuppressMessage("AOT", "IL3050", Justification = "ApiClientTestData and HaloPsaApiClientOptions properties are simple types")]
     protected override void ConfigureServices(IServiceCollection services, IConfiguration configuration)

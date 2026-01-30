@@ -21,6 +21,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{97FDE202-0638-4D9D-8BC9-173AC7EC127D}"
 	ProjectSection(SolutionItems) = preProject
 		docs\CONVENTIONS.md = docs\CONVENTIONS.md
+		docs\CreateAsset.json = docs\CreateAsset.json
 		docs\NUIGET.md = docs\NUIGET.md
 		docs\schema.sql = docs\schema.sql
 		swagger-20260125.json = swagger-20260125.json

@@ -12,24 +12,27 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+namespace ProvisionData.HaloPSA.ApiClient;
 
-public record ModelChange
+/// <summary>
+/// Internal token model for OAuth authentication responses.
+/// </summary>
+internal sealed class AuthToken
 {
-    public required String JsonModelName { get; set; }
-    public String? ClientClasslName { get; set; }
+    [JsonPropertyName("access_token")]
+    public String AccessToken { get; set; } = String.Empty;
 
-    public String? JsonPropertyName { get; set; }
-    public String? ClientPropertyName { get; set; }
+    [JsonPropertyName("token_type")]
+    public String TokenType { get; set; } = String.Empty;
 
-    public String? JsonPropertyType { get; internal set; }
-    public String? JsonFormat { get; internal set; }
+    [JsonPropertyName("expires_in")]
+    public Int32 ExpiresIn { get; set; }
 
-    public String? ClientPropertyType { get; set; }
+    [JsonPropertyName("refresh_token")]
+    public String RefreshToken { get; set; } = String.Empty;
 
-    public String? DefaultValue { get; set; }
-    public Boolean Ignore { get; set; }
-    public Boolean? Nullable { get; set; }
-    public Boolean PrivateConstructor { get; set; }
-    public Boolean Required { get; set; }
+    public DateTimeOffset IssuedAt { get; set; }
+
+    public Boolean IsExpired(DateTimeOffset now)
+        => IssuedAt.AddSeconds(ExpiresIn) <= now;
 }

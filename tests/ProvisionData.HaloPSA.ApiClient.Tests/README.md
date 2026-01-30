@@ -49,9 +49,9 @@ public async Task GetAssetAsync_ShouldReturnAsset_WhenAssetExists()
     var result = await client.GetAssetAsync(123);
 
     // Assert
-    result.ShouldNotBeNull();
-    result.Id.ShouldBe(123);
-    result.Name.ShouldBe("Test Asset");
+    result.Should().NotBeNull();
+    result.Id.Should().Be(123);
+    result.Name.Should().Be("Test Asset");
 }
 ```
 

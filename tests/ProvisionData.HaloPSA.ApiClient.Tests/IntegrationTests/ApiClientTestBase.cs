@@ -12,6 +12,7 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
+using Bogus;
 using ProvisionData.HaloPSA.ApiClient.Testing;
 
 namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;
@@ -22,4 +23,5 @@ public class ApiClientTestBase(ApiClientTestFixture fixture)
     private readonly ApiClientTestFixture _fixture = fixture;
 
     protected ApiClientTestData TestData => _fixture.TestData;
+    protected Faker Bogus => _fixture.Bogus;
 }

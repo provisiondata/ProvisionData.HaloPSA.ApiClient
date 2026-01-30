@@ -13,7 +13,6 @@
 // program. If not, see <https://www.gnu.org/licenses/>.
 
 using ProvisionData.HaloPSA.ApiClient.Models;
-using System.Text.Json.Serialization;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
@@ -40,50 +39,6 @@ namespace ProvisionData.HaloPSA.ApiClient;
 
 // Non-generated types
 [JsonSerializable(typeof(InstanceInfo))]
-
-// Types used by HaloPsaApiClient methods (also in generated .g.cs file)
-// Device/Asset types
-[JsonSerializable(typeof(Device))]
-[JsonSerializable(typeof(DeviceView))]
-[JsonSerializable(typeof(DeviceList))]
-[JsonSerializable(typeof(List<Device>))]
-[JsonSerializable(typeof(List<DeviceList>))]
-
-// Client/Area types
-[JsonSerializable(typeof(Area))]
-[JsonSerializable(typeof(AreaView))]
-[JsonSerializable(typeof(AreaList))]
-[JsonSerializable(typeof(List<Area>))]
-[JsonSerializable(typeof(List<AreaList>))]
-
-// Ticket types
-[JsonSerializable(typeof(Tickets))]
-[JsonSerializable(typeof(List<Tickets>))]
-
-// Invoice types
-[JsonSerializable(typeof(InvoiceHeader))]
-[JsonSerializable(typeof(List<InvoiceHeader>))]
-
-// Item types
-[JsonSerializable(typeof(Item))]
-[JsonSerializable(typeof(List<Item>))]
-
-// Supplier types
-[JsonSerializable(typeof(Supplier))]
-[JsonSerializable(typeof(List<Supplier>))]
-
-// Company types
-[JsonSerializable(typeof(Company))]
-[JsonSerializable(typeof(List<Company>))]
-
-// Request types
-[JsonSerializable(typeof(StdRequest))]
-[JsonSerializable(typeof(List<StdRequest>))]
-
-// Site types
-[JsonSerializable(typeof(SiteList))]
-[JsonSerializable(typeof(List<SiteList>))]
-
 [JsonSourceGenerationOptions(
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]

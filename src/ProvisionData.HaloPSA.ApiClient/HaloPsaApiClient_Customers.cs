@@ -25,19 +25,19 @@ public partial class HaloPsaApiClient
     /// Lists all clients from the HaloPSA API.
     /// </summary>
     /// <param name="cancellationToken">Cancellation token.</param>
-    /// <returns>A collection of area list items representing clients.</returns>
-    public async Task<IEnumerable<AreaList>?> ListClientsAsync(CancellationToken cancellationToken = default)
+    /// <returns>A collection of <see cref="CustomerView"/> representing clients.</returns>
+    public async Task<IEnumerable<CustomerView>?> ListCustomersAsync(CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Client")
             .AppendQueryParam("count", 5000)
             .ToUri();
         var json = await HttpGetAsync(uri, cancellationToken);
-        Logger.LogTrace("ListClientsAsync Response: {JSON}", json);
+        Logger.LogTrace("ListCustomersAsync Response: {JSON}", json);
 
         try
         {
-            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.AreaView)
+            var list = JsonSerializer.Deserialize(json, HaloPsaCustomerJsonContext.Default.CustomerView)
                 ?? throw new InvalidOperationException("Failed to deserialize ListClientsResponse.");
 
             return list.Clients;
@@ -55,8 +55,8 @@ public partial class HaloPsaApiClient
     /// <param name="customerId">The customer ID.</param>
     /// <param name="includeDetails">Whether to include detailed information.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
-    /// <returns>The area representing the customer.</returns>
-    public async Task<Area> GetCustomerAsync(Int32 customerId, Boolean includeDetails = false, CancellationToken cancellationToken = default)
+    /// <returns>The customer representing the customer.</returns>
+    public async Task<Customer> GetCustomerAsync(Int32 customerId, Boolean includeDetails = false, CancellationToken cancellationToken = default)
     {
         // https://halo.pdsint.net/api/Client/172?includedetails=true
         var clientUri = Options.ApiUrl
@@ -70,14 +70,14 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var area = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Area)
-                ?? throw new HaloPsaApiClientException($"Failed to deserialize {nameof(Area)}.", json);
+            var customer = JsonSerializer.Deserialize(json, HaloPsaCustomerJsonContext.Default.Customer)
+                ?? throw new HaloPsaApiClientException($"Failed to deserialize {nameof(Customer)}.", json);
 
-            return area;
+            return customer;
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to get area: {ClientID}", customerId);
+            Logger.LogError(ex, "Failed to get customer: {ClientID}", customerId);
             throw;
         }
     }
@@ -87,8 +87,8 @@ public partial class HaloPsaApiClient
     /// </summary>
     /// <param name="name">The client name to search for.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
-    /// <returns>The area representing the client.</returns>
-    public async Task<Area> GetClientAsync(String name, CancellationToken cancellationToken = default)
+    /// <returns>The customer representing the client.</returns>
+    public async Task<Customer> GetCustomerAsync(String name, CancellationToken cancellationToken = default)
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Client")
@@ -99,14 +99,14 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var client = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Area)
-                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Area)}.");
+            var client = JsonSerializer.Deserialize(json, HaloPsaCustomerJsonContext.Default.Customer)
+                ?? throw new InvalidOperationException($"Failed to deserialize {nameof(Customer)}.");
 
             return client;
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to get area: {Name}", name);
+            Logger.LogError(ex, "Failed to get customer: {Name}", name);
             throw;
         }
     }

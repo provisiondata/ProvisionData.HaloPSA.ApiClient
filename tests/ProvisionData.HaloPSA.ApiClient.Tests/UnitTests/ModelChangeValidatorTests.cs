@@ -34,7 +34,7 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeFalse();
+        _validator.IsValid(change, out var error).Should().BeFalse();
     }
 
     [Fact]
@@ -50,7 +50,7 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeFalse();
+        _validator.IsValid(change, out var error).Should().BeFalse();
     }
 
     [Fact]
@@ -66,7 +66,7 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeTrue();
+        _validator.IsValid(change, out var error).Should().BeTrue();
     }
 
     [Fact]
@@ -82,7 +82,7 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeFalse();
+        _validator.IsValid(change, out var error).Should().BeFalse();
     }
 
     [Fact]
@@ -97,7 +97,7 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeTrue();
+        _validator.IsValid(change, out var error).Should().BeTrue();
     }
 
     [Fact]
@@ -112,7 +112,7 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeTrue();
+        _validator.IsValid(change, out var error).Should().BeTrue();
     }
 
     [Fact]
@@ -127,7 +127,7 @@ public class ModelChangeValidatorTests
             Required = true
         };
 
-        _validator.IsValid(change).ShouldBeTrue();
+        _validator.IsValid(change, out var error).Should().BeTrue();
     }
 
     [Fact]
@@ -142,7 +142,7 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeFalse();
+        _validator.IsValid(change, out var error).Should().BeFalse();
     }
 
     [Fact]
@@ -158,6 +158,6 @@ public class ModelChangeValidatorTests
             Required = false
         };
 
-        _validator.IsValid(change).ShouldBeFalse();
+        _validator.IsValid(change, out var error).Should().BeFalse();
     }
 }

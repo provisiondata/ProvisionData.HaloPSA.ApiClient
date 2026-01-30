@@ -34,14 +34,15 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
     /// </summary>
     private static readonly Dictionary<String, String[]> TypeCategories = new()
     {
-        ["Device"] = ["Device", "Asset"],
-        ["Client"] = ["Area", "Client", "Site", "Company", "Organisation"],
+        ["Asset"] = ["Asset", "Device"],
+        ["Customer"] = ["Customer", "Area", "Client", "Site"],
         ["Ticket"] = ["Ticket", "Fault", "Action"],
         ["Invoice"] = ["Invoice", "Quotation", "Payment"],
         ["Contract"] = ["Contract"],
-        ["Item"] = ["Item", "Stock", "Supplier", "Consignment"],
+        ["Item"] = ["Item", "Stock", "Consignment"],
         ["User"] = ["User", "Uname", "Agent"],
-        ["Configuration"] = ["Config", "Setting", "Setup", "Module", "Field", "Custom"],
+        ["Vendor"] = ["Vendor", "Company", "Organisation", "Supplier"],
+        ["Configuration"] = ["Configuration", "Config", "Setting", "Setup", "Module", "Field"],
         ["Integration"] = ["Integration", "Webhook", "Azure", "Microsoft", "Slack", "Teams"],
     };
 
@@ -122,7 +123,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                 if (schema.TryGetProperty("type", out var typeProp) && typeProp.GetString() == "object")
                 {
                     code = GenerateClassCode(typeElement.Name, schema);
-                    generatedClasses.Add(code.ClassName);
+                    generatedClasses.Add(code.ClientClassName);
                     counter++;
                 }
                 else if (schema.TryGetProperty("enum", out var enumProp) && enumProp.ValueKind == JsonValueKind.Array)
@@ -136,7 +137,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                     continue;
                 }
 
-                var filePath = Path.Combine(_options.OutputPath, $"{code.ClassName}.g.cs");
+                var filePath = Path.Combine(_options.OutputPath, $"{code.ClientClassName}.g.cs");
                 await File.WriteAllTextAsync(filePath, code.Code, cancellationToken);
                 _logger.LogInformation("Wrote {File}", filePath);
             }
@@ -196,7 +197,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         }
 
         // Generate the combined context that includes all types
-        await GenerateCombinedContextAsync(generatedClasses, cancellationToken);
+        //await GenerateCombinedContextAsync(generatedClasses, cancellationToken);
 
         _logger.LogInformation("Generated {Count} focused JsonSerializerContext files plus combined context.",
             categorizedTypes.Count);
@@ -247,8 +248,9 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         // Add JsonSerializable attributes for each type
         foreach (var typeName in types.OrderBy(t => t))
         {
-            sb.AppendLine($"[JsonSerializable(typeof({GetModelsNamespace()}.{typeName}))]");
-            sb.AppendLine($"[JsonSerializable(typeof(List<{GetModelsNamespace()}.{typeName}>))]");
+            var className = _changeProvider.GetClassName(typeName);
+            sb.AppendLine($"[JsonSerializable(typeof({GetModelsNamespace()}.{className}))]");
+            sb.AppendLine($"[JsonSerializable(typeof(List<{GetModelsNamespace()}.{className}>))]");
         }
 
         sb.AppendLine("[JsonSourceGenerationOptions(");
@@ -288,8 +290,9 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         // Add JsonSerializable attributes for each type
         foreach (var typeName in allTypes.OrderBy(t => t))
         {
-            sb.AppendLine($"[JsonSerializable(typeof({GetModelsNamespace()}.{typeName}))]");
-            sb.AppendLine($"[JsonSerializable(typeof(List<{GetModelsNamespace()}.{typeName}>))]");
+            var className = _changeProvider.GetClassName(typeName);
+            sb.AppendLine($"[JsonSerializable(typeof({GetModelsNamespace()}.{className}))]");
+            sb.AppendLine($"[JsonSerializable(typeof(List<{GetModelsNamespace()}.{className}>))]");
         }
 
         sb.AppendLine("[JsonSourceGenerationOptions(");
@@ -325,8 +328,10 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
     /// <returns>The Models namespace.</returns>
     private String GetModelsNamespace() => _options.Namespace;
 
-    private GeneratedCode GenerateEnumCode(String className, JsonElement enumProp)
+    private GeneratedCode GenerateEnumCode(String jsonModelName, JsonElement enumProp)
     {
+        var className = _changeProvider.GetClassName(jsonModelName);
+
         var sb = GetHeader();
 
         sb.AppendLine($"public enum {className}");
@@ -362,26 +367,45 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         sb.AppendLine("}");
         sb.AppendLine();
 
-        return new GeneratedCode() { ClassName = className, Code = sb.ToString() };
+        return new GeneratedCode()
+        {
+            JsonModelName = jsonModelName,
+            ClientClassName = className,
+            Code = sb.ToString()
+        };
     }
 
-    private GeneratedCode GenerateClassCode(String jsonTypeName, JsonElement schema)
+    private GeneratedCode GenerateClassCode(String jsonModelName, JsonElement schema)
     {
-        var className = _changeProvider.GetClassName(jsonTypeName);
+        var className = _changeProvider.GetClassName(jsonModelName);
+        var category = GetTypeCategory(className);
+        var classChange = _changeProvider.GetChange(jsonModelName);
+
+        //if (jsonModelName.StartsWith("Device", StringComparison.InvariantCultureIgnoreCase))
+        //    Debugger.Break();
 
         var sb = GetHeader();
 
         sb.AppendLine("#nullable enable");
         sb.AppendLine();
+        sb.AppendLine($"// JSON Type Name: {jsonModelName}, Category: {category}");
         sb.AppendLine($"public partial class {className}");
         sb.AppendLine("{");
+
+        if (classChange?.PrivateConstructor == true)
+        {
+            sb.AppendLine("    // JSON Deserialization Constructor");
+            sb.AppendLine($"    protected {className}() {{ }}");
+            sb.AppendLine();
+        }
 
         if (schema.TryGetProperty("properties", out var properties) && properties.ValueKind == JsonValueKind.Object)
         {
             foreach (var prop in properties.EnumerateObject())
             {
-                var change = _changeProvider.GetChange(jsonTypeName, prop);
+                var change = _changeProvider.GetChange(jsonModelName, prop);
 
+                var reqired = change.Required ? "required " : String.Empty;
                 var nullableSuffix = String.Empty;
 
                 if (change.Nullable == true)
@@ -391,13 +415,13 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                 }
 
                 sb.AppendLine($"    [JsonPropertyName(\"{prop.Name}\")]");
-                sb.AppendLine($"    public {change.ClientTypeName}{nullableSuffix} {change.ClientPropertyName} {{ get; set; }}{change.DefaultValue}");
+                sb.AppendLine($"    public {reqired}{change.ClientPropertyType}{nullableSuffix} {change.ClientPropertyName} {{ get; set; }}{change.DefaultValue}");
                 sb.AppendLine();
             }
         }
         else
         {
-            sb.AppendLine($"        // NOTE: The schema for {jsonTypeName} had no properties defined.");
+            sb.AppendLine($"        // NOTE: The schema for {jsonModelName} had no properties defined.");
         }
 
         sb.AppendLine("}");
@@ -408,7 +432,8 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
 
         return new GeneratedCode
         {
-            ClassName = jsonTypeName,
+            JsonModelName = jsonModelName,
+            ClientClassName = className,
             Code = sb.ToString()
         };
     }

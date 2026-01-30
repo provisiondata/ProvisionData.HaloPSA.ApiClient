@@ -40,20 +40,20 @@ public class HaloPsaApiClientExtensionsTests
         var httpClientBuilder = services.AddHaloPsaApiClient(configuration);
 
         // Assert
-        httpClientBuilder.ShouldNotBeNull();
+        httpClientBuilder.Should().NotBeNull();
 
         var serviceProvider = services.BuildServiceProvider();
         var options = serviceProvider.GetRequiredService<IOptions<HaloPsaApiClientOptions>>();
         var timeProvider = serviceProvider.GetRequiredService<TimeProvider>();
         var client = serviceProvider.GetRequiredService<HaloPsaApiClient>();
 
-        options.Value.AuthUrl.ShouldBe("https://test.halo.local/auth/");
-        options.Value.ApiUrl.ShouldBe("https://test.halo.local/api/");
-        options.Value.ClientId.ShouldBe("test-client");
-        options.Value.ClientSecret.ShouldBe("test-secret");
-        options.Value.PageSize.ShouldBe(100);
-        timeProvider.ShouldNotBeNull();
-        client.ShouldNotBeNull();
+        options.Value.AuthUrl.Should().Be("https://test.halo.local/auth/");
+        options.Value.ApiUrl.Should().Be("https://test.halo.local/api/");
+        options.Value.ClientId.Should().Be("test-client");
+        options.Value.ClientSecret.Should().Be("test-secret");
+        options.Value.PageSize.Should().Be(100);
+        timeProvider.Should().NotBeNull();
+        client.Should().NotBeNull();
     }
 
     [Fact]
@@ -76,15 +76,15 @@ public class HaloPsaApiClientExtensionsTests
         var httpClientBuilder = services.AddHaloPsaApiClient(configuration);
 
         // Assert
-        httpClientBuilder.ShouldNotBeNull();
+        httpClientBuilder.Should().NotBeNull();
 
         var serviceProvider = services.BuildServiceProvider();
         var options = serviceProvider.GetRequiredService<IOptions<HaloPsaApiClientOptions>>();
 
-        options.Value.AuthUrl.ShouldBe("https://custom.halo.local/auth/");
-        options.Value.ApiUrl.ShouldBe("https://custom.halo.local/api/");
-        options.Value.ClientId.ShouldBe("custom-client");
-        options.Value.ClientSecret.ShouldBe("custom-secret");
+        options.Value.AuthUrl.Should().Be("https://custom.halo.local/auth/");
+        options.Value.ApiUrl.Should().Be("https://custom.halo.local/api/");
+        options.Value.ClientId.Should().Be("custom-client");
+        options.Value.ClientSecret.Should().Be("custom-secret");
     }
 
     [Fact]
@@ -104,18 +104,18 @@ public class HaloPsaApiClientExtensionsTests
         });
 
         // Assert
-        httpClientBuilder.ShouldNotBeNull();
+        httpClientBuilder.Should().NotBeNull();
 
         var serviceProvider = services.BuildServiceProvider();
         var options = serviceProvider.GetRequiredService<IOptions<HaloPsaApiClientOptions>>();
         var client = serviceProvider.GetRequiredService<HaloPsaApiClient>();
 
-        options.Value.AuthUrl.ShouldBe("https://action.halo.local/auth/");
-        options.Value.ApiUrl.ShouldBe("https://action.halo.local/api/");
-        options.Value.ClientId.ShouldBe("action-client");
-        options.Value.ClientSecret.ShouldBe("action-secret");
-        options.Value.PageSize.ShouldBe(200);
-        client.ShouldNotBeNull();
+        options.Value.AuthUrl.Should().Be("https://action.halo.local/auth/");
+        options.Value.ApiUrl.Should().Be("https://action.halo.local/api/");
+        options.Value.ClientId.Should().Be("action-client");
+        options.Value.ClientSecret.Should().Be("action-secret");
+        options.Value.PageSize.Should().Be(200);
+        client.Should().NotBeNull();
     }
 
     [Fact]
@@ -125,8 +125,11 @@ public class HaloPsaApiClientExtensionsTests
         IServiceCollection services = null!;
         var configuration = new ConfigurationBuilder().Build();
 
-        // Act & Assert
-        Should.Throw<ArgumentNullException>(() => services.AddHaloPsaApiClient(configuration));
+        // Act
+        var exception = Record.Exception(() => services.AddHaloPsaApiClient(configuration));
+
+        // Assert
+        exception.Should().BeOfType<ArgumentNullException>();
     }
 
     [Fact]
@@ -136,8 +139,11 @@ public class HaloPsaApiClientExtensionsTests
         var services = new ServiceCollection();
         IConfiguration configuration = null!;
 
-        // Act & Assert
-        Should.Throw<ArgumentNullException>(() => services.AddHaloPsaApiClient(configuration));
+        // Act
+        var exception = Record.Exception(() => services.AddHaloPsaApiClient(configuration));
+
+        // Assert
+        exception.Should().BeOfType<ArgumentNullException>();
     }
 
     [Fact]
@@ -146,8 +152,11 @@ public class HaloPsaApiClientExtensionsTests
         // Arrange
         IServiceCollection services = null!;
 
-        // Act & Assert
-        Should.Throw<ArgumentNullException>(() => services.AddHaloPsaApiClient(configureOptions));
+        // Act
+        var exception = Record.Exception(() => services.AddHaloPsaApiClient(configureOptions));
+
+        // Assert
+        exception.Should().BeOfType<ArgumentNullException>();
 
         static void configureOptions(HaloPsaApiClientOptions options)
         {
@@ -161,8 +170,11 @@ public class HaloPsaApiClientExtensionsTests
         var services = new ServiceCollection();
         Action<HaloPsaApiClientOptions> configureOptions = null!;
 
-        // Act & Assert
-        Should.Throw<ArgumentNullException>(() => services.AddHaloPsaApiClient(configureOptions));
+        // Act
+        var exception = Record.Exception(() => services.AddHaloPsaApiClient(configureOptions));
+
+        // Assert
+        exception.Should().BeOfType<ArgumentNullException>();
     }
 
     [Fact]
@@ -186,6 +198,6 @@ public class HaloPsaApiClientExtensionsTests
         var timeProviders = serviceProvider.GetServices<TimeProvider>().ToList();
 
         // Should only have one TimeProvider registered despite adding twice
-        timeProviders.Count.ShouldBe(1);
+        timeProviders.Count.Should().Be(1);
     }
 }

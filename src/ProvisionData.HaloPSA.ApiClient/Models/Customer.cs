@@ -12,24 +12,9 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-public record ModelChange
+public partial class Customer
 {
-    public required String JsonModelName { get; set; }
-    public String? ClientClasslName { get; set; }
-
-    public String? JsonPropertyName { get; set; }
-    public String? ClientPropertyName { get; set; }
-
-    public String? JsonPropertyType { get; internal set; }
-    public String? JsonFormat { get; internal set; }
-
-    public String? ClientPropertyType { get; set; }
-
-    public String? DefaultValue { get; set; }
-    public Boolean Ignore { get; set; }
-    public Boolean? Nullable { get; set; }
-    public Boolean PrivateConstructor { get; set; }
-    public Boolean Required { get; set; }
+    public List<SiteList> Sites { get; set; } = [];
 }

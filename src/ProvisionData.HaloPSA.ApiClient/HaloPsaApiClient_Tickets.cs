@@ -25,17 +25,18 @@ public partial class HaloPsaApiClient
     /// Lists all faults/tickets from the HaloPSA API.
     /// </summary>
     /// <returns>A collection of tickets.</returns>
-    public async Task<IReadOnlyList<Tickets>> ListFaultsAsync()
+    public async Task<IReadOnlyList<Ticket>> ListFaultsAsync()
     {
         var uri = Options.ApiUrl
             .AppendPathSegment("Tickets")
             .AppendQueryParam("count", 5000)
             .ToUri();
+
         var json = await HttpGetAsync(uri);
 
         try
         {
-            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.ListTickets)
+            var list = JsonSerializer.Deserialize(json, HaloPsaTicketJsonContext.Default.ListTicket)
                 ?? throw new InvalidOperationException("Failed to deserialize FaultsList.");
 
             return list;
@@ -51,13 +52,17 @@ public partial class HaloPsaApiClient
     /// </summary>
     /// <param name="fault">The ticket to create.</param>
     /// <returns>The JSON response from the API.</returns>
-    public async Task<String> CreateFaultAsync(Tickets fault)
+    public async Task<String> CreateFaultAsync(Ticket fault)
     {
         ArgumentNullException.ThrowIfNull(fault);
 
-        var payload = JsonSerializer.Serialize(fault, HaloPsaApiJsonSerializerContext.Default.Tickets);
+        var uri = Options.ApiUrl
+            .AppendPathSegment("Tickets")
+            .ToUri();
 
-        var json = await HttpPostAsync("Tickets", $"[{payload}]");
+        var payload = JsonSerializer.Serialize(fault, HaloPsaTicketJsonContext.Default.Ticket);
+
+        var json = await HttpPostAsync(uri, $"[{payload}]");
 
         Logger.LogDebug("Create Fault Response: {json}", json);
 

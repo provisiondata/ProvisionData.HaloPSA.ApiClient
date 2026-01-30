@@ -13,37 +13,75 @@
 // program. If not, see <https://www.gnu.org/licenses/>.
 
 using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+using System.Text;
 
 namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Services;
 
 public class ModelChangeValidator : IModelChangeValidator
 {
-    public Boolean IsValid(ModelChange change)
+    public Boolean IsValid(ModelChange change, out String error)
     {
+        error = String.Empty;
+
         if (String.IsNullOrEmpty(change.JsonModelName))
         {
+            error = "- JsonModelName is required.";
             return false;
         }
+
+        var sb = new StringBuilder();
 
         // Model Name Change requires ClientClasslName.
         if (!String.IsNullOrEmpty(change.ClientClasslName))
         {
             // Model Name Change should have ClientClasslName and nothing else.
-            return String.IsNullOrEmpty(change.JsonPropertyName)
-                && String.IsNullOrEmpty(change.ClientPropertyName)
-                && change.Nullable is null
-                && change.Required == false;
-        }
+            if (!String.IsNullOrEmpty(change.JsonPropertyName))
+            {
+                sb.Append("- When ClientClasslName is provided, JsonPropertyName MUST be null (default). ");
+            }
 
-        // Property Change
-        // If JsonPropertyName is provided, one or more of ClientPropertyName, Nullable, or Required must also be provided
-        if (!String.IsNullOrEmpty(change.JsonPropertyName))
+            if (!String.IsNullOrEmpty(change.ClientPropertyName))
+            {
+                sb.Append("- When ClientClasslName is provided, ClientPropertyName MUST be null (default). ");
+            }
+
+            if (change.DefaultValue is not null)
+            {
+                sb.Append("- When ClientClasslName is provided, DefaultValue MUST be null (default).");
+            }
+
+            if (change.Ignore == true)
+            {
+                sb.Append("- When ClientClasslName is provided, Ignore MUST be false (default).");
+            }
+
+            if (change.Nullable is not null)
+            {
+                sb.Append("- When ClientClasslName is provided, Nullable MUST be null (default).");
+            }
+
+            if (change.Required == true)
+            {
+                sb.Append("- When ClientClasslName is provided, Required MUST be false (default).");
+            }
+        }
+        else if (!String.IsNullOrEmpty(change.JsonPropertyName))
         {
-            return !String.IsNullOrWhiteSpace(change.ClientPropertyName)
-                || change.Nullable is not null
-                || change.Required;
+            // Property Change
+            // If JsonPropertyName is provided, one or more of ClientPropertyName, DefaultValue, Ignore, Nullable, or Required must also be provided
+            if (String.IsNullOrWhiteSpace(change.ClientPropertyName)
+                && change.DefaultValue is null
+                && change.Ignore != true
+                && change.Nullable is null
+                && change.Required == false
+            )
+            {
+                sb.Append("- When JsonPropertyName is provided, one or more of ClientPropertyName, DefaultValue, Ignore, Nullable, or Required MUST be provided.");
+            }
         }
 
-        return false;
+        error = sb.ToString();
+
+        return sb.Length == 0;
     }
 }

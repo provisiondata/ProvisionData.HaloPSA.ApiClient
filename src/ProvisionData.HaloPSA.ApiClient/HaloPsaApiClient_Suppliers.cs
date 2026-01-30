@@ -31,11 +31,12 @@ public partial class HaloPsaApiClient
             .AppendPathSegment("Supplier")
             .AppendQueryParam("count", 5000)
             .ToUri();
+
         var json = await HttpGetAsync(uri);
 
         try
         {
-            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.ListCompany)
+            var list = JsonSerializer.Deserialize(json, HaloPsaVendorJsonContext.Default.ListCompany)
                 ?? throw new InvalidOperationException("Failed to deserialize SuppliersList.");
 
             return list;
@@ -55,9 +56,13 @@ public partial class HaloPsaApiClient
     {
         ArgumentNullException.ThrowIfNull(supplier);
 
-        var payload = JsonSerializer.Serialize(supplier, HaloPsaApiJsonSerializerContext.Default.Supplier);
+        var uri = Options.ApiUrl
+            .AppendPathSegment("Supplier")
+            .ToUri();
 
-        var json = await HttpPostAsync("Supplier", $"[{payload}]");
+        var payload = JsonSerializer.Serialize(supplier, HaloPsaVendorJsonContext.Default.Supplier);
+
+        var json = await HttpPostAsync(uri, $"[{payload}]");
 
         Logger.LogDebug("Create Supplier Response: {json}", json);
 

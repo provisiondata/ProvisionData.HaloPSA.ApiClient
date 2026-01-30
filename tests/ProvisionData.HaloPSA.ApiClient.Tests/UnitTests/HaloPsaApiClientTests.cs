@@ -57,7 +57,7 @@ public class HaloPsaApiClientTests
         );
 
         // Assert
-        client.ShouldNotBeNull();
+        client.Should().NotBeNull();
     }
 
     [Fact]
@@ -67,10 +67,10 @@ public class HaloPsaApiClientTests
         var options = new HaloPsaApiClientOptions();
 
         // Assert
-        options.PageSize.ShouldBe(50);
-        options.AuthUrl.ShouldBe(String.Empty);
-        options.ApiUrl.ShouldBe(String.Empty);
-        options.ClientId.ShouldBe(String.Empty);
-        options.ClientSecret.ShouldBe(String.Empty);
+        options.PageSize.Should().Be(50);
+        options.AuthUrl.Should().Be(String.Empty);
+        options.ApiUrl.Should().Be(String.Empty);
+        options.ClientId.Should().Be(String.Empty);
+        options.ClientSecret.Should().Be(String.Empty);
     }
 }

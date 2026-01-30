@@ -32,11 +32,12 @@ public partial class HaloPsaApiClient
             .AppendPathSegment("Item")
             .AppendQueryParam("count", 5000)
             .ToUri();
+
         var json = await HttpGetAsync(uri, cancellationToken);
 
         try
         {
-            var list = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.ListItem)
+            var list = JsonSerializer.Deserialize(json, HaloPsaItemJsonContext.Default.ListItem)
                 ?? throw new InvalidOperationException("Failed to deserialize ItemsList.");
 
             return list;
@@ -60,11 +61,12 @@ public partial class HaloPsaApiClient
             .AppendPathSegment("Item")
             .AppendPathSegment(itemId)
             .ToUri();
+
         var json = await HttpGetAsync(uri, cancellationToken);
 
         try
         {
-            var item = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Item)
+            var item = JsonSerializer.Deserialize(json, HaloPsaItemJsonContext.Default.Item)
                 ?? throw new InvalidOperationException("Failed to deserialize ItemsList.");
 
             return item;
@@ -84,12 +86,16 @@ public partial class HaloPsaApiClient
     /// <returns>The created item.</returns>
     public async Task<Item> CreateItemAsync(Item item, CancellationToken cancellationToken = default)
     {
-        var payload = JsonSerializer.Serialize(item, HaloPsaApiJsonSerializerContext.Default.Item);
+        var uri = Options.ApiUrl
+            .AppendPathSegment("Item")
+            .ToUri();
 
-        var json = await HttpPostAsync("Item", $"[{payload}]", cancellationToken);
+        var payload = JsonSerializer.Serialize(item, HaloPsaItemJsonContext.Default.Item);
+
+        var json = await HttpPostAsync(uri, $"[{payload}]", cancellationToken);
 
         Logger.LogDebug("Create Item Response: {json}", json);
 
-        return JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.Item)!;
+        return JsonSerializer.Deserialize(json, HaloPsaItemJsonContext.Default.Item)!;
     }
 }

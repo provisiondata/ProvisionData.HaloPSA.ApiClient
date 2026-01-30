@@ -45,10 +45,11 @@ public partial class ModelChangeProvider : IModelChangeProvider
 
         foreach (var change in _options.Changes)
         {
-            if (_validator.IsValid(change) is false)
+            if (_validator.IsValid(change, out var error) is false)
             {
                 isInvalid = true;
-                _logger.LogWarning("Invalid Change: {@Change}", change);
+                _logger.LogWarning("Invalid Change: {JsonModelName}{ClassOrPropertyName}  Errors:\n{Error}\n",
+                    change.JsonModelName, change.ClientClasslName ?? change.JsonPropertyName ?? String.Empty, error);
                 continue;
             }
 
@@ -84,6 +85,19 @@ public partial class ModelChangeProvider : IModelChangeProvider
         }
 
         return jsonModelName.ToPascalCase();
+    }
+
+    public ModelChange? GetChange([DisallowNull] String jsonModelName)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(jsonModelName);
+
+        var key = GetKey(jsonModelName);
+        if (_changes.TryGetValue(key, out var change))
+        {
+            return change;
+        }
+
+        return null;
     }
 
     public ModelChange GetChange([DisallowNull] String jsonModelName, JsonProperty jsonProperty)
@@ -143,7 +157,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
 
         if (jsonschema.TryGetProperty("type", out var typeProp))
         {
-            change.JsonTypeName = typeProp.GetString();
+            change.JsonPropertyType = typeProp.GetString();
         }
 
         if (jsonschema.TryGetProperty("format", out var formatProp))
@@ -151,7 +165,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
             change.JsonFormat = formatProp.GetString();
         }
 
-        if (jsonschema.TryGetProperty("nullable", out var nullableElement))
+        if (change.Nullable is null && jsonschema.TryGetProperty("nullable", out var nullableElement))
         {
             change.Nullable = nullableElement.ValueKind == JsonValueKind.True;
         }
@@ -161,27 +175,38 @@ public partial class ModelChangeProvider : IModelChangeProvider
             change.Required = requiredElement.ValueKind == JsonValueKind.True;
         }
 
-        if (String.Equals(change.JsonTypeName, "array", StringComparison.OrdinalIgnoreCase))
-        {
-            if (jsonschema.TryGetProperty("items", out var itemsElement))
-            {
-                MapRefOrType(change, itemsElement);
+        //if (change.ClientPropertyName == "Fields")
+        //{
+        //    Debugger.Break();
+        //}
 
-                change.ClientTypeName = $"List<{GetClassName(change.ClientTypeName!)}>";
+        if (String.IsNullOrWhiteSpace(change.ClientPropertyType))
+        {
+            if (String.Equals(change.JsonPropertyType, "array", StringComparison.OrdinalIgnoreCase))
+            {
+                if (jsonschema.TryGetProperty("items", out var itemsElement))
+                {
+                    MapRefOrType(change, itemsElement);
+
+                    change.ClientPropertyType = $"List<{GetClassName(change.JsonModelName!)}>";
+                }
+            }
+            else
+            {
+                MapRefOrType(change, jsonschema);
+
+                change.ClientPropertyType = change.ClientPropertyType switch
+                {
+                    "String" when String.Equals(change.JsonFormat, "date-time", StringComparison.OrdinalIgnoreCase) => "DateTimeOffset",
+                    _ => GetClassName(change.ClientPropertyType!).ToPascalCase()
+                };
             }
         }
-        else
+
+        if (change.DefaultValue is null)
         {
-            MapRefOrType(change, jsonschema);
-
-            change.ClientTypeName = change.ClientTypeName switch
-            {
-                "String" when String.Equals(change.JsonFormat, "date-time", StringComparison.OrdinalIgnoreCase) => "DateTimeOffset",
-                _ => GetClassName(change.ClientTypeName!).ToPascalCase()
-            };
+            SetDefaultValue(change);
         }
-
-        SetDefaultValue(change);
     }
 
     private void MapRefOrType(ModelChange change, JsonElement schema)
@@ -193,7 +218,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
         {
             var refValue = refProp.GetString() ?? String.Empty;
             var name = refValue.Split('/').Last();
-            change.ClientTypeName = name.ToPascalCase();
+            change.ClientPropertyType = name.ToPascalCase();
             return;
         }
 
@@ -202,23 +227,23 @@ public partial class ModelChangeProvider : IModelChangeProvider
             switch (typeProp.GetString())
             {
                 case "string":
-                    change.ClientTypeName = "String";
+                    change.ClientPropertyType = "String";
                     return;
 
                 case "integer":
                     if (schema.TryGetProperty("format", out var fmt) && fmt.GetString() == "int64")
                     {
-                        change.ClientTypeName = "Int64";
+                        change.ClientPropertyType = "Int64";
                         return;
                     }
 
-                    change.ClientTypeName = "Int32";
+                    change.ClientPropertyType = "Int32";
                     return;
 
                 case "number":
                     if (schema.TryGetProperty("format", out var nfmt))
                     {
-                        change.ClientTypeName = nfmt.GetString() switch
+                        change.ClientPropertyType = nfmt.GetString() switch
                         {
                             "float" => "Single",
                             "double" => "Double",
@@ -227,35 +252,38 @@ public partial class ModelChangeProvider : IModelChangeProvider
                         return;
                     }
 
-                    change.ClientTypeName = "Decimal";
+                    change.ClientPropertyType = "Decimal";
                     return;
 
                 case "boolean":
-                    change.ClientTypeName = "Boolean";
+                    change.ClientPropertyType = "Boolean";
                     return;
 
                 case "object":
-                    change.ClientTypeName = "Object";
+                    change.ClientPropertyType = "Object";
                     return;
             }
         }
 
-        change.ClientTypeName = _options.UnknownTypeName;
+        change.ClientPropertyType = _options.UnknownTypeName;
     }
 
     private static void SetDefaultValue(ModelChange change)
     {
-        if (String.IsNullOrWhiteSpace(change.ClientTypeName)
-            || change.ClientTypeName.IsValueType())
+        if (String.IsNullOrWhiteSpace(change.ClientPropertyType)
+            || change.ClientPropertyType.IsValueType())
         {
             change.DefaultValue = String.Empty;
             return;
         }
 
-        if (change.JsonTypeName == "array")
+        if (change.JsonPropertyType == "array" || change.ClientPropertyType.StartsWith("List<"))
+        {
             change.DefaultValue = " = [];";
+            return;
+        }
 
-        change.DefaultValue = change.ClientTypeName switch
+        change.DefaultValue = change.ClientPropertyType switch
         {
             "String" => " = String.Empty;",
             "Object" => " = new Object();",

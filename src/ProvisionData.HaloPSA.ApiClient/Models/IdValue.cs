@@ -12,9 +12,16 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-public partial class Area
+public class IdValue
 {
-    public List<SiteList> Sites { get; set; } = [];
+    [JsonPropertyName("id")]
+    public int Id { get; set; }
+    [JsonPropertyName("value")]
+    public string Value { get; set; } = string.Empty;
 }

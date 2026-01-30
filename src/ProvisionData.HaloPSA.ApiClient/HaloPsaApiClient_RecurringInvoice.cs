@@ -40,7 +40,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var invoiceHeaders = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.ListInvoiceHeader)
+            var invoiceHeaders = JsonSerializer.Deserialize(json, HaloPsaInvoiceJsonContext.Default.ListInvoiceHeader)
                 ?? throw new InvalidOperationException("Failed to deserialize GetRecurringInvoicesResult.");
 
             return invoiceHeaders;
@@ -68,7 +68,7 @@ public partial class HaloPsaApiClient
 
         try
         {
-            var recurringinvoice = JsonSerializer.Deserialize(json, HaloPsaApiJsonSerializerContext.Default.InvoiceHeader)
+            var recurringinvoice = JsonSerializer.Deserialize(json, HaloPsaInvoiceJsonContext.Default.InvoiceHeader)
                 ?? throw new InvalidOperationException("Failed to deserialize RecurringInvoice.");
 
             return recurringinvoice;
@@ -88,13 +88,17 @@ public partial class HaloPsaApiClient
     /// <returns>The created invoice header.</returns>
     public async Task<InvoiceHeader> CreateRecurringInvoiceAsync(InvoiceHeader request, CancellationToken cancellationToken = default)
     {
-        var payload = JsonSerializer.Serialize(request, HaloPsaApiJsonSerializerContext.Default.InvoiceHeader);
+        var uri = Options.ApiUrl
+            .AppendPathSegment("RecurringInvoice")
+            .ToUri();
 
-        var invoiceResponse = await HttpPostAsync("RecurringInvoice", $"[{payload}]", cancellationToken);
+        var payload = JsonSerializer.Serialize(request, HaloPsaInvoiceJsonContext.Default.InvoiceHeader);
+
+        var invoiceResponse = await HttpPostAsync(uri, $"[{payload}]", cancellationToken);
 
         Logger.LogTrace("CreateRecurringInvoiceAsync Response: {json}", invoiceResponse);
 
-        var response = JsonSerializer.Deserialize(invoiceResponse, HaloPsaApiJsonSerializerContext.Default.InvoiceHeader)!;
+        var response = JsonSerializer.Deserialize(invoiceResponse, HaloPsaInvoiceJsonContext.Default.InvoiceHeader)!;
 
         await CreateRecurringInvoiceScheduleAsync(response, cancellationToken);
 
@@ -117,11 +121,15 @@ public partial class HaloPsaApiClient
             Startdate = invoice.Schedule.Startdate
         };
 
+        var uri = Options.ApiUrl
+            .AppendPathSegment("Template")
+            .ToUri();
+
         try
         {
-            var payload = JsonSerializer.Serialize(schedule, HaloPsaApiJsonSerializerContext.Default.StdRequest);
+            var payload = JsonSerializer.Serialize(schedule, HaloPsaInvoiceJsonContext.Default.StdRequest);
             // STDREQUEST
-            var json = await HttpPostAsync("Template", $"[{payload}]", cancellationToken);
+            var json = await HttpPostAsync(uri, $"[{payload}]", cancellationToken);
 
             Logger.LogTrace("CreateRecurringInvoiceScheduleAsync Response: {json}", json);
         }

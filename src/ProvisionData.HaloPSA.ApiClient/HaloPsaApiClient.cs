@@ -16,6 +16,7 @@ using Flurl;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ProvisionData.HaloPSA.ApiClient.Models;
+using System.Text.Json;
 
 namespace ProvisionData.HaloPSA.ApiClient;
 
@@ -34,11 +35,17 @@ public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApi
     {
         try
         {
-            var uri = Options.ApiUrl.AppendPathSegment("InstanceInfo").ToUri();
-            var info = await GetAsync(uri, HaloPsaApiJsonSerializerContext.Default.InstanceInfo, cancellationToken);
-            Logger.LogInformation("{Instance}", info);
+            var uri = Options.ApiUrl
+                .AppendPathSegment("InstanceInfo")
+                .ToUri();
+            var json = await HttpGetAsync(uri, cancellationToken);
 
-            return info;
+            var instanceInfo = JsonSerializer.Deserialize<InstanceInfo>(json, HaloPsaApiJsonSerializerContext.Default.InstanceInfo)
+                ?? throw new InvalidOperationException("Failed to deserialize InstanceInfo.");
+
+            Logger.LogInformation("{Instance}", instanceInfo);
+
+            return instanceInfo;
         }
         catch (Exception ex)
         {

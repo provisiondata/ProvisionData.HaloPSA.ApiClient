@@ -30,8 +30,8 @@ public class ApiClientTests(ApiClientTestFixture fixture)
         var info = await client.GetInstanceInfoAsync(CancellationToken.None);
 
         // Assert
-        info.ShouldNotBeNull();
-        info.AppName.ShouldBe("Halo PSA");
+        info.Should().NotBeNull();
+        info.AppName.Should().Be("Halo PSA");
     }
 
     [Fact]
@@ -40,27 +40,29 @@ public class ApiClientTests(ApiClientTestFixture fixture)
         // Arrange
 
         // Act
-        var client = await SUT.GetCustomerAsync(TestData.TestCompanyId, cancellationToken: CancellationToken);
+        var client = await SUT.GetCustomerAsync(TestData.TestCustomerId, cancellationToken: CancellationToken);
 
         // Assert
-        client.ShouldNotBeNull();
-        client.Id.ShouldBe(TestData.TestCompanyId);
+        client.Should().NotBeNull();
+        client.Id.Should().Be(TestData.TestCustomerId);
     }
 
     [Fact]
     public async Task Should_CreateAsset()
     {
         // Arrange
-        var asset = new Device()
-        {
+        var id = Guid.NewGuid().ToString().Replace("-", String.Empty)[..8];
+        var serialNumber = Bogus.Commerce.Ean13();
 
-        };
+        var asset = Asset.Create(TestData.TestCustomerId, TestData.TestAssetTypeId, TestData.TestSiteId, TestData.TestTechnicalOwnerId,
+            assetNumber: $"ASSET-{id}", name: $"Test Asset {id}", Bogus.Person.FullName, Bogus.Commerce.ProductName(), serialNumber, DateTime.UtcNow.AddDays(-1));
 
         // Act
-        var client = await SUT.GetCustomerAsync(TestData.TestCompanyId, cancellationToken: CancellationToken);
+        var result = await SUT.CreateAssetAsync(asset, cancellationToken: CancellationToken);
 
         // Assert
-        client.ShouldNotBeNull();
-        client.Id.ShouldBe(TestData.TestCompanyId);
+        result.Should().NotBeNull();
+        result.Id.Should().BeGreaterThan(0);
+        result.Fields.SingleOrDefault(f => f.Id == 117)?.Value.Should().Be(serialNumber);
     }
 }
