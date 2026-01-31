@@ -1,6 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+
+        <RootNamespace>ProvisionData.HaloPSA.ApiClient</RootNamespace>
+
         <!-- NuGet package metadata -->
         <PackageId>ProvisionData.HaloPSA.ApiClient</PackageId>
         <Title>ProvisionData HaloPSA API Client</Title>
