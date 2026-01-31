@@ -39,6 +39,11 @@
         <NeutralLanguage>en</NeutralLanguage>
         <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 
+        <!-- GitInfo Settings -->
+        <GitIgnoreBranchVersion>true</GitIgnoreBranchVersion>
+        <GitThisAssemblyMetadata>true</GitThisAssemblyMetadata>
+        <GitCommitsIgnoreMerges>true</GitCommitsIgnoreMerges>
+
     </PropertyGroup>
 
     <!-- CI build settings -->
