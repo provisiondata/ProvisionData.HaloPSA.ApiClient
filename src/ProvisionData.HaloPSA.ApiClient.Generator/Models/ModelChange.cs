@@ -17,7 +17,7 @@ namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
 public record ModelChange
 {
     public required String JsonModelName { get; set; }
-    public String? ClientClassName { get; set; }
+    public String? ClientDtoName { get; set; }
 
     public String? JsonPropertyName { get; set; }
     public String? ClientPropertyName { get; set; }

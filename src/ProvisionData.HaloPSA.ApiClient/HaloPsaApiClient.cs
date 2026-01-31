@@ -23,9 +23,16 @@ namespace ProvisionData.HaloPSA.ApiClient;
 /// <summary>
 /// HaloPSA API client providing typed access to the HaloPSA REST API.
 /// </summary>
-public partial class HaloPsaApiClient(HttpClient httpClient, IOptions<HaloPsaApiClientOptions> options, IAuthTokenProvider tokenRepository, TimeProvider timeProvider, ILogger<HaloPsaApiClient> logger)
-    : HaloPsaApiClientBase(httpClient, options.Value, tokenRepository, timeProvider, logger)
+public partial class HaloPsaApiClient(
+    HttpClient httpClient,
+    IOptions<HaloPsaApiClientOptions> options,
+    IAuthTokenProvider tokenRepository,
+    TimeProvider timeProvider,
+    ILogger<HaloPsaApiClient> logger,
+    IFieldMappingProvider fieldMappingProvider
+    ) : HaloPsaApiClientBase(httpClient, options.Value, tokenRepository, timeProvider, logger, fieldMappingProvider)
 {
+
     /// <summary>
     /// Gets information about the HaloPSA instance.
     /// </summary>

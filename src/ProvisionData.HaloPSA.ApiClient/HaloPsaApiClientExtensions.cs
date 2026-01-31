@@ -16,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
+using ProvisionData.HaloPSA.ApiClient.Models;
 using System.Diagnostics.CodeAnalysis;
 
 namespace ProvisionData.HaloPSA.ApiClient;
@@ -42,6 +43,7 @@ public static class HaloPsaApiClientExtensions
         // Register singleton services if not already registered
         services.TryAddSingleton(TimeProvider.System);
         services.TryAddSingleton<IAuthTokenProvider, AuthTokenProvider>();
+        services.TryAddSingleton<IFieldMappingProvider, ConfigurationBasedFieldMappingProvider>();
 
         // Register HttpClient with factory pattern
         return services.AddHttpClient<HaloPsaApiClient>((sp, httpClient) =>
@@ -51,6 +53,18 @@ public static class HaloPsaApiClientExtensions
             httpClient.BaseAddress = new Uri(options.ApiUrl);
             httpClient.Timeout = TimeSpan.FromMinutes(5);
         });
+    }
+
+    public static IServiceProvider EnsureCustomFieldsHaveBeenMapped(this IServiceProvider serviceProvider)
+    {
+        ArgumentNullException.ThrowIfNull(serviceProvider);
+
+        var mapper = serviceProvider.GetRequiredService<IFieldMappingProvider>();
+
+        // Apply field mappings for models that implement IHasCustomFields
+        Asset.ApplyFieldMappings(mapper);
+
+        return serviceProvider;
     }
 
     /// <summary>
@@ -66,12 +80,15 @@ public static class HaloPsaApiClientExtensions
         ArgumentNullException.ThrowIfNull(services);
         ArgumentNullException.ThrowIfNull(configureOptions);
 
+        services.AddOptions();
+
         // Configure options using action
         services.Configure(configureOptions);
 
         // Register singleton services if not already registered
         services.TryAddSingleton(TimeProvider.System);
         services.TryAddSingleton<IAuthTokenProvider, AuthTokenProvider>();
+        services.TryAddSingleton<IFieldMappingProvider, ConfigurationBasedFieldMappingProvider>();
 
         // Register HttpClient with factory pattern
         return services.AddHttpClient<HaloPsaApiClient>((sp, httpClient) =>

@@ -47,8 +47,8 @@ public partial class ModelChangeProvider : IModelChangeProvider
             if (_validator.IsValid(change, out var error) is false)
             {
                 isInvalid = true;
-                _logger.LogWarning("Invalid Change: {JsonModelName}{ClassOrPropertyName}  Errors:\n{Error}\n",
-                    change.JsonModelName, change.ClientClassName ?? change.JsonPropertyName ?? String.Empty, error);
+                _logger.LogWarning("Invalid Change: {JsonModelName}{DtoOrPropertyName}  Errors:\n{Error}\n",
+                    change.JsonModelName, change.ClientDtoName ?? change.JsonPropertyName ?? String.Empty, error);
                 continue;
             }
 
@@ -72,15 +72,15 @@ public partial class ModelChangeProvider : IModelChangeProvider
         return changes;
     }
 
-    public String GetClassName(String jsonModelName)
+    public String GetDtoName(String jsonModelName)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(jsonModelName);
 
         var key = GetKey(jsonModelName);
 
-        if (_changes.TryGetValue(key, out var change) && !String.IsNullOrEmpty(change.ClientClassName))
+        if (_changes.TryGetValue(key, out var change) && !String.IsNullOrEmpty(change.ClientDtoName))
         {
-            return change.ClientClassName;
+            return change.ClientDtoName;
         }
 
         return jsonModelName.ToPascalCase();
@@ -170,7 +170,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
             return;
         }
 
-        change.ClientClassName = GetClassName(change.JsonModelName);
+        change.ClientDtoName = GetDtoName(change.JsonModelName);
         change.ClientPropertyName = GetPropertyName(change.JsonModelName, change.JsonPropertyName);
 
         if (jsonschema.TryGetProperty("type", out var typeProp))
@@ -206,7 +206,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
                 {
                     MapRefOrType(change, itemsElement);
 
-                    change.ClientPropertyType = $"List<{GetClassName(change.JsonModelName!)}>";
+                    change.ClientPropertyType = $"List<{GetDtoName(change.JsonModelName!)}>";
                 }
             }
             else
@@ -216,7 +216,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
                 change.ClientPropertyType = change.ClientPropertyType switch
                 {
                     "String" when String.Equals(change.JsonFormat, "date-time", StringComparison.OrdinalIgnoreCase) => "DateTimeOffset",
-                    _ => GetClassName(change.ClientPropertyType!).ToPascalCase()
+                    _ => GetDtoName(change.ClientPropertyType!).ToPascalCase()
                 };
             }
         }

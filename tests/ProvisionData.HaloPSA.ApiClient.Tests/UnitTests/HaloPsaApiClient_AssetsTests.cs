@@ -14,6 +14,7 @@
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ProvisionData.HaloPSA.ApiClient.Models;
 using System.Net;
 
 namespace ProvisionData.HaloPSA.ApiClient.UnitTests;
@@ -24,6 +25,7 @@ public class HaloPsaApiClient_AssetsTests
     private readonly Mock<ILogger<HaloPsaApiClient>> _loggerMock;
     private readonly Mock<IOptions<HaloPsaApiClientOptions>> _optionsMock;
     private readonly Mock<TimeProvider> _timeProviderMock;
+    private readonly Mock<IFieldMappingProvider> _fieldMappingProviderMock;
     private readonly HaloPsaApiClientOptions _options;
 
     public HaloPsaApiClient_AssetsTests()
@@ -32,6 +34,7 @@ public class HaloPsaApiClient_AssetsTests
         _loggerMock = new Mock<ILogger<HaloPsaApiClient>>();
         _optionsMock = new Mock<IOptions<HaloPsaApiClientOptions>>();
         _timeProviderMock = new Mock<TimeProvider>();
+        _fieldMappingProviderMock = new Mock<IFieldMappingProvider>();
 
         _tokenProviderMock.Setup(tp => tp.GetTokenAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(new AuthToken());
@@ -60,7 +63,8 @@ public class HaloPsaApiClient_AssetsTests
             _optionsMock.Object,
             _tokenProviderMock.Object,
             _timeProviderMock.Object,
-            _loggerMock.Object
+            _loggerMock.Object,
+            _fieldMappingProviderMock.Object
         );
 
         // Act & Assert

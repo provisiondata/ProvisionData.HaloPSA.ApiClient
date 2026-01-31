@@ -20,11 +20,11 @@ using System.Text.Json;
 namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Services;
 
 /// <summary>
-/// Generates C# model classes and JsonSerializerContext files from an OpenAPI specification.
+/// Generates DTOs and JsonSerializerContext files from an OpenAPI specification.
 /// </summary>
-public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOptions> options, IModelChangeProvider changeProvider) : IGenerator
+public partial class DtosGenerator(ILogger<DtosGenerator> logger, IOptions<GeneratorOptions> options, IModelChangeProvider changeProvider) : IGenerator
 {
-    private readonly ILogger<Generator> _logger = logger;
+    private readonly ILogger<DtosGenerator> _logger = logger;
     private readonly IModelChangeProvider _changeProvider = changeProvider;
     private readonly GeneratorOptions _options = options.Value;
 
@@ -54,7 +54,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
     {
         if (_options.IsValid() == false)
         {
-            _logger.LogError("Generator options are not valid. Please check the configuration.");
+            _logger.LogError("DtosGenerator options are not valid. Please check the configuration.");
             return;
         }
 
@@ -89,11 +89,11 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
 
             await GenerateAsync(json, cancellationToken);
 
-            _logger.LogInformation("POCO generation completed successfully. Output written to: {OutputPath}", _options.OutputPath);
+            _logger.LogInformation("DTO generation completed successfully. Output written to: {OutputPath}", _options.OutputPath);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "An error occurred during POCO generation: {ErrorMessage}", ex.Message);
+            _logger.LogError(ex, "An error occurred during DTO generation: {ErrorMessage}", ex.Message);
         }
     }
 
@@ -105,7 +105,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         if (root.TryGetProperty("components", out var components) && components.ValueKind == JsonValueKind.Object
             && components.TryGetProperty("schemas", out var schemas) && schemas.ValueKind == JsonValueKind.Object)
         {
-            var generatedClasses = new List<String>();
+            var generatedDtos = new List<String>();
             var counter = 0;
 
             foreach (var typeElement in schemas.EnumerateObject())
@@ -122,8 +122,8 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                 // Only generate for known types
                 if (schema.TryGetProperty("type", out var typeProp) && typeProp.GetString() == "object")
                 {
-                    code = GenerateClassCode(typeElement.Name, schema);
-                    generatedClasses.Add(code.ClientClassName);
+                    code = GenerateDtoCode(typeElement.Name, schema);
+                    generatedDtos.Add(code.ClientDtoName);
                     counter++;
                 }
                 else if (schema.TryGetProperty("enum", out var enumProp) && enumProp.ValueKind == JsonValueKind.Array)
@@ -137,15 +137,15 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                     continue;
                 }
 
-                var filePath = Path.Combine(_options.OutputPath, $"{code.ClientClassName}.g.cs");
+                var filePath = Path.Combine(_options.OutputPath, $"{code.ClientDtoName}.g.cs");
                 await File.WriteAllTextAsync(filePath, code.Code, cancellationToken);
                 _logger.LogInformation("Wrote {File}", filePath);
             }
 
-            _logger.LogInformation("Generated {Count} classes/enums from OpenAPI specification.", counter);
+            _logger.LogInformation("Generated {Count} DTOs/enums from OpenAPI specification.", counter);
 
             // Generate JsonSerializerContext files
-            await GenerateJsonSerializerContextsAsync(generatedClasses, cancellationToken);
+            await GenerateJsonSerializerContextsAsync(generatedDtos, cancellationToken);
         }
         else
         {
@@ -157,15 +157,15 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
     /// <summary>
     /// Generates multiple focused JsonSerializerContext files for better trimming support.
     /// </summary>
-    /// <param name="generatedClasses">List of all generated class names.</param>
+    /// <param name="generatedDtos">List of all generated class names.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
-    private async Task GenerateJsonSerializerContextsAsync(List<String> generatedClasses, CancellationToken cancellationToken)
+    private async Task GenerateJsonSerializerContextsAsync(List<String> generatedDtos, CancellationToken cancellationToken)
     {
         // Group types by category
         var categorizedTypes = new Dictionary<String, List<String>>();
         var uncategorizedTypes = new List<String>();
 
-        foreach (var className in generatedClasses)
+        foreach (var className in generatedDtos)
         {
             var category = GetTypeCategory(className);
             if (category is not null)
@@ -195,9 +195,6 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         {
             await GenerateFocusedContextAsync(category, types, cancellationToken);
         }
-
-        // Generate the combined context that includes all types
-        //await GenerateCombinedContextAsync(generatedClasses, cancellationToken);
 
         _logger.LogInformation("Generated {Count} focused JsonSerializerContext files plus combined context.",
             categorizedTypes.Count);
@@ -236,7 +233,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         var sb = new StringBuilder();
 
         sb.AppendLine("// <auto-generated>");
-        sb.AppendLine("// Generated by ProvisionData.HaloPSA.ApiClient.Generator");
+        sb.AppendLine("// Generated by ProvisionData.HaloPSA.ApiClient.DtosGenerator");
         sb.AppendLine("// This focused context enables better trimming by only including related types.");
         sb.AppendLine("// </auto-generated>");
         sb.AppendLine();
@@ -248,7 +245,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         // Add JsonSerializable attributes for each type
         foreach (var typeName in types.OrderBy(t => t))
         {
-            var className = _changeProvider.GetClassName(typeName);
+            var className = _changeProvider.GetDtoName(typeName);
             sb.AppendLine($"[JsonSerializable(typeof({GetModelsNamespace()}.{className}))]");
             sb.AppendLine($"[JsonSerializable(typeof(List<{GetModelsNamespace()}.{className}>))]");
         }
@@ -264,48 +261,6 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         var filePath = Path.Combine(parentDirectory, $"{contextName}.g.cs");
         await File.WriteAllTextAsync(filePath, sb.ToString(), cancellationToken);
         _logger.LogInformation("Generated focused context: {ContextName} with {TypeCount} types", contextName, types.Count);
-    }
-
-    /// <summary>
-    /// Generates a combined JsonSerializerContext that includes all types.
-    /// This is useful for users who don't need optimal trimming.
-    /// </summary>
-    /// <param name="allTypes">All generated class names.</param>
-    /// <param name="cancellationToken">Cancellation token.</param>
-    private async Task GenerateCombinedContextAsync(List<String> allTypes, CancellationToken cancellationToken)
-    {
-        var sb = new StringBuilder();
-
-        sb.AppendLine("// <auto-generated>");
-        sb.AppendLine("// Generated by ProvisionData.HaloPSA.ApiClient.Generator");
-        sb.AppendLine("// This combined context includes all generated types.");
-        sb.AppendLine("// For better trimming, use the focused contexts (e.g., HaloPsaDeviceJsonContext).");
-        sb.AppendLine("// </auto-generated>");
-        sb.AppendLine();
-        sb.AppendLine("using System.Text.Json.Serialization;");
-        sb.AppendLine();
-        sb.AppendLine(GetContextNamespace());
-        sb.AppendLine();
-
-        // Add JsonSerializable attributes for each type
-        foreach (var typeName in allTypes.OrderBy(t => t))
-        {
-            var className = _changeProvider.GetClassName(typeName);
-            sb.AppendLine($"[JsonSerializable(typeof({GetModelsNamespace()}.{className}))]");
-            sb.AppendLine($"[JsonSerializable(typeof(List<{GetModelsNamespace()}.{className}>))]");
-        }
-
-        sb.AppendLine("[JsonSourceGenerationOptions(");
-        sb.AppendLine("    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,");
-        sb.AppendLine("    PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]");
-        sb.AppendLine("public partial class HaloPsaApiJsonSerializerContext : JsonSerializerContext");
-        sb.AppendLine("{");
-        sb.AppendLine("}");
-
-        var parentDirectory = Directory.GetParent(_options.OutputPath)?.FullName ?? _options.OutputPath;
-        var filePath = Path.Combine(parentDirectory, "HaloPsaApiJsonSerializerContext.g.cs");
-        await File.WriteAllTextAsync(filePath, sb.ToString(), cancellationToken);
-        _logger.LogInformation("Generated combined context: HaloPsaApiJsonSerializerContext with {TypeCount} types", allTypes.Count);
     }
 
     /// <summary>
@@ -330,7 +285,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
 
     private GeneratedCode GenerateEnumCode(String jsonModelName, JsonElement enumProp)
     {
-        var className = _changeProvider.GetClassName(jsonModelName);
+        var className = _changeProvider.GetDtoName(jsonModelName);
 
         var sb = GetHeader();
 
@@ -370,26 +325,42 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         return new GeneratedCode()
         {
             JsonModelName = jsonModelName,
-            ClientClassName = className,
+            ClientDtoName = className,
             Code = sb.ToString()
         };
     }
 
-    private GeneratedCode GenerateClassCode(String jsonModelName, JsonElement schema)
+    private GeneratedCode GenerateDtoCode(String jsonModelName, JsonElement schema)
     {
-        var className = _changeProvider.GetClassName(jsonModelName);
+        var className = _changeProvider.GetDtoName(jsonModelName);
         var category = GetTypeCategory(className);
         var classChange = _changeProvider.GetChange(jsonModelName);
 
-        //if (jsonModelName.StartsWith("Device", StringComparison.InvariantCultureIgnoreCase))
-        //    Debugger.Break();
+        var hasCustomFields = false;
+        var changes = new List<ModelChange>();
+
+        if (schema.TryGetProperty("properties", out var properties) && properties.ValueKind == JsonValueKind.Object)
+        {
+            foreach (var prop in properties.EnumerateObject())
+            {
+                var change = _changeProvider.GetChange(jsonModelName, prop);
+                if (change.ClientPropertyType == "List<IdValue>")
+                {
+                    hasCustomFields = true;
+                }
+
+                changes.Add(change);
+            }
+        }
+
+        var customFieldsInterface = hasCustomFields ? " : IHasCustomFields" : String.Empty;
 
         var sb = GetHeader();
 
         sb.AppendLine("#nullable enable");
         sb.AppendLine();
         sb.AppendLine($"// JSON Type Name: {jsonModelName}, Category: {category}");
-        sb.AppendLine($"public partial class {className}");
+        sb.AppendLine($"public partial class {className}{customFieldsInterface}");
         sb.AppendLine("{");
 
         if (classChange?.PrivateConstructor == true)
@@ -399,11 +370,10 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
             sb.AppendLine();
         }
 
-        if (schema.TryGetProperty("properties", out var properties) && properties.ValueKind == JsonValueKind.Object)
+        if (changes.Count > 0)
         {
-            foreach (var prop in properties.EnumerateObject())
+            foreach (var change in changes)
             {
-                var change = _changeProvider.GetChange(jsonModelName, prop);
                 if (change.Ignore)
                 {
                     sb.AppendLine($"    // Property {change.JsonPropertyName} is ignored as per ModelChanges configuration.");
@@ -421,7 +391,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
                         sb.AppendLine("    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]");
                     }
 
-                    sb.AppendLine($"    [JsonPropertyName(\"{prop.Name}\")] // Original Type: {change.JsonPropertyType}");
+                    sb.AppendLine($"    [JsonPropertyName(\"{change.JsonPropertyName}\")] // Original Type: {change.JsonPropertyType}");
                     sb.AppendLine($"    public {reqired}{change.ClientPropertyType}{nullableSuffix} {change.ClientPropertyName} {{ get; set; }}{change.DefaultValue}");
                     sb.AppendLine();
 
@@ -442,7 +412,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
         return new GeneratedCode
         {
             JsonModelName = jsonModelName,
-            ClientClassName = className,
+            ClientDtoName = className,
             Code = sb.ToString()
         };
     }
@@ -451,7 +421,7 @@ public partial class Generator(ILogger<Generator> logger, IOptions<GeneratorOpti
     {
         var sb = new StringBuilder();
         sb.AppendLine("// <auto-generated>");
-        sb.AppendLine("// Generated by ProvisionData.HaloPSA.ApiClient.Generator");
+        sb.AppendLine("// Generated by ProvisionData.HaloPSA.ApiClient.DtosGenerator");
         sb.AppendLine("// </auto-generated>");
         sb.AppendLine();
         sb.AppendLine($"namespace {_options.Namespace};");

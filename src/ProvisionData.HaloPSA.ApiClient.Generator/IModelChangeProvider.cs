@@ -20,7 +20,7 @@ namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator;
 
 public interface IModelChangeProvider
 {
-    String GetClassName(String jsonModelName);
+    String GetDtoName(String jsonModelName);
     ModelChange? GetChange([DisallowNull] String jsonModelName);
     ModelChange GetChange([DisallowNull] String jsonModelName, JsonProperty jsonProperty);
 

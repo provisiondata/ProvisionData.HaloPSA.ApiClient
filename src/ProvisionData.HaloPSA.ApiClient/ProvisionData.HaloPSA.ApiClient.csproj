@@ -7,8 +7,14 @@
         <Description>HaloPSA API Client for .NET providing typed models and client helpers.</Description>
         <PackageTags>HaloPSA;API;Client</PackageTags>
 
-        <IsTrimmable>True</IsTrimmable>
-        <IsAotCompatible>True</IsAotCompatible>
+        <!-- Enable incremental builds -->
+        <UseSharedCompilation>true</UseSharedCompilation>
+        <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+
+        <!-- Optimize source generators -->
+        <EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)Generated</CompilerGeneratedFilesOutputPath>
+    
     </PropertyGroup>
 
     <ItemGroup>

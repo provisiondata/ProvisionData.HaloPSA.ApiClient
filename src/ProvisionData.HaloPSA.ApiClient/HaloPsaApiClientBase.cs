@@ -14,6 +14,7 @@
 
 using Flurl;
 using Microsoft.Extensions.Logging;
+using ProvisionData.HaloPSA.ApiClient.Models;
 using System.Net;
 using System.Net.Http.Headers;
 
@@ -22,15 +23,33 @@ namespace ProvisionData.HaloPSA.ApiClient;
 /// <summary>
 /// Base class for HaloPSA API clients providing HTTP operations and authentication.
 /// </summary>
-public abstract class HaloPsaApiClientBase(HttpClient httpClient, HaloPsaApiClientOptions options, IAuthTokenProvider tokenRepository, TimeProvider timeProvider, ILogger logger)
+public abstract class HaloPsaApiClientBase(
+    HttpClient httpClient,
+    HaloPsaApiClientOptions options,
+    IAuthTokenProvider tokenRepository,
+    TimeProvider timeProvider,
+    ILogger logger,
+    IFieldMappingProvider fieldMappingProvider)
 {
     // private AuthToken? _token;
     private readonly IAuthTokenProvider _tokenRepository = tokenRepository;
+    private readonly IFieldMappingProvider _fieldMappingProvider = fieldMappingProvider;
 
     protected HttpClient HttpClient { get; } = httpClient;
     protected HaloPsaApiClientOptions Options { get; } = options;
     protected TimeProvider TimeProvider { get; } = timeProvider;
     public ILogger Logger { get; } = logger;
+
+    protected T EnsureAssetFieldsMapped<T>(T dto)
+        where T : IHasCustomFields
+    {
+        if (!dto.FieldsAreMapped)
+        {
+            dto.ApplyFieldMap(_fieldMappingProvider);
+        }
+
+        return dto;
+    }
 
     private async Task EnsureAuthorizedAsync(CancellationToken cancellationToken)
     {

@@ -29,14 +29,20 @@ public class Program
         builder.Services.Configure<GeneratorOptions>(builder.Configuration.GetSection(GeneratorOptions.SectionName));
         builder.Services.Configure<ModelChanges>(builder.Configuration.GetSection(ModelChanges.SectionName));
 
-        builder.Services.AddSingleton<IGenerator, Services.Generator>();
+        builder.Services.AddSingleton<IGenerator, Services.DtosGenerator>();
         builder.Services.AddSingleton<IModelChangeValidator, ModelChangeValidator>();
         builder.Services.AddSingleton<IModelChangeProvider, ModelChangeProvider>();
+        builder.Services.AddSingleton<CustomFieldsGenerator>();
 
         var host = builder.Build();
 
         var generator = host.Services.GetRequiredService<IGenerator>();
+        var customFieldsGenerator = host.Services.GetRequiredService<CustomFieldsGenerator>();
 
+        // Generate main models from OpenAPI spec
         await generator.GenerateAsync(CancellationToken.None);
+
+        // Generate custom fields partial classes
+        await customFieldsGenerator.GenerateAsync(CancellationToken.None);
     }
 }

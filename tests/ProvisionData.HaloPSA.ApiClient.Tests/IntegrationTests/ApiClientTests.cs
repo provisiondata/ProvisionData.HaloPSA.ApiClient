@@ -61,6 +61,20 @@ public class ApiClientTests(ApiClientTestFixture fixture)
     }
 
     [Fact]
+    public async Task ShouldGet_Asset()
+    {
+        // Arrange
+
+        // Act
+        var asset = await SUT.GetAssetAsync(TestData.TestAssetId, cancellationToken: CancellationToken);
+
+        // Assert
+        asset.Should().NotBeNull();
+        asset.Id.Should().Be(TestData.TestAssetId);
+        asset.SerialNumber.Should().NotBeNullOrWhiteSpace();
+    }
+
+    [Fact]
     public async Task Should_CreateAsset()
     {
         // Arrange

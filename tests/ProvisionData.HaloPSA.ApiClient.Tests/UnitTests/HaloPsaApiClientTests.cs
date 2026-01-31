@@ -14,6 +14,7 @@
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ProvisionData.HaloPSA.ApiClient.Models;
 
 namespace ProvisionData.HaloPSA.ApiClient.UnitTests;
 
@@ -23,6 +24,7 @@ public class HaloPsaApiClientTests
     private readonly Mock<ILogger<HaloPsaApiClient>> _loggerMock;
     private readonly Mock<IOptions<HaloPsaApiClientOptions>> _optionsMock;
     private readonly Mock<TimeProvider> _timeProviderMock;
+    private readonly Mock<IFieldMappingProvider> _fieldMappingProviderMock;
     private readonly HaloPsaApiClientOptions _options;
 
     public HaloPsaApiClientTests()
@@ -31,6 +33,7 @@ public class HaloPsaApiClientTests
         _loggerMock = new Mock<ILogger<HaloPsaApiClient>>();
         _optionsMock = new Mock<IOptions<HaloPsaApiClientOptions>>();
         _timeProviderMock = new Mock<TimeProvider>();
+        _fieldMappingProviderMock = new Mock<IFieldMappingProvider>();
 
         _options = new HaloPsaApiClientOptions
         {
@@ -56,7 +59,8 @@ public class HaloPsaApiClientTests
             _optionsMock.Object,
             _tokenProviderMock.Object,
             _timeProviderMock.Object,
-            _loggerMock.Object
+            _loggerMock.Object,
+            _fieldMappingProviderMock.Object
         );
 
         // Assert

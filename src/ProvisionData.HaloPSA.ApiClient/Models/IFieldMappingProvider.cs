@@ -12,11 +12,18 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-internal class GeneratedCode
+/// <summary>
+/// Provides field ID mappings for HaloPSA custom fields.
+/// </summary>
+public interface IFieldMappingProvider
 {
-    public required String JsonModelName { get; init; }
-    public required String ClientDtoName { get; init; }
-    public String Code { get; set; } = String.Empty;
+    /// <summary>
+    /// Gets the field ID for a specific model type and field name.
+    /// </summary>
+    /// <param name="modelType">The type of the model (e.g., "Asset").</param>
+    /// <param name="fieldName">The field name (e.g., "SerialNumber").</param>
+    /// <returns>The field ID, or null if not configured.</returns>
+    Int32 GetFieldId(String modelType, String fieldName);
 }

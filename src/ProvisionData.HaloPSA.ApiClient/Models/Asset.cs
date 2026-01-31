@@ -14,21 +14,48 @@
 
 namespace ProvisionData.HaloPSA.ApiClient.Models;
 
+/// <summary>
+/// Partial class for Asset containing custom factory methods and business logic.
+/// Custom field properties are generated in Asset.CustomFields.g.cs
+/// </summary>
 public partial class Asset
 {
-    [JsonPropertyName("infofield_101")] // Original Type: string
-    public String? Infofield101 { get; set; }
-    [JsonPropertyName("infofield_148")] // Original Type: string
-    public String? Infofield148 { get; set; }
-    [JsonPropertyName("infofield_51")] // Original Type: string
-    public String? Infofield51 { get; set; }
-    [JsonPropertyName("infofield_117")] // Original Type: string
-    public String? Infofield117 { get; set; }
-    [JsonPropertyName("infofield_24")] // Original Type: string
-    public String? Infofield24 { get; set; }
-
-    public static Asset Create(Int32 customerId, Int32 assetTypeId, Int32 customerSiteId, Int32 technicalOwnerId, String assetNumber, String name, String user, String model, String serialNumber, DateTime purchaseDate)
+    /// <summary>
+    /// Creates a new Asset with the specified properties.
+    /// </summary>
+    /// <param name="customerId">The customer ID.</param>
+    /// <param name="assetTypeId">The asset type ID.</param>
+    /// <param name="customerSiteId">The customer site ID.</param>
+    /// <param name="technicalOwnerId">The technical owner ID.</param>
+    /// <param name="assetNumber">The asset inventory number.</param>
+    /// <param name="name">The asset name.</param>
+    /// <param name="user">The assigned user.</param>
+    /// <param name="model">The hardware model.</param>
+    /// <param name="serialNumber">The serial number.</param>
+    /// <param name="purchaseDate">The purchase date.</param>
+    /// <returns>A new Asset instance with all properties set.</returns>
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when field mappings have not been initialized.
+    /// </exception>
+    public static Asset Create(
+        Int32 customerId,
+        Int32 assetTypeId,
+        Int32 customerSiteId,
+        Int32 technicalOwnerId,
+        String assetNumber,
+        String name,
+        String user,
+        String model,
+        String serialNumber,
+        DateTime purchaseDate)
     {
+        // Ensure field mappings are initialized before creating
+        if (!Mapped)
+        {
+            throw new InvalidOperationException(
+                $"Asset field mappings not initialized. Deserialize an Asset first or call {nameof(Asset)}.{nameof(ApplyFieldMappings)}() explicitly.");
+        }
+
         ArgumentOutOfRangeException.ThrowIfLessThan(customerId, 1);
         ArgumentOutOfRangeException.ThrowIfLessThan(assetTypeId, 1);
         ArgumentOutOfRangeException.ThrowIfLessThan(customerSiteId, 1);
@@ -37,8 +64,9 @@ public partial class Asset
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
         ArgumentException.ThrowIfNullOrWhiteSpace(serialNumber);
 
-        var asset = new Asset()
+        var asset = new Asset
         {
+            ClientId = customerId,
             AssettypeId = assetTypeId,
             SiteId = customerSiteId,
             AssetNumber = assetNumber,
@@ -51,15 +79,16 @@ public partial class Asset
             StatusId = 1,
             Criticality = 0,
             Inactive = false,
-
+            Fields = [],
+            // Use generated properties to set custom fields
+            Name = name,
+            User = user,
+            Model = model,
+            SerialNumber = serialNumber,
+            PurchaseDate = purchaseDate
         };
-
-        asset.Fields.Add(new IdValue() { Id = 101, Value = name }); // Name
-        asset.Fields.Add(new IdValue() { Id = 148, Value = user }); // User
-        asset.Fields.Add(new IdValue() { Id = 51, Value = model }); // Model
-        asset.Fields.Add(new IdValue() { Id = 117, Value = serialNumber }); // Serial Number
-        asset.Fields.Add(new IdValue() { Id = 24, Value = purchaseDate.ToString("o") }); // Purchase Date
 
         return asset;
     }
 }
+

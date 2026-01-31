@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+<Project Sdk="Microsoft.NET.Sdk.Worker">
 
     <PropertyGroup>
         <RootNamespace>ProvisionData.HaloPSA.ApiClient.ModelGenerator</RootNamespace>
@@ -8,6 +8,12 @@
     <ItemGroup>
         <PackageReference Include="Humanizer.Core" Version="3.0.1" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="custom-fields-config.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
 </Project>

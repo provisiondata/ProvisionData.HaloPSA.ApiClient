@@ -12,11 +12,11 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+namespace ProvisionData.HaloPSA.ApiClient.Models;
 
-internal class GeneratedCode
+public interface IHasCustomFields
 {
-    public required String JsonModelName { get; init; }
-    public required String ClientDtoName { get; init; }
-    public String Code { get; set; } = String.Empty;
+    List<IdValue> Fields { get; }
+    Boolean FieldsAreMapped { get; }
+    void ApplyFieldMap(IFieldMappingProvider provider);
 }

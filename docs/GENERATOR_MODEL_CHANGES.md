@@ -11,7 +11,7 @@ The generator uses an **Include** feature for type filtering:
 - **Only types with entries in the `ModelChanges.Changes` array are generated**
 - Types without any corresponding changes in the configuration are automatically excluded
 - A type can be "included" by having either:
-  - A model-level change (with `ClientClasslName` only)
+  - A model-level change (with `ClientDtoName` only)
   - One or more property-level changes
 
 ## Configuration Structure
@@ -37,7 +37,7 @@ Used to rename the class or apply class-wide settings:
 ```json
 {
   "JsonModelName": "Device",
-  "ClientClasslName": "Asset"
+  "ClientDtoName": "Asset"
 }
 ```
 
@@ -63,7 +63,7 @@ Used to rename properties or set default values:
 | Property | Type | Description |
 |----------|------|-------------|
 | `JsonModelName` | string | **Required**. The name of the type in the OpenAPI specification. |
-| `ClientClasslName` | string | New name for the C# class. Use for model-level changes only. |
+| `ClientDtoName` | string | New name for the C# class. Use for model-level changes only. |
 | `JsonPropertyName` | string | Name of the property in the API JSON. Used for property-level changes. |
 | `ClientPropertyName` | string | New name for the C# property. |
 | `ClientPropertyType` | string | Override the inferred C# type (e.g., `List<IdValue>`). |
@@ -80,7 +80,7 @@ Used to rename properties or set default values:
 ```json
 {
   "JsonModelName": "Area",
-  "ClientClasslName": "Customer"
+  "ClientDtoName": "Customer"
 }
 ```
 
@@ -126,7 +126,7 @@ This simplifies configuration by maintaining a single source of truth.
 
 ## Best Practices
 
-1. **Start with model-level changes**: Add a `ClientClasslName` change for types that need class-level customization
+1. **Start with model-level changes**: Add a `ClientDtoName` change for types that need class-level customization
 2. **Add property-level changes as needed**: Rename properties or set defaults
 3. **Use meaningful names**: Map cryptic API names to UI-friendly C# names
 4. **Be explicit**: Only add types to configuration that you want to generate

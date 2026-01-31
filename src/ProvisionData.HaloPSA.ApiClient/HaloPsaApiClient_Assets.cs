@@ -69,7 +69,7 @@ public partial class HaloPsaApiClient
             var asset = JsonSerializer.Deserialize(json, HaloPsaAssetJsonContext.Default.Asset)
                 ?? throw new HaloPsaApiClientException("Failed to deserialize AssetsList.", json);
 
-            return asset;
+            return EnsureAssetFieldsMapped(asset);
         }
         catch (Exception ex)
         {
@@ -96,6 +96,8 @@ public partial class HaloPsaApiClient
 
         Logger.LogDebug("Create Asset Response: {json}", json);
 
-        return JsonSerializer.Deserialize(json, HaloPsaAssetJsonContext.Default.Asset)!;
+        var createdAsset = JsonSerializer.Deserialize(json, HaloPsaAssetJsonContext.Default.Asset)!;
+
+        return EnsureAssetFieldsMapped(createdAsset);
     }
 }

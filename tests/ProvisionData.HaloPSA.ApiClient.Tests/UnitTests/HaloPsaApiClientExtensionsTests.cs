@@ -36,6 +36,8 @@ public class HaloPsaApiClientExtensionsTests
             }!)
             .Build();
 
+        services.AddSingleton<IConfiguration>(configuration);
+
         // Act
         var httpClientBuilder = services.AddHaloPsaApiClient(configuration);
 
@@ -92,6 +94,8 @@ public class HaloPsaApiClientExtensionsTests
     {
         // Arrange
         var services = new ServiceCollection();
+        var configuration = new ConfigurationBuilder().Build();
+        services.AddSingleton<IConfiguration>(configuration);
 
         // Act
         var httpClientBuilder = services.AddHaloPsaApiClient(options =>

@@ -32,11 +32,16 @@ public class ApiClientTestFixture : IntegrationTestFixture
     private Lazy<Faker> LazyFaker => new(() => new Faker());
     public Faker Bogus => LazyFaker.Value;
 
-    [UnconditionalSuppressMessage("Trimming", "IL2026", Justification = "ApiClientTestData and HaloPsaApiClientOptions properties are simple types")]
-    [UnconditionalSuppressMessage("AOT", "IL3050", Justification = "ApiClientTestData and HaloPsaApiClientOptions properties are simple types")]
     protected override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<ApiClientTestData>(configuration.GetSection(nameof(ApiClientTestData)));
         services.AddHaloPsaApiClient(configuration);
+    }
+
+    protected override ValueTask InitializeFixtureAsync(IServiceProvider services)
+    {
+        services.EnsureCustomFieldsHaveBeenMapped();
+
+        return ValueTask.CompletedTask;
     }
 }

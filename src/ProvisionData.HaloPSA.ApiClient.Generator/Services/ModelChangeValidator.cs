@@ -31,38 +31,38 @@ public class ModelChangeValidator : IModelChangeValidator
 
         var sb = new StringBuilder();
 
-        // Model Name Change requires ClientClassName.
-        if (!String.IsNullOrEmpty(change.ClientClassName))
+        // Model Name Change requires ClientDtoName.
+        if (!String.IsNullOrEmpty(change.ClientDtoName))
         {
-            // Model Name Change should have ClientClassName and nothing else.
+            // Model Name Change should have ClientDtoName and nothing else.
             if (!String.IsNullOrEmpty(change.JsonPropertyName))
             {
-                sb.Append("- When ClientClassName is provided, JsonPropertyName MUST be null (default). ");
+                sb.Append("- When ClientDtoName is provided, JsonPropertyName MUST be null (default). ");
             }
 
             if (!String.IsNullOrEmpty(change.ClientPropertyName))
             {
-                sb.Append("- When ClientClassName is provided, ClientPropertyName MUST be null (default). ");
+                sb.Append("- When ClientDtoName is provided, ClientPropertyName MUST be null (default). ");
             }
 
             if (change.DefaultValue is not null)
             {
-                sb.Append("- When ClientClassName is provided, DefaultValue MUST be null (default).");
+                sb.Append("- When ClientDtoName is provided, DefaultValue MUST be null (default).");
             }
 
             if (change.Ignore == true)
             {
-                sb.Append("- When ClientClassName is provided, Ignore MUST be false (default).");
+                sb.Append("- When ClientDtoName is provided, Ignore MUST be false (default).");
             }
 
             if (change.Nullable is not null)
             {
-                sb.Append("- When ClientClassName is provided, Nullable MUST be null (default).");
+                sb.Append("- When ClientDtoName is provided, Nullable MUST be null (default).");
             }
 
             if (change.Required == true)
             {
-                sb.Append("- When ClientClassName is provided, Required MUST be false (default).");
+                sb.Append("- When ClientDtoName is provided, Required MUST be false (default).");
             }
         }
         else if (!String.IsNullOrEmpty(change.JsonPropertyName))
@@ -81,7 +81,7 @@ public class ModelChangeValidator : IModelChangeValidator
         }
         else
         {
-            sb.Append("- Either ClientClassName or JsonPropertyName MUST be provided.");
+            sb.Append("- Either ClientDtoName or JsonPropertyName MUST be provided.");
         }
 
         error = sb.ToString();
