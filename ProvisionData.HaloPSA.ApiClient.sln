@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiClient.ModelGenerator", "src\ProvisionData.HaloPSA.ApiClient.Generator\ProvisionData.HaloPSA.ApiClient.ModelGenerator.csproj", "{2882F981-AE3E-4AC0-83D7-216A03F9724A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionData.HaloPSA.ApiClient.Contracts", "src\ProvisionData.HaloPSA.ApiClient.Contracts\ProvisionData.HaloPSA.ApiClient.Contracts.csproj", "{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,18 @@ Global
 		{2882F981-AE3E-4AC0-83D7-216A03F9724A}.Release|x64.Build.0 = Release|Any CPU
 		{2882F981-AE3E-4AC0-83D7-216A03F9724A}.Release|x86.ActiveCfg = Release|Any CPU
 		{2882F981-AE3E-4AC0-83D7-216A03F9724A}.Release|x86.Build.0 = Release|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Debug|x64.Build.0 = Debug|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Debug|x86.Build.0 = Debug|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Release|x64.ActiveCfg = Release|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Release|x64.Build.0 = Release|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +110,7 @@ Global
 		{76065FFC-B8F3-8AB0-7041-436455EE6E17} = {23C1DDDD-B343-4B9C-92A9-01B149A2988B}
 		{49E06BEC-5887-0D2F-F77F-18AD537B02CC} = {C6CA5124-02E2-43FE-A1CF-DC83D2CDA645}
 		{2882F981-AE3E-4AC0-83D7-216A03F9724A} = {23C1DDDD-B343-4B9C-92A9-01B149A2988B}
+		{D9F62CDB-2483-4E7F-BD2B-ECF939E0A305} = {23C1DDDD-B343-4B9C-92A9-01B149A2988B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39718234-34AB-4D17-8279-5CA43A7BD1A2}

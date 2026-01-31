@@ -1,8 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <RootNamespace>ProvisionData.HaloPSA.ApiClient</RootNamespace>
+
         <!-- NuGet package metadata -->
-        <PackageId>ProvisionData.HaloPSA.ApiClient</PackageId>
+        <PackageId>ProvisionData.HaloPSA.ApiClient.Contracts</PackageId>
         <Title>ProvisionData HaloPSA API Client</Title>
         <Description>HaloPSA API Client for .NET providing typed models and client helpers.</Description>
         <PackageTags>HaloPSA;API;Client</PackageTags>
@@ -14,7 +16,7 @@
         <!-- Optimize source generators -->
         <EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
         <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)Generated</CompilerGeneratedFilesOutputPath>
-    
+
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,15 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Dapper" Version="2.1.66" />
-        <PackageReference Include="Flurl" Version="4.0.0" />
-        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
-        <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.2" />
-        <PackageReference Include="Polly" Version="8.6.5" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\ProvisionData.HaloPSA.ApiClient.Contracts\ProvisionData.HaloPSA.ApiClient.Contracts.csproj" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
     </ItemGroup>
 
 </Project>

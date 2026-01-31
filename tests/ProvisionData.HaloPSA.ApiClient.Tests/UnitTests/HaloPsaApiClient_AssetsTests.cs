@@ -14,7 +14,6 @@
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using ProvisionData.HaloPSA.ApiClient.Models;
 using System.Net;
 
 namespace ProvisionData.HaloPSA.ApiClient.UnitTests;

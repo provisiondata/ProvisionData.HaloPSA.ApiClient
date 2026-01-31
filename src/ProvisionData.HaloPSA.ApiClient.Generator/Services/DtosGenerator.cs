@@ -409,6 +409,18 @@ public partial class DtosGenerator(ILogger<DtosGenerator> logger, IOptions<Gener
         sb.AppendLine("#nullable disable");
         sb.AppendLine();
 
+        sb.AppendLine("// Mapperly Attributes");
+        foreach (var change in changes.OrderBy(c => c.ClientPropertyName))
+        {
+            if (String.IsNullOrWhiteSpace(change.ClientPropertyName)
+                || change.Ignore)
+            {
+                continue;
+            }
+
+            sb.AppendLine($"// [MapperIgnoreTarget(nameof(ApiClient.Models.{change.ClientDtoName}.{change.ClientPropertyName}))]");
+        }
+
         return new GeneratedCode
         {
             JsonModelName = jsonModelName,
