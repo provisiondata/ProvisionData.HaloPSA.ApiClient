@@ -78,6 +78,20 @@ public class ApiClientTests(ApiClientTestFixture fixture, ITestOutputHelper test
     }
 
     [Fact]
+    public async Task Should_List_Asset()
+    {
+        // Arrange
+
+        // Act
+        var list = await SUT.ListAssetsAsync(cancellationToken: CancellationToken);
+
+        // Assert
+        list.Should().NotBeNull();
+        list.Should().NotBeEmpty();
+        list.Should().AllBeOfType<AssetList>();
+    }
+
+    [Fact]
     public async Task Should_CreateAsset()
     {
         // Arrange
