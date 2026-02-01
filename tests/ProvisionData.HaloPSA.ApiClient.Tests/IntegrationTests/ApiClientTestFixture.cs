@@ -19,7 +19,7 @@ using Microsoft.Extensions.Options;
 using ProvisionData.Testing;
 using System.Diagnostics.CodeAnalysis;
 
-namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;
+namespace ProvisionData.HaloPSA.IntegrationTests;
 
 public class ApiClientTestFixture : IntegrationTestFixture
 {

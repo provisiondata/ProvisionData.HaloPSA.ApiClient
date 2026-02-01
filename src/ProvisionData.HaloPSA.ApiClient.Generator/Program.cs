@@ -12,11 +12,11 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
-using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Services;
+using ProvisionData.HaloPSA.ModelGenerator.Models;
+using ProvisionData.HaloPSA.ModelGenerator.Services;
 using System.Diagnostics.CodeAnalysis;
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator;
+namespace ProvisionData.HaloPSA.ModelGenerator;
 
 public class Program
 {
@@ -29,14 +29,14 @@ public class Program
         builder.Services.Configure<GeneratorOptions>(builder.Configuration.GetSection(GeneratorOptions.SectionName));
         builder.Services.Configure<ModelChanges>(builder.Configuration.GetSection(ModelChanges.SectionName));
 
-        builder.Services.AddSingleton<IGenerator, Services.DtosGenerator>();
+        builder.Services.AddSingleton<DtoGenerator>();
         builder.Services.AddSingleton<IModelChangeValidator, ModelChangeValidator>();
         builder.Services.AddSingleton<IModelChangeProvider, ModelChangeProvider>();
         builder.Services.AddSingleton<CustomFieldsGenerator>();
 
         var host = builder.Build();
 
-        var generator = host.Services.GetRequiredService<IGenerator>();
+        var generator = host.Services.GetRequiredService<DtoGenerator>();
         var customFieldsGenerator = host.Services.GetRequiredService<CustomFieldsGenerator>();
 
         // Generate main models from OpenAPI spec

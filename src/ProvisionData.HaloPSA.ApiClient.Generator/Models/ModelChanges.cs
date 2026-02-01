@@ -12,7 +12,7 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+namespace ProvisionData.HaloPSA.ModelGenerator.Models;
 
 public class ModelChanges
 {
@@ -24,7 +24,8 @@ public class ModelChanges
 
     public ModelChange[] Changes { get; set; } = [];
 
-    public String[] IgnoredJsonPropteryNames { get; set; } = [];
+    public String[] IgnoredJsonPropertyNames { get; set; } = [];
+    public String[] IgnoredJsonPropertyTypes { get; set; } = [];
 
     public Boolean InitializeArrays { get; set; }
 }

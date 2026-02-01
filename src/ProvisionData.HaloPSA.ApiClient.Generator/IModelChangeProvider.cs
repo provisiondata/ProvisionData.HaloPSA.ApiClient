@@ -12,11 +12,11 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+using ProvisionData.HaloPSA.ModelGenerator.Models;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator;
+namespace ProvisionData.HaloPSA.ModelGenerator;
 
 public interface IModelChangeProvider
 {

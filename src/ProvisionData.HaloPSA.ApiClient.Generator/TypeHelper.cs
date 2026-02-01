@@ -17,7 +17,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ProvisionData.HaloPSA.ApiClient.Generator;
+namespace ProvisionData.HaloPSA.Generator;
 
 public static partial class TypeHelper
 {

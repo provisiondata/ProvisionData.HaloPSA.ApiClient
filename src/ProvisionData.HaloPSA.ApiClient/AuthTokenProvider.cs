@@ -16,7 +16,7 @@ using Flurl;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
 
-namespace ProvisionData.HaloPSA.ApiClient;
+namespace ProvisionData.HaloPSA;
 
 // TODO: Add ITokenStorage for token persistence (e.g., to a redis or database).
 
@@ -67,7 +67,7 @@ public class AuthTokenProvider(
             response.EnsureSuccessStatusCode();
 
             var token = JsonSerializer.Deserialize(json, AuthJsonSerializerContext.Default.AuthToken)
-                ?? throw new HaloPsaApiClientException("Failed to deserialize access token.", json);
+                ?? throw new HaloApiException("Failed to deserialize access token.", json);
 
             token.IssuedAt = _timeProvider.GetUtcNow();
 
@@ -75,7 +75,7 @@ public class AuthTokenProvider(
         }
         catch (Exception ex)
         {
-            throw new HaloPsaApiClientException("Failed to get access token.", json, ex);
+            throw new HaloApiException("Failed to get access token.", json, ex);
         }
     }
 }

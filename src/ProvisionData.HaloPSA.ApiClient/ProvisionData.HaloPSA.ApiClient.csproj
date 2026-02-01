@@ -2,7 +2,7 @@
 
     <PropertyGroup>
 
-        <RootNamespace>ProvisionData.HaloPSA.ApiClient</RootNamespace>
+        <RootNamespace>ProvisionData.HaloPSA</RootNamespace>
 
         <!-- NuGet package metadata -->
         <PackageId>ProvisionData.HaloPSA.ApiClient</PackageId>

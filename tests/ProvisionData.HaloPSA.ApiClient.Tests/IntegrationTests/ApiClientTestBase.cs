@@ -15,10 +15,10 @@
 using Bogus;
 using ProvisionData.Testing;
 
-namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;
+namespace ProvisionData.HaloPSA.IntegrationTests;
 
-public class ApiClientTestBase(ApiClientTestFixture fixture)
-    : IntegrationTestBase<HaloPsaApiClient, ApiClientTestFixture>(fixture)
+public class ApiClientTestBase(ApiClientTestFixture fixture, ITestOutputHelper testOutputHelper)
+    : IntegrationTestBase<ApiClient, ApiClientTestFixture>(fixture, testOutputHelper)
 {
     private readonly ApiClientTestFixture _fixture = fixture;
 

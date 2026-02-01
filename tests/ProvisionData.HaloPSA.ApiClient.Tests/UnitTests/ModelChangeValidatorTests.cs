@@ -12,10 +12,10 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
-using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Services;
+using ProvisionData.HaloPSA.ModelGenerator.Models;
+using ProvisionData.HaloPSA.ModelGenerator.Services;
 
-namespace ProvisionData.HaloPSA.ApiClient.UnitTests;
+namespace ProvisionData.HaloPSA.UnitTests;
 
 public class ModelChangeValidatorTests
 {

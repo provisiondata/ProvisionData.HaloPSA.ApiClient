@@ -12,10 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev", "dev", "{4B8794A0-C7E
 		.gitignore = .gitignore
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		Directory.Build.props = Directory.Build.props
+		GitInfo.txt = GitInfo.txt
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 		scratch.txt = scratch.txt
-		version.json = version.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{97FDE202-0638-4D9D-8BC9-173AC7EC127D}"

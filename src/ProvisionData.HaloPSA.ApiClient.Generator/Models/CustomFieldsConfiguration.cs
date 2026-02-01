@@ -14,7 +14,7 @@
 
 using System.Text.Json.Serialization;
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+namespace ProvisionData.HaloPSA.ModelGenerator.Models;
 
 /// <summary>
 /// Root configuration for custom fields definitions.

@@ -12,19 +12,22 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
+using Flurl;
 using Microsoft.Extensions.DependencyInjection;
-using ProvisionData.HaloPSA.ApiClient.Models;
+using ProvisionData.HaloPSA.DTO;
 
-namespace ProvisionData.HaloPSA.ApiClient.IntegrationTests;
+namespace ProvisionData.HaloPSA.IntegrationTests;
 
-public class ApiClientTests(ApiClientTestFixture fixture)
-    : ApiClientTestBase(fixture)
+public class ApiClientTests(ApiClientTestFixture fixture, ITestOutputHelper testOutputHelper)
+    : ApiClientTestBase(fixture, testOutputHelper)
 {
+    private readonly ITestOutputHelper _testOutputHelper = testOutputHelper;
+
     [Fact]
     public async Task Client_ShouldAuthenticate()
     {
         // Arrange
-        var client = Services.GetRequiredService<HaloPsaApiClient>();
+        var client = Services.GetRequiredService<ApiClient>();
 
         // Act
         var info = await client.GetInstanceInfoAsync(CancellationToken.None);
@@ -91,5 +94,20 @@ public class ApiClientTests(ApiClientTestFixture fixture)
         result.Should().NotBeNull();
         result.Id.Should().BeGreaterThan(0);
         result.Fields.SingleOrDefault(f => f.Id == 117)?.Value.Should().Be(serialNumber);
+    }
+
+    [Fact]
+    public async Task Should_GetJson()
+    {
+        var uri = "https://halo.pdsint.net/api/"
+            .AppendPathSegment("Field")
+            .AppendPathSegment("117")
+            .AppendQueryParam("includedetails", "true")
+            .AppendQueryParam("kind", "T")
+            .ToUri();
+
+        var json = await SUT.HttpGetAsync(uri, CancellationToken);
+
+        _testOutputHelper.WriteLine(json);
     }
 }

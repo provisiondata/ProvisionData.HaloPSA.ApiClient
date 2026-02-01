@@ -17,6 +17,7 @@ This document outlines the implementation plan for extending the existing model 
 ## Configuration File Structure
 
 ### Location
+
 ```
 src/ProvisionData.HaloPSA.ApiClient.Generator/custom-fields-config.json
 ```
@@ -160,7 +161,7 @@ Example: `Asset.CustomFields.g.cs`
 
 #nullable enable
 
-namespace ProvisionData.HaloPSA.ApiClient.Models;
+namespace ProvisionData.HaloPSA.DTO;
 
 /// <summary>
 /// Custom fields implementation for {ModelName}.

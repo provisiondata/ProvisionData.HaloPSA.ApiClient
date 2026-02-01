@@ -12,10 +12,10 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using ProvisionData.HaloPSA.ApiClient.Models;
+using ProvisionData.HaloPSA.DTO;
 using System.Globalization;
 
-namespace ProvisionData.HaloPSA.ApiClient;
+namespace ProvisionData.HaloPSA;
 
 /// <summary>
 /// Extension methods for working with mapped custom fields.

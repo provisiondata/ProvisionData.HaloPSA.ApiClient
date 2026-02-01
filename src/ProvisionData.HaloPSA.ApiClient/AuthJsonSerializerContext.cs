@@ -12,7 +12,7 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient;
+namespace ProvisionData.HaloPSA;
 
 /// <summary>
 /// Source-generated JSON serializer context for internal authentication types.

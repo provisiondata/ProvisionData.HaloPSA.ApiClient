@@ -14,7 +14,7 @@
 
 using Microsoft.Extensions.Configuration;
 
-namespace ProvisionData.HaloPSA.ApiClient.Models;
+namespace ProvisionData.HaloPSA;
 
 /// <summary>
 /// Provides field mappings from application configuration (appsettings.json).

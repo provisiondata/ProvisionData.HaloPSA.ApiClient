@@ -12,19 +12,19 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+namespace ProvisionData.HaloPSA.ModelGenerator.Models;
 
 public class GeneratorOptions
 {
     public static String SectionName { get; set; } = nameof(GeneratorOptions);
 
     public String SpecificationPath { get; set; } = String.Empty;
-    public String OutputPath { get; set; } = String.Empty;
-    public String Namespace { get; set; } = String.Empty;
+    public String OutputBasePath { get; set; } = String.Empty;
+    public String RootNamespace { get; set; } = String.Empty;
     public Boolean DeletePreviousOutputs { get; set; } = true;
 
     public Boolean IsValid()
-        => !String.IsNullOrWhiteSpace(OutputPath)
-        && !String.IsNullOrWhiteSpace(Namespace)
+        => !String.IsNullOrWhiteSpace(OutputBasePath)
+        && !String.IsNullOrWhiteSpace(RootNamespace)
         && !String.IsNullOrWhiteSpace(SpecificationPath);
 }

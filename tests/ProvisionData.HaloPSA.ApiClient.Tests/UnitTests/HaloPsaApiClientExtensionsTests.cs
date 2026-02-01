@@ -16,7 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace ProvisionData.HaloPSA.ApiClient.UnitTests;
+namespace ProvisionData.HaloPSA.UnitTests;
 
 public class HaloPsaApiClientExtensionsTests
 {
@@ -47,7 +47,7 @@ public class HaloPsaApiClientExtensionsTests
         var serviceProvider = services.BuildServiceProvider();
         var options = serviceProvider.GetRequiredService<IOptions<HaloPsaApiClientOptions>>();
         var timeProvider = serviceProvider.GetRequiredService<TimeProvider>();
-        var client = serviceProvider.GetRequiredService<HaloPsaApiClient>();
+        var client = serviceProvider.GetRequiredService<ApiClient>();
 
         options.Value.AuthUrl.Should().Be("https://test.halo.local/auth/");
         options.Value.ApiUrl.Should().Be("https://test.halo.local/api/");
@@ -112,7 +112,7 @@ public class HaloPsaApiClientExtensionsTests
 
         var serviceProvider = services.BuildServiceProvider();
         var options = serviceProvider.GetRequiredService<IOptions<HaloPsaApiClientOptions>>();
-        var client = serviceProvider.GetRequiredService<HaloPsaApiClient>();
+        var client = serviceProvider.GetRequiredService<ApiClient>();
 
         options.Value.AuthUrl.Should().Be("https://action.halo.local/auth/");
         options.Value.ApiUrl.Should().Be("https://action.halo.local/api/");
@@ -189,7 +189,7 @@ public class HaloPsaApiClientExtensionsTests
         var configuration = new ConfigurationBuilder()
             .AddInMemoryCollection(new Dictionary<String, String>
             {
-                ["HaloPsaApiClient:ClientId"] = "test"
+                ["ApiClient:ClientId"] = "test"
             }!)
             .Build();
 

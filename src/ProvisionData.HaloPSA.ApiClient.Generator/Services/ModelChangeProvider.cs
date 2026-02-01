@@ -13,18 +13,19 @@
 // program. If not, see <https://www.gnu.org/licenses/>.
 
 using Microsoft.Extensions.Options;
-using ProvisionData.HaloPSA.ApiClient.Generator;
-using ProvisionData.HaloPSA.ApiClient.ModelGenerator.Models;
+using ProvisionData.HaloPSA.Generator;
+using ProvisionData.HaloPSA.ModelGenerator.Models;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 
-namespace ProvisionData.HaloPSA.ApiClient.ModelGenerator.Services;
+namespace ProvisionData.HaloPSA.ModelGenerator.Services;
 
 public partial class ModelChangeProvider : IModelChangeProvider
 {
     private readonly ModelChanges _options;
     private readonly Dictionary<String, ModelChange> _changes;
-    private readonly List<String> _ignoredJsonPropertyNames = [];
+    private readonly HashSet<String> _ignoredJsonPropertyNames = [];
+    private readonly HashSet<String> _ignoredJsonPropertyTypes = [];
     private readonly ILogger<ModelChangeProvider> _logger;
     private readonly IModelChangeValidator _validator;
 
@@ -34,7 +35,8 @@ public partial class ModelChangeProvider : IModelChangeProvider
         _validator = validator;
         _options = optionsAccessor.Value;
         _changes = ValidateChanges();
-        _ignoredJsonPropertyNames.AddRange(_options.IgnoredJsonPropteryNames);
+        _ignoredJsonPropertyNames.UnionWith(_options.IgnoredJsonPropertyNames);
+        _ignoredJsonPropertyTypes.UnionWith(_options.IgnoredJsonPropertyTypes);
     }
 
     private Dictionary<String, ModelChange> ValidateChanges()
@@ -164,12 +166,6 @@ public partial class ModelChangeProvider : IModelChangeProvider
         ArgumentException.ThrowIfNullOrWhiteSpace(change.JsonModelName);
         ArgumentException.ThrowIfNullOrWhiteSpace(change.JsonPropertyName);
 
-        if (_ignoredJsonPropertyNames.Contains(change.JsonPropertyName))
-        {
-            change.Ignore = true;
-            return;
-        }
-
         change.ClientDtoName = GetDtoName(change.JsonModelName);
         change.ClientPropertyName = GetPropertyName(change.JsonModelName, change.JsonPropertyName);
 
@@ -206,7 +202,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
                 {
                     MapRefOrType(change, itemsElement);
 
-                    change.ClientPropertyType = $"List<{GetDtoName(change.JsonModelName!)}>";
+                    change.ClientPropertyType = $"List<{GetDtoName(change.JsonPropertyType!)}>";
                 }
             }
             else
@@ -219,6 +215,13 @@ public partial class ModelChangeProvider : IModelChangeProvider
                     _ => GetDtoName(change.ClientPropertyType!).ToPascalCase()
                 };
             }
+        }
+
+        if (_ignoredJsonPropertyNames.Contains(change.JsonPropertyName)
+            || _ignoredJsonPropertyTypes.Contains(change.JsonPropertyType!))
+        {
+            change.Ignore = true;
+            return;
         }
 
         if (change.DefaultValue is null)
@@ -235,8 +238,8 @@ public partial class ModelChangeProvider : IModelChangeProvider
         if (schema.TryGetProperty("$ref", out var refProp))
         {
             var refValue = refProp.GetString() ?? String.Empty;
-            change.JsonPropertyType = refValue;
             var name = refValue.Split('/').Last();
+            change.JsonPropertyType = name;
             change.ClientPropertyType = name.ToPascalCase();
             return;
         }
