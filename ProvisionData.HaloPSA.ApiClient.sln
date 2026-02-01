@@ -20,18 +20,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev", "dev", "{4B8794A0-C7E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{97FDE202-0638-4D9D-8BC9-173AC7EC127D}"
 	ProjectSection(SolutionItems) = preProject
-		docs\BuildPerformanceAnalysis.md = docs\BuildPerformanceAnalysis.md
-		docs\CONVENTIONS.md = docs\CONVENTIONS.md
 		docs\CreateAsset.json = docs\CreateAsset.json
-		docs\custom-fields-quick-reference.md = docs\custom-fields-quick-reference.md
-		docs\generator-custom-fields-implementation-guide.md = docs\generator-custom-fields-implementation-guide.md
-		docs\GENERATOR_MODEL_CHANGES.md = docs\GENERATOR_MODEL_CHANGES.md
-		docs\NUIGET.md = docs\NUIGET.md
 		docs\schema.sql = docs\schema.sql
-		docs\scratch.md = docs\scratch.md
 		swagger-20260125.json = swagger-20260125.json
-		docs\TODO.md = docs\TODO.md
-		docs\USAGE.md = docs\USAGE.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C6CA5124-02E2-43FE-A1CF-DC83D2CDA645}"

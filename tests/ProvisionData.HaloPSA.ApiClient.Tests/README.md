@@ -1,12 +1,16 @@
 # ProvisionData.HaloPSA.ApiClient.Tests
 
-XUnit test project for the HaloPSA API Client library.
+XUnit test project for the HaloPSA API Client library, providing both unit and integration test coverage.
 
 ## Testing Stack
 
-- **XUnit** - Testing framework
+- **XUnit v3** - Testing framework
 - **Moq** - Mocking framework for creating test doubles
-- **Shouldly** - Assertion library with readable syntax
+- **FluentAssertions** - Assertion library with fluent, readable syntax
+- **Bogus** - Fake data generator for test data
+- **Microsoft.Extensions.TimeProvider.Testing** - Time provider testing utilities
+- **ProvisionData.Testing.Integration** - Custom integration testing framework
+- **MartinCostello.Logging.XUnit.v3** & **Meziantou.Extensions.Logging.Xunit** - XUnit logging extensions
 
 ## Running Tests
 
@@ -23,53 +27,120 @@ dotnet test --collect:"XPlat Code Coverage"
 
 ## Test Structure
 
-Tests are organized by the partial class structure of `HaloPsaApiClient`:
+Tests are organized into two main categories:
 
-- `HaloPsaApiClientTests.cs` - Core client initialization and configuration tests
-- `HaloPsaApiClient_AssetsTests.cs` - Asset management endpoint tests
-- Additional test files should follow the naming pattern: `HaloPsaApiClient_{Feature}Tests.cs`
+### Unit Tests (`UnitTests/`)
+
+- **`HaloPsaApiClientTests.cs`** - Core `ApiClient` initialization and configuration tests
+- **`HaloPsaApiClient_AssetsTests.cs`** - Asset management endpoint tests
+- **`HaloPsaApiClientExtensionsTests.cs`** - Dependency injection extension method tests
+- **`JsonExtensionsTests.cs`** - JSON utility extension tests
+- **`ModelChangeValidatorTests.cs`** - Model generator validation tests
+
+### Integration Tests (`IntegrationTests/`)
+
+- **`ApiClientTests.cs`** - Full integration tests against a live HaloPSA instance
+- **`ApiClientTestFixture.cs`** - Shared test fixture with dependency injection setup
+- **`ApiClientTestBase.cs`** - Base class for integration tests
+- **`ApiClientTestData.cs`** - Configuration model for test data (customer IDs, etc.)
 
 ## Writing Tests
 
-### Example: Testing with Moq and Shouldly
+### Unit Test Example: Testing with Moq and FluentAssertions
 
 ```csharp
 [Fact]
-public async Task GetAssetAsync_ShouldReturnAsset_WhenAssetExists()
+public void Constructor_ShouldInitialize_WithValidParameters()
 {
     // Arrange
-    var expectedAsset = new Asset { Id = 123, Name = "Test Asset" };
-    var mockHandler = new MockHttpMessageHandler(
-        JsonSerializer.Serialize(expectedAsset)
-    );
-    var httpClient = new HttpClient(mockHandler);
-    var client = new HaloPsaApiClient(httpClient, _optionsMock.Object, _timeProviderMock.Object, _loggerMock.Object);
+    var tokenProviderMock = new Mock<IAuthTokenProvider>();
+    var loggerMock = new Mock<ILogger<ApiClient>>();
+    var optionsMock = new Mock<IOptions<HaloPsaApiClientOptions>>();
+    var timeProviderMock = new Mock<TimeProvider>();
+    var fieldMappingProviderMock = new Mock<IFieldMappingProvider>();
+
+    var options = new HaloPsaApiClientOptions
+    {
+        AuthUrl = "https://test.halo.local/auth/",
+        ApiUrl = "https://test.halo.local/api/",
+        ClientId = "test-client-id",
+        ClientSecret = "test-client-secret",
+        PageSize = 50
+    };
+
+    optionsMock.Setup(x => x.Value).Returns(options);
 
     // Act
-    var result = await client.GetAssetAsync(123);
+    var client = new ApiClient(
+        tokenProviderMock.Object,
+        loggerMock.Object,
+        optionsMock.Object,
+        timeProviderMock.Object,
+        fieldMappingProviderMock.Object
+    );
 
     // Assert
-    result.Should().NotBeNull();
-    result.Id.Should().Be(123);
-    result.Name.Should().Be("Test Asset");
+    client.Should().NotBeNull();
+}
+```
+
+### Integration Test Example
+
+```csharp
+public class ApiClientTests(ApiClientTestFixture fixture, ITestOutputHelper testOutputHelper)
+    : ApiClientTestBase(fixture, testOutputHelper)
+{
+    [Fact]
+    public async Task Client_ShouldAuthenticate()
+    {
+        // Arrange
+        var client = Services.GetRequiredService<ApiClient>();
+
+        // Act
+        var info = await client.GetInstanceInfoAsync(CancellationToken.None);
+
+        // Assert
+        info.Should().NotBeNull();
+        info.AppName.Should().Be("Halo PSA");
+    }
 }
 ```
 
 ### Global Usings
 
-The following namespaces are globally imported in `GlobalUsings.cs`:
+The following namespaces are globally imported via the project file:
+
 - `Xunit`
 - `Moq`
-- `Shouldly`
-- `System`
-- `System.Collections.Generic`
-- `System.Threading`
-- `System.Threading.Tasks`
+- `FluentAssertions`
+
+## Integration Test Configuration
+
+Integration tests require a `appsettings.Testing.json` file (only copied in Debug builds):
+
+```json
+{
+  "HaloPsaApiClientOptions": {
+    "AuthUrl": "https://your-instance.halopsa.com/auth/",
+    "ApiUrl": "https://your-instance.halopsa.com/api/",
+    "ClientId": "your-client-id",
+    "ClientSecret": "your-client-secret",
+    "PageSize": 50
+  },
+  "ApiClientTestData": {
+    "TestCustomerId": 123,
+    "TestAssetId": 456
+  }
+}
+```
+
+> **NOTE**: The `appsettings.Testing.json` file should not be committed to source control as it contains sensitive credentials.
 
 ## Test Coverage Goals
 
-- Unit test all public methods
-- Mock HTTP dependencies
+- **Unit Tests**: Test all public methods with mocked dependencies
+- **Integration Tests**: Validate end-to-end functionality against a live HaloPSA instance
 - Test error handling and edge cases
 - Verify proper logging behavior
 - Validate authentication token management
+- Ensure custom field mapping works correctly
