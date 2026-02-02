@@ -98,8 +98,8 @@ public class ApiClientTests(ApiClientTestFixture fixture, ITestOutputHelper test
         var id = Guid.NewGuid().ToString().Replace("-", String.Empty)[..8];
         var serialNumber = Bogus.Commerce.Ean13();
 
-        var asset = Asset.Create(TestData.TestCustomerId, TestData.TestAssetTypeId, TestData.TestSiteId, TestData.TestTechnicalOwnerId,
-            assetNumber: $"ASSET-{id}", name: $"Test Asset {id}", Bogus.Person.FullName, Bogus.Commerce.ProductName(), serialNumber, DateTime.UtcNow.AddDays(-1));
+        var asset = Asset.Create(TestData.TestCustomerId, TestData.TestSiteId, TestData.TestAssetTypeId, assetNumber: $"ASSET-{id}",
+            model: Bogus.Commerce.ProductName(), purchaseDate: DateTime.UtcNow.AddDays(-1), serialNumber: serialNumber, technicalOwnerId: TestData.TestTechnicalOwnerId, name: $"Test Asset {id}", user: Bogus.Person.FullName);
 
         // Act
         var result = await SUT.CreateAssetAsync(asset, cancellationToken: CancellationToken);
@@ -108,6 +108,8 @@ public class ApiClientTests(ApiClientTestFixture fixture, ITestOutputHelper test
         result.Should().NotBeNull();
         result.Id.Should().BeGreaterThan(0);
         result.Fields.SingleOrDefault(f => f.Id == 117)?.Value.Should().Be(serialNumber);
+        result.SerialNumber.Should().Be(serialNumber);
+        result.KeyField3.Should().Be($"SN: {serialNumber}");
     }
 
     [Fact]

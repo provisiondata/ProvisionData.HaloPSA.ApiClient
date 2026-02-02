@@ -12,42 +12,45 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
+using System.Diagnostics;
+
 namespace ProvisionData.HaloPSA.DTO;
 
 /// <summary>
 /// Partial class for Asset containing custom factory methods and business logic.
 /// Custom field properties are generated in Asset.CustomFields.g.cs
 /// </summary>
+[DebuggerDisplay("{Id} {AssetNumber} {KeyField} {KeyField2} {KeyField3}")]
 public partial class Asset
 {
     /// <summary>
     /// Creates a new Asset with the specified properties.
     /// </summary>
     /// <param name="customerId">The customer ID.</param>
-    /// <param name="assetTypeId">The asset type ID.</param>
     /// <param name="customerSiteId">The customer site ID.</param>
-    /// <param name="technicalOwnerId">The technical owner ID.</param>
+    /// <param name="assetTypeId">The asset type ID.</param>
     /// <param name="assetNumber">The asset inventory number.</param>
+    /// <param name="model">The hardware model.</param>
+    /// <param name="purchaseDate">The purchase date.</param>
+    /// <param name="serialNumber">The serial number.</param>
+    /// <param name="technicalOwnerId">The technical owner ID.</param>
     /// <param name="name">The asset name.</param>
     /// <param name="user">The assigned user.</param>
-    /// <param name="model">The hardware model.</param>
-    /// <param name="serialNumber">The serial number.</param>
-    /// <param name="purchaseDate">The purchase date.</param>
     /// <returns>A new Asset instance with all properties set.</returns>
     /// <exception cref="InvalidOperationException">
     /// Thrown when field mappings have not been initialized.
     /// </exception>
     public static Asset Create(
         Int32 customerId,
-        Int32 assetTypeId,
         Int32 customerSiteId,
-        Int32 technicalOwnerId,
+        Int32 assetTypeId,
         String assetNumber,
-        String name,
-        String user,
         String model,
+        DateTime purchaseDate,
         String serialNumber,
-        DateTime purchaseDate)
+        Int32 technicalOwnerId,
+        String name,
+        String user)
     {
         // Ensure field mappings are initialized before creating
         if (!Mapped)
@@ -57,16 +60,15 @@ public partial class Asset
         }
 
         ArgumentOutOfRangeException.ThrowIfLessThan(customerId, 1);
-        ArgumentOutOfRangeException.ThrowIfLessThan(assetTypeId, 1);
         ArgumentOutOfRangeException.ThrowIfLessThan(customerSiteId, 1);
-        ArgumentOutOfRangeException.ThrowIfLessThan(technicalOwnerId, 1);
+        ArgumentOutOfRangeException.ThrowIfLessThan(assetTypeId, 1);
         ArgumentException.ThrowIfNullOrWhiteSpace(assetNumber);
-        ArgumentException.ThrowIfNullOrWhiteSpace(name);
+        ArgumentException.ThrowIfNullOrWhiteSpace(model);
         ArgumentException.ThrowIfNullOrWhiteSpace(serialNumber);
 
         var asset = new Asset
         {
-            ClientId = customerId,
+            CustomerId = customerId,
             AssetTypeId = assetTypeId,
             SiteId = customerSiteId,
             AssetNumber = assetNumber,
@@ -79,13 +81,16 @@ public partial class Asset
             StatusId = 1,
             Criticality = 0,
             Inactive = false,
+            KeyField = model,
+            KeyField2 = purchaseDate.ToShortDateString(),
+            KeyField3 = String.IsNullOrWhiteSpace(serialNumber) ? String.Empty : $"SN: {serialNumber}",
             Fields = [],
             // Use generated properties to set custom fields
             Name = name,
             User = user,
             Model = model,
             SerialNumber = serialNumber,
-            PurchaseDate = purchaseDate
+            PurchaseDate = purchaseDate,
         };
 
         return asset;

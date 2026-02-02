@@ -45,7 +45,7 @@ public partial class Asset : IHasCustomFields
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_id")] // Json Property Type: integer
-    public Int32? ClientId { get; set; }
+    public Int32? CustomerId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("client_name")] // Json Property Type: string
@@ -1469,7 +1469,6 @@ public partial class Asset : IHasCustomFields
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.ChildGuid))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.ChildId))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.Children))]
-// [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.ClientId))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.ClientName))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.CloneCount))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.CloneInventoryNumbers))]
@@ -1490,6 +1489,7 @@ public partial class Asset : IHasCustomFields
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.Criticality))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.CriticalityDescription))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.Custombuttons))]
+// [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.CustomerId))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.Customfields))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.DattoAlternateId))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.DattoId))]

@@ -12,8 +12,11 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
+using System.Diagnostics;
+
 namespace ProvisionData.HaloPSA.DTO;
 
+[DebuggerDisplay("Id={Id}, Value={Value}")]
 public class IdValue
 {
     [JsonPropertyName("id")]
