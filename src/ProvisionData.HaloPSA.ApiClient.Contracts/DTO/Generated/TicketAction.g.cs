@@ -100,7 +100,8 @@ public partial class TicketAction
     [JsonPropertyName("tweet_sent")] // Json Property Type: boolean
     public Boolean? TweetSent { get; set; }
 
-    // Property: attachment_list Type: Attachment_View ignored by configuration.
+    [JsonPropertyName("attachment_list")] // Json Property Type: Attachment_View
+    public AttachmentView AttachmentList { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("customfields")] // Json Property Type: CustomField
@@ -957,8 +958,8 @@ public partial class TicketAction
     public Boolean? Canupdate { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("assets")] // Json Property Type: Device_List
-    public List<AssetList>? Assets { get; set; }
+    [JsonPropertyName("assets")] // Json Property Type: array
+    public List<Asset>? Assets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("dont_do_rules")] // Json Property Type: boolean
@@ -2037,6 +2038,7 @@ public partial class TicketAction
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.TicketAction.Assets))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.TicketAction.AssetSite))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.TicketAction.AttachmentCount))]
+// [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.TicketAction.AttachmentList))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.TicketAction.AzureActionComplete))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.TicketAction.Backoutplan))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.TicketAction.BigpandaId))]

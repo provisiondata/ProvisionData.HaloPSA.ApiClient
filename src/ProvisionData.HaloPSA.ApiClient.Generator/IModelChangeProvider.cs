@@ -24,6 +24,8 @@ public interface IModelChangeProvider
     ModelChange? GetChange([DisallowNull] String jsonModelName);
     ModelChange GetChange([DisallowNull] String jsonModelName, JsonProperty jsonProperty);
 
+    void LogUnreferencedChanges();
+
     /// <summary>
     /// Determines if a model type should be skipped during generation.
     /// A type is skipped if it has no corresponding entries in ModelChanges.

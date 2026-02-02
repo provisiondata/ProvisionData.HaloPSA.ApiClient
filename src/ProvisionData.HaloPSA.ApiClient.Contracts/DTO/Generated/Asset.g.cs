@@ -28,9 +28,8 @@ public partial class Asset : IHasCustomFields
     [JsonPropertyName("intent")] // Json Property Type: string
     public String? Intent { get; set; }
 
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("inventory_number")] // Json Property Type: string
-    public required String? AssetNumber { get; set; }
+    public String AssetNumber { get; set; } = String.Empty;
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("key_field")] // Json Property Type: string
@@ -54,7 +53,7 @@ public partial class Asset : IHasCustomFields
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_id")] // Json Property Type: integer
-    public required Int32? SiteId { get; set; }
+    public Int32? SiteId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("site_name")] // Json Property Type: string
@@ -90,7 +89,7 @@ public partial class Asset : IHasCustomFields
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("technical_owner_id")] // Json Property Type: integer
-    public required Int32? TechnicalOwnerId { get; set; }
+    public Int32? TechnicalOwnerId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("technical_owner_name")] // Json Property Type: string
@@ -376,12 +375,12 @@ public partial class Asset : IHasCustomFields
     public List<Asset>? Children { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("parent_assets")] // Json Property Type: Device_List
-    public List<AssetList>? ParentAssets { get; set; }
+    [JsonPropertyName("parent_assets")] // Json Property Type: array
+    public List<Asset>? ParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("child_assets")] // Json Property Type: Device_List
-    public List<AssetList>? ChildAssets { get; set; }
+    [JsonPropertyName("child_assets")] // Json Property Type: array
+    public List<Asset>? ChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("hierarchy")] // Json Property Type: Device
@@ -465,9 +464,7 @@ public partial class Asset : IHasCustomFields
     [JsonPropertyName("azure_userprincipalname")] // Json Property Type: string
     public String? AzureUserprincipalname { get; set; }
 
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("stockdetails")] // Json Property Type: ItemStock
-    public ItemStock? StockDetails { get; set; }
+    // Property: stockdetails Type: ItemStock ignored by configuration.
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("assetgroup_name")] // Json Property Type: string
@@ -719,8 +716,8 @@ public partial class Asset : IHasCustomFields
     public String? WorkspaceOrgunitpath { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("sibling_assets")] // Json Property Type: Device_List
-    public List<AssetList>? SiblingAssets { get; set; }
+    [JsonPropertyName("sibling_assets")] // Json Property Type: array
+    public List<Asset>? SiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("import_details_id")] // Json Property Type: integer
@@ -885,40 +882,40 @@ public partial class Asset : IHasCustomFields
     public DateTimeOffset? IntuneLastsyncdatetime { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_parent_assets")] // Json Property Type: Device_List
-    public List<AssetList>? AddParentAssets { get; set; }
+    [JsonPropertyName("add_parent_assets")] // Json Property Type: array
+    public List<Asset>? AddParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_child_assets")] // Json Property Type: Device_List
-    public List<AssetList>? AddChildAssets { get; set; }
+    [JsonPropertyName("add_child_assets")] // Json Property Type: array
+    public List<Asset>? AddChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("add_sibling_assets")] // Json Property Type: Device_List
-    public List<AssetList>? AddSiblingAssets { get; set; }
+    [JsonPropertyName("add_sibling_assets")] // Json Property Type: array
+    public List<Asset>? AddSiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("edit_parent_assets")] // Json Property Type: Device_List
-    public List<AssetList>? EditParentAssets { get; set; }
+    [JsonPropertyName("edit_parent_assets")] // Json Property Type: array
+    public List<Asset>? EditParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("edit_child_assets")] // Json Property Type: Device_List
-    public List<AssetList>? EditChildAssets { get; set; }
+    [JsonPropertyName("edit_child_assets")] // Json Property Type: array
+    public List<Asset>? EditChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("edit_sibling_assets")] // Json Property Type: Device_List
-    public List<AssetList>? EditSiblingAssets { get; set; }
+    [JsonPropertyName("edit_sibling_assets")] // Json Property Type: array
+    public List<Asset>? EditSiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("delete_parent_assets")] // Json Property Type: Device_List
-    public List<AssetList>? DeleteParentAssets { get; set; }
+    [JsonPropertyName("delete_parent_assets")] // Json Property Type: array
+    public List<Asset>? DeleteParentAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("delete_child_assets")] // Json Property Type: Device_List
-    public List<AssetList>? DeleteChildAssets { get; set; }
+    [JsonPropertyName("delete_child_assets")] // Json Property Type: array
+    public List<Asset>? DeleteChildAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("delete_sibling_assets")] // Json Property Type: Device_List
-    public List<AssetList>? DeleteSiblingAssets { get; set; }
+    [JsonPropertyName("delete_sibling_assets")] // Json Property Type: array
+    public List<Asset>? DeleteSiblingAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("auto_tag")] // Json Property Type: boolean
@@ -1695,7 +1692,6 @@ public partial class Asset : IHasCustomFields
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.StockbinName))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.Stockdate))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.StockDate))]
-// [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.StockDetails))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.SupplierContractId))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.SupplierContractRef))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Asset.SupplierExpirydate))]

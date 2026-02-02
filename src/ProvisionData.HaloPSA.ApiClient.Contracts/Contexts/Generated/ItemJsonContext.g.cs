@@ -12,8 +12,6 @@ namespace ProvisionData.HaloPSA.Contexts;
 [JsonSerializable(typeof(List<Item>))]
 [JsonSerializable(typeof(ItemAccountsLink))]
 [JsonSerializable(typeof(List<ItemAccountsLink>))]
-[JsonSerializable(typeof(ItemStock))]
-[JsonSerializable(typeof(List<ItemStock>))]
 [JsonSourceGenerationOptions(
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]

@@ -74,6 +74,20 @@ public partial class ModelChangeProvider : IModelChangeProvider
         return changes;
     }
 
+    public void LogUnreferencedChanges()
+    {
+        var unreferenced = _changes.Values
+            .Where(c => !c.Generated && !c.HasBeenReferenced && c.JsonPropertyName != null)
+            .OrderBy(c => c.JsonModelName)
+            .ThenBy(c => c.JsonPropertyName);
+
+        foreach (var change in unreferenced)
+        {
+            _logger.LogWarning("Unreferenced Change! Model: {JsonModelName} Property: {JsonPropertyName}",
+                change.JsonModelName, change.JsonPropertyName);
+        }
+    }
+
     public String GetDtoName(String jsonModelName)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(jsonModelName);
@@ -111,7 +125,8 @@ public partial class ModelChangeProvider : IModelChangeProvider
             change = new ModelChange()
             {
                 JsonModelName = jsonModelName,
-                JsonPropertyName = jsonProperty.Name
+                JsonPropertyName = jsonProperty.Name,
+                Generated = true
             };
 
             _changes.Add(key, change);
@@ -133,7 +148,7 @@ public partial class ModelChangeProvider : IModelChangeProvider
             return false; // Has model-level change, include it
         }
 
-        // Check if there are any property-level changes for this model
+        // Check if there are any property-level unreferenced for this model
         var propertyKeyPrefix = $"{jsonModelName}:";
         return !_changes.Keys.Any(k => k.StartsWith(propertyKeyPrefix, StringComparison.InvariantCultureIgnoreCase));
     }

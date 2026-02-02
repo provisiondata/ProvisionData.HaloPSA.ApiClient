@@ -88,7 +88,7 @@ public class ApiClientTests(ApiClientTestFixture fixture, ITestOutputHelper test
         // Assert
         list.Should().NotBeNull();
         list.Should().NotBeEmpty();
-        list.Should().AllBeOfType<AssetList>();
+        list.Should().AllBeOfType<Asset>();
     }
 
     [Fact]

@@ -14,16 +14,12 @@ namespace ProvisionData.HaloPSA.Contexts;
 [JsonSerializable(typeof(List<AssetApplications>))]
 [JsonSerializable(typeof(AssetChange))]
 [JsonSerializable(typeof(List<AssetChange>))]
-[JsonSerializable(typeof(AssetList))]
-[JsonSerializable(typeof(List<AssetList>))]
 [JsonSerializable(typeof(AssetMeterReading))]
 [JsonSerializable(typeof(List<AssetMeterReading>))]
 [JsonSerializable(typeof(AssetRelationshipRestriction))]
 [JsonSerializable(typeof(List<AssetRelationshipRestriction>))]
 [JsonSerializable(typeof(AssetUserCount))]
 [JsonSerializable(typeof(List<AssetUserCount>))]
-[JsonSerializable(typeof(AssetView))]
-[JsonSerializable(typeof(List<AssetView>))]
 [JsonSourceGenerationOptions(
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]

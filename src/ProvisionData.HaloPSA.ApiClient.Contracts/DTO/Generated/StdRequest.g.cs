@@ -392,9 +392,8 @@ public partial class StdRequest
     [JsonPropertyName("customfields")] // Json Property Type: CustomField
     public List<CustomField>? Customfields { get; set; }
 
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("assets")] // Json Property Type: Device_List
-    public List<AssetList>? Assets { get; set; }
+    [JsonPropertyName("assets")] // Json Property Type: array
+    public List<Asset> Assets { get; set; } = [];
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("sqltoselectassets")] // Json Property Type: boolean
@@ -760,8 +759,8 @@ public partial class StdRequest
     public List<CustomField>? OptionalCustomfields { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("optional_assets")] // Json Property Type: Device_List
-    public List<AssetList>? OptionalAssets { get; set; }
+    [JsonPropertyName("optional_assets")] // Json Property Type: array
+    public List<Asset>? OptionalAssets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("optional_forwardinboundupdates")] // Json Property Type: integer

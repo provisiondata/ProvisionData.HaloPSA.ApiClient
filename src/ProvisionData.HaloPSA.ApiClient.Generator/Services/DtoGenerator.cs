@@ -91,6 +91,8 @@ public partial class DtoGenerator
 
             await GenerateAsync(json, cancellationToken);
 
+            _changeProvider.LogUnreferencedChanges();
+
             _logger.LogInformation("DTO generation completed successfully. Output written to: {OutputBasePath}", _options.OutputBasePath);
         }
         catch (Exception ex)
@@ -363,7 +365,7 @@ public partial class DtoGenerator
                 }
                 else
                 {
-
+                    change.HasBeenReferenced = true;
                     var reqired = change.Required ? "required " : String.Empty;
                     var nullableSuffix = String.Empty;
 

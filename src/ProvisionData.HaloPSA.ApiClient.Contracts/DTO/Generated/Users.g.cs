@@ -745,7 +745,8 @@ public partial class Users
 
     // Property: usercompany Type: UserCompany ignored by configuration.
 
-    // Property: supplier Type: Supplier ignored by configuration.
+    [JsonPropertyName("supplier")] // Json Property Type: Supplier
+    public Supplier Supplier { get; set; } = new();
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("supplier_name")] // Json Property Type: string
@@ -893,8 +894,8 @@ public partial class Users
     public String? Oppemailaddress { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("assets")] // Json Property Type: Device_List
-    public List<AssetList>? Assets { get; set; }
+    [JsonPropertyName("assets")] // Json Property Type: array
+    public List<Asset>? Assets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("locked")] // Json Property Type: boolean
@@ -1636,6 +1637,7 @@ public partial class Users
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Users.SoftwareRoleName))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Users.SqlimportId))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Users.SqlimportUser))]
+// [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Users.Supplier))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Users.SupplierId))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Users.SupplierName))]
 // [MapperIgnoreTarget(nameof(ProvisionData.HaloPSA.DTO.Users.SupportExpires))]

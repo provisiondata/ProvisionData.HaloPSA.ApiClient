@@ -28,7 +28,7 @@ public static class TicketExtensions
     public static async Task<IReadOnlyList<Ticket>> ListTicketsAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
     {
         var uri = "Tickets"
-            .AppendQueryParam("count", 5000)
+            .AppendQueryParam("count", 200)
             .ToUri();
 
         var result = await haloApiClient.HttpGetAsync(uri, TicketJsonContext.Default.ListTicket, cancellationToken);

@@ -68,15 +68,16 @@ public class ModelChangeValidator : IModelChangeValidator
         else if (!String.IsNullOrEmpty(change.JsonPropertyName))
         {
             // Property Change
-            // If JsonPropertyName is provided, one or more of ClientPropertyName, DefaultValue, Ignore, Nullable, or Required must also be provided
+            // If JsonPropertyName is provided, one or more of ClientPropertyName, ClientPropertyType, DefaultValue, Ignore, Nullable, or Required must also be provided
             if (String.IsNullOrWhiteSpace(change.ClientPropertyName)
+                && String.IsNullOrWhiteSpace(change.ClientPropertyType)
                 && change.DefaultValue is null
                 && change.Ignore != true
                 && change.Nullable is null
                 && change.Required == false
             )
             {
-                sb.Append("- When JsonPropertyName is provided, one or more of ClientPropertyName, DefaultValue, Ignore, Nullable, or Required MUST be provided.");
+                sb.Append("- When JsonPropertyName is provided, one or more of ClientPropertyName, ClientPropertyType, DefaultValue, Ignore, Nullable, or Required MUST be provided.");
             }
         }
         else

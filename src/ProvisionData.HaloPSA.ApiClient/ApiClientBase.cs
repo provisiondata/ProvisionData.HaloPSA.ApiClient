@@ -65,7 +65,7 @@ public abstract class ApiClientBase(
         try
         {
             var result = System.Text.Json.JsonSerializer.Deserialize<T>(json, context)
-                ?? throw new HaloApiException($"Failed to deserialize response from: {uri}", json);
+                ?? throw new HaloApiException($"Failed to deserialize response from: {uri}", json.ToFormattedJson());
 
             if (result is IHasCustomFields hasCustomFields)
             {
@@ -76,8 +76,8 @@ public abstract class ApiClientBase(
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to deserialize response from: {URI}", uri);
-            throw new HaloApiException($"Failed to deserialize response from: {uri}", json, ex);
+            Logger.LogError(ex, "Failed to deserialize response from: {URI}\n{Response}", uri, json.ToFormattedJson());
+            throw new HaloApiException($"Failed to deserialize response from: {uri}", json.ToFormattedJson(), ex);
         }
     }
 
@@ -114,7 +114,7 @@ public abstract class ApiClientBase(
                 }
 
                 Logger.LogError("Failed to GET from {uri} => {HttpStatus}: {HttpMessage}\n\tResponse: {response}",
-                    uri, response.StatusCode, response.ReasonPhrase, json);
+                    uri, response.StatusCode, response.ReasonPhrase, json.ToFormattedJson());
 
                 response.EnsureSuccessStatusCode();
 
@@ -134,7 +134,7 @@ public abstract class ApiClientBase(
         try
         {
             var result = System.Text.Json.JsonSerializer.Deserialize<T>(json, context)
-                ?? throw new HaloApiException($"Failed to deserialize response from: {uri}", json);
+                ?? throw new HaloApiException($"Failed to deserialize response from: {uri}", json.ToFormattedJson());
 
             if (result is IHasCustomFields hasCustomFields)
             {
@@ -146,7 +146,7 @@ public abstract class ApiClientBase(
         catch (Exception ex)
         {
             Logger.LogError(ex, "Failed to deserialize response from: {URI}", uri);
-            throw new HaloApiException($"Failed to deserialize response from: {uri}", json, ex);
+            throw new HaloApiException($"Failed to deserialize response from: {uri}", json.ToFormattedJson(), ex);
         }
     }
 
@@ -154,7 +154,7 @@ public abstract class ApiClientBase(
     {
         await EnsureAuthorizedAsync(cancellationToken);
 
-        Logger.LogTrace("HttpPostAsync: {api} => {payload}", uri, payload);
+        Logger.LogTrace("HttpPostAsync: {api} => {payload}", uri, payload.ToFormattedJson());
 
         var response = await HttpClient.PostAsync(uri, new StringContent(payload, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
@@ -163,9 +163,9 @@ public abstract class ApiClientBase(
             var errorResponse = await response.Content.ReadAsStringAsync(cancellationToken);
 
             Logger.LogError("Failed to POST to {uri} => {HttpStatus}: {HttpMessage}\n\tRequest: {request}\n\tResponse: {response}",
-                uri, response.StatusCode, response.ReasonPhrase, payload, errorResponse);
+                uri, response.StatusCode, response.ReasonPhrase, payload.ToFormattedJson(), errorResponse);
 
-            throw new HaloApiException($"Failed to POST to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload);
+            throw new HaloApiException($"Failed to POST to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload.ToFormattedJson());
         }
 
         return await response.Content.ReadAsStringAsync(cancellationToken);
@@ -177,7 +177,7 @@ public abstract class ApiClientBase(
         try
         {
             var result = System.Text.Json.JsonSerializer.Deserialize<T>(json, context)
-                ?? throw new HaloApiException($"Failed to deserialize response from: {uri}", json);
+                ?? throw new HaloApiException($"Failed to deserialize response from: {uri}", json.ToFormattedJson());
 
             if (result is IHasCustomFields hasCustomFields)
             {
@@ -189,7 +189,7 @@ public abstract class ApiClientBase(
         catch (Exception ex)
         {
             Logger.LogError(ex, "Failed to deserialize response from: {URI}", uri);
-            throw new HaloApiException($"Failed to deserialize response from: {uri}", json, ex);
+            throw new HaloApiException($"Failed to deserialize response from: {uri}", json.ToFormattedJson(), ex);
         }
     }
 
@@ -204,9 +204,9 @@ public abstract class ApiClientBase(
             var errorResponse = await response.Content.ReadAsStringAsync(cancellationToken);
 
             Logger.LogError("Failed to PUT to {uri} => {HttpStatus}: {HttpMessage}\n\tRequest: {request}\n\tResponse: {response}",
-                uri, response.StatusCode, response.ReasonPhrase, payload, errorResponse);
+                uri, response.StatusCode, response.ReasonPhrase, payload.ToFormattedJson(), errorResponse);
 
-            throw new HaloApiException($"Failed to PUT to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload);
+            throw new HaloApiException($"Failed to PUT to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload.ToFormattedJson());
         }
 
         return await response.Content.ReadAsStringAsync(cancellationToken);

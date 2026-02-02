@@ -47,7 +47,7 @@ public class ApiClient(
                 .ToUri();
             var json = await HttpGetAsync(uri, cancellationToken);
 
-            var instanceInfo = JsonSerializer.Deserialize<InstanceInfo>(json, ApiJsonSerializerContext.Default.InstanceInfo)
+            var instanceInfo = JsonSerializer.Deserialize<InstanceInfo>(json, ApiJsonContext.Default.InstanceInfo)
                 ?? throw new HaloApiException("Failed to deserialize InstanceInfo.", json);
 
             Logger.LogInformation("{Instance}", instanceInfo);

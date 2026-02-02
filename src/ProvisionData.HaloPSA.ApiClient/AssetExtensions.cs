@@ -26,17 +26,15 @@ public static partial class AssetExtensions
     /// </summary>
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns>A collection of device assetView items.</returns>
-    public static async Task<IReadOnlyCollection<AssetList>?> ListAssetsAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
+    public static async Task<IReadOnlyCollection<Asset>?> ListAssetsAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
     {
         var uri = "Asset"
-            .AppendQueryParam("count", 5000)
+            .AppendQueryParam("count", 200)
             .ToUri();
 
-        var json = await haloApiClient.HttpGetAsync(uri, cancellationToken);
-        var assetView = JsonSerializer.Deserialize(json, AssetJsonContext.Default.AssetView)
-            ?? throw new HaloApiException("Failed to deserialize AssetView.", json);
+        var result = await haloApiClient.HttpGetAsync(uri, ApiJsonContext.Default.AssetList, cancellationToken);
 
-        return assetView?.Assets?.AsReadOnly() ?? [];
+        return result.Assets;
     }
 
     /// <summary>

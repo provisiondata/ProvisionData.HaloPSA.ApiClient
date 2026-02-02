@@ -22,7 +22,7 @@ namespace ProvisionData.HaloPSA;
 /// <remarks>
 /// <para>
 /// This partial class contains types used directly by the ApiClient methods.
-/// When you run the model generator, it will create <c>ApiJsonSerializerContext.g.cs</c>
+/// When you run the model generator, it will create <c>ApiJsonContext.g.cs</c>
 /// which adds all generated model types as a partial class extension.
 /// </para>
 /// <para>
@@ -38,10 +38,11 @@ namespace ProvisionData.HaloPSA;
 /// </remarks>
 
 // Non-generated types
+[JsonSerializable(typeof(AssetList))]
 [JsonSerializable(typeof(InstanceInfo))]
 [JsonSourceGenerationOptions(
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
-public partial class ApiJsonSerializerContext : JsonSerializerContext
+public partial class ApiJsonContext : JsonSerializerContext
 {
 }

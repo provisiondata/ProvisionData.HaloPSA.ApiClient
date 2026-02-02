@@ -28,7 +28,7 @@ public static class InvoiceExtensions
     public static async Task<IReadOnlyCollection<InvoiceHeader>> ListInvoicesAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
     {
         var uri = "Invoice"
-            .AppendQueryParam("count", 5000)
+            .AppendQueryParam("count", 200)
             .AppendQueryParam("pageinate", false)
             .AppendQueryParam("page_size", 5000)
             .ToUri();

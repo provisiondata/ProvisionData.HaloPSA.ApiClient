@@ -14,6 +14,7 @@
 
 using ProvisionData.HaloPSA.ModelGenerator.Models;
 using ProvisionData.HaloPSA.ModelGenerator.Services;
+using Serilog;
 using System.Diagnostics.CodeAnalysis;
 
 namespace ProvisionData.HaloPSA.ModelGenerator;
@@ -25,6 +26,8 @@ public class Program
     public static async Task Main(String[] args)
     {
         var builder = Host.CreateApplicationBuilder(args);
+
+        builder.Services.AddSerilog(logger => logger.WriteTo.Console());
 
         builder.Services.Configure<GeneratorOptions>(builder.Configuration.GetSection(GeneratorOptions.SectionName));
         builder.Services.Configure<ModelChanges>(builder.Configuration.GetSection(ModelChanges.SectionName));

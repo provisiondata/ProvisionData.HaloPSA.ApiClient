@@ -28,7 +28,7 @@ public static class SupplierExtensions
     public static async Task<IReadOnlyList<Company>> ListSuppliersAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
     {
         var uri = "Supplier"
-            .AppendQueryParam("count", 5000)
+            .AppendQueryParam("count", 200)
             .ToUri();
 
         var result = await haloApiClient.HttpGetAsync(uri, VendorJsonContext.Default.ListCompany, cancellationToken);

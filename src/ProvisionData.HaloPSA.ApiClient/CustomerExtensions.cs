@@ -29,7 +29,7 @@ public static class CustomerExtensions
     public static async Task<CustomerList?> ListCustomersAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
     {
         var uri = "Client"
-            .AppendQueryParam("count", 5000)
+            .AppendQueryParam("count", 200)
             .ToUri();
 
         var json = await haloApiClient.HttpGetAsync(uri, cancellationToken);

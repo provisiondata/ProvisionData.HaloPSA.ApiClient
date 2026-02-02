@@ -29,7 +29,7 @@ public static class RecurringInvoiceExtensions
     public static async Task<IReadOnlyCollection<InvoiceHeader>> ListRecurringInvoicesAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
     {
         var uri = "RecurringInvoice"
-            .AppendQueryParam("count", 5000)
+            .AppendQueryParam("count", 200)
             .AppendQueryParam("pageinate", false)
             .AppendQueryParam("page_size", 5000)
             .ToUri();

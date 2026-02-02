@@ -1838,8 +1838,8 @@ public partial class Ticket
     public Boolean? Ispreview { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("assets")] // Json Property Type: Device_List
-    public List<AssetList>? Assets { get; set; }
+    [JsonPropertyName("assets")] // Json Property Type: array
+    public List<Asset>? Assets { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("nochangesequpdate")] // Json Property Type: boolean

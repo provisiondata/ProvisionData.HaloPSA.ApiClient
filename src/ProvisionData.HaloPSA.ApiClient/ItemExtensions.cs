@@ -29,7 +29,7 @@ public static class ItemExtensions
     public static async Task<IReadOnlyCollection<Item>> ListItemsAsync(this ApiClient haloApiClient, CancellationToken cancellationToken = default)
     {
         var uri = "Item"
-            .AppendQueryParam("count", 5000)
+            .AppendQueryParam("count", 200)
             .ToUri();
 
         var result = await haloApiClient.HttpGetAsync(uri, ItemJsonContext.Default.ListItem, cancellationToken);
