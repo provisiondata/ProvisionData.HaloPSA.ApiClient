@@ -12,7 +12,6 @@
 // You should have received a copy of the GNU Affero General Public License along with this
 // program. If not, see <https://www.gnu.org/licenses/>.
 
-using Flurl;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Http.Headers;
@@ -62,6 +61,7 @@ public abstract class ApiClientBase(
     public async Task<T> HttpGetAsync<T>(Uri uri, JsonTypeInfo<T> context, CancellationToken cancellationToken = default)
     {
         var json = await HttpGetAsync(uri, cancellationToken);
+
         try
         {
             var result = System.Text.Json.JsonSerializer.Deserialize<T>(json, context)
@@ -108,6 +108,11 @@ public abstract class ApiClientBase(
                 }
 
                 var json = await response.Content.ReadAsStringAsync(cancellationToken);
+
+                Logger.LogTrace("HttpGetAsync  {status} {message}: {uri} => {response}",
+                    response.StatusCode, response.RequestMessage,
+                    uri, json.ToFormattedJson());
+
                 if (response.IsSuccessStatusCode)
                 {
                     return json;
@@ -131,6 +136,7 @@ public abstract class ApiClientBase(
     public async Task<T> HttpPostAsync<T>(Uri uri, String payload, JsonTypeInfo<T> context, CancellationToken cancellationToken = default)
     {
         var json = await HttpPostAsync(uri, payload, cancellationToken);
+
         try
         {
             var result = System.Text.Json.JsonSerializer.Deserialize<T>(json, context)
@@ -154,9 +160,13 @@ public abstract class ApiClientBase(
     {
         await EnsureAuthorizedAsync(cancellationToken);
 
-        Logger.LogTrace("HttpPostAsync: {api} => {payload}", uri, payload.ToFormattedJson());
-
         var response = await HttpClient.PostAsync(uri, new StringContent(payload, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
+
+        var json = await response.Content.ReadAsStringAsync(cancellationToken);
+
+        Logger.LogTrace("HttpPostAsync {status} {message}: {uri} => {payload} => {response}",
+            response.StatusCode, response.RequestMessage,
+            uri, payload.ToFormattedJson(), json.ToFormattedJson());
 
         if (!response.IsSuccessStatusCode)
         {
@@ -168,12 +178,13 @@ public abstract class ApiClientBase(
             throw new HaloApiException($"Failed to POST to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload.ToFormattedJson());
         }
 
-        return await response.Content.ReadAsStringAsync(cancellationToken);
+        return json;
     }
 
     public async Task<T> HttpPutAsync<T>(Uri uri, String payload, JsonTypeInfo<T> context, CancellationToken cancellationToken = default)
     {
         var json = await HttpPutAsync(uri, payload, cancellationToken);
+
         try
         {
             var result = System.Text.Json.JsonSerializer.Deserialize<T>(json, context)
@@ -199,6 +210,12 @@ public abstract class ApiClientBase(
 
         var response = await HttpClient.PutAsync(uri, new StringContent(payload, System.Text.Encoding.UTF8, "application/json"), cancellationToken);
 
+        var json = await response.Content.ReadAsStringAsync(cancellationToken);
+
+        Logger.LogTrace("HttpPutAsync {status} {message}: {uri} => {payload} => {response}",
+            response.StatusCode, response.RequestMessage,
+            uri, payload.ToFormattedJson(), json.ToFormattedJson());
+
         if (!response.IsSuccessStatusCode)
         {
             var errorResponse = await response.Content.ReadAsStringAsync(cancellationToken);
@@ -209,21 +226,6 @@ public abstract class ApiClientBase(
             throw new HaloApiException($"Failed to PUT to {uri} => {response.StatusCode}: {response.ReasonPhrase}", payload.ToFormattedJson());
         }
 
-        return await response.Content.ReadAsStringAsync(cancellationToken);
-    }
-
-    public async Task<String> HttpGetPagedAsync(Uri uri, Int32 pagenumber, CancellationToken cancellationToken = default)
-        => await HttpGetPagedAsync(uri, pagenumber, Options.PageSize, cancellationToken);
-
-    public async Task<String> HttpGetPagedAsync(Uri uri, Int32 pagenumber, Int32 pageSize, CancellationToken cancellationToken = default)
-    {
-        await EnsureAuthorizedAsync(cancellationToken);
-
-        var url = uri.AppendQueryParam("pageinate", true)
-                     .AppendQueryParam("page_no", pagenumber)
-                     .AppendQueryParam("page_size", pageSize)
-                     .ToUri();
-
-        return await HttpGetAsync(url, cancellationToken);
+        return json;
     }
 }
